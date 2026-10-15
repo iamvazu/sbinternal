@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STRONGERbuilt Bid Intelligence</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface: #fcfcfb; --surface-2: #f3f2ee;
+  --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --ring: rgba(11,11,11,0.10);
+  --accent: #2a78d6; --accent-ink: #1c5cab; --accent-wash: #cde2fb;
+  --good: #0ca30c; --good-ink: #006300; --warning: #fab219; --serious: #ec835a; --critical: #d03b3b;
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --surface-2: #232321;
+    --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --ring: rgba(255,255,255,0.10);
+    --accent: #3987e5; --accent-ink: #86b6ef; --accent-wash: #184f95;
+    --good-ink: #0ca30c; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --surface-2: #232321;
+  --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --ring: rgba(255,255,255,0.10);
+  --accent: #3987e5; --accent-ink: #86b6ef; --accent-wash: #184f95;
+  --good-ink: #0ca30c; --shadow: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+a { color: var(--accent-ink); }
+button { font: inherit; cursor: pointer; }
+header { position: sticky; top: 0; z-index: 5; background: var(--surface); border-bottom: 1px solid var(--ring); }
+.bar { display: flex; align-items: center; gap: 16px; padding: 10px 24px; flex-wrap: wrap; }
+.brand { font-weight: 700; letter-spacing: -.01em; font-size: 16px; }
+.brand span { color: var(--accent-ink); }
+nav { display: flex; gap: 2px; flex-wrap: wrap; }
+nav button { border: 0; background: none; color: var(--ink-2); padding: 7px 12px; border-radius: 8px; }
+nav button:hover { background: var(--surface-2); }
+nav button[aria-selected="true"] { background: var(--accent-wash); color: var(--ink); font-weight: 600; }
+.pill { margin-left: auto; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--ink-2);
+  border: 1px solid var(--ring); border-radius: 999px; padding: 4px 10px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); }
+main { padding: 20px 24px 60px; max-width: 1440px; margin: 0 auto; }
+section[hidden] { display: none; }
+h2 { font-size: 18px; margin: 0 0 4px; letter-spacing: -.01em; }
+h3 { font-size: 14px; margin: 0 0 10px; }
+.sub { color: var(--ink-2); margin: 0 0 16px; }
+.grid { display: grid; gap: 16px; }
+.kpis { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); margin-bottom: 16px; }
+.card { background: var(--surface); border: 1px solid var(--ring); border-radius: 12px; padding: 16px; box-shadow: var(--shadow); min-width: 0; }
+.kpi .v { font-size: 28px; font-weight: 650; letter-spacing: -.02em; }
+.kpi .l { color: var(--ink-2); font-size: 12.5px; }
+.kpi .h { color: var(--muted); font-size: 12px; margin-top: 2px; }
+.two { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); }
+.three { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+@media (max-width: 900px) { .two { grid-template-columns: 1fr; } }
+.md h1, .md h2, .md h3 { font-size: 14px; margin: 14px 0 6px; }
+.md p, .md ul { margin: 6px 0; } .md ul { padding-left: 18px; }
+.md li { margin: 3px 0; }
+.empty { color: var(--muted); padding: 18px 0; }
+.btn { border: 1px solid var(--ring); background: var(--surface); color: var(--ink); border-radius: 8px; padding: 7px 12px; }
+.btn:hover { background: var(--surface-2); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.primary:hover { filter: brightness(1.07); }
+.btn:disabled { opacity: .55; cursor: progress; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; align-items: center; }
+input, select, textarea { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--axis); border-radius: 8px; padding: 7px 10px; }
+input[type=search] { min-width: 240px; flex: 1 1 240px; }
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; }
+th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+th { font-size: 12px; color: var(--ink-2); font-weight: 600; position: sticky; top: 0; background: var(--surface); white-space: nowrap; }
+th[data-sort] { cursor: pointer; } th[data-sort]:hover { color: var(--ink); }
+tbody tr { cursor: pointer; } tbody tr:hover { background: var(--surface-2); }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.t-name { font-weight: 550; } .t-sub { color: var(--ink-2); font-size: 12.5px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip { font-size: 11.5px; border: 1px solid var(--ring); background: var(--surface-2); color: var(--ink-2); border-radius: 6px; padding: 1px 6px; white-space: nowrap; }
+.chip.key { background: var(--accent-wash); color: var(--ink); border-color: transparent; }
+.chip.block { border-color: var(--critical); color: var(--ink); }
+.chip.unlock { border-style: dashed; border-color: var(--accent); color: var(--ink); }
+.urg { display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; white-space: nowrap; }
+.urg i { width: 8px; height: 8px; border-radius: 2px; display: inline-block; }
+.urg.critical i { background: var(--critical); } .urg.soon i { background: var(--warning); }
+.urg.open i { background: var(--good); } .urg.closed i, .urg.unknown i { background: var(--muted); }
+.meter { display: inline-flex; align-items: center; gap: 6px; }
+.meter b { display: inline-block; height: 6px; width: 54px; background: var(--grid); border-radius: 3px; overflow: hidden; }
+.meter b i { display: block; height: 100%; background: var(--accent); border-radius: 3px; }
+/* charts */
+svg text { fill: var(--ink-2); font-size: 11.5px; }
+svg .val { fill: var(--ink); font-weight: 600; }
+svg .bar { fill: var(--accent); }
+svg .bar:hover, svg .hit:hover + .bar { fill: var(--accent-ink); }
+svg .gridl { stroke: var(--grid); } svg .base { stroke: var(--axis); }
+.tip { position: fixed; pointer-events: none; z-index: 50; background: var(--ink); color: var(--surface); padding: 6px 9px; border-radius: 6px; font-size: 12px; max-width: 280px; display: none; }
+/* drawer */
+.scrim { position: fixed; inset: 0; background: rgba(0,0,0,.28); z-index: 20; }
+aside { position: fixed; top: 0; right: 0; bottom: 0; width: min(760px, 100%); background: var(--page); z-index: 21; overflow-y: auto;
+  border-left: 1px solid var(--ring); box-shadow: -12px 0 40px rgba(0,0,0,.18); }
+aside .head { position: sticky; top: 0; background: var(--surface); border-bottom: 1px solid var(--ring); padding: 16px 20px; z-index: 2; }
+aside .content { padding: 16px 20px 40px; display: grid; gap: 14px; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px 16px; }
+.facts div small { display: block; color: var(--muted); font-size: 11.5px; }
+.ev { font-size: 12.5px; color: var(--ink-2); border-left: 2px solid var(--grid); padding-left: 8px; margin: 4px 0 10px; }
+.list { margin: 0; padding-left: 18px; } .list li { margin: 3px 0; }
+.chat { display: grid; gap: 10px; }
+.msg { padding: 10px 12px; border-radius: 10px; border: 1px solid var(--ring); background: var(--surface); }
+.msg.me { background: var(--accent-wash); border-color: transparent; justify-self: end; max-width: 85%; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.spin { display: inline-block; width: 12px; height: 12px; border: 2px solid var(--axis); border-top-color: var(--accent); border-radius: 50%; animation: s 0.8s linear infinite; vertical-align: -2px; }
+@keyframes s { to { transform: rotate(360deg); } }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--ink-2); margin-top: 6px; }
+label.f { display: grid; gap: 4px; font-size: 12px; color: var(--ink-2); }
+.formgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="brand">STRONGER<span>built</span> · Bid Intelligence</div>
+    <nav role="tablist" id="nav">
+      <button data-view="command" aria-selected="true">Command Center</button>
+      <button data-view="bids">Bids</button>
+      <button data-view="match">Client Match</button>
+      <button data-view="lens">Certification Lens</button>
+      <button data-view="ask">Ask</button>
+    </nav>
+    <span class="pill" id="model"><span class="dot"></span>checking model…</span>
+  </div>
+</header>
+
+<main>
+  <!-- COMMAND CENTER -->
+  <section id="v-command">
+    <div class="grid kpis" id="kpis"></div>
+    <div class="grid two">
+      <div class="card">
+        <div class="row" style="justify-content:space-between"><h3 style="margin:0">AI opportunity brief</h3>
+          <button class="btn" id="brief-btn">Regenerate</button></div>
+        <div class="t-sub" id="brief-meta" style="margin:4px 0 8px"></div>
+        <div class="md" id="brief"></div>
+      </div>
+      <div class="grid" style="align-content:start">
+        <div class="card"><h3>Deadline runway <span class="t-sub">· open bids closing per week</span></h3><div id="c-weeks"></div></div>
+        <div class="card"><h3>Must act <span class="t-sub">· closes ≤ 3 days or mandatory pre-bid</span></h3><div id="mustact"></div></div>
+      </div>
+    </div>
+    <div class="grid three" style="margin-top:16px">
+      <div class="card"><h3>Open bids by department</h3><div id="c-dept"></div></div>
+      <div class="card"><h3>Open bids by category</h3><div id="c-cat"></div></div>
+      <div class="card"><h3>Program signals in open bids</h3><div id="c-sig"></div></div>
+    </div>
+  </section>
+
+  <!-- BIDS -->
+  <section id="v-bids" hidden>
+    <div class="filters">
+      <input type="search" id="q" placeholder="Search title, department, summary…">
+      <select id="f-dept"><option value="">All departments</option></select>
+      <select id="f-cat"><option value="">All categories</option></select>
+      <select id="f-sig"><option value="">Any program signal</option></select>
+      <select id="f-urg">
+        <option value="live">Open only</option><option value="soon">Closing ≤ 7 days</option>
+        <option value="all">Include closed</option></select>
+      <select id="f-ai"><option value="">AI: any</option><option value="yes">AI analyzed</option><option value="no">Not analyzed</option></select>
+      <span class="t-sub" id="count"></span>
+    </div>
+    <div class="card" style="padding:0"><div class="tablewrap"><table>
+      <thead><tr>
+        <th data-sort="name">Bid</th><th data-sort="category">Category</th><th data-sort="days_left">Closes</th>
+        <th>Program signals</th><th data-sort="fit">SB fit</th><th data-sort="complexity">Complexity</th>
+      </tr></thead><tbody id="rows"></tbody></table></div></div>
+  </section>
+
+  <!-- MATCH -->
+  <section id="v-match" hidden>
+    <h2>Client match</h2>
+    <p class="sub">Rank every open bid for a client by fit. Scores are rule-based and instant. Reasons, blockers and the certifications that would change the outcome are listed on each bid.</p>
+    <div class="filters">
+      <select id="client"></select>
+      <button class="btn" id="edit-client">Edit profile</button>
+      <button class="btn" id="new-client">New client</button>
+      <span class="t-sub" id="mcount"></span>
+    </div>
+    <div class="card" id="client-form" hidden></div>
+    <div class="card" style="padding:0;margin-top:12px"><div class="tablewrap"><table>
+      <thead><tr><th>Match</th><th>Bid</th><th>Closes</th><th>Why</th><th>Watch-outs</th></tr></thead>
+      <tbody id="mrows"></tbody></table></div></div>
+  </section>
+
+  <!-- LENS -->
+  <section id="v-lens" hidden>
+    <h2>Certification lens</h2>
+    <p class="sub">Where a certification changes who can win. Use this to show a client what getting certified would unlock, and to find primes that need SB/DVBE/DBE partners.</p>
+    <div class="grid kpis" id="lens-kpis"></div>
+    <div class="card" style="margin-bottom:16px"><h3>Client unlock report <span class="t-sub">· matching open bids (score ≥ 30) where a certification the client lacks matters</span></h3><div id="unlock"></div></div>
+    <div class="grid three" id="lens-lists"></div>
+  </section>
+
+  <!-- ASK -->
+  <section id="v-ask" hidden>
+    <h2>Ask the bid data</h2>
+    <p class="sub">Answers come from your local model, using search over every description and attachment. Event IDs in answers open the bid.</p>
+    <div class="row" style="margin-bottom:10px" id="presets"></div>
+    <div class="chat" id="chat"></div>
+    <form class="row" id="ask-form" style="margin-top:12px">
+      <input id="ask-q" style="flex:1 1 320px" placeholder="e.g. Which Caltrans bids need a C-10 license and close this month?">
+      <button class="btn primary">Ask</button>
+    </form>
+  </section>
+</main>
+
+<div class="tip" id="tip"></div>
+<div class="scrim" id="scrim" hidden></div>
+<aside id="drawer" hidden></aside>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const api = async (p, o) => { const r = await fetch(p, o); const j = await r.json(); if (!r.ok) throw new Error(j.error || r.status); return j; };
+const post = (p, body) => api(p, {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body || {})});
+
+const SIG = {
+  sb_set_aside: "SB set-aside", sb_dvbe_option: "SB/DVBE option", sb_preference: "SB 5% preference",
+  dvbe_participation: "DVBE participation", dvbe_incentive: "DVBE incentive", dbe_goal: "DBE goal",
+  federal_aid: "Federal funds", microbusiness: "Microbusiness", prevailing_wage: "Prevailing wage",
+  bid_bond: "Bid bond", performance_bond: "Perf./payment bond", mandatory_prebid: "Mandatory pre-bid",
+  optional_prebid: "Optional pre-bid", insurance: "Insurance", statewide_contract: "Statewide contract",
+  master_agreement: "Master agreement"
+};
+const KEY_SIG = new Set(["sb_set_aside", "sb_dvbe_option", "sb_preference", "dvbe_participation", "dbe_goal", "mandatory_prebid"]);
+const URG = {critical: "≤ 3 days", soon: "≤ 7 days", open: "Open", closed: "Closed", unknown: "No date"};
+
+let BIDS = [], STATS = null, CLIENTS = [], sortKey = "days_left", sortDir = 1;
+
+function when(r) {
+  if (r.days_left == null) return `<span class="urg unknown"><i></i>No date</span>`;
+  const d = r.days_left, txt = d < 0 ? "Closed" : d < 1 ? `${Math.max(1, Math.round(d * 24))} hrs` : `${Math.floor(d)} days`;
+  const date = r.end_date ? new Date(r.end_date).toLocaleDateString(undefined, {month: "short", day: "numeric"}) : "";
+  return `<span class="urg ${r.urgency}" title="${URG[r.urgency]}"><i></i>${txt}</span><div class="t-sub">${date}</div>`;
+}
+const chips = (sigs, max = 4) => `<div class="chips">${sigs.filter(s => KEY_SIG.has(s)).slice(0, max)
+  .map(s => `<span class="chip key">${SIG[s]}</span>`).join("")}${sigs.filter(s => !KEY_SIG.has(s)).length ? `<span class="chip">+${sigs.filter(s => !KEY_SIG.has(s)).length}</span>` : ""}</div>`;
+const meter = v => v == null ? `<span class="t-sub">—</span>` : `<span class="meter"><b><i style="width:${v}%"></i></b>${v}</span>`;
+
+function md(text) {
+  const lines = esc(text || "").split(/\n/); let out = "", inList = false;
+  for (let l of lines) {
+    l = l.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\[(\w{6,12})\]/g, (m, id) => `<a href="#" data-bid="${id}">${id}</a>`)
+         .replace(/\b(0000\d{6})\b(?![^<]*<\/a>)/g, `<a href="#" data-bid="$1">$1</a>`);
+    if (/^\s*[-*]\s+/.test(l)) { if (!inList) { out += "<ul>"; inList = true; } out += `<li>${l.replace(/^\s*[-*]\s+/, "")}</li>`; continue; }
+    if (inList) { out += "</ul>"; inList = false; }
+    if (/^#{1,4}\s/.test(l)) out += `<h3>${l.replace(/^#+\s/, "")}</h3>`;
+    else if (/^\d+\.\s/.test(l)) out += `<p>${l}</p>`;
+    else if (l.trim()) out += `<p>${l}</p>`;
+  }
+  return out + (inList ? "</ul>" : "");
+}
+document.addEventListener("click", e => { const a = e.target.closest("[data-bid]"); if (a) { e.preventDefault(); openBid(a.dataset.bid); } });
+
+/* ---------------- charts: single-series, thin bars, direct labels, hover tooltip ---------------- */
+const tip = $("#tip");
+function showTip(e, html) { tip.innerHTML = html; tip.style.display = "block"; tip.style.left = Math.min(e.clientX + 12, innerWidth - 290) + "px"; tip.style.top = (e.clientY + 12) + "px"; }
+function hideTip() { tip.style.display = "none"; }
+function bindTips(el) {
+  el.querySelectorAll("[data-tip]").forEach(n => { n.addEventListener("mousemove", e => showTip(e, n.dataset.tip)); n.addEventListener("mouseleave", hideTip);
+    if (n.dataset.click) n.addEventListener("click", () => applyFilter(n.dataset.click)); });
+}
+function hbars(el, data, {click} = {}) {
+  const W = el.clientWidth || 360, rowH = 26, labelW = Math.min(170, W * 0.45), H = data.length * rowH + 4;
+  const max = Math.max(1, ...data.map(d => d[1])), bw = W - labelW - 36;
+  el.innerHTML = `<svg width="100%" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="bar chart">
+    <line class="base" x1="${labelW}" x2="${labelW}" y1="0" y2="${H}"/>
+    ${data.map(([k, v], i) => { const y = i * rowH + 5, w = Math.max(2, v / max * bw);
+      return `<g data-tip="<b>${esc(k)}</b><br>${v} open bids" ${click ? `data-click="${esc(click)}:${esc(k)}" style="cursor:pointer"` : ""}>
+        <rect class="hit" x="0" y="${y - 3}" width="${W}" height="${rowH}" fill="transparent"/>
+        <text x="${labelW - 8}" y="${y + 12}" text-anchor="end">${esc(k.length > 26 ? k.slice(0, 25) + "…" : k)}</text>
+        <path class="bar" d="M${labelW},${y + 4} h${w - 4} a4,4 0 0 1 4,4 v2 a4,4 0 0 1 -4,4 h-${w - 4} z"/>
+        <text class="val" x="${labelW + w + 6}" y="${y + 13}">${v}</text></g>`; }).join("")}
+  </svg>`;
+  bindTips(el);
+}
+function columns(el, weeks) {
+  const W = el.clientWidth || 420, H = 170, pad = 22, bottom = 34, max = Math.max(1, ...weeks.map(w => w.count));
+  const step = (W - pad * 2) / weeks.length, bw = Math.min(34, step * 0.56), ch = H - bottom - 14;
+  const nice = Math.ceil(max / 5) * 5 || 5, ticks = [0, nice / 2, nice];
+  el.innerHTML = `<svg width="100%" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="deadlines per week">
+    ${ticks.map(t => { const y = 14 + ch - t / nice * ch; return `<line class="gridl" x1="${pad}" x2="${W - 4}" y1="${y}" y2="${y}"/><text x="${pad - 4}" y="${y + 4}" text-anchor="end">${t}</text>`; }).join("")}
+    <line class="base" x1="${pad}" x2="${W - 4}" y1="${14 + ch}" y2="${14 + ch}"/>
+    ${weeks.map((w, i) => { const h = Math.max(w.count ? 2 : 0, w.count / nice * ch), x = pad + i * step + (step - bw) / 2, y = 14 + ch - h;
+      const d = new Date(w.start + "T00:00"), lbl = i === 0 ? "This wk" : i === 8 ? "Later" : d.toLocaleDateString(undefined, {month: "short", day: "numeric"});
+      return `<g data-tip="<b>${i === 8 ? "8+ weeks out" : "Week of " + d.toLocaleDateString(undefined, {month: "short", day: "numeric"})}</b><br>${w.count} bids close">
+        <rect x="${pad + i * step}" y="0" width="${step}" height="${H}" fill="transparent"/>
+        ${h ? `<path class="bar" d="M${x},${y + h} v-${Math.max(0, h - 4)} a4,4 0 0 1 4,-4 h${bw - 8} a4,4 0 0 1 4,4 v${Math.max(0, h - 4)} z"/>` : ""}
+        <text class="val" x="${x + bw / 2}" y="${y - 4}" text-anchor="middle">${w.count || ""}</text>
+        <text x="${x + bw / 2}" y="${H - 14}" text-anchor="middle">${lbl}</text></g>`; }).join("")}
+  </svg>`;
+  bindTips(el);
+}
+
+/* ---------------- command center ---------------- */
+function kpi(v, l, h) { return `<div class="card kpi"><div class="v">${v}</div><div class="l">${l}</div>${h ? `<div class="h">${h}</div>` : ""}</div>`; }
+function renderCommand() {
+  const s = STATS;
+  $("#kpis").innerHTML = kpi(s.open, "Open bids", `${s.total} scraped`) + kpi(s.closing_7d, "Close within 7 days", `${s.closing_3d} within 3 days`)
+    + kpi(s.sb_access, "SB preference / set-aside", "certified SBs get an edge") + kpi(s.dvbe, "DVBE participation", "primes need DVBE partners")
+    + kpi(s.dbe, "Federal DBE goals", "federal-aid work, CUCP-certified") + kpi(s.mandatory_prebid, "Mandatory pre-bids", "miss it, can't bid")
+    + kpi(`${s.analyzed}`, "AI-analyzed bids", `${Math.round(s.analyzed / Math.max(1, s.total) * 100)}% coverage`);
+  columns($("#c-weeks"), s.by_week);
+  hbars($("#c-dept"), s.by_dept.slice(0, 10).map(([k, v]) => [k.replace(/^Department of |^Dept of (the )?/, ""), v, k]), {});
+  hbars($("#c-cat"), s.by_category, {click: "cat"});
+  hbars($("#c-sig"), Object.entries(s.signals).filter(([k]) => SIG[k]).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([k, v]) => [SIG[k], v]), {});
+  const must = BIDS.filter(r => r.urgency === "critical" || (r.urgency !== "closed" && r.signals.includes("mandatory_prebid") && r.days_left <= 14)).slice(0, 9);
+  $("#mustact").innerHTML = must.length ? `<table><tbody>${must.map(r => `<tr data-bid="${r.id}"><td><div class="t-name">${esc(r.name)}</div>
+    <div class="t-sub">${esc(r.dept)} · ${r.id}</div></td><td class="num">${when(r)}</td><td>${chips(r.signals, 2)}</td></tr>`).join("")}</tbody></table>`
+    : `<div class="empty">Nothing urgent.</div>`;
+}
+async function loadBrief() {
+  const b = await api("/api/brief");
+  $("#brief").innerHTML = b.body ? md(b.body) : `<div class="empty">No brief yet. Analyze some bids (python analyze.py --limit 25), then click Regenerate.</div>`;
+  $("#brief-meta").textContent = b.created ? `Generated ${new Date(b.created).toLocaleString()} · ${b.model}` : "";
+}
+$("#brief-btn").onclick = async e => {
+  const btn = e.target; btn.disabled = true; btn.innerHTML = `<span class="spin"></span> Writing…`;
+  try { await post("/api/brief"); await loadBrief(); } catch (err) { $("#brief").innerHTML = `<div class="empty">Model error: ${esc(err.message)}</div>`; }
+  btn.disabled = false; btn.textContent = "Regenerate";
+};
+
+/* ---------------- bids table ---------------- */
+function fillFilters() {
+  const opts = (sel, vals) => { const el = $(sel); vals.forEach(v => el.insertAdjacentHTML("beforeend", `<option>${esc(v)}</option>`)); };
+  opts("#f-dept", [...new Set(BIDS.map(b => b.dept))].sort());
+  opts("#f-cat", [...new Set(BIDS.map(b => b.category))].sort());
+  Object.entries(SIG).forEach(([k, l]) => $("#f-sig").insertAdjacentHTML("beforeend", `<option value="${k}">${l}</option>`));
+}
+function applyFilter(spec) { const [k, v] = spec.split(":"); if (k === "cat") { $("#f-cat").value = v; show("bids"); renderBids(); } }
+function renderBids() {
+  const q = $("#q").value.toLowerCase(), dept = $("#f-dept").value, cat = $("#f-cat").value, sig = $("#f-sig").value, urg = $("#f-urg").value, ai = $("#f-ai").value;
+  let rows = BIDS.filter(r => (!q || `${r.name} ${r.dept} ${r.summary} ${r.id}`.toLowerCase().includes(q)) && (!dept || r.dept === dept)
+    && (!cat || r.category === cat) && (!sig || r.signals.includes(sig))
+    && (urg === "all" || (urg === "live" ? r.urgency !== "closed" : r.urgency === "critical" || r.urgency === "soon"))
+    && (!ai || (ai === "yes") === r.analyzed));
+  rows = rows.sort((a, b) => { const x = a[sortKey], y = b[sortKey]; return (x == null) - (y == null) || (x > y ? 1 : x < y ? -1 : 0) * sortDir; });
+  $("#count").textContent = `${rows.length} bids`;
+  $("#rows").innerHTML = rows.map(r => `<tr data-bid="${r.id}">
+    <td><div class="t-name">${esc(r.name)}</div><div class="t-sub">${esc(r.dept)} · ${r.id}${r.method ? " · " + r.method : ""}${r.value ? " · " + esc(r.value) : ""}</div></td>
+    <td>${esc(r.category)}</td><td class="num">${when(r)}</td><td>${chips(r.signals)}</td>
+    <td class="num">${meter(r.fit)}</td><td class="num">${r.complexity ? r.complexity + " / 5" : "—"}</td></tr>`).join("")
+    || `<tr><td colspan="6" class="empty">No bids match these filters.</td></tr>`;
+}
+["#q", "#f-dept", "#f-cat", "#f-sig", "#f-urg", "#f-ai"].forEach(s => $(s).addEventListener("input", renderBids));
+document.querySelectorAll("th[data-sort]").forEach(th => th.onclick = () => {
+  sortDir = sortKey === th.dataset.sort ? -sortDir : (th.dataset.sort === "fit" ? -1 : 1); sortKey = th.dataset.sort; renderBids(); });
+
+/* ---------------- bid drawer ---------------- */
+const li = arr => arr && arr.length ? `<ul class="list">${arr.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : `<div class="t-sub">Not stated</div>`;
+function closeDrawer() { $("#drawer").hidden = true; $("#scrim").hidden = true; }
+$("#scrim").onclick = closeDrawer; addEventListener("keydown", e => e.key === "Escape" && closeDrawer());
+
+async function openBid(id) {
+  const d = $("#drawer"); d.hidden = false; $("#scrim").hidden = false;
+  d.innerHTML = `<div class="head"><span class="spin"></span> Loading ${esc(id)}…</div>`;
+  try { renderDrawer(await api(`/api/bid/${encodeURIComponent(id)}`)); } catch (e) { d.innerHTML = `<div class="head">Could not load: ${esc(e.message)}</div>`; }
+}
+function renderDrawer(b) {
+  const a = b.analysis || {}, f = b.facts || {}, r = b.row, sa = a.set_aside_and_preferences || {};
+  const has = Object.keys(a).length > 0;
+  const sigs = Object.entries(f.signals || {});
+  $("#drawer").innerHTML = `
+  <div class="head">
+    <div class="row" style="justify-content:space-between;align-items:flex-start;flex-wrap:nowrap">
+      <div style="min-width:0"><div class="t-sub">${esc(b.dept)} · ${b.id} · ${esc(b.format || "")}</div>
+        <h2 style="margin:4px 0">${esc(b.name)}</h2>
+        <div class="row">${when(r)}${r.method ? `<span class="chip">${r.method}</span>` : ""}<span class="chip">${esc(r.category)}</span></div></div>
+      <button class="btn" onclick="closeDrawer()" aria-label="Close">✕</button>
+    </div>
+  </div>
+  <div class="content">
+    <div class="card">
+      <div class="row" style="justify-content:space-between"><h3 style="margin:0">AI analysis</h3>
+        <button class="btn ${has ? "" : "primary"}" id="run-ai">${has ? "Re-analyze" : "Run AI analysis"}</button></div>
+      <div class="t-sub" style="margin:4px 0 10px">${b.analysis_meta ? (b.analysis_meta.error ? "Last run failed: " + esc(b.analysis_meta.error)
+        : `${esc(b.analysis_meta.model)} · ${b.analysis_meta.seconds}s · ${new Date(b.analysis_meta.created).toLocaleString()} · confidence ${esc(a.confidence)}`) : "Not analyzed yet. Runs on your local model."}</div>
+      ${has ? `<p style="margin-top:0">${esc(a.plain_summary)}</p>
+      <div class="facts">
+        <div><small>Buying</small>${esc(a.what_is_being_bought)}</div>
+        <div><small>Award basis</small>${esc(a.award_basis)}</div>
+        <div><small>Term</small>${esc(a.contract_term)}</div>
+        <div><small>Est. value</small>${esc(a.estimated_value)}</div>
+        <div><small>Where</small>${esc(a.place_of_performance)}</div>
+        <div><small>SB fit</small>${meter(a.small_business_fit?.score)}</div>
+        <div><small>Complexity</small>${a.complexity} / 5</div>
+        <div><small>NAICS</small>${esc((a.naics_codes || []).join(", ") || "—")}</div>
+      </div>
+      <p class="t-sub">${esc(a.small_business_fit?.rationale)}</p>` : ""}
+    </div>
+    ${has ? `
+    <div class="card"><h3>Who can win · preferences & certifications</h3>
+      <div class="chips" style="margin-bottom:8px">
+        ${sa.sb_set_aside ? `<span class="chip key">SB set-aside</span>` : ""}${sa.sb_preference_available ? `<span class="chip key">SB 5% preference</span>` : ""}
+        ${sa.dvbe_requirement_pct != null ? `<span class="chip key">DVBE ${sa.dvbe_requirement_pct}%</span>` : ""}${sa.dvbe_incentive_available ? `<span class="chip key">DVBE incentive</span>` : ""}
+        ${sa.dbe_goal_pct != null ? `<span class="chip key">DBE goal ${sa.dbe_goal_pct}%</span>` : ""}</div>
+      <p style="margin:0 0 8px">${esc(sa.notes)}</p>
+      <div class="facts"><div><small>Licenses</small>${esc((a.required_licenses || []).join(", ") || "Not stated")}</div>
+        <div><small>Certifications</small>${esc((a.required_certifications || []).join(", ") || "Not stated")}</div></div>
+      ${a.teaming_opportunity?.exists ? `<p style="margin-bottom:0"><b>Teaming:</b> ${esc(a.teaming_opportunity.description)}</p>` : ""}
+    </div>
+    <div class="card"><h3>Key dates</h3>${(a.key_dates || []).length ? `<table><tbody>${a.key_dates.map(k => `<tr><td>${esc(k.label)}${k.mandatory ? ` <span class="chip block">Mandatory</span>` : ""}</td><td class="num">${esc(k.date)}</td></tr>`).join("")}</tbody></table>` : `<div class="t-sub">Not stated</div>`}</div>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+      <div class="card"><h3>Minimum qualifications</h3>${li(a.minimum_qualifications)}</div>
+      <div class="card"><h3>Submission checklist</h3>${li(a.submission_checklist)}</div>
+      <div class="card"><h3>Risks & gotchas</h3>${li(a.risks_and_gotchas)}</div>
+      <div class="card"><h3>Bid / no-bid questions</h3>${li(a.bid_no_bid_questions)}</div>
+      <div class="card"><h3>Bonds & insurance</h3>${li(a.bonds_and_insurance)}</div>
+      <div class="card"><h3>Ideal bidder</h3><p style="margin:0">${esc(a.ideal_bidder)}</p>
+        ${(a.missing_information || []).length ? `<h3 style="margin-top:12px">Not in the documents</h3>${li(a.missing_information)}` : ""}</div>
+    </div>` : ""}
+    <div class="card"><h3>AI drafting tools</h3>
+      <div class="row" id="tools">
+        <button class="btn" data-q="Draft a short, persuasive email from STRONGERbuilt to a client explaining this opportunity, why it fits a California small business, the deadline, and what we need from them to bid.">Client outreach email</button>
+        <button class="btn" data-q="Write 5 clarifying questions a bidder should submit to the buyer before the question deadline, based on gaps or ambiguities in the documents.">Questions for the buyer</button>
+        <button class="btn" data-q="Build a compliance matrix: each requirement, where it appears in the documents, and what the bidder must provide. Use a markdown bullet list.">Compliance matrix</button>
+        <button class="btn" data-q="Which kinds of small, DVBE or DBE subcontractors should a prime team with on this bid, and for which scope?">Teaming partners</button>
+      </div>
+      <div class="chat" id="tool-out" style="margin-top:10px"></div>
+    </div>
+    <div class="card"><h3>Rule-detected signals <span class="t-sub">· with the text that triggered them</span></h3>
+      ${sigs.length ? sigs.map(([k, v]) => `<div><b>${esc(v.label)}</b> <span class="t-sub">— ${esc(v.source)}</span><div class="ev">${esc(v.evidence)}</div></div>`).join("") : `<div class="t-sub">None detected.</div>`}
+      ${(f.licenses || []).length ? `<div><b>License classes mentioned:</b> ${esc(f.licenses.join(", "))}</div>` : ""}
+      ${(f.counties || []).length ? `<div><b>Counties mentioned:</b> ${esc(f.counties.join(", "))}</div>` : ""}
+    </div>
+    <div class="card"><h3>Description</h3><p style="margin:0;white-space:pre-wrap">${esc(b.description || "Not provided")}</p></div>
+    <div class="card"><h3>Attachments (${b.attachments.length})</h3>
+      <table><tbody>${b.attachments.map(x => `<tr><td><a href="/files/${b.id}/${encodeURIComponent(x.file_name)}" target="_blank" rel="noopener">${esc(x.file_name)}</a>
+        ${x.error ? `<div class="t-sub">Unreadable: ${esc(x.error)}</div>` : ""}</td><td class="num t-sub">${x.pages ? x.pages + " pp" : ""}</td>
+        <td class="num t-sub">${x.size_bytes ? (x.size_bytes / 1048576).toFixed(1) + " MB" : ""}</td></tr>`).join("")}</tbody></table></div>
+    <div class="card"><h3>Buyer</h3>${esc(b.contact_name || "")} ${b.contact_email ? `· ${esc(b.contact_email)}` : ""} ${b.contact_phone ? `· ${esc(b.contact_phone)}` : ""}
+      <div class="t-sub">UNSPSC: ${b.unspsc.map(u => `${esc(u.code)} ${esc(u.description)}`).join("; ") || "none"}</div>
+      <div style="margin-top:6px"><a href="https://caleprocure.ca.gov/pages/Events-BS3/event-search.aspx" target="_blank" rel="noopener">Open Cal eProcure event search</a> and look up ${b.id}</div></div>
+  </div>`;
+  $("#run-ai").onclick = async e => {
+    const btn = e.target; btn.disabled = true; btn.innerHTML = `<span class="spin"></span> Analyzing (can take a few minutes)…`;
+    try { const res = await post(`/api/analyze/${b.id}`); renderDrawer(res.bid); refresh(); } catch (err) { btn.textContent = "Failed: " + err.message; btn.disabled = false; }
+  };
+  $("#tools").querySelectorAll("button").forEach(btn => btn.onclick = async () => {
+    const out = $("#tool-out"); out.innerHTML = `<div class="msg"><span class="spin"></span> ${esc(btn.textContent)}…</div>`;
+    try { const res = await post("/api/ask", {question: btn.dataset.q, event_id: b.id}); out.innerHTML = `<div class="msg md">${md(res.answer)}</div>`; }
+    catch (err) { out.innerHTML = `<div class="msg">Model error: ${esc(err.message)}</div>`; }
+  });
+}
+
+/* ---------------- client match ---------------- */
+async function loadClients() {
+  CLIENTS = await api("/api/clients");
+  $("#client").innerHTML = CLIENTS.map(c => `<option value="${esc(c.id)}">${esc(c.name)}</option>`).join("");
+}
+async function renderMatch() {
+  const id = $("#client").value; if (!id) { $("#mrows").innerHTML = `<tr><td colspan="5" class="empty">Add a client profile first.</td></tr>`; return; }
+  $("#mrows").innerHTML = `<tr><td colspan="5"><span class="spin"></span></td></tr>`;
+  const rows = await api(`/api/match/${encodeURIComponent(id)}`);
+  $("#mcount").textContent = `${rows.length} bids with a positive score`;
+  $("#mrows").innerHTML = rows.slice(0, 150).map(r => `<tr data-bid="${r.id}">
+    <td class="num">${meter(r.match.score)}</td>
+    <td><div class="t-name">${esc(r.name)}</div><div class="t-sub">${esc(r.dept)} · ${r.id}</div></td>
+    <td class="num">${when(r)}</td>
+    <td><div class="chips">${r.match.reasons.map(x => `<span class="chip">${esc(x)}</span>`).join("")}</div></td>
+    <td><div class="chips">${r.match.blockers.map(x => `<span class="chip block">${esc(x)}</span>`).join("")}
+      ${r.match.unlock.map(x => `<span class="chip unlock" title="Getting ${x} certified would help on this bid">+${x} would help</span>`).join("")}</div></td></tr>`).join("")
+    || `<tr><td colspan="5" class="empty">No matches. Add UNSPSC prefixes or keywords to the profile.</td></tr>`;
+}
+$("#client").onchange = renderMatch;
+function clientForm(c) {
+  const el = $("#client-form"); el.hidden = false;
+  const v = (k) => esc(Array.isArray(c[k]) ? c[k].join(", ") : c[k] || "");
+  el.innerHTML = `<h3>${c.id ? "Edit" : "New"} client profile</h3><div class="formgrid">
+    <label class="f">Name<input id="cf-name" value="${v("name")}"></label>
+    <label class="f">Certifications (SB, MB, SB-PW, DVBE, DBE, WBE, WOSB)<input id="cf-certifications" value="${v("certifications")}"></label>
+    <label class="f">UNSPSC prefixes (e.g. 72, 4619, 811116)<input id="cf-unspsc" value="${v("unspsc")}"></label>
+    <label class="f">Keywords<input id="cf-keywords" value="${v("keywords")}"></label>
+    <label class="f">CSLB license classes (A, B, C-10…)<input id="cf-licenses" value="${v("licenses")}"></label>
+    <label class="f">Counties served<input id="cf-counties" value="${v("counties")}"></label>
+    <label class="f" style="grid-template-columns:auto 1fr;align-items:center"><input type="checkbox" id="cf-statewide" ${c.statewide ? "checked" : ""}> Works statewide</label>
+    <label class="f">Notes<input id="cf-notes" value="${v("notes")}"></label></div>
+    <div class="row" style="margin-top:10px"><button class="btn primary" id="cf-save">Save</button><button class="btn" id="cf-cancel">Cancel</button>
+    ${c.id ? `<button class="btn" id="cf-del" style="margin-left:auto">Delete</button>` : ""}</div>`;
+  const list = k => $("#cf-" + k).value.split(",").map(s => s.trim()).filter(Boolean);
+  $("#cf-cancel").onclick = () => el.hidden = true;
+  $("#cf-save").onclick = async () => {
+    const n = {id: c.id || $("#cf-name").value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "client-" + Date.now(),
+      name: $("#cf-name").value, certifications: list("certifications").map(s => s.toUpperCase()), unspsc: list("unspsc"), keywords: list("keywords"),
+      licenses: list("licenses").map(s => s.toUpperCase()), counties: list("counties"), statewide: $("#cf-statewide").checked, notes: $("#cf-notes").value};
+    const all = CLIENTS.filter(x => x.id !== n.id).concat([n]);
+    await post("/api/clients", all); await loadClients(); $("#client").value = n.id; el.hidden = true; renderMatch(); renderLens();
+  };
+  if (c.id) $("#cf-del").onclick = async () => {
+    const btn = $("#cf-del"); if (btn.dataset.armed !== "1") { btn.dataset.armed = "1"; btn.textContent = "Click again to delete"; return; }
+    await post("/api/clients", CLIENTS.filter(x => x.id !== c.id)); await loadClients(); el.hidden = true; renderMatch(); renderLens(); };
+}
+$("#edit-client").onclick = () => clientForm(CLIENTS.find(c => c.id === $("#client").value) || {});
+$("#new-client").onclick = () => clientForm({});
+
+/* ---------------- certification lens ---------------- */
+const CERT_COPY = {
+  SB: "Certified Small Businesses get a 5% bid preference on state contracts and access to SB/DVBE-option buys.",
+  DVBE: "Most state contracts carry a 3% DVBE participation goal, so primes actively look for certified DVBE partners. Many add a DVBE incentive.",
+  DBE: "Federally funded work (Caltrans and others) sets DBE contract goals. Certification is through CUCP; since USDOT's Oct 2025 rule, eligibility needs an individual showing of disadvantage. Check the current rules before advising a client.",
+  "SB-PW": "Public works with prevailing wage. SB-PW certification is the small-business path for construction primes and subs."
+};
+async function renderLens() {
+  const L = await api("/api/lens");
+  $("#lens-kpis").innerHTML = Object.entries(L).map(([k, g]) => kpi(g.count, `${k} matters`, esc(g.label))).join("");
+  $("#lens-lists").innerHTML = Object.entries(L).map(([k, g]) => `<div class="card"><h3>${k} · ${g.count} open bids</h3>
+    <p class="t-sub" style="margin-top:-4px">${CERT_COPY[k]}</p>
+    <table><tbody>${g.bids.slice(0, 12).map(r => `<tr data-bid="${r.id}"><td><div class="t-name">${esc(r.name)}</div><div class="t-sub">${esc(r.dept)}</div></td><td class="num">${when(r)}</td></tr>`).join("")}</tbody></table></div>`).join("");
+  const rows = await Promise.all(CLIENTS.map(async c => ({c, m: await api(`/api/match/${encodeURIComponent(c.id)}`)})));
+  $("#unlock").innerHTML = rows.length ? `<table><thead><tr><th>Client</th><th>Holds</th><th>Matching bids</th><th>Certification that would help</th></tr></thead><tbody>
+    ${rows.map(({c, m}) => { const good = m.filter(r => r.match.score >= 30), u = {};
+      good.forEach(r => r.match.unlock.forEach(x => u[x] = (u[x] || 0) + 1));
+      return `<tr style="cursor:default"><td class="t-name">${esc(c.name)}</td><td>${esc((c.certifications || []).join(", ") || "none")}</td><td class="num">${good.length}</td>
+      <td><div class="chips">${Object.entries(u).sort((a, b) => b[1] - a[1]).map(([k, n]) => `<span class="chip unlock">${k}: ${n} bids</span>`).join("") || `<span class="t-sub">Already positioned</span>`}</div></td></tr>`; }).join("")}
+    </tbody></table>` : `<div class="empty">No clients yet.</div>`;
+}
+
+/* ---------------- ask ---------------- */
+const PRESETS = ["Which open bids are the best fit for a small fire-protection contractor?", "What closes in the next 7 days and needs a mandatory pre-bid?",
+  "Which bids have DVBE participation requirements where a small sub could team with a prime?", "Summarize the janitorial and landscaping opportunities."];
+$("#presets").innerHTML = PRESETS.map(p => `<button class="btn" type="button">${esc(p)}</button>`).join("");
+$("#presets").querySelectorAll("button").forEach(b => b.onclick = () => { $("#ask-q").value = b.textContent; $("#ask-form").requestSubmit(); });
+$("#ask-form").onsubmit = async e => {
+  e.preventDefault(); const q = $("#ask-q").value.trim(); if (!q) return; $("#ask-q").value = "";
+  const chat = $("#chat"); chat.insertAdjacentHTML("beforeend", `<div class="msg me">${esc(q)}</div><div class="msg" id="pending"><span class="spin"></span> Thinking…</div>`);
+  try { const r = await post("/api/ask", {question: q}); $("#pending").outerHTML = `<div class="msg md">${md(r.answer)}${r.sources.length ? `<div class="t-sub">Searched: ${[...new Set(r.sources.map(s => s.event_id))].map(id => `<a href="#" data-bid="${id}">${id}</a>`).join(", ")}</div>` : ""}</div>`; }
+  catch (err) { $("#pending").outerHTML = `<div class="msg">Model error: ${esc(err.message)}</div>`; }
+};
+
+/* ---------------- shell ---------------- */
+function show(v) {
+  document.querySelectorAll("#nav button").forEach(b => b.setAttribute("aria-selected", b.dataset.view === v));
+  document.querySelectorAll("main > section").forEach(s => s.hidden = s.id !== "v-" + v);
+  if (v === "command") renderCommand(); if (v === "match") renderMatch(); if (v === "lens") renderLens(); if (v === "bids") renderBids();
+}
+document.querySelectorAll("#nav button").forEach(b => b.onclick = () => show(b.dataset.view));
+async function refresh() { [BIDS, STATS] = await Promise.all([api("/api/bids"), api("/api/stats")]); }
+async function status() {
+  try { const s = await api("/api/status");
+    $("#model").innerHTML = `<span class="dot" style="background:${s.ok ? "var(--good)" : "var(--critical)"}"></span>${s.ok ? "AI ready" : "AI offline"} · ${esc(s.model)}`;
+    $("#model").title = s.ok ? s.url : (s.error || `model ${s.model} not pulled at ${s.url}`);
+  } catch { }
+}
+(async () => {
+  await refresh(); fillFilters(); await loadClients(); renderCommand(); loadBrief(); status();
+  addEventListener("resize", () => { if (!$("#v-command").hidden) renderCommand(); });
+})();
+</script>
+</body>
+</html>

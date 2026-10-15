@@ -1,0 +1,14 @@
+# Large binary attachments
+attachments/
+
+# Databases and runtime data
+*.db
+*.db-wal
+*.db-shm
+bidintel/data/
+
+# Python cache & logs
+__pycache__/
+*.py[cod]
+*$py.class
+*.log

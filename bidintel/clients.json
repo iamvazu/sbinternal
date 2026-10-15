@@ -1,0 +1,46 @@
+[
+  {
+    "id": "sample-fire",
+    "name": "SAMPLE - Valley Fire & Safety",
+    "certifications": ["SB", "DVBE"],
+    "unspsc": ["4619", "4617", "4614"],
+    "keywords": ["fire suppression", "fire alarm", "sprinkler", "extinguisher", "fire protection"],
+    "licenses": ["C-16", "C-10"],
+    "counties": ["Sacramento", "Placer", "Yolo", "El Dorado", "San Joaquin"],
+    "statewide": false,
+    "notes": "Example profile - replace with a real client."
+  },
+  {
+    "id": "sample-paving",
+    "name": "SAMPLE - Golden State Paving (woman-owned)",
+    "certifications": ["SB-PW", "DBE", "WBE"],
+    "unspsc": ["7214", "7215", "3010"],
+    "keywords": ["paving", "asphalt", "striping", "guardrail", "grading", "pavement", "concrete"],
+    "licenses": ["A", "C-12", "C-32"],
+    "counties": ["Los Angeles", "Orange", "Riverside", "San Bernardino", "Ventura"],
+    "statewide": false,
+    "notes": "Example profile - replace with a real client."
+  },
+  {
+    "id": "sample-it",
+    "name": "SAMPLE - Bay IT Solutions",
+    "certifications": ["SB", "MB"],
+    "unspsc": ["43", "8111", "8116"],
+    "keywords": ["software", "cloud", "cybersecurity", "network", "help desk", "data", "IT"],
+    "licenses": [],
+    "counties": [],
+    "statewide": true,
+    "notes": "Example profile - replace with a real client."
+  },
+  {
+    "id": "sample-janitorial",
+    "name": "SAMPLE - Delta Facility Services (not yet certified)",
+    "certifications": [],
+    "unspsc": ["7611", "7210", "7011"],
+    "keywords": ["janitorial", "custodial", "landscaping", "maintenance", "cleaning", "pest"],
+    "licenses": ["C-27"],
+    "counties": ["Sacramento", "San Joaquin", "Stanislaus", "Fresno"],
+    "statewide": false,
+    "notes": "Example of an uncertified client - the Certification lens shows what SB/DVBE status would unlock."
+  }
+]
