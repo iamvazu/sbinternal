@@ -9346,17 +9346,49 @@
     "Details": {
       "Event ID": "0000040373",
       "Dept": "Department of General Services",
-      "Department Code": "7760",
-      "Format/Type": "Sell / RFx",
-      "Event End Date": "10/21/2026  2:00PM PDT",
-      "Status": "Posted"
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "2",
+      "Published Date": "09/15/2026 9:41AM PDT",
+      "Event End Date": "10/21/2026 2:00PM PDT"
     },
-    "Detail URL": "https://caleprocure.ca.gov/event/7760/0000040373",
-    "Attachments": [],
     "Contact Information": {
       "Contact Name": "Megan Sanchez",
       "Email": "megan.sanchez@dgs.ca.gov"
-    }
+    },
+    "Description": "STATE OF CALIFORNIA DEPARTMENT OF GENERAL SERVICES EXECUTIVE OFFICE ¿ SUSTAINABILITY ADVERTISEMENT FOR BIDS DOT D5-ELECTRIC VEHICLE SUPPLY EQUIPMENT-SANTA BARBARA MAINTENANCE STATION CALIFORNIA DEPARTMENT OF TRANSPORTATION (CALTRANS) SANTA BARBARA COUNTY, CA CONTRACT NUMBER: 26-334140, PROJECT NUMBER: 000000000013681 This project is being bid in accordance with Government Code 14838.7 and is open only to Small Business and Micro Business contractors certified through the California Department of General Services, Office of Small Business and DVBE Services. Bids shall be submitted electronically to insert Megan.Sanchez@dgs.ca.gov email address before 2:00 P.M. Project comprises labor, material and services necessary for: Major components of Project Work consist of install and electrically connect EVSE infrastructure to include wiring devices, and all required associated items for a complete and operational system including required testing. Provide the required saw cutting, trenching, backfilling and finishing of the affected lot surface and restore to original condition. Bollards may be required on this contract even if not shown explicitly on the construction drawings. Provide and install all items shown on the drawings including the ADA accessible ports and as specified unless otherwise noted as not in contract or existing to remain. License required to bid the project: C-10 Certificate of Reported Compliance (CRC) ¿ Fleet Vehicles: As a condition of Contract award, prior to Contract execution, Contractor shall submit copies of the valid CRCs for any fleet retained by the Contractor or any listed Subcontractor, for which any vehicles subject to the California Air Resources Board In-Use Off-Road Diesel Fueled Fleet Regulations, Section 2449(i), Title 12, California Code of Regulations, are used in the completion of the work included in the Contract. More information on the In-Use Off-Road Diesel-Fueled Fleets Regulation can be found at the following link: https://ww2.arb.ca.gov/our-work/programs/use-road-diesel-fueled-fleets-regulation Health and Safety Provisions: Contractor and all subcontractors shall abide by all health and safety mandates issued by federal, state, and local governments and/or public health officers as well as those issued by DGS, and worksite specific mandates. If multiple mandates exist, the Contractor and subcontractors shall abide by the most restrictive mandate. The term ¿employee¿, ¿worker¿, ¿state worker¿ or ¿state employee¿ in health and safety mandates includes contractor and subcontractor personnel. Costs associated with adhering to health and safety mandates are the responsibility of the Contractor. Contractor is responsible for the tracking and compliance of health and safety mandates and may be audited upon request. Successful bidder shall furnish payment and performance bonds, each in the amount of 100 percent of the Contract price. Virtual Pre-bid Site Inspection: Bids will only be accepted from those Contractors having attended the MANDATORY VIRTUAL pre-bid site inspection tour on October 7, 2026, at 9:00 A.M., at which time representatives of the State and prospective bidders shall meet virtually in the Microsoft Teams platform, at which time a site plan and video presentation will be presented to bidders. Attendance for the entire inspection is required in order for bidders to be eligible to submit a bid. Virtual Pre-bid Site Inspection Link: https://teams.microsoft.com/meet/272183747898899?p=u06ydV2BaKvxCgDwpU Bid forms, plans, specifications, and addenda will be available for download at http://www.caleprocure.ca.gov/. Click on ¿Start Search.¿ In the Event name field, enter the project number and click search. While viewing the Event Details, click on ¿View Event Package¿ to view bid forms. It is recommended that all vendors register as a bidder through the Cal eProcure website at https://www.caleprocure.ca.gov/pages/bidder-vendor.aspx. This will allow for automatic notifications if there is any modification to the Event such as the posting of an addendum or additional documentation. Drawings and Project Manual may also be viewed through Builders' Exchanges. States estimated cost: $52,000.00. The term of this project is 60 calendar days. The States Project Director is Ann Watson at (279) 782-3872.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "72141126",
+        "UNSPSC Classification Description": "Heavy construction services - Infrastructure building & paving services - Underground utilities construction service"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "Bid_Package.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_4/viewredirect/%7bV2%7d6_JvwZBy.ItrwqGPN04xL1vTX2nI3N2NvNP9_oPkUZFc_JvLeY_ELjqMFDetV0EWarrxUFqZG9PqI8N5NE3Df1B5kOT_DJzkv1ncBM9O.L_FMPYj2DHZmfZx4rDtA436YApgzB8rbtTBkv2baQpYRxI48q7k2H4a2.f1enivYZoz5qMDKBkVgC83J9E-/Bid_Package.pdf",
+        "local_path": "attachments\\0000040373\\Bid_Package.pdf",
+        "size_bytes": 1911996
+      },
+      {
+        "file_name": "Plans.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_4/viewredirect/%7bV2%7d6PgrHfZviF8qCfBmkidbbnFyMZyA.kyfKGI9ZIgSCaKiJS2AMo3qDHTgFYnzkBDalz._AeKv8Ypii62kQi8lIbHZi3Za.nhcSHRPdqafBteClS8lw7.0POgJt._eSyy9GC0e2bcOGq7TfLcP_9jGrMyxFiI39LtdwDCsCyFL4.A-/Plans.pdf",
+        "local_path": "attachments\\0000040373\\Plans.pdf",
+        "size_bytes": 5795475
+      },
+      {
+        "file_name": "Project_Manual_26-334140.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_4/viewredirect/%7bV2%7dhdBvouSkS9fBFQ5n1592R3zWAK_ZhZiBANDryZjiXWUhzExBaFs5F9Ist9LkJnoouvwVhq7Yu6ZfKHlwn0EAVZktHIPViNL0qTRWyvTJO1iX6F5VceJjEfo_Ee2yNwGNKhD3J3FsdkiFIUk5lJxaet5KrywLin4iN5QaO3RFNmw8VsGsO4ZoVk0KNQHyf95fih.bSpcBFJLjrEWx3WKC6CrrvGqLxw--/Project_Manual_26-334140.pdf",
+        "local_path": "attachments\\0000040373\\Project_Manual_26-334140.pdf",
+        "size_bytes": 65604285
+      },
+      {
+        "file_name": "DOT_Santa_Barbara_10-7-26_Virutal_Bid_Walk_Sign_in_Sheet.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_4/viewredirect/%7bV2%7dBJyxAJHxqhvgPqe7FKeFSkpW99uZe.GDbVIu0Asr1p5_6wEj5Bl3ADq8N_fX_WBC1X3FYkSgtgM50SBNDbTMeumADUU8uJ5ZPQfp9ZiZFuHERFfozLp9Xo.eENKGiFt8rVAuZgIlwzg2V2SWB5YEENIikP4zmMXJ2DK.2bVnv.JlB6T6WJG5czZLx4barqWOLLYD.P16smsbGxwfnPXoa90jvJLqF36H9C76CSSMHCjGwpiKztHSkDJsdjBsLcvTKiXTVJob47UHwC6i2NMST8tF9BiW.oCDqFVK1fP.ridUt.tIBpE-/DOT_Santa_Barbara_10-7-26_Virutal_Bid_Walk_Sign_in_Sheet.pdf",
+        "local_path": "attachments\\0000040373\\DOT_Santa_Barbara_10-7-26_Virutal_Bid_Walk_Sign_in_Sheet.pdf",
+        "size_bytes": 229498
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/7760/0000040373"
   },
   {
     "Event Name": "DOT D7 - EVSE - VENTURA FIELD OFFICE - PN",
@@ -9759,17 +9791,73 @@
     "Details": {
       "Event ID": "07A6471",
       "Dept": "Department of Transportation",
-      "Department Code": "2660",
-      "Format/Type": "Sell / RFx",
-      "Event End Date": "10/22/2026  2:00PM PDT",
-      "Status": "Posted"
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "2",
+      "Published Date": "09/23/2026 7:49AM PDT",
+      "Event End Date": "10/22/2026 2:00PM PDT"
     },
-    "Detail URL": "https://caleprocure.ca.gov/event/2660/07A6471",
-    "Attachments": [],
     "Contact Information": {
       "Contact Name": "Aimee Rosales",
       "Email": "aimee.rosales@dot.ca.gov"
-    }
+    },
+    "Description": "Contractor shall furnish all labor, equipment, tools, materials, parts, supplies, fees, permits, travel, and incidentals necessary to provide boiler inspection, maintenance, repair, testing, and reporting services to Caltrans. The documents and files attached to this solicitation do not have any updates for digital accessibility at this time. Updates will be applied as soon as they are available. For an accessible version of solicitation documents published on this page, please submit a request at http://bit.ly/dpac-ada or call (916) 654-2852.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "40102000",
+        "UNSPSC Classification Description": "Heating ventilation - Boilers"
+      },
+      {
+        "UNSPSC Classification": "40151500",
+        "UNSPSC Classification Description": "Industrial pumps & compressors - Pumps"
+      },
+      {
+        "UNSPSC Classification": "72151000",
+        "UNSPSC Classification Description": "Special trade construction & maintenance services - Boiler & furnace construction & maintenance"
+      },
+      {
+        "UNSPSC Classification": "40101834",
+        "UNSPSC Classification Description": "Heating ventilation - Heating equipment parts & accessories - Burners"
+      },
+      {
+        "UNSPSC Classification": "40101851",
+        "UNSPSC Classification Description": "Heating ventilation - Heating equipment parts & accessories - Boiler parts and accessories"
+      },
+      {
+        "UNSPSC Classification": "40102002",
+        "UNSPSC Classification Description": "Heating ventilation - Boilers - Water tube boiler"
+      },
+      {
+        "UNSPSC Classification": "40151504",
+        "UNSPSC Classification Description": "Industrial pumps & compressors - Pumps - Circulating pumps"
+      },
+      {
+        "UNSPSC Classification": "41113049",
+        "UNSPSC Classification Description": "Lab monitoring & testing - Chemical eval instruments & supplies - Combustion analyzer"
+      },
+      {
+        "UNSPSC Classification": "72101507",
+        "UNSPSC Classification Description": "Building facility maintenance & repair services - Building maintenance service"
+      },
+      {
+        "UNSPSC Classification": "72154109",
+        "UNSPSC Classification Description": "Special trade construction & maint srvcs - Distribution conditioning system equip maint & repair - Centrifugal pump maintenance or repair"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "IFPQ_Solicitation_Final_07A6471.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_5/viewredirect/%7bV2%7duaypXBh5h82wOs6gypHUXO6FJsUeUji5ff8KQ0A.4QkpAuHD7DfB0nDIq2GGcibkxk0CFfgsucv0vu2TdIP1h3DLuZpi2C7tsIx8ybyTMX1JY3zNLsr5vweD6oX6YQDVpUcP2ZVgI1OqxRR9ZdqjrqkKBsSbVloxLS1qqjw51A7L0vp24.t8J3p1lAa9w8cYlhGecrCUtfxFcs29AugpAzvgmVr1KXMDtnDqOmgdw6ZNGxlQ/IFPQ_Solicitation_Final_07A6471.pdf",
+        "local_path": "attachments\\07A6471\\IFPQ_Solicitation_Final_07A6471.pdf",
+        "size_bytes": 13069887
+      },
+      {
+        "file_name": "Addendum_1_07A6471.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_5/viewredirect/%7bV2%7dqBNK2w5Q0j0eZvJSNeyG5Zj3jfggVKw3yq.9EEv_1BmyaKVKlRivQ.YwDfI.tC4hpu03WNdc3KWorMXLw_xz39insPPSFQGodbIduUN0QQ0y0_a_Hsz0rMzjoHFRFnLbQKdJPLDLGpI525kt14gSE7EzDjJOhAuO9zDfbgQSQ6N84QUf1J4oSnbbrbnhpbyKKmHXS.jJVmLUzA--/Addendum_1_07A6471.pdf",
+        "local_path": "attachments\\07A6471\\Addendum_1_07A6471.pdf",
+        "size_bytes": 298407
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/2660/07A6471"
   },
   {
     "Event Name": "C26635008 - Septic Pumping Services for Humboldt Redwoods and Grizzly Creek State Parks",
@@ -10126,13 +10214,32 @@
     "Details": {
       "Event ID": "0000040552",
       "Dept": "UCLA",
-      "Department Code": "6530",
-      "Format/Type": "RFI / RFx",
-      "Event End Date": "10/26/2026 10:00AM PDT",
-      "Status": "Posted"
+      "Format/Type": "Request For Information / RFx",
+      "Event Version": "1",
+      "Published Date": "10/05/2026 11:45AM PDT",
+      "Event End Date": "10/26/2026 10:00AM PDT"
     },
-    "Detail URL": "https://caleprocure.ca.gov/event/6530/0000040552",
-    "Attachments": []
+    "Contact Information": {
+      "Contact Name": "Karin Tsai",
+      "Phone": "310/267-1242"
+    },
+    "Description": "ADVERTISEMENT FOR EXECUTIVE ARCHITECT UCLA requests a written response to this Request for Qualifications (RFQ) to select an Executive Architect for the proposed 143 Triunfo Canyon Road Tenant Improvements (Project #907111.01), located at 143 Triunfo Canyon Rd, Westlake Village, CA 91361. The project will include an adaptive-reuse tenant improvement of an existing, recently acquired medical office building to accommodate the expansion of services and clinics, which may include, but are not limited to, Radiation Oncology, Nuclear Medicine, and other clinics and services. The existing 2-story building was built in 1987, renovated in 2005, and consists of approximately 21,000 gross square feet (GSF) with associated surface lot parking. The overall project is anticipated to include improvements to both the first and second floors, with the second floor intended to accommodate future clinical space. At this time, the University is proceeding with the first-floor scope as the initial phase of the project, with the second-floor clinical improvements to be developed and implemented at a later date. The Executive Architect will be responsible for supporting the overall design and coordination of both floors, including the future second-floor clinical space. The new architectural program will be developed during the pre-design phase of this project. Responses to this RFQ should demonstrate familiarity with and experience in medical outpatient facilities and adaptive reuse building projects. The personnel proposed for this project must demonstrate expertise in these areas. The architectural program shall provide space for clinical and support uses and may include, but not be limited to: ¿ Radiation therapy systems, including Linear Accelerator (Linac) ¿ Advanced imaging systems and shielding, including but not limited to Computed Tomography (CT), Positron Emission Tomography-Computed Tomography (PET/CT), and Magnetic Resonance Imaging (MRI), ¿ Patient areas include exam and procedure rooms, receptions, consultation areas, treatment, and recovery spaces. ¿ Clinical support areas, and staff and administrative areas. The construction cost for the project has not yet been determined and depends on phasing. The overall project cost for both first and second floors is anticipated to be $40 to $45 million, depending on the agreed-upon scope of work. The selection committee will base its review of the Executive Architects' submitted proposals and selection on the identified Selection Criteria (Attachment A). The final selection and appointment of the Executive Architect is contingent upon project approval by the UC Board of Regents or their delegated authority. The complete RFQ packet will be available at http://www.uclaplanroom.com on Monday, October 5, 2026. Responses to the RFQ are due by or before 10:00 a.m. on Monday, October 26, 2026. To download the packet, you must create a login and password. Registration instructions are available at https://www.uclaplanroom.com/help/account.register. Once in the UCLA Planroom, click the \"RFQ\" tab and search for the project to download. Within the project \"RFQ Document\" tab, download (1) RFQ, (2) the Planroom RFQ-Upload Instructions, and (3) Appendix C and D Instructions to ensure your documents are filled out properly and are easily accessible to us within the Planroom. Failure to comply could result in your submission being overlooked. Every effort will be made to ensure that all persons have equal access to contracts and other business opportunities with the University within the limits imposed by law or University policy. Each Candidate Firm may be required to show evidence of its Equal Employment Opportunity policy. Important dates | Advertisement period:10/5-10/26 | Questions due date: 10 a.m. 10/12 | Submission date:10/26",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "80111617",
+        "UNSPSC Classification Description": "HR Services - Temporary personnel srvcs - Temporary architectural services"
+      },
+      {
+        "UNSPSC Classification": "81101508",
+        "UNSPSC Classification Description": "Professional engineering services - Civil engineering - Architectural engineering"
+      },
+      {
+        "UNSPSC Classification": "94101605",
+        "UNSPSC Classification Description": "Work related organizations & clubs srvcs - Professional associations - Architect associations"
+      }
+    ],
+    "Attachments": [],
+    "Detail URL": "https://caleprocure.ca.gov/event/6530/0000040552"
   },
   {
     "Event Name": "SB/MB Option - IFPQ - Painting and Repair Services in Riverside and San Bernardino Counties",
@@ -10283,17 +10390,80 @@
     "Details": {
       "Event ID": "3CA07908",
       "Dept": "CAL FIRE",
-      "Department Code": "3540",
-      "Format/Type": "Sell / RFx",
-      "Event End Date": "10/26/2026  5:00PM PDT",
-      "Status": "Posted"
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "5",
+      "Published Date": "09/10/2026 1:21PM PDT",
+      "Event End Date": "10/26/2026 5:00PM PDT"
     },
-    "Detail URL": "https://caleprocure.ca.gov/event/3540/3CA07908",
-    "Attachments": [],
     "Contact Information": {
       "Contact Name": "Gilbert Delpasen",
+      "Phone": "916/653-7311",
       "Email": "gilbert.delpasen@fire.ca.gov"
-    }
+    },
+    "Description": "Contractor agrees to provide to the California Department of Forestry and Fire Protection (CAL FIRE) Vehicle Wash Equipment Services, as described herein: Contractor shall provide all materials, labor, equipment, tools, permits, taxes, transportation, and fees to provide quarterly service to the vehicle wash water recycling, hot water pressure washer, vehicle vacuum, and reverse osmosis systems at the CAL FIRE Southern Operation Facility. Services are necessary to ensure that the vehicle wash equipment services protect all of CAL FIRE¿s vehicle¿s conditions and values, improves safety and visibility, and reflects personal care and professionalism by having clean vehicles.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "72153300",
+        "UNSPSC Classification Description": "Special trade construction & maint srvcs - Service station equipment installation & maintenance"
+      },
+      {
+        "UNSPSC Classification": "25191740",
+        "UNSPSC Classification Description": "Vehicle servicing equipment - Vehicle washing machine"
+      },
+      {
+        "UNSPSC Classification": "73152108",
+        "UNSPSC Classification Description": "Industrial Manufacturing support services - Manufacturing equip maint & repair srvcs - Electrical equipment maintenance and repair srvcs"
+      },
+      {
+        "UNSPSC Classification": "76101501",
+        "UNSPSC Classification Description": "Industrial Cleaning - Decontamination services - Disinfection - Washroom sanitation"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "3CA07908_STD_213_-_For_Posting.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_7/viewredirect/%7bV2%7d_7OQNJjU5u94UBJZONxCVRNz3rmFW4T4WaGw1E0jPFrns7qhy8iELoTSUdTxCsYQ8WP_F4y3xpoDdzJyJcCfn37rz5JoP0P9JFRneFdfJcTXN9BYnMdveHgeI4.t97s62.B9CT2gR4EyUjNO_m.xlyIVQPA2Ltyn.JIjx.aJ3ict48BhdM5j.wldVAMULj.PISIGLqrEEzMU0T52eCojpdw7.wyYsS8WLWSgKQfTNwgnxw--/3CA07908_STD_213_-_For_Posting.pdf",
+        "local_path": "attachments\\3CA07908\\3CA07908_STD_213_-_For_Posting.pdf",
+        "size_bytes": 1381553
+      },
+      {
+        "file_name": "3CA07908_IFB_-_Master_-_PDF.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_7/viewredirect/%7bV2%7dpYJvCzT1N4PdXbrnSBnEdecxBCEqWDMjZ2a4.e0QTaduDRCsAbZ2nhoh7AJXD9GD9EAf.GdG.nC_aELE9JfKT8LYZDavqroW2d_J5VGpNZBcVjZMPPDrT1HSv4swaSIA09xWLCSHtt3gsrOeWwo3xtBwsvMmtHY_LBIqAe7ZBoYCxQqnt47nG0p33RfOBG.9l7PFQjppbQgEdwvdamONCGqKmOgCKKAyNfkViw--/3CA07908_IFB_-_Master_-_PDF.pdf",
+        "local_path": "attachments\\3CA07908\\3CA07908_IFB_-_Master_-_PDF.pdf",
+        "size_bytes": 526914
+      },
+      {
+        "file_name": "3CA07908_-_Mandatory_Pre-Bid_Walk_Thru_Sign_In_Sheet.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_7/viewredirect/%7bV2%7dYMDk1OUzDrApLk7KlKUxW9xUDtlD.24n8yRT3s1vZdHxbo0C8SUoVef1Yu6t8LG.Wd5Kul91SyIgXfjMee_MFnmktyLBKUZSczrtbbGsiIp1YXK2BENEryBXLrpuIk.bKbv8O4bLZlzWff7i7f6TCTgbygGczh0iahHSiRHkuLpIXFyjRQKcpZfcvRC4UJ6QoC0PjABLXkbP6v0AwIdw6M_J4ZqLOCLtOhHXHdEZEhh7yeqBC19PN_veDc2v5Qu570UC5QfXN8Y8d0I1URnYYiAnwB6mPT8AfbvZKKXr/3CA07908_-_Mandatory_Pre-Bid_Walk_Thru_Sign_In_Sheet.pdf",
+        "local_path": "attachments\\3CA07908\\3CA07908_-_Mandatory_Pre-Bid_Walk_Thru_Sign_In_Sheet.pdf",
+        "size_bytes": 52234
+      },
+      {
+        "file_name": "Vehicle_Wash_Equipment_Specifications.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_7/viewredirect/%7bV2%7dcU23Jo445xt9tbZiY.6FsK2qF_CGwE1leiuK7GHXGEnKfqperB1Jd6rA17EPP.T5u._Jl4RvDDxMICsfEyKJBbPzunA15v.tUDKenxT3Qsjx9JnXOEwUSkihGHg3sXypfsJlC7w_iptVRO5DZT6hL3.sZTordC_bt1ZQMNJ6Q9HkoJMJZvvQWDtO2oWWACPr6rVJh2ooQ.Jm1WygwYcs_5hg9HqbOQbBS9Vyx3KXdrju3zehbJa0TpeVLSJqSt35/Vehicle_Wash_Equipment_Specifications.pdf",
+        "local_path": "attachments\\3CA07908\\Vehicle_Wash_Equipment_Specifications.pdf",
+        "size_bytes": 8412731
+      },
+      {
+        "file_name": "3CA07908_IFB_Addendum_1.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_7/viewredirect/%7bV2%7doBw75XopuHHKBmCWRa6jWT0zm6HpeDu1UtetOLNHfOBoRKCpoQymnIe8rCt_nF1ojE7GuIEiLuXq5Hh8FgF1mcxqSTdTw45JAaSt8keVt0UtIfMw5B6EaJCKPcYfUl15l1WkSI1f9NaFbkrzHPR_SFveV3jaK5Ns7vJHcQhLUE4.1D6UQnriqWZAzLKAnSKwGNQXMABzsaKCWqs3L.3C3m_716E-/3CA07908_IFB_Addendum_1.pdf",
+        "local_path": "attachments\\3CA07908\\3CA07908_IFB_Addendum_1.pdf",
+        "size_bytes": 201000
+      },
+      {
+        "file_name": "3CA07908_-_Mandatory_Pre-Bid_Sign_In_Sheet.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_7/viewredirect/%7bV2%7dd_C6EMq6it192.ye2uU_QpSASBqN8Ve0iHzdVyV6Ud1Fq9NYFUZ5OKs1pTUY7ZhQePkoXv835zGX94TJXWFdQytoJ3uN96z92zbuv0XeXTEmzxro1aP7KaR_QzPo8NimTIhMWowelh9rCqDZNZ0HEs6BKPYP_njW0XsoXi85gWd.jj4_IaOoEQGr.JM5jySM6GMbwuHUM0qDeis3ZVLdOiHNdTrIkx_FVkAroRDdWx_yUViPxMxeHdS4D67qf.cGoK036EkmT68Ryg--/3CA07908_-_Mandatory_Pre-Bid_Sign_In_Sheet.pdf",
+        "local_path": "attachments\\3CA07908\\3CA07908_-_Mandatory_Pre-Bid_Sign_In_Sheet.pdf",
+        "size_bytes": 80201
+      },
+      {
+        "file_name": "IFB_Addendum_2_-_PDF.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_7/viewredirect/%7bV2%7d83raod7DzgCKv7gfq9IaJnDJYYD5CoRUumQFfaNAMZG.DOiHgiKFyTayac5f5dUX_RTzOYp3qWI_J6ofFFvc2NTRZj1YM5TNlZQ25YjofrvUJgp5aYLAE2CKdRSvqzmqZXySbU.Z7dj77VDCXWceUjpY4qfMmTzYFLgryEbbCAtpn1ybiWrV8xnrUWCXY437N4QK0HRDlCSBaQNF9tU-/IFB_Addendum_2_-_PDF.pdf",
+        "local_path": "attachments\\3CA07908\\IFB_Addendum_2_-_PDF.pdf",
+        "size_bytes": 200965
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/3540/3CA07908"
   },
   {
     "Event Name": "1CA07935 CZU Headquarters Keyless Entry and Access Control System Installation",
@@ -10692,17 +10862,67 @@
     "Details": {
       "Event ID": "0000040226",
       "Dept": "Dept of Parks & Recreation",
-      "Department Code": "3790",
-      "Format/Type": "Sell / RFx",
-      "Event End Date": "10/27/2026  2:00PM PDT",
-      "Status": "Posted"
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "6",
+      "Published Date": "08/31/2026 1:46PM PDT",
+      "Event End Date": "10/27/2026 2:00PM PDT"
     },
-    "Detail URL": "https://caleprocure.ca.gov/event/3790/0000040226",
-    "Attachments": [],
     "Contact Information": {
       "Contact Name": "Merrilee Byrnes",
       "Email": "merrilee.byrnes@parks.ca.gov"
-    }
+    },
+    "Description": "10/12/26 - Addendum 4 was posted to extend the bid date. 10/5/26 - Addendum 3 was posted. 10/1/26 - Addendum 2 was posted to extend the bid date. 9/17/26 - Job Showing Sign-in was posted. 9/15/26 - Addendum 1 was posted to extend the bid date. Tenant improvements to multiple areas within the existing building to support the Cannabis Watershed Protection Program, Telecommunications, and IT groups, including reconfigured office and storage spaces, added lab and high¿pile rack areas, enhanced security partitions, and upgrades to mechanical, fire sprinkler, and alarm systems to meet new operational and ventilation requirements at McCLELLAN PARK in Sacramento County, California. Job Showing is Mandatory - see Notice to Contractors included in the Project Manual. Instructions to Download Bid Package: Prospective bidders may examine and obtain the bid forms, specifications, plans and addenda (if any) by downloading this bid package from this website. Questions and Answers: Any discrepancies, omissions, ambiguities, or conflicts in or among the contract documents or doubts as to meaning shall be brought to the State's attention by emailing your questions to merrilee.byrnes@parks.ca.gov NO LATER THAN 2 p.m., seven (7) calendar days prior to bid opening date. Answers will be provided by Addendum on this website, and it is the responsibility of the bidders to download any addendum as needed. Participation in Disabled Veteran Business Enterprise Program (DVBE): The minimum DVBE participation percentage goal is 6%. Failure to fulfill the DVBE requirement will render your bid non-responsive. DVBE Incentive: For evaluation purposes only, an incentive will be given to bidders who exceed the 6% DVBE participation requirements. Refer to the DVBE forms beginning with DPR 479IP. Small Business Preference and Small Business Subcontractor Participation: A five percent (5%) Small Business Preference will be granted to properly certified small businesses (a completed STD 811 Form must be submitted with the bid proposal). Public Works Contractor Registration Program ¿ SB 854: 1) No contractor or subcontractor may be listed on a bid proposal for a public works project (submitted on or after March 1, 2015) unless registered with the Department of Industrial Relations pursuant to Labor Code section 1725.5 [with limited exceptions from this requirement for bid purposes only under Labor Code section 1771.1(a)]. 2) No contractor or subcontractor may be awarded a contract for public work on a public works project (awarded on or after April 1, 2015) unless registered with the Department of Industrial Relations pursuant to Labor Code section 1725.5. 3) This project is subject to compliance monitoring and enforcement by the Department of Industrial Relations. Refer to http://www.dir.ca.gov/Public-Works/SB854.html for more information.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "72101500",
+        "UNSPSC Classification Description": "Building facility maintenance & repair services"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "Drawings_C26863011.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_8/viewredirect/%7bV2%7dnUwsoFk47mCgfd3LFV3X.eEi3yIDjULtiZ1LCWpMzWzQdBTOuDj4VOjUXoF6zhYECNU5hERCGlpmzBbjZ__SxaXcn0X7kRHP9cSHlhCdW0XC3T.XcDYx3GsRkZjA6eotoX4Ckah6AAHDj82S83T5PpvoY7kpQk1WaS7o62Zp9H7_VbOOUWb8rmhV7zEO2F6cAGqFlUl_dbFGlA--/Drawings_C26863011.pdf",
+        "local_path": "attachments\\0000040226\\Drawings_C26863011.pdf",
+        "size_bytes": 89766644
+      },
+      {
+        "file_name": "Project_Manual_C26863011.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_8/viewredirect/%7bV2%7dAovb25U_XPKAYf2jvFDPop95bAnWR15dzLHmA7r7Ei__onRAZjqUfVwd2ObXcJKizYAZv4Zx42dwTbXLY6BV18mqd2GgsVuy1XbbwnGpSimM7.KRTOBcGYk1qO1GBQrxdnU3Kq87YoUJVdWvy3Ki4zIAru1QTQ8hQRkFEc8PAYuUvDLcqSOKbt.qKAHE7AJl23huhju7R4FO_ErsML1Izod8gZQWCA--/Project_Manual_C26863011.pdf",
+        "local_path": "attachments\\0000040226\\Project_Manual_C26863011.pdf",
+        "size_bytes": 12123515
+      },
+      {
+        "file_name": "Addendum_1_C26863011.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_8/viewredirect/%7bV2%7diNPYKaqqVJ9i8ZMw0IyO83BXToqO5CW9_5G8oDB1quOfHyZWRmY1vqZXCvNVzOYu9Wq0D2_s4h_zdUXjGn2b4bOOIPDMNT2rBGL9GslbvQNM9cg3sFe7NzJ58i3y1sLpO.OHehG8NpGur_b12rmuUoM_feWfVyg3yyh8hZOEtwt_T.b8fCSZz4DW4vtG3mXc6wJEtkTvP8mayhjQ9fI-/Addendum_1_C26863011.pdf",
+        "local_path": "attachments\\0000040226\\Addendum_1_C26863011.pdf",
+        "size_bytes": 2824290
+      },
+      {
+        "file_name": "Job_Showing_Sign-in_C26863011.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_8/viewredirect/%7bV2%7dgUtl0FGXNaAih_O7mRgLl1xB1zGLskhAYTyscULTG3uDQ3Ed2rlQBGWqaCuX_rjJ1CNOq1UFo9CNQR.piFt_xz02UuwxUVbgURxjoKIE9NBx8t1CkE8RLwBa3QTmKFmrLBm3ZeixMHQOB.MXc.QuZ9fDpRk_AHkVBqsH7P4.bWlrXj1h1KpiIvXwlKCJwbxVj7KYqjM_KO7DMBBK6.KpDMiguzOohqv.aZZCb07JN3I-/Job_Showing_Sign-in_C26863011.pdf",
+        "local_path": "attachments\\0000040226\\Job_Showing_Sign-in_C26863011.pdf",
+        "size_bytes": 13027525
+      },
+      {
+        "file_name": "Addendum_2_C26863011.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_8/viewredirect/%7bV2%7duATCP3rH_YkaXeU5sv0qtAGH9UB9ZeMCY9Kv6A2JN0w3bEiZmUeuX1lnauWyfj8yKCKBeY4Z9G2mF5cFg5aUbDNQ5Wwz4DXMI1dmqYMuVQfih2Qssx2epVH64wtdePPiZIvi..QisQ3dw1VBYTgUtHNYQc1t7TqtEPeWWM1_Jc4YxO1fPMZ.nDcs7h_aZI5G4NmuCXoE8O1BVNDUBP4-/Addendum_2_C26863011.pdf",
+        "local_path": "attachments\\0000040226\\Addendum_2_C26863011.pdf",
+        "size_bytes": 2689101
+      },
+      {
+        "file_name": "Addendum_3_C26863011.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_8/viewredirect/%7bV2%7dXXjHiF5FQWVoHG5iIe.YVG90I2cdizDop7Wl2paS8K2i0L6kJTTSbAVBLDB8ag0mR5Zf_aQQYc_gsi1Agg_nSmvJdSK2HT2JZmHNgqErJ1gVIU6LVHXLiI8oerekwluYpD90PgasjDn8Eoao0CnfkHkzq39x4a7HOSlKgNPWmUNRT8TLAmx8.8uu5Ov4p5eVFJ8CaxZ4zvf4DlwJowk-/Addendum_3_C26863011.pdf",
+        "local_path": "attachments\\0000040226\\Addendum_3_C26863011.pdf",
+        "size_bytes": 5603939
+      },
+      {
+        "file_name": "Addendum_4_C26863011.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_8/viewredirect/%7bV2%7dclJISXE3vnVJHGGn94muB8qeABeVnVP0_SbG3iRUUEKhvnvmI50KX6VwVryNShbjdFerdgjrVeshXUpZaPDBjL1kkNdK0nsha108vIIvi6JrKvnQJYD0UsxlYtZpkglszytkv0AvztVxGO9VlZb7Eg69fUHrisWduSeOvdS1s_tMXeuxcqhHWP8Aufz6r97TtIKrj.sdTWYTkCQRgLM-/Addendum_4_C26863011.pdf",
+        "local_path": "attachments\\0000040226\\Addendum_4_C26863011.pdf",
+        "size_bytes": 2728894
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/3790/0000040226"
   },
   {
     "Event Name": "CONTRACT NUMBER: 26-334792; AUGMENTATION OF ELECTRICAL SERVICE CAPACITY, DEPARTMENT OF STATE HOSPITALS, NAPA STATE HOSPITAL, NAPA, NAPA COUNTY, CALIFORNIA, PROJECT NUMBER: 14109",
@@ -11099,17 +11319,32 @@
     "Details": {
       "Event ID": "0000040650",
       "Dept": "Department of State Hospitals",
-      "Department Code": "4440",
-      "Format/Type": "Sell / RFx",
-      "Event End Date": "10/28/2026  4:00PM PDT",
-      "Status": "Posted"
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/14/2026 3:06PM PDT",
+      "Event End Date": "10/28/2026 4:00PM PDT"
     },
-    "Detail URL": "https://caleprocure.ca.gov/event/4440/0000040650",
-    "Attachments": [],
     "Contact Information": {
       "Contact Name": "Aubreana Diaz",
+      "Phone": "909/425-6888",
       "Email": "aubreana.diaz@dsh.ca.gov"
-    }
+    },
+    "Description": "Contractor shall provide all equipment, materials, supplies, personnel, transportation, licenses, certifications, and permits necessary to provide Date Time Stamp Machine Repair Services on an as-needed basis.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "44103202",
+        "UNSPSC Classification Description": "Office time recording machines and accessories - Time stamping machines"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "26-30024-000_-_IFB.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_9/viewredirect/%7bV2%7d5hupn7bfR7FTSk1M23rT61yFRIOqID.U_EqY8yiwjAhUGSK0.rRkmLgssPxElzRJAr5376oxoI6vlJQpZuVxGbSKXjxXAWolslMnfUtik.KH95zhDkp3imqbwv7w8n9lSmOXsWUEIUUNb0g0nFeWQ33JyxFujyqx4osuQ_gbGt1W.dL7_XiZ4pbcTmz8ue0VYR.akic6aAFeTQ--/26-30024-000_-_IFB.pdf",
+        "local_path": "attachments\\0000040650\\26-30024-000_-_IFB.pdf",
+        "size_bytes": 1295914
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/4440/0000040650"
   },
   {
     "Event Name": "26-30612-000 - West Perimeter Bridge",
@@ -11450,17 +11685,35 @@
     "Details": {
       "Event ID": "07A6506",
       "Dept": "Department of Transportation",
-      "Department Code": "2660",
-      "Format/Type": "Sell / RFx",
-      "Event End Date": "10/29/2026  2:00PM PDT",
-      "Status": "Posted"
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/14/2026 4:00PM PDT",
+      "Event End Date": "10/29/2026 2:00PM PDT"
     },
-    "Detail URL": "https://caleprocure.ca.gov/event/2660/07A6506",
-    "Attachments": [],
     "Contact Information": {
       "Contact Name": "Kae Saechn",
       "Email": "kae.saechin@dot.ca.gov"
-    }
+    },
+    "Description": "FI$Cal Advertisement Disclaimer: The documents and files attached to this solicitation do not have any updates for digital accessibility at this time. Updates will be applied as soon as they are available. For an accessible version of solicitation documents published on this page, please submit a request to ADAdocs@dot.ca.gov or call (833) 713-2922. Contractor agrees to provide to the California Department of Transportation (Caltrans) dewatering well-water pump removal, installation, and repair services as described herein. Contractor shall provide all labor, tools, materials, parts, disposal, equipment, travel, and incidentals necessary to repair and/or replace dewatering well water pumps, motors, repair motor control equipment, electric flow meters, pressure gauges and all well monitoring equipment, including existing data logging and well cleaning by water-jet treatment or purge and remote access equipment.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "40151511",
+        "UNSPSC Classification Description": "Industrial pumps & compressors - Pumps - Well pumps"
+      },
+      {
+        "UNSPSC Classification": "40151547",
+        "UNSPSC Classification Description": "Industrial pumps & compressors - Pumps - Deepwell pumps"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "IFB_Solicitation_Package_07A6506.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_16/viewredirect/%7bV2%7dPQs2fp743dD8LLc6CHNVB.kaPFqAH8nfROjqmy6YuyGbjZaaKHxxzrDWYHlaQ6Z95494H2Wblb6V398lyjNmz0MiBXq_Ni_fs4ose.sUqhrwAvkPmk.jw0XoASjGx0uxxrGKE_GY7SIxXlvA3NXfEX21B.7FvsqkV3hKg2NRT.xGICsmII82a74zl7g6hVF0BzkLKAR_Gjo3Rrgc9JmYa1q_JckpVNPhOXBXyqFZ6H6sosQnbPw-/IFB_Solicitation_Package_07A6506.pdf",
+        "local_path": "attachments\\07A6506\\IFB_Solicitation_Package_07A6506.pdf",
+        "size_bytes": 48327807
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/2660/07A6506"
   },
   {
     "Event Name": "EDIS90726 RFQ-ITS Equipment and Software Maintenance - Quadient Inserters",
@@ -11684,17 +11937,110 @@
     "Details": {
       "Event ID": "0000036719",
       "Dept": "Ofc Technology and Solutions I",
-      "Department Code": "0531",
-      "Format/Type": "Sell / RFx",
-      "Event End Date": "10/31/2026  5:00PM PDT",
-      "Status": "Posted"
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "13",
+      "Published Date": "09/17/2025 5:00PM PDT",
+      "Event End Date": "10/31/2026 5:00PM PDT"
     },
-    "Detail URL": "https://caleprocure.ca.gov/event/0531/0000036719",
-    "Attachments": [],
     "Contact Information": {
-      "Contact Name": "Aaron Micka",
+      "Contact Name": "Alina Corpus",
+      "Phone": "(916) 634-2905",
       "Email": "aaron.micka@otsi.ca.gov"
-    }
+    },
+    "Description": "The State of California, Office of Technology and Solutions Integration (OTSI), is releasing a Request for Proposal (RFP) #73040873 for System Development, Maintenance & Operations (SDMO) for the California Healthcare Eligibility, Enrollment and Retention System (CalHEERS). There will be a mandatory in-person Bidders Conference held on October 15, 2025. Please note: the conference will begin at 9:30 a.m. so please allow time for sign-in. The CalHEERS Project supports the enhancement, maintenance and operations, and on-going business of both Covered California and the Department of Health Care Services (DHCS). CalHEERS supports account creation, consumer application, eligibility rules, and health plan selection for insurance affordability programs, streamlining Californian's ability to research, compare, check their eligibility for, and purchase health coverage. CalHEERS interfaces with the Statewide Automated Welfare Systems (SAWS) for Modified Adjusted Gross Income (MAGI) Medi-Cal eligibility, enrollment and reporting, and provides data for potential eligibility to other programs such as, non-MAGI Medi-Cal, CalFresh, and California Work Opportunities and Responsibility for Kids (CalWORKS). 9/11/2026 - Posting of the Notification of Award.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "80101507",
+        "UNSPSC Classification Description": "MGMT Business Prof & Admin Services - Business corporate MGMT consult srvcs - Information technology consult srvcs"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "CalHEERS_SDMO_RFP_73040873.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_20/viewredirect/%7bV2%7dRHNJsCdvqaWYpgDRHtYI1iuIJnqky6A00hhjBsCbvx_YMDkCg5.K.uene8A3CHfckGyRdpnS0iO_rgsBoUo9P452hA2pLzTtahYXyDLSUvSzXfKjELId.GxWvfAuBsH.qExBtosxi7nWvWbXZbNEI_XSqzv9OQxvPonCaLWs3xywWpYOmbp7sgS.4ebzzM_LuwjWB8Yi6y__S2C0rIbwRYGzak9APZYBIVA-/CalHEERS_SDMO_RFP_73040873.pdf",
+        "local_path": "attachments\\0000036719\\CalHEERS_SDMO_RFP_73040873.pdf",
+        "size_bytes": 16930742
+      },
+      {
+        "file_name": "Bidders_Conference_Presentation_10.15.25.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_20/viewredirect/%7bV2%7d8P3ro4SeeJpwZMOVMcG9VvmSC7bwjoUTojeAy4pJKyYjuOLkimjPiwDzyZUjv.geYKCcxZrJzbBPBSa3DR6IlUe16NvdZwzB9SSj1flg9rRkNvbM__9XtPs2.mi5VMUKjrTzyvncl64xgwfFtBlQh6jpnuWGRor.Awgo7LiAat.FaoGOAzJ6IS0ywgxqsrB4.3PaN_kotCayXvz8ePV96agdF6VqmQrZmZ7VLXCmZ9FUHnyrqo86Nn.NkRsInlABsTXe4McB/Bidders_Conference_Presentation_10.15.25.pdf",
+        "local_path": "attachments\\0000036719\\Bidders_Conference_Presentation_10.15.25.pdf",
+        "size_bytes": 5144081
+      },
+      {
+        "file_name": "Bidders_Conference_Attendance_List_10.15.25.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_20/viewredirect/%7bV2%7dSSoEEXt.xO.EX5IHi_nBCZCY6fGtSFvAlYRtf1m7o1GzSxgU5Qg1qxb3tbOPGLRbgE49wFqyT.97GUDtVSuDwVIJSMs20Dq7vIXVwBF4MebJiuFj_ZuocHwXnod4D3ECdzo28DzYZhAvCCo4ePP_SiuNbbJuGVYTLugiTMnxSBM4L8.qnm3xY8HeVqDvoG5v6wbSxOg7t2diaie2ai4PIKawhhxm5zcndkzfKuQMNE7065X7pDBLh6IFWDCLsLsexCDLBm45JnXyMPb9/Bidders_Conference_Attendance_List_10.15.25.pdf",
+        "local_path": "attachments\\0000036719\\Bidders_Conference_Attendance_List_10.15.25.pdf",
+        "size_bytes": 214143
+      },
+      {
+        "file_name": "CalHEERS_SDMO_RFP_73040873_Addendum_01.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_20/viewredirect/%7bV2%7dbCoBAfZ1rn01SBEdnS9s5iYJxnsIA0lon28sVPShvKvifjLbcsjt_vyAqCL5_z7Py_5VCpS2rApPIzxjkYVlmgommMIVYSjDCKuLi6SymLX4gpQc42dd4le7cYCojyApa_6txWRukystw39.oundWeDreLuEH0rgb5SK_dII6wsUuKA_BwvC.GVq5pNsNE.tkuO0wtAa5y_RpZVF6zlsIb7aobBMNQ5th5CCAf5EgYv7XkX9sbjKIhOBFzTWqafFeyI-/CalHEERS_SDMO_RFP_73040873_Addendum_01.pdf",
+        "local_path": "attachments\\0000036719\\CalHEERS_SDMO_RFP_73040873_Addendum_01.pdf",
+        "size_bytes": 17108384
+      },
+      {
+        "file_name": "Responses_Rel_01_20251031_RFP_73040873.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_20/viewredirect/%7bV2%7dayMls0gYLHuaK3MMDJGp1q6TVIVM0HjiQuZ2gSOxkGfQ0M4pwj1md_pZnY2Fz5kAagLZzmIYmnSjIo0a3dTUnSfXXadcd3.2iv6kc1hpQl7KvgQ.TVzbyPOiaaZeFrMVo8O1nVMNlo8Ps0OBIibwgmhG.Lg6qJVS2ytukxzMjpIvpiqktsWCH63hJvqK6q9O3Gz1u67e.2whDMIlw48ukmMMID3rzgIxQaBP_rcpcT3iNxTBlCf37s3G4AKHBlNpMGo-/Responses_Rel_01_20251031_RFP_73040873.pdf",
+        "local_path": "attachments\\0000036719\\Responses_Rel_01_20251031_RFP_73040873.pdf",
+        "size_bytes": 284326
+      },
+      {
+        "file_name": "Responses_Rel_02_20251113_RFP_73040873.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_20/viewredirect/%7bV2%7doyR7nRZRwNo6S550RBt2gq85xOYg7zjYr7pot6WNDOO440OdOxcCj9rUUTeKNKpfwCnEt9ahO1OG5JY4ycWv8nhp0GsakMIcGQjNm_b_xuG3LIxWTGhddqlK5tPfYrvgmEAhiNgMceWol0hV84yt8TrBVgMM0KoaT8lE1MA7jDE9H0D1xCcE4mrxX_8qS.Py0HjVj9dnhhDLSb4BENnslslOs269PwdZaweB4TIDNuMnUx60MsR6H6BtBwAnOvBIIaY-/Responses_Rel_02_20251113_RFP_73040873.pdf",
+        "local_path": "attachments\\0000036719\\Responses_Rel_02_20251113_RFP_73040873.pdf",
+        "size_bytes": 584412
+      },
+      {
+        "file_name": "Responses_Rel_03_20251121_RFP_73040873.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_20/viewredirect/%7bV2%7d0g52jPDkRHrC8UlGYjilQUCe1zLgwh_STGQGMfXwpJ5apyAWP3DZOPTeC.O_Y4YM1aqcl_vVCc7fLyArmgLlwrRhDDkKYkFTsoNY9mqsnn34SdYbadBJWKi6sVKK1DO6pBUeuNlPnLTKrUXSfWeb_hD5WMLdt0Q3QsqpxBIxbYhhJviYxyaQRmVcW3B_5sx9bUCgVel7b1FZaOqxg4k96nQfDZh3KtKw62rUQXbHnrgyq7R9lrPkl89L7JkveS0C6Iw-/Responses_Rel_03_20251121_RFP_73040873.pdf",
+        "local_path": "attachments\\0000036719\\Responses_Rel_03_20251121_RFP_73040873.pdf",
+        "size_bytes": 360375
+      },
+      {
+        "file_name": "Responses_Rel_04_20251126_RFP_73040873.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_20/viewredirect/%7bV2%7d6vNXFS_YCDhMCabCKhkqk0DCaVdMMpsmNwnJigWITyJ1KOFi2uq7W6XbJl8uDmJDiQ1PVDatA9a05FrGaEpRSMbDkGmaCzQMVJOfveSDD9mPQtPSC3IIElcUdiMF1.w4asxeHjUQavn6ceHvCEfkYV5QAQqW8C0hKYk1Q2pxK2rZo93RyWSxl4dK6z0WPpde6CMjPC4aXuPANxmDOPCAty2kjzZfEEsQPIe3Ff8rQ6aK1Cw2SofMdjxRJW9UcwaYTsY-/Responses_Rel_04_20251126_RFP_73040873.pdf",
+        "local_path": "attachments\\0000036719\\Responses_Rel_04_20251126_RFP_73040873.pdf",
+        "size_bytes": 348433
+      },
+      {
+        "file_name": "Responses_Rel_05_20251204_RFP_73040873.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_20/viewredirect/%7bV2%7dAkWqOW5l.ssyU_nO569BPEk8OEavwJujnEVT2AICb0x46_DP_aAVXKmk7Kd7_8dYtMXHmvp080Kr9KLUPBEe5F1xG54S7fePVdEXCF1rqpVMTz4Cht10Iybn286mJwrwO5QlBkwrWrPIwAbrEZk1ROcmOIjvA062WJII_Q8Ihyhn5yySMhhKNb.c7Vpzpz2CYz1wmKFjTXjleGOQqwu2tu8fFCW3vRSF_d7E.o6mGLrY0ix3FSU32TYlvDY9WwOUaT8-/Responses_Rel_05_20251204_RFP_73040873.pdf",
+        "local_path": "attachments\\0000036719\\Responses_Rel_05_20251204_RFP_73040873.pdf",
+        "size_bytes": 363809
+      },
+      {
+        "file_name": "Responses_Rel_06_20251211_RFP_73040873.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_20/viewredirect/%7bV2%7dtyzOj2dcKLTIHaH5tUqQTbBPJkbR7hewlwSX_ActJWUUI8aYKAtlIKRJcxvChPU5gzC_MPC4MaxP.NvqU8.LY4DoScLmAiypblrgoI5mGqPYLPTliyV5a.gMB.JGzviuXpX.S_Mhs6CQ.N.d00sQuZ1coy6e8GY3DQqFqcboQtEJm3EWf5sycr7eXnary0UCgRwzyuDb1wp917Oro5nvg1stIrm39HDn7rklRFcecTkazfJcPOA3sXkbc9TONLnRNaU-/Responses_Rel_06_20251211_RFP_73040873.pdf",
+        "local_path": "attachments\\0000036719\\Responses_Rel_06_20251211_RFP_73040873.pdf",
+        "size_bytes": 371324
+      },
+      {
+        "file_name": "CalHEERS_SDMO_RFP_73040873_Addendum_02.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_20/viewredirect/%7bV2%7dyilaJqUZiO5PP2iGcK_MPckH5OOT8rCMKhUJZ2OK.Uli_uNBl9ymsSxOAMA2yEeaFPzOD3_RueBTvAMqbzSdPHoqNBggXqCgpiet.LHgyL93dxABhXUEeXuuK0TLMdd.nTk3IVuZ8zkaAynLbUneiBaBf1h13hgvK7P.hbPGQg8zwQmUy.RrYG70g_jBZgw4V4JcnRc7Y_.0PAS3C91aE1UhB_OUjExyy3P9Th6LNVrQuWsQUdtq4fqlUjETBN5Pldo-/CalHEERS_SDMO_RFP_73040873_Addendum_02.pdf",
+        "local_path": "attachments\\0000036719\\CalHEERS_SDMO_RFP_73040873_Addendum_02.pdf",
+        "size_bytes": 18833144
+      },
+      {
+        "file_name": "Responses_Rel_07_20251219_RFP_73040873.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_20/viewredirect/%7bV2%7d6JmGJ4ev0pD5vPbBGIljGrPjuhU2Uy8dazqPndXwC_LRfjlfqheLyKKcnPnpHUzZY0UL8kOx7bG1yQ2W.2IehsUAtp3bL1niHHgklf8xCjwoaDQDG6vEKFLKz1zaD99VBbn2kUUKTWlwiPfOfgK3SjEPAXpYBAVSVh9IY3vFtL_tJPIF5W5gEeZB7o0R5HZh3QrBgasi3z92Rsu1rcFxeyy5nWZ1YVIDgmZt20R8IfiQyyNh8GHoc8cb3LEy2siXPAY-/Responses_Rel_07_20251219_RFP_73040873.pdf",
+        "local_path": "attachments\\0000036719\\Responses_Rel_07_20251219_RFP_73040873.pdf",
+        "size_bytes": 369684
+      },
+      {
+        "file_name": "CalHEERS_SDMO_RFP_73040873_Addendum_03.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_20/viewredirect/%7bV2%7dvu6qB9BEE7WpUCLMPcwSlI7.JChF6eA.l54uHJpet14WGS1zLgnTfUTMxAEGvjYIdV8eizYGcSDqiKFsTshTPh7mxcCX0AjkeQCvxil0YoGpLn_Dbktj7KrejYlFIRMj60jQH6Y2qgzDarKAng6w5B7MSNTQoDMIHjTijJiE4Wj0VO58abQ47PpIJt.LuKu4K3_xPqeYSLuJ4vZMoo5r51BgmtpwdasoqTVGAlbGK7hiWccX2fvg3G2BoxxRENTaozc-/CalHEERS_SDMO_RFP_73040873_Addendum_03.pdf",
+        "local_path": "attachments\\0000036719\\CalHEERS_SDMO_RFP_73040873_Addendum_03.pdf",
+        "size_bytes": 18578392
+      },
+      {
+        "file_name": "Notification_of_Award_CalHEERS_SDMO_RFP__73040873.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_20/viewredirect/%7bV2%7dIeOznmw04Kh9MkHU8BZv_nAo5jCNQyJ1ixxaGOhBgUFxEr1Zp17kVlw3V1AKkm5CAYv9FG_p7jkBg.k8mQIfLadHfHDCIBiQWwgb_UqoDLcuQsGC6xmeDm7Gek0JYbHcJOxFUGlkPT4VcZR9I68dRDiklH.dY5tLWg29QDdbAqwFVmE3v2.slnaUAZPsVkr6JZKFChsYgtbhMmGQlUQdkolLeRW1ZZUMb_Zl4ITJ82WWLlfE9zLHaXPI5UMj3U.DtiLo1bRRFHVkIX4OSxtHyfPAh_C614aU/Notification_of_Award_CalHEERS_SDMO_RFP__73040873.pdf",
+        "local_path": "attachments\\0000036719\\Notification_of_Award_CalHEERS_SDMO_RFP__73040873.pdf",
+        "size_bytes": 167519
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/0531/0000036719"
   },
   {
     "Event Name": "RFP 23NS0710 CAC Equipment Processing Center (EPC)",
@@ -12461,17 +12807,31 @@
     "Details": {
       "Event ID": "1CA08012",
       "Dept": "CAL FIRE",
-      "Department Code": "3540",
-      "Format/Type": "Sell / RFx",
-      "Event End Date": "11/04/2026  5:00PM PST",
-      "Status": "Posted"
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "2",
+      "Published Date": "10/14/2026 12:15PM PDT",
+      "Event End Date": "11/04/2026 5:00PM PST"
     },
-    "Detail URL": "https://caleprocure.ca.gov/event/3540/1CA08012",
-    "Attachments": [],
     "Contact Information": {
       "Contact Name": "Christopher Cabanes",
       "Email": "christopher.cabanes@fire.ca.gov"
-    }
+    },
+    "Description": "Contractor agrees to provide to the California Department of Forestry and Fire Protection (CAL FIRE) HVAC Annual Maintenance Inspection, Repair and Emergency Repair Services. Contractor shall provide all materials, labor, equipment, tools, permits, taxes, transportation, repairs, and fees to provide HVAC inspection and maintenance services.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "72151200",
+        "UNSPSC Classification Description": "Special trade construction & maintenance services - Heating cooling air condit. HVAC construction & maintenance"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "1CA08012_IFB_Solicitation.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_22/viewredirect/%7bV2%7deR8wiMHnTgNTyXwzxgeDmotXcJ7qkrFMZD6cKr0zVNjF7gpfaS_K6Z_K0faEitD5cA.Jlfp4ILhzaIyB32ilO3n0QLpB39FefGLmlXApAxPO_oXcXSI8bodg0Y8Eoc0.1Co7yxmBpgJ6fhy_WRsMX4xGpwSMNsshJANvEPpaMcd8M6iU.0.DhrdwvsAsXEk61Sk3hWtTbkkPo4pmuf055rredzWWkQCl/1CA08012_IFB_Solicitation.pdf",
+        "local_path": "attachments\\1CA08012\\1CA08012_IFB_Solicitation.pdf",
+        "size_bytes": 3362611
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/3540/1CA08012"
   },
   {
     "Event Name": "Video Equipment & Services For Pacific Amphitheatre",
@@ -12579,17 +12939,49 @@
     "Details": {
       "Event ID": "0000040350",
       "Dept": "Dept of Corrections & Rehab",
-      "Department Code": "5225",
-      "Format/Type": "Sell / RFx",
-      "Event End Date": "11/05/2026  2:00PM PST",
-      "Status": "Posted"
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "2",
+      "Published Date": "09/11/2026 2:00PM PDT",
+      "Event End Date": "11/05/2026 2:00PM PST"
     },
-    "Detail URL": "https://caleprocure.ca.gov/event/5225/0000040350",
-    "Attachments": [],
     "Contact Information": {
       "Contact Name": "Kirsten Ruesch",
       "Email": "kirsten.ruesch@cdcr.ca.gov"
-    }
+    },
+    "Description": "Please read the Invitation of Bid and Addendums, if any, in their entirety as they contain information pertinent to the bidding process.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "30151505",
+        "UNSPSC Classification Description": "Construction Exterior finishing materials - Roofing - Roofing membranes"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "12_-_FPCM-HDSP-PH_2-148-KR_IFB.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_24/viewredirect/%7bV2%7dRzmvjG.fbE5NfQ3q_Hu2KZwo44uHEdpb6gTIeb6OUv8q.TarGAKrr9bI75H8vIVS5KhThS5Z4Wdl4VB4h42m3BhrhcsdlYrjRqUIcfxA.3LrsXF4RgpSiRqCTuZnz5_9at1ekNBMsv.zCacbmjrClzGBuvvurc0liYM33iCOVL2RZ6Ff1920Xd2OlNLG9KD.jmdjojZ4CUbt8oa9AMnN9gMadwNLL_0UCI7QYGbZpEsEdg--/12_-_FPCM-HDSP-PH_2-148-KR_IFB.pdf",
+        "local_path": "attachments\\0000040350\\12_-_FPCM-HDSP-PH_2-148-KR_IFB.pdf",
+        "size_bytes": 2006757
+      },
+      {
+        "file_name": "Spec.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_24/viewredirect/%7bV2%7d_nOwDus7N6FByb.dYP0MsyOWSHeYWjKlHChOz4rwaGfFkjokZpI13Ce7mcyP3uDdMmdWKzzezRBufKjo7n6ACzJOJ0hrdF7tWoBm9Dq_QRicfCfC9WUE9jq1K5srKO_6.puOGY_f7ZYDWCGbhahF9nfXOfHxE1mcyoKVUaix/Spec.pdf",
+        "local_path": "attachments\\0000040350\\Spec.pdf",
+        "size_bytes": 8396105
+      },
+      {
+        "file_name": "12_-_FPCM-HDSP-PH_2-148-KR_IFB,_Addendum__01.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_24/viewredirect/%7bV2%7dR3kR1bdFf_lXK7hxe4LfwQVf4LriZtjNSVWjBNuBfRDWyNpGmySpMEcGX7qqUsJoQPA5GLw0pBIHunw5YEgzXTAxzc3QbRdj6aNJ4Mf2uQhHEhf8oiVjr1eQd28zDwyt6XYAV2i2XbE4Rj7qqbilASYSNVKFYMzx98BfvDiu3ZhkIN4wG2gUD6w4HHUQpyMB80jKDMrWY8ld1FE2zQQLATzls_GrtOF6nNK3bLqyoq7jvQFRFrPPRDmaQd8_sprcsxjtFcmyveAYt5RkIgs-/12_-_FPCM-HDSP-PH_2-148-KR_IFB,_Addendum__01.pdf",
+        "local_path": "attachments\\0000040350\\12_-_FPCM-HDSP-PH_2-148-KR_IFB,_Addendum__01.pdf",
+        "size_bytes": 130843
+      },
+      {
+        "file_name": "19-030_HDSP_Replace_Roof_-_Phase_2_Final_Plans.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_24/viewredirect/%7bV2%7dDyvU.6fc5kOK_fWMPqI1sBXll44XJKvPMSb15fNwA_zBk4JMVpO11WW9wTq.K4oq644UNvLS_BjzM8xWN7Z892MGysjxTXXk67sNqRBAxUPIT4YmNe05bqYXk5pf9zdsN7fKALs._bIIIy0eSAOPW464LZAfNbC5RwciFNw_bXA.jeo4HnD6xCNXTaKwl3nUqmWJnzjzRZDWNGSeigzpvM8cM0v_7ywdIlOpcROnIHOZv_Q3TZJDw5OZ3a14d0FT6vDnavS1AFEXJetoPLcWAT6M/19-030_HDSP_Replace_Roof_-_Phase_2_Final_Plans.pdf",
+        "local_path": "attachments\\0000040350\\19-030_HDSP_Replace_Roof_-_Phase_2_Final_Plans.pdf",
+        "size_bytes": 61432221
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/5225/0000040350"
   },
   {
     "Event Name": "C26683004 - Chemical Toilet Rental and/or Service",
@@ -14821,5 +15213,988 @@
       }
     ],
     "Detail URL": "https://caleprocure.ca.gov/event/3940/0000040529"
+  },
+  {
+    "Event Name": "33050876 - Rocket Reflection Renewal",
+    "Details": {
+      "Event ID": "0000040652",
+      "Dept": "Ofc Technology and Solutions I",
+      "Event End Date": "10/19/2026 10:00AM PDT",
+      "Format/Type": "Sell / RFx"
+    },
+    "Contact Information": {
+      "Contact Name": "[Contact Name]",
+      "Phone": "[Phone Number]",
+      "Email": "[EmailAddress]"
+    },
+    "Description": "[Detail Description]",
+    "Attachments": [],
+    "Detail URL": "https://caleprocure.ca.gov/event/0531/0000040652"
+  },
+  {
+    "Event Name": "*CERTIFIED SB ONLY* 75350865 - CWDS ImageTrust Renewal",
+    "Details": {
+      "Event ID": "0000040667",
+      "Dept": "Ofc Technology and Solutions I",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 1:42PM PDT",
+      "Event End Date": "10/19/2026 5:00PM PDT"
+    },
+    "Contact Information": {
+      "Contact Name": "Mel Keller",
+      "Email": "mel.keller@otsi.ca.gov"
+    },
+    "Description": "The California Health and Human Services Agency, Office of Technology and Solutions Integration (CalHHS OTSI) is releasing Request for Quote #75350865 for CWDS ImageTrust Renewal. Please see the attached for details. CalHHS OTSI has elected to use the Small Business (SB) Option for this RFQ, and participation is limited to only California certified SBs. For information on how to become a certified SB please visit the DGS OSDS website at: https://www.dgs.ca.gov/PD/Services/Page-Content/Procurement-Division-Services-List-Folder/Apply-for-or-Re-apply-as-Small-Business-Disabled-Veteran-Business-Enterprise",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "43231500",
+        "UNSPSC Classification Description": "Business function specific software"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "75350865-Solicitation.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_3/viewredirect/%7bV2%7dnt_eEDyqTlWwE2iMLgWQo2lUfOU07aELRAcj8SCU.rX2mAAmu4NAMKPeBUGqJBKglmwzWkVjMRclm8QouWn8tL_UKGezDsLxSrM_7SAn4jRvcdIKukIU7uN6OT35gvy934IRPDYuBM7jBB2TE6VHObObrGmZToR7kcaGjbliNYkObyafunA9D5qA6c6WLGvBYTaX.BUy2mejoq08BUZAvw--/75350865-Solicitation.pdf",
+        "local_path": "attachments\\0000040667\\75350865-Solicitation.pdf",
+        "size_bytes": 254420
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/0531/0000040667"
+  },
+  {
+    "Event Name": "RFQ #2026076 - SB option - Recast Endpoint Insights and Right Click Tools Subscription",
+    "Details": {
+      "Event ID": "0000040657",
+      "Dept": "State Air Resources Board",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 8:00AM PDT",
+      "Event End Date": "10/28/2026 5:00PM PDT"
+    },
+    "Contact Information": {
+      "Contact Name": "Jian Huang",
+      "Email": "jian.huang@arb.ca.gov"
+    },
+    "Description": "Recast Software¿s Right Click Tools and Endpoint Insight is a suite of tools designed to work with SCCM. It improves productivity, security, compliance, and automates repetitive tasks that can save times (SCCM admins) and increase productivity.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "43231500",
+        "UNSPSC Classification Description": "Business function specific software"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "RFQ_2026076.docx",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_10/viewredirect/%7bV2%7dXtBVAlXLk9qo9BlEgmCUBBbk57feHl0Y1hdPgIdr5ZTTjDfXN_V..saWfE5ilfPQPhbRGVsHqoAJlTGxVOFuOkfR_zhTkcQI1O6gcN5hxhUccETFVjBGAtxl_iyVkuNY9jXpUe0kdSQTJUA8zdoli6MfCypsw9wC2oyQHV6Xgtm1UZVklbGOhkFH26lKXA--/RFQ_2026076.docx",
+        "local_path": "attachments\\0000040657\\RFQ_2026076.docx",
+        "size_bytes": 205844
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/3900/0000040657"
+  },
+  {
+    "Event Name": "RFQ #2026039 ¿SB Option Canary Subscription Renewal 21 Canaries Hosted Console",
+    "Details": {
+      "Event ID": "0000040659",
+      "Dept": "State Air Resources Board",
+      "Event End Date": "10/28/2026  5:00PM PDT",
+      "Format/Type": "Sell / RFx"
+    },
+    "Contact Information": {
+      "Contact Name": "[Contact Name]",
+      "Phone": "[Phone Number]",
+      "Email": "[EmailAddress]"
+    },
+    "Description": "[Detail Description]",
+    "Attachments": [],
+    "Detail URL": "https://caleprocure.ca.gov/event/3900/0000040659"
+  },
+  {
+    "Event Name": "IFB 26-E0010 Translation and Interpretation Services",
+    "Details": {
+      "Event ID": "0000040664",
+      "Dept": "Env'l Health Hazard Assessment",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 12:00PM PDT",
+      "Event End Date": "10/29/2026 12:00PM PDT"
+    },
+    "Contact Information": {
+      "Contact Name": "Cindy Vang",
+      "Email": "cindy.vang@oehha.ca.gov"
+    },
+    "Description": "1. Contractor shall provide OEHHA with qualified and experienced language professionals to conduct as-needed written and webpage translation services to ensure that OEHHA¿s critical and time-sensitive public health related information are accessible to California residents regardless of language. Contractor shall also provide OEHHA staff translations of various scientific studies that are written in other languages. Additionally, Contractor shall provide real-time interpretation (in-person and telephonic/virtual) services. 2. Written and webpage translations shall include, but are not limited to, Fish Advisory Signs, Invasive Species Program Question and Answer (Q&A) Fact Sheets including HTML translation for posting Q&A Fact Sheets to website, Synthetic Turf Fact Sheets, Prop 65 Warnings, and documents relating to CalEnviroScreen. 3. Languages to be translated into include, but are not limited to, Arabic, Armenian, Cambodian (Khmer), German, Hmong, Japanese, Korean, Laotian, Mixteco, Punjabi, Romanian, Russian, Samoan, Simplified Chinese, Spanish, Tagalog, Traditional Chinese, Ukrainian, Vietnamese and Zapotec; languages to be translated from include, but are not limited to, Chinese, German, and Russian. 4. Contractor shall provide Standard General Translation, Premium General Translation, Website and Online Document translation, and Scientific/Technical document translation. 5. Translated documents provided to OEHHA shall be made fully accessible. Ensure to refer to IFB packet for details.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "82111500",
+        "UNSPSC Classification Description": "Editorial services - Writing & translations - Technical writing"
+      },
+      {
+        "UNSPSC Classification": "82112000",
+        "UNSPSC Classification Description": "Editorial services - Writing & translations - In person language interpretation services"
+      },
+      {
+        "UNSPSC Classification": "82111503",
+        "UNSPSC Classification Description": "Editorial services - Writing & translations - Technical writing - Academic or scientific article writing"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "IFB_26-E0010_Translation_and_Interpretation_Services.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_12/viewredirect/%7bV2%7dyE6m3r60ZOAiHY.6oANOgB_59iIvnYE5tXo6URRZ7qMGLbzxXJdxJv2y2NqoIYtpVpnQtp4Suen7k9b1g6JdLxcWc6bf3wJO9SgcGjzg9EjuYjvl4HAnPoHovxGdpaOy96_Nq3x2V0F4XhAk7dn3yuif6gJlept33cyoTvMLLfWAdPbmN3pCaEJLFO_8jlMB47Pr19W7BjZwdB8y_WraDUB9.Fu87zto.RakzClV82tJyIxLVkNKvwlRVvUdORWfFgGLqbaKrEB6MFB0ekWK6pPW9uN.O9NKddts4rDb/IFB_26-E0010_Translation_and_Interpretation_Services.pdf",
+        "local_path": "attachments\\0000040664\\IFB_26-E0010_Translation_and_Interpretation_Services.pdf",
+        "size_bytes": 631023
+      },
+      {
+        "file_name": "Attachment_4.1_-_Cost_Worksheet.xlsx",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_12/viewredirect/%7bV2%7dfjtVzzIQf6pqYltqwi1_kd6lCRyQ.DUWMBpDIrmO2QtKpFrZ6fmHxfr3fGuOCW7pzKTuWGmnmTCJIRLq3e1lMjIN4lr_EBzURhs2zbEi2Nfcirzz2cvE3minaU1EOIY8gWY5RbgtEH4p4pYqPEPDJnRuxXFV6e9bW8glnjnG4mDYrXsdfnSXzTYpDm5rAEpVMTyqKHkXde_pAaJx1VKFeOKDYygzHHAzdFaiAVbjaMdSeXb4fLs-/Attachment_4.1_-_Cost_Worksheet.xlsx",
+        "local_path": "attachments\\0000040664\\Attachment_4.1_-_Cost_Worksheet.xlsx",
+        "size_bytes": 17361
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/3980/0000040664"
+  },
+  {
+    "Event Name": "Hazardous Waste Disposal Services in Placer, Butte, Colusa, Sacramento, Yolo, Yuba, Nevada, Glenn, El Dorado, Sierra and Sutter Counties",
+    "Details": {
+      "Event ID": "03A4250",
+      "Dept": "Department of Transportation",
+      "Event End Date": "10/29/2026  2:00PM PDT",
+      "Format/Type": "Sell / RFx"
+    },
+    "Contact Information": {
+      "Contact Name": "[Contact Name]",
+      "Phone": "[Phone Number]",
+      "Email": "[EmailAddress]"
+    },
+    "Description": "[Detail Description]",
+    "Attachments": [],
+    "Detail URL": "https://caleprocure.ca.gov/event/2660/03A4250"
+  },
+  {
+    "Event Name": "IFB Dry Dock Ferry Maintenance and Repair Services in Solano County",
+    "Details": {
+      "Event ID": "04A7610",
+      "Dept": "Department of Transportation",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 4:14PM PDT",
+      "Event End Date": "10/29/2026 2:00PM PDT"
+    },
+    "Contact Information": {
+      "Contact Name": "JoAnna Nevarez",
+      "Email": "joanna.nevarez@dot.ca.gov"
+    },
+    "Description": "The documents and files attached to this solicitation do not have any updates for digital accessibility at this time. Updates will be applied as soon as they are available. For an accessible version of solicitation documents published on this page, please submit a request at http://bit.ly/dpac-ada or call (916) 654-2852. Contractor shall furnish all labor, materials, supplies, tools, parts, equipment, towing/ transportation, disposal and incidentals required to perform Dry-Dock Ferry Maintenance and Repair Services to Caltrans. Bidder must possess a minimum of five (5) years¿ experience in the dry-docking industry performing services similar to those identified in Exhibit A, Scope of Work, of the Proposed Form of Agreement. Bidder shall submit Experience Letter and Certification (Attachment 2) to document their minimum five (5) years¿ experience. A bidder may submit more than one (1) experience letter, if needed, to document their attainment of the required experience. Overlapping dates of service will only be counted once towards the required five (5) years¿ experience. Bidder shall sign the Certification Statement included within Experience Letter and Certification (Attachment 2) to confirm compliance with the terms to be included within Agreement 04A7610. All welders performing work on the hull, vehicle aprons, deck of vessel structure are to be certified and shall possess a current and valid American Bureau of Shipping (ABS) Certification by the ABS prior to the start of work.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "25172904",
+        "UNSPSC Classification Description": "Exterior vehicle lighting - Exterior ship or boat lighting"
+      },
+      {
+        "UNSPSC Classification": "25173004",
+        "UNSPSC Classification Description": "Interior vehicle lighting - Interior ship or boat lighting"
+      },
+      {
+        "UNSPSC Classification": "95121602",
+        "UNSPSC Classification Description": "Permanent buildings & structures for build or to procure - Transport buildings & structures - Dry dock"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "Solicitation_Package_04A7610.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_14/viewredirect/%7bV2%7dn.GTHQGXyO5zXYMLXMbV26KGIj6.vI1hF9rDgGwzA.s3J5Bn_XUgpICGbPwRP2W_kVwu5bfh36mMvXjevLTYZol3WXMCanmguqZ5dM7bRQFrGTwRetybuB3ADqqCQgyJvCUVaRL4DLzStChAEilz1EjtFxAf3TGqQVmWqXDYvGfIR13st_z1bV9LflJ73_gKqIO2Bdk14oidcEegkcuWnqU0QLsIS.eltfJ0eCg-/Solicitation_Package_04A7610.pdf",
+        "local_path": "attachments\\04A7610\\Solicitation_Package_04A7610.pdf",
+        "size_bytes": 12365652
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/2660/04A7610"
+  },
+  {
+    "Event Name": "Hazardous Waste Disposal Services in Madera, Fresno, Tulare, Kings, and Kern Counties",
+    "Details": {
+      "Event ID": "06A3352",
+      "Dept": "Department of Transportation",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 1:00PM PDT",
+      "Event End Date": "10/29/2026 2:00PM PDT"
+    },
+    "Contact Information": {
+      "Contact Name": "Matthew Stephens",
+      "Email": "matthew.stephens@dot.ca.gov"
+    },
+    "Description": "The documents and files attached to this solicitation do not have any updates for digital accessibility at this time. Updates will be applied as soon as they are available. For an accessible version of solicitation documents published on this page, please submit a request at http://bit.ly/dpac-ada or call (916) 654-2852",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "76121900",
+        "UNSPSC Classification Description": "Refuse disposal & treatment - Hazardous waste disposal"
+      },
+      {
+        "UNSPSC Classification": "76121905",
+        "UNSPSC Classification Description": "Refuse disposal & treatment - Hazardous waste disposal - Inorganic hazardous waste collection and disposal"
+      },
+      {
+        "UNSPSC Classification": "76122404",
+        "UNSPSC Classification Description": "Refuse disposal & treatment - Refuse disposal & treatment fees - Hazardous waste fee"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "IFB_06A3352.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_15/viewredirect/%7bV2%7d4p8.252pQD.2KpUxVz9uwcI4yL1ypvRCLTbxJxqufeIybMkkjagYOJXobm4P.OIph0gHm72cDYAgHcPRnl6QabWK3nZfRqdIv.__GA5b24YxS34aEZrtal4E.yU0qtUuN6l_vxd0uNd4Knl_T.FoPf65d.Qk3vfetEVLF4sXD2u.iZ7EEgFI7XhlGfU-/IFB_06A3352.pdf",
+        "local_path": "attachments\\06A3352\\IFB_06A3352.pdf",
+        "size_bytes": 1711856
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/2660/06A3352"
+  },
+  {
+    "Event Name": "26YS0015 - Automatic Door Maintenance Repair and Installation Services",
+    "Details": {
+      "Event ID": "0000040629",
+      "Dept": "Dept of Veterans Affairs",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "3",
+      "Published Date": "10/15/2026 8:00AM PDT",
+      "Event End Date": "10/29/2026 5:00PM PDT"
+    },
+    "Contact Information": {
+      "Contact Name": "Eric Dahmen",
+      "Phone": "916/653-1980",
+      "Email": "eric.dahmen@calvet.ca.gov"
+    },
+    "Description": "The Veterans Home of California at Yountville is requesting Automatic Door Maintenance Repair and Installation Services. The details for the work needed can be found in Exhibit A. All questions must be submitted via email. See the timeline of events in the Notice to Prospective Bidders (IFB) Letter.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "72154032",
+        "UNSPSC Classification Description": "Special trade construction & maint srvcs - Specialty building & trades srvcs - Window & door & screening installation & repair"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "26YS0015_-_IFB_Letter.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_17/viewredirect/%7bV2%7d6RezAZ5Ki_MeNEHepLIZDHQWuBuR8PWPTxM2U7xL7KWQaF4Jg6f6H16egJyChcP_5kytFbi2mBNkSy32JHarrlSv.IPWkiQzdMfAslaB6_iJ_QjaIijf21V3us0rJPyo5_mpi4HoCLSOhq3CC_HfYIbfbqMZ1bsiNjPn7QGHlQ612Vm6NrAT9Z0E3TbTQbP_R424iXh2BJsHOaT.ejx8uw--/26YS0015_-_IFB_Letter.pdf",
+        "local_path": "attachments\\0000040629\\26YS0015_-_IFB_Letter.pdf",
+        "size_bytes": 232813
+      },
+      {
+        "file_name": "26YS0015_-_Exhibits_A-D.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_17/viewredirect/%7bV2%7dZ1AqEDLiFh.U8XlTRjy0URhblomSSWBPyYI7_m3oMahDUzJQmQJdaPNYdEMTWds3UqJq.RbdAaBPWtVPfQI49VDc2UbIloAyQDVvDKAnMlU2r1FhpMkRsbcObVTRZMgpMXshzpPBMEV_hwnZNXBiBP7VgGSKej.22_cK3kgqo.LCO._MJJAh4aQInAQSV2oSCfi0CFUw0u1q_tqX9WTmMFnf34s-/26YS0015_-_Exhibits_A-D.pdf",
+        "local_path": "attachments\\0000040629\\26YS0015_-_Exhibits_A-D.pdf",
+        "size_bytes": 340903
+      },
+      {
+        "file_name": "26YS0015_-_Bidders_Checklist.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_17/viewredirect/%7bV2%7dkeaeJkdTIzFI2oakoNncwlFo0Z44HtmZMuaGjfJkSb.qSyytMFPZ1BNUSDzOYaZRN18LAfc5PF3l8QLtkEfVcdodtQPeV0AeoDT.NZalB6eYgpipeQbf0IJ6PXOSad5C8loZbLJET7jfWQ.g8TogVAVAEXVNTYurdXnjMLezVrweeq5Rj8jl8_drHS4x1P1hWByWJPkzNdwElzHHFNClodHmC6ZwKQ.7DsBkWaHg/26YS0015_-_Bidders_Checklist.pdf",
+        "local_path": "attachments\\0000040629\\26YS0015_-_Bidders_Checklist.pdf",
+        "size_bytes": 19724
+      },
+      {
+        "file_name": "26YS0015_-_Bidders_Certification.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_17/viewredirect/%7bV2%7d6pFTlHekzJ_PXOyFM6BNz4dEC1.iICvqy4jeV91ga8PToXRAxXglQ96K7jGj3eENhFjEsx32QUEqnhvK6Isron_a98y8ZpEE5H8XHOVkW3g4K.BmTehm0N_Eu4r43hr_sr16d.wx7wjISRwHUxCSjJIkrL5R7jkwK9iGn467LTZZyy79chA4GUgoXT2ECkIuVD581UnjWncTZp2WYoDvMZtehEscVaepo0KQWzDQGMyZq_QfUZE-/26YS0015_-_Bidders_Certification.pdf",
+        "local_path": "attachments\\0000040629\\26YS0015_-_Bidders_Certification.pdf",
+        "size_bytes": 23376
+      },
+      {
+        "file_name": "26YS0015_-_STD_204.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_17/viewredirect/%7bV2%7d_dBYle4S4Q5l40KFXlP0bf9Hkc_YnlyH4G4X_kWKfIAWo8lvGt6csVlqJ2uahTklnJe.ITtMCXJ2sJniBe2HvBZ4rKgwlaRM9n8GBKI2gaTr1FOA6XqKYLZPwS1hEMsE.vpMh7AKTDqpVhL5tRP43TXRqtjxiNVXPl.YV11nxE8UHMTz4kbP6fwEuqORN2Vyvz4PTbjp5uGuJg--/26YS0015_-_STD_204.pdf",
+        "local_path": "attachments\\0000040629\\26YS0015_-_STD_204.pdf",
+        "size_bytes": 1748716
+      },
+      {
+        "file_name": "26YS0015_-_STD_205.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_17/viewredirect/%7bV2%7dsfX.1tCvDTELHMzqJiTMCWRwZzF2RneEjGcHveUN4g9G5SX3E6pRMX9zJynL.WoCOo3N7n0iseUP83FokoWFOTH94rK3x8OD20eMLAc.5qAo.oEyLjvJYeGYJ1x2dra.F0znC_jbSBIANjUxo_GCiJDOhgPGCuqVoYe0cPXYjIOpv8Q8RgpetuQOS.dCKprw7pnsWoXfY.WKvg--/26YS0015_-_STD_205.pdf",
+        "local_path": "attachments\\0000040629\\26YS0015_-_STD_205.pdf",
+        "size_bytes": 789125
+      },
+      {
+        "file_name": "26YS0015_-_Bidder_Declaration.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_17/viewredirect/%7bV2%7dMbuoE6srSmZ6F_2lIYmDZfzri5ECQz8tylTG.RG8UYYJQCUtz0WgLo1FYj91wNj1bs3eVTbGXlrsVWWbhdgBFMZQFDgVkReqFi.ArfMkqhY_YlRK2htDBO9uryxmDCHAUkdg9P3f2Dpfte0TFHffgnK7w2bBwZSKzYcmIFI2_.9bCG6gxE3JMgJ4fDhMb9OdalWRE3Ic6bTsiL2raA_dZHxJOi.G3UDjTqgRfWiwkPU-/26YS0015_-_Bidder_Declaration.pdf",
+        "local_path": "attachments\\0000040629\\26YS0015_-_Bidder_Declaration.pdf",
+        "size_bytes": 582435
+      },
+      {
+        "file_name": "26YS0015_-_CUF_Certification_Form.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_17/viewredirect/%7bV2%7dEnoBbXlztRDq4g_tbJa3ucZpjhs0eFtumc9USFQFb5z5PGscxdbjnQW2QMreJZoM7gCCsOO3VtFSFBDT9OwYsed5VNY635RLCERg.CWO3iHNgWmKz_VtEzIki.wOdyed5qcc7KwTUBNQVwkkfLMT4KXj3mRjd.fdk1RmQGEhmXkU9vI11s86nI0M.YTjT6QYcN3k4IKlomnsKciLOjsXT8B51BMbkktxmV6ekGHQKIznghvO5N8XVg--/26YS0015_-_CUF_Certification_Form.pdf",
+        "local_path": "attachments\\0000040629\\26YS0015_-_CUF_Certification_Form.pdf",
+        "size_bytes": 194963
+      },
+      {
+        "file_name": "26YS0015_-_DVBE_Declarations.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_17/viewredirect/%7bV2%7dM.9eGIIn5_4C07CgiSu.zSx0qukuq4SZ13zXmsNjk5lmLX6DTG_poypObZPoRwywXaN8Vx1GY7RM2JEMpj7wWm_xS.3gG9zeSXyE5PlsUEDcGQJIzo.Wbt4LY6lNNxmPbLdlRTOaalzgAI3enhYlXWKJEf6NrJ.2QUS3iryiRg_agXHgQldtjeLcLPngOZgPMJbXzVQss4hl._tmnf22TR6UJwz0lYX5B0rJRpY7/26YS0015_-_DVBE_Declarations.pdf",
+        "local_path": "attachments\\0000040629\\26YS0015_-_DVBE_Declarations.pdf",
+        "size_bytes": 1038109
+      },
+      {
+        "file_name": "DVBEProgramRequirements_-_Contracts_-_Revision_Date_012022.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_17/viewredirect/%7bV2%7dYa_TeG85jbh3N3SSdrJsJkT1DESu8Os_Jt4pfctOdkt496aMoLuX4zzzvKOM2uZtBgViKpFpUanv6StlNJeC2EXF8jK28GpXJzZa2qG7VUSTBaCx.iZs.EEJVuhUNmfJkAyyOJhjlqS4V2tyUa9ODFXkE8jqRYOEXge8WeAqbsV2XrBMpuvFXV3Z5iyBubnHhEdnTar5SsPtrHT_I8VM1XmH8PXd37lofJSVJUXjMu.gFoTA3XLnPGg6aGCFrDi7fJFeL9rz9LUd_RROI0MaHrYzBsjgzMWr.yC6Fpmqph8JvvLQISA9t6lM/DVBEProgramRequirements_-_Contracts_-_Revision_Date_012022.pdf",
+        "local_path": "attachments\\0000040629\\DVBEProgramRequirements_-_Contracts_-_Revision_Date_012022.pdf",
+        "size_bytes": 228880
+      },
+      {
+        "file_name": "26YS0015_-_CCC.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_17/viewredirect/%7bV2%7dzVxD7HN_uW8wnNDGskMn5i0Tdw90LYcx1i1Zt794KUkLMz2JaxfMkf6VYFLG.FR6PE07VBOjtBoSnmviSNNj8FiDxTkptKQ4T4cO68qYHXIAWjh0OF1hymJ49bN8XxF1BxIR39auhO8DeK2aaOd6f.lTg1Ta1PhwfarqfWDrhixP.24il25egWz.BxjyyTwKV94-/26YS0015_-_CCC.pdf",
+        "local_path": "attachments\\0000040629\\26YS0015_-_CCC.pdf",
+        "size_bytes": 245749
+      },
+      {
+        "file_name": "26YS0015_-_CA_Civil_Rights.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_17/viewredirect/%7bV2%7diSw7dORQ9O45nANeP.60j4HUYOH48I9nSKjDSIgC71ZBVr.PeRNP6v8Nh7CrNHMOvXJoXJvDl2KdJWtvQ.uqX1rMbpFuStw089dk_BoDp9DR_nBuOqULk_ITENAHjVvDSx4i1Er7Cj6M5LdMaWuugBoRH9vg_MHY7gMTvLfxWEvD2VMe4EgZyarKdPVUbsytsE3Kv5uLpOvOCerBGKv7jacTh9jQombm3o0-/26YS0015_-_CA_Civil_Rights.pdf",
+        "local_path": "attachments\\0000040629\\26YS0015_-_CA_Civil_Rights.pdf",
+        "size_bytes": 321015
+      },
+      {
+        "file_name": "26YS0015_-_Sample_Insurance_Template.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_17/viewredirect/%7bV2%7dYplPJmDHtoknrRkksjV08phcRW1JNqrAchfGCQzAwI3hOj465r8Q2j9L40O8YKuaSd6oGaXaIGOLrRtMQ351LhV1H99FyFf50vDIBIA.W7yx0ocDIaPFjLBrPccPzwOLBzHSskaZ742QeBAx5B_FLJM7haV2vELn6rMwySL7wsPQrE4bp68DqOeyKz6RYTV6w.w_MfhC1TBGBayBFXjND.F108U37VY5awGSdLCziqh1CszmGGwCEydxNKpOTw--/26YS0015_-_Sample_Insurance_Template.pdf",
+        "local_path": "attachments\\0000040629\\26YS0015_-_Sample_Insurance_Template.pdf",
+        "size_bytes": 1030396
+      },
+      {
+        "file_name": "26YS0015_-_STD_213_-_Sample_Agreement.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_17/viewredirect/%7bV2%7dz5BaXLVYlRtnoKaljVBFfuwtC3cb1HNBPgvRntCjI3xAamcB0qe9LK1LZhndIykpL2MszTMS8AQ8r95FzAH79PUFLrQ1kjIyEs6zUsOUE1fZtYawJVdydLnLLQ3WlZJiJoy74ynbT0EcJfjKFBrfmsF6DLtnzVAFxxnrwIjniZIW9UdkdykBwBPx4nqEce7r21R60xEMRJ2GwYYz500wdZ2CIWyKXtg5_f1sCnAEAgmDzOYMMuFUsLkU_BDdBlTL/26YS0015_-_STD_213_-_Sample_Agreement.pdf",
+        "local_path": "attachments\\0000040629\\26YS0015_-_STD_213_-_Sample_Agreement.pdf",
+        "size_bytes": 49661
+      },
+      {
+        "file_name": "26YS0015_-_Campus_Map_-_Plant_Operations_Directions.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_17/viewredirect/%7bV2%7dN4pg.jqo.U9GUyKX15xMwUy0pNIshRLEa_6Xp1dqFJZkNMBK.d1nIZacmnMiOleAwrNv5L2odsmk8ZjTNFAZ1JdYpOTTGPcZcBQ4meExot1JM_D_QmxhJYTNqVPL3Lxj1p3LTOgwH3YFj6agDURyFkBKJgFquBZU5Al2dzZuzs_rc_ha4_v9N9gKGVLy7Fh1sPma0U08S69U2cJhzmBh4H7xMqC614xZSnXCROapL..obUt.kDM7MFOfFLHgLsrGE4VpuLTTnf1ZwyPqSI7Xy2nqlPif1d.5jA.TEA--/26YS0015_-_Campus_Map_-_Plant_Operations_Directions.pdf",
+        "local_path": "attachments\\0000040629\\26YS0015_-_Campus_Map_-_Plant_Operations_Directions.pdf",
+        "size_bytes": 1462509
+      },
+      {
+        "file_name": "26YS0015_-_Bid_Rate_Sheet_v3.xlsm",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_17/viewredirect/%7bV2%7dnCbJ_KFNrmEeJiwSbgGbMVusN4ElzfOwYeTLpK0ZdtjBHyLOlmmNqxEfARyyckctObbwuxIIiHzz701myArlKUO7LrXvYlKR09zBa7eTpJFLOkMQ5rKejRhaA7g86vqaZtMuGNPcIVo6V4zqlvgqm7moDxPgGbH9S3pFSm8spqybGw_JEeqUCErwZQaY99.aTBvFiaA9yslsqgSJY.qeGIX3B72jTy3dJYvK_oLwrxA-/26YS0015_-_Bid_Rate_Sheet_v3.xlsm",
+        "local_path": "attachments\\0000040629\\26YS0015_-_Bid_Rate_Sheet_v3.xlsm",
+        "size_bytes": 20023
+      },
+      {
+        "file_name": "26YS0015_-_Addendum__1.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_17/viewredirect/%7bV2%7dqZ6rpsj5Q1il0zt1oIzitJ6ruczNYa0thc8KSvMw_pGFqmC2FPWH4iAeCsFZ5rhPj_QQQ_qv.vsTXGFAbWliE520lvZsVUTTPvcXKURY7e4yjmTpRyJMIUCxphnZn_fPqSAQE5gr2Olk65HPOdfin6Iel.8XhJZEEV6_Jjxn1IW74t903JKs1v3ijP6Pcczv_lFM.XhgWLzhQ.2BTu9McbHy/26YS0015_-_Addendum__1.pdf",
+        "local_path": "attachments\\0000040629\\26YS0015_-_Addendum__1.pdf",
+        "size_bytes": 82063
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/8955/0000040629"
+  },
+  {
+    "Event Name": "IFB No. 133701 Fire Alarm System Repair, Maintenance & Modernization Services, Bldgs. 20, 21 & 1000, Joint Forces Training Base",
+    "Details": {
+      "Event ID": "0000040622",
+      "Dept": "California Military Department",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 2:00PM PDT",
+      "Event End Date": "10/30/2026 2:00PM PDT"
+    },
+    "Contact Information": {
+      "Contact Name": "Lana Ponomarenko",
+      "Email": "lana.ponomarenko@cmd.ca.gov"
+    },
+    "Description": "The Contractor shall provide all materials, labor, bonds, licenses, insurance, equipment, tools, permits, taxes, transportation, and fees to to provide National Fire Protection Association (NFPA) compliant fire alarm repairs, reprogramming, emergency¿lighting modernization, and one year of inspection, testing, maintenance, and monitoring for Buildings 20, 21, and 1000 at JFTB Los Alamitos. All work shall be in accordance with the terms, conditions, and requirements of this Invitation for Bid (IFB). Bid submissions shall be emailed to PWC@cmd.ca.gov and shall include the Contracting Administrator listed in this IFB as a copied recipient. Subject line must include the IFB No. 133701, Fire Alarm System Repair, Maintenance & Modernization Services ¿ Bldgs. 20, 21 & 1000 and Contractor Business Name. Prospective bidders MUST attend the mandatory pre-bid job walk on 10/20/2026, at 10:00 AM at Joint Forces Training Base, 11200 Lexington Drive, Los Alamitos, CA 90720. Arrive at least 15 minutes early and bring business cards. Failure to arrive at the designated meeting location by the scheduled start time may result in disqualification from submitting a bid. Bidders who do not remain for the entire pre-bid job walk may be considered non-responsive and may not be allowed to bid on this project. Prospective bidders may obtain directions to the pre-bid job walk site by contacting Lana Ponomarenko at Lana.Ponomarenko@cmd.ca.gov. The prime contractor MUST possess a type C-10 - Electrical Contractor license. All questions regarding this IFB MUST be submitted to Lana Ponomarenko at Lana.Ponomarenko@cmd.ca.gov no later than 5:00 PM on 10/23/2026. Email subject lines must reference IFB No. 133701. If an addendum is necessary, it will be issued prior to the Bid Submission Deadline. The bid opening will be held on 10/30/2026 at 2:15 PM. Fire Alarm System Repair, Maintenance & Modernization Services ¿ Bldgs. 20, 21 & 1000 PRE-BID JOB WALK: 10/20/2026 at 10:00 AM Q&A END: 10/23/2026 at 5:00 PM BID SUBMISSION DEADLINE: 10/30/2026 at 2:00 PM BID OPENING: 10/30/2026 at 2:15 PM",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "72101509",
+        "UNSPSC Classification Description": "Building facility maintenance & repair services - Fire protection system and equipment maintenance or repair service"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "133701_IFB_Packet.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_18/viewredirect/%7bV2%7dAFBEj0ablnhPjGKoftHOutBleBMHjDxZCE6v3PG1.sOAZKmbyXBv1M89nN9NlmDJZ9ey9FLKsD048kz3qJMsurFiWtZPwLNM72Mr9459imgCUzmP6yJu1cIH7s8w_85jswRPlGjEaWjCxK7QlG0r3X8tZc8ZDwJM4vb_dWAMD75UUbcPXI_ylCP7B055RoJmvHodVHSjmyY-/133701_IFB_Packet.pdf",
+        "local_path": "attachments\\0000040622\\133701_IFB_Packet.pdf",
+        "size_bytes": 2064062
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/8940/0000040622"
+  },
+  {
+    "Event Name": "2CA08061 - Replacing Heating, Ventilation and Air Conditioning (HVAC) Units Services **Small Business Bidders ONLY**",
+    "Details": {
+      "Event ID": "2CA08061",
+      "Dept": "CAL FIRE",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 8:00AM PDT",
+      "Event End Date": "10/30/2026 5:00PM PDT"
+    },
+    "Contact Information": {
+      "Contact Name": "Austin Bristol",
+      "Email": "austin.bristol@fire.ca.gov"
+    },
+    "Description": "**Only Small Businesses certified by the State of CA shall submit a bid** Contractor agrees to provide to the California Department of Forestry and Fire Protection (CAL FIRE) Heating, Ventilation and Air Conditioning (HVAC) Unit Replacement services at CAL FIRE Siskiyou Unit - Emergency Command Center",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "72101511",
+        "UNSPSC Classification Description": "Building facility maintenance & repair services - Air conditioning installation or maintenance or repair service"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "2CA08061_-_Bidders_Instructions.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_19/viewredirect/%7bV2%7d.6OPbnK8OENyYeJrGJ0ifPIn4XVm0kGa0kYk3wTMjtpMxXJwqROp4CLNKURy965WTcc33F8LXQBN_2vJKBfibu6Ts.3vJ9sq.HsdkfooMZyOj5fiMYgviiJmMOROSjtUpHeJRmm1L6ccrcifmGfPHVSoYKczZxWPjt96w6nrWudL7ZVmNsCcrXzAPpI89t0CGWDDhvWuATUQ3mdcAEH6ldeoc52ERn90c9uIlFOVRXZRsdE5/2CA08061_-_Bidders_Instructions.pdf",
+        "local_path": "attachments\\2CA08061\\2CA08061_-_Bidders_Instructions.pdf",
+        "size_bytes": 1513366
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/3540/2CA08061"
+  },
+  {
+    "Event Name": "IFB 26-41111-000 Off-Site Records Storage and Retention Services",
+    "Details": {
+      "Event ID": "0000040666",
+      "Dept": "Department of State Hospitals",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 11:40AM PDT",
+      "Event End Date": "11/02/2026 2:00PM PST"
+    },
+    "Contact Information": {
+      "Contact Name": "Sabina Baffoe",
+      "Email": "sabina.baffoe@dsh.ca.gov"
+    },
+    "Description": "Contractor shall provide all equipment, materials, supplies, personnel, transportation, licenses, and permits necessary to perform the work stated herein for off-site records storage and retention services.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "78131804",
+        "UNSPSC Classification Description": "Storage srvcs - Specialized warehousing & storage - Document storage services"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "IFB_26-41111-000_Off-Site_Records_Storage_and_Retention.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_21/viewredirect/%7bV2%7d1pikQgocqCHzqhur6ux.l9NIGQ10b1x36Izyn5xZ840TgBTyLfVlxYF9.SsbD88KBzOwEa3A2fzmefZVTczzoDIyL5qQj1HL45rXmZN_h4L29vM.4lOaTWW6noLJyfLjtDAMHY.oxUbDrr96N4YV7uK5kSffJ6_LpnpJ90BTZjVwkWioU2Lb11OxofKTtkko9LJriv5KtBeRkk7abOkQDfJPT.17578sJBEG7iYzq8aZa49dUWQTYj26TuTGb3Ehi6Y62hONa3G1csa3mVH_Xw5EReUGhsujL_bV4ggRxf7pTZQG/IFB_26-41111-000_Off-Site_Records_Storage_and_Retention.pdf",
+        "local_path": "attachments\\0000040666\\IFB_26-41111-000_Off-Site_Records_Storage_and_Retention.pdf",
+        "size_bytes": 3591132
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/4440/0000040666"
+  },
+  {
+    "Event Name": "C5613670-D, Statewide Safety Training Services",
+    "Details": {
+      "Event ID": "0000040658",
+      "Dept": "Dept of Corrections & Rehab",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 8:00AM PDT",
+      "Event End Date": "11/05/2026 11:00AM PST"
+    },
+    "Contact Information": {
+      "Contact Name": "Monique Stephens",
+      "Phone": "916/255-6199",
+      "Email": "monique.stephens@cdcr.ca.gov"
+    },
+    "Description": "The Contractor shall provide safety training services on an ¿as-needed basis¿ and will be compensated for the services in accordance with the service rate specified on Exhibit B-1, Rate Sheet; which shall include all equipment, materials, supplies, permits, licenses, insurance, taxes, per diem, and any other item of expense necessary to perform training services for the California Department of Corrections and Rehabilitation (CDCR), Correctional Construction Mentorship Program (CCM) located at CDCR Institutions as listed in Exhibit A-1, Safety Training Institutions.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "46201000",
+        "UNSPSC Classification Description": "Public safety training equipment"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "IFB_C5613670-D.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_23/viewredirect/%7bV2%7dSBgtjxuHuc7f2xwVGvL6LQNPmT7fDyTqgrWeyO7OF.fzv8vxBpdrRphiAKR22HXJ2wGGzb.kiJRv8PfvwYlkZeDLzRFIhse8oPQPLsds.NmYyivI1ANi6oLGNRvgyn9pJhjUqg3fL7wUKdVfar8SjxU9VjYQ5u_YTfkwNvEj8OsUg0UvNc8f3iD64hOEc3nhEaY-/IFB_C5613670-D.pdf",
+        "local_path": "attachments\\0000040658\\IFB_C5613670-D.pdf",
+        "size_bytes": 6992504
+      },
+      {
+        "file_name": "Exhibit_A-1.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_23/viewredirect/%7bV2%7d3bVz3X8CnsYTpDdmY8SWDtTU9njbDAEve6Cly.6FDxblnKHlLFo.YR8l_AAsUeQhpk3LdRKXjkqWE98O2D3L11Wl68MabeABUzyBH3hxJKdWfCgGl76zaG7.gzXD5CIpgOCSujssY0ayf0QIRlVYWrE3hIZzKwSHOJYq9.uhAgt62Xhqr0mR3kTOUoM-/Exhibit_A-1.pdf",
+        "local_path": "attachments\\0000040658\\Exhibit_A-1.pdf",
+        "size_bytes": 208375
+      },
+      {
+        "file_name": "Exhibit_A-2.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_23/viewredirect/%7bV2%7dV1PxKaoLkVkcUqs8xUiGWcmtfyN6Q6i5dbimccsjSqGxXsliomiMwI4uV4KK9DPhXUh4RBMCN0P1bSyqJ6PHenW5G3lNycYEDUQAOqOfK4d6DsDoljEJDOxy0k8861qiiOvRfzny7nPkJkPJFGwu6fIaGNZ23HypDiX0UOSBe_o5XBVzDt8EurnpmU4-/Exhibit_A-2.pdf",
+        "local_path": "attachments\\0000040658\\Exhibit_A-2.pdf",
+        "size_bytes": 167542
+      },
+      {
+        "file_name": "Exhibit_B-1_-_Rate_Sheet.xlsx",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_23/viewredirect/%7bV2%7dNTbZm5J3f5etOk.nKQSuiR4ewfD8Fg6u4jvA04enQhhkqMkDRo9eLFvgPwgWt9nSDsQJIxxtkdIAhvYTIZwcLXiKSF6XzPnV8jPZ4eMmQCU.TBtyuu1e_nxdD3nyDncE0F9Nof.mjATbV.DP.B_1VjGWfL1pAqes3hpIefBbMAZbRciJ4W7gnLSNq4a.4XracWliTpesSXcGw9.D02h36yL2Qfcp00Au/Exhibit_B-1_-_Rate_Sheet.xlsx",
+        "local_path": "attachments\\0000040658\\Exhibit_B-1_-_Rate_Sheet.xlsx",
+        "size_bytes": 33251
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/5225/0000040658"
+  },
+  {
+    "Event Name": "Certified Court Reporting",
+    "Details": {
+      "Event ID": "26-012-210",
+      "Dept": "State Water Resources Control",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 4:30PM PDT",
+      "Event End Date": "11/05/2026 3:00PM PST"
+    },
+    "Contact Information": {
+      "Contact Name": "Panthea McDonald-Ryan",
+      "Phone": "916/445-9730",
+      "Email": "panthea.mcdonald-ryan@waterboards.ca.gov"
+    },
+    "Description": "10/15/2026: Prospective Bidders are invited to review and respond to this Invitation for Bid (IFB) No. 26-012-210 entitled, \"Certified Court Reporting\" for the State Water Resources Control Board (Water Board). When preparing and submitting a bid response, compliance with the instructions found herein is imperative. Key Action Dates: IFB Available to Prospective Bidders on: October 15, 2026 Questions Must be Submitted by: October 22, 2026, by 3:00 PM PST Bids Must be Received By: November 5, 2026, by 3:00 PM PST Due date to request bid opening link: November 4, 2026, by 3:00 PM PST Bid Opening: November 6, 2026, 2:00 PM PST Anticipated Start Date of Agreement: December 01, 2026",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "82111603",
+        "UNSPSC Classification Description": "Editorial services - Writing & translations - Non technical writing - Court reporting services"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "26-012-210_IFB_Certified_Court_Reporting.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_25/viewredirect/%7bV2%7d9rXMxV278st6ZvttdNq1EGjEVR2BtWpb9CYsjChJykotadgCyRWTdYpZ7gdCszLe2O.qt4HDPmj0rMMhZEKnr1YPgz.rm3c6zsZowDofmNLr_zVQGI9evGGNsMiScRiE3N2zDU1mE1Es7GJ0QQc7aelYKZHiUiLehCLO.DQOtzEe6yn66AsknBnI2qy.PU6e.cRKhKf9Tk.eyRJm0xlAvBKxaYQrTrChpn8r8QPI1TfJcIraAohfXUj4Er2TN_mkNE295hj7/26-012-210_IFB_Certified_Court_Reporting.pdf",
+        "local_path": "attachments\\26-012-210\\26-012-210_IFB_Certified_Court_Reporting.pdf",
+        "size_bytes": 5899437
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/3940/26-012-210"
+  },
+  {
+    "Event Name": "26-0062a - Winterhaven BPS Generator Replacement (Imperial County) Public Works",
+    "Details": {
+      "Event ID": "0000040672",
+      "Dept": "Dept of Food & Agriculture",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 5:00PM PDT",
+      "Event End Date": "11/10/2026 2:00PM PST"
+    },
+    "Contact Information": {
+      "Contact Name": "Stefani Johnson",
+      "Email": "stefani.johnson@cdfa.ca.gov"
+    },
+    "Description": "This is an Agreement in which the Contractor shall provide replacement of its existing generator. The existing generator will need to be demolished and replaced with a new generator, which will be installed in the existing generator¿s place. The connecting existing integrated panelboard and the existing conductors will also be demolished and replaced for this generator replacement. The components of this scope have been developed by the Department of General Services (¿DGS¿), must be adhered to, and will be provided to the Contractor.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "26111600",
+        "UNSPSC Classification Description": "Power generators"
+      },
+      {
+        "UNSPSC Classification": "72151502",
+        "UNSPSC Classification Description": "Special trade construction & maintenance services - Electrical system services - Electric power system construction service"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "26-0052a_Cost_Proposal_Template.xlsx",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_26/viewredirect/%7bV2%7dW2O0kEhQkLvgvjqYf3kNAvC2quzCiAo9tldFXAZnJPMi.nQuSaP_fl5FQcKyguuvPHUTedryA12kKQtdRp43vFP7eeA466cStpaIhSQmet0XjrWjJgPjP8JWLEDPBOWaSo4Nu4GlDUgloYRYbpKA3ivtJn2_JdnEvfx489I4Koz_0Hhm4FUmJeSOdORE7omg9T.USsozhqEPe1wF3Gjby7UZzKPhu9GjexLLuiqCdBmFJxMXWpQ-/26-0052a_Cost_Proposal_Template.xlsx",
+        "local_path": "attachments\\0000040672\\26-0052a_Cost_Proposal_Template.xlsx",
+        "size_bytes": 13507
+      },
+      {
+        "file_name": "Attachment_2_Winterhaven_BPS_Working_Drawings.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_26/viewredirect/%7bV2%7dOU_T99Rl1qwCTLFwHD9gkfGOs1zITY9IQlYzcOh_htUTGzg8Na0Ubme0WKgEo9CAY6ZXP7VphDJxLWI7y.U4Cck34bgLw6RDVMZyL.0jjx90qyXlEFA2YkEyYPJuqiSP2B4.3UPnrxFFUFi1_aQyNL4nEnEegibfQxcYI9M3i_UdB9ItsBM3vOqLMQ8wKUlIqMOnd3EasOTYQk5tGke1z_tYeYwX7v6IqcEfe8c7X.6H0ICLYufxjU.e9mjxynm13UGl7TJ40ZEKdCSdlB2rBA--/Attachment_2_Winterhaven_BPS_Working_Drawings.pdf",
+        "local_path": "attachments\\0000040672\\Attachment_2_Winterhaven_BPS_Working_Drawings.pdf",
+        "size_bytes": 4805275
+      },
+      {
+        "file_name": "Attachment_3_Winterhaven_BPS_Project_Manual.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_26/viewredirect/%7bV2%7dmnQ5j1qitO_iocCoKbSDRryEVWGYsfEbRKpnCf4zdwbY9QkiITtuPVtsEv77kysiVfB00Voebega1gxL8T7CjBw1h5h7_jweGwoqerP6GWw49_mgOdYmHR6t1_3D9EaOJJWHe_6dn75fIqdTOohynZG6jqg2HpPr.wCsDt9e3YrUIQx63UFNzh6aYh67lz1dvr8gc8CZmuF22P6_HGR.No76grQhYLns5PQiXNWXxs.Nt9VxOlWkxPrQmg6GKYydfVEqv0X5INUfSDKL/Attachment_3_Winterhaven_BPS_Project_Manual.pdf",
+        "local_path": "attachments\\0000040672\\Attachment_3_Winterhaven_BPS_Project_Manual.pdf",
+        "size_bytes": 1053107
+      },
+      {
+        "file_name": "Attachment_4_-_Labor_Code_Certifications.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_26/viewredirect/%7bV2%7dCr8rg_BRVQKVbE8rff3RY_LLWu3846Y0BaRSge45ODGVVIvFHVuJ9vPuV0nxCZxgR6xPoHB4ID07KYjiNLJmdwVjSXRpH54PTElqCC9kSreAvhLo4ibWnQsdvVw_R.TLvMCutcfVZ7q5H8Lb1b0J1cRLHTeWbg4zJ00bCx4nXS.b1oLXckHih9JF_TqaTYgRhSdU6HD1MXGsbhI.4vdlHVyZvJXy.2Aez_5LQk7obLiwlWgyZIyKiye5Ui69fND_AdnMUe16/Attachment_4_-_Labor_Code_Certifications.pdf",
+        "local_path": "attachments\\0000040672\\Attachment_4_-_Labor_Code_Certifications.pdf",
+        "size_bytes": 78214
+      },
+      {
+        "file_name": "Attachment_5_-_Non-Collusion.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_26/viewredirect/%7bV2%7dW43GM22tbbr6Rb.tV8vbvkK9S7vre8LJkHh9_3BRg60njdIa.k7U.D6hgLykEuod_SmMF8BTTk1dGtTUvUDFBJdW3zFO.od0hjp3TH5JraPDmxB.y8jZTFDgT0SqDJpc2mro5pMlzHoKyvj4gaL_xlSquXz7nsobB.4ezebEqE_rVJTt4zX_5k4k1l9eF1Yb6gTlxe5NNwDy1Uizzj4jiWhI9Wgg4aanH5v77Fol/Attachment_5_-_Non-Collusion.pdf",
+        "local_path": "attachments\\0000040672\\Attachment_5_-_Non-Collusion.pdf",
+        "size_bytes": 727584
+      },
+      {
+        "file_name": "26-0052a_IFB_Public_Works.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_26/viewredirect/%7bV2%7d5kUjOdM48xEPz_Bq0A33DTJqSBbgxNHj_z9gPXc5RBUEOPoLyWyFGCQqQsxzlctA4UG7J7hoHbdIo5jG1ZnXiwHzmn_fhku2EoGpz3PdDdPrFFsNwIOnpQA4UyNTJfkrgQlXropPVjh3b8JbpKzdwuI625tz3z2z2_ZxZkjKu0mGXbmXeBUiESWfCaUr6ZhLPIdvSnnoeUv9z62fHgBwYeB54wcrb_jg/26-0052a_IFB_Public_Works.pdf",
+        "local_path": "attachments\\0000040672\\26-0052a_IFB_Public_Works.pdf",
+        "size_bytes": 704932
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/8570/0000040672"
+  },
+  {
+    "Event Name": "C26863029 GROVER HOT SPRINGS STATE PARK - Maintenance Yard Rebuild",
+    "Details": {
+      "Event ID": "0000040673",
+      "Dept": "Dept of Parks & Recreation",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 2:26PM PDT",
+      "Event End Date": "11/12/2026 2:00PM PST"
+    },
+    "Contact Information": {
+      "Contact Name": "Merrilee Byrnes",
+      "Email": "merrilee.byrnes@parks.ca.gov"
+    },
+    "Description": "Furnish and install pre-engineered pump house and stick-framed dormitory, site utilities and pavement to rebuild existing maintenance yard at GROVER HOT SPRINGS STATE PARK in Alpine County, California. Job Showing is Mandatory - see Notice to Contractors included in the Project Manual. Instructions to Download Bid Package: Prospective bidders may examine and obtain the bid forms, specifications, plans and addenda (if any) by downloading this bid package from this website. Questions and Answers: Any discrepancies, omissions, ambiguities, or conflicts in or among the contract documents or doubts as to meaning shall be brought to the State's attention by emailing your questions to merrilee.byrnes@parks.ca.gov NO LATER THAN 2 p.m., seven (7) calendar days prior to bid opening date. Answers will be provided by Addendum on this website, and it is the responsibility of the bidders to download any addendum as needed. Participation in Disabled Veteran Business Enterprise Program (DVBE): The minimum DVBE participation percentage goal is 6%. Failure to fulfill the DVBE requirement will render your bid non-responsive. DVBE Incentive: For evaluation purposes only, an incentive will be given to bidders who exceed the 6% DVBE participation requirements. Refer to the DVBE forms beginning with DPR 479IP. Small Business Preference and Small Business Subcontractor Participation: A five percent (5%) Small Business Preference will be granted to properly certified small businesses (a completed STD 811 Form must be submitted with the bid proposal). Public Works Contractor Registration Program ¿ SB 854: 1) No contractor or subcontractor may be listed on a bid proposal for a public works project (submitted on or after March 1, 2015) unless registered with the Department of Industrial Relations pursuant to Labor Code section 1725.5 [with limited exceptions from this requirement for bid purposes only under Labor Code section 1771.1(a)]. 2) No contractor or subcontractor may be awarded a contract for public work on a public works project (awarded on or after April 1, 2015) unless registered with the Department of Industrial Relations pursuant to Labor Code section 1725.5. 3) This project is subject to compliance monitoring and enforcement by the Department of Industrial Relations. Refer to http://www.dir.ca.gov/Public-Works/SB854.html for more information.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "72101500",
+        "UNSPSC Classification Description": "Building facility maintenance & repair services"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "Bid_Forms_C26863029.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_27/viewredirect/%7bV2%7dt2vyeSYuixSPSartz0IgtSlTZYDgUKHnlInZj8hHYcbsIKZn5RFDQ5jPAARTBHRIrii0YWWPz6FQ5VCfZ8GunhwYHMnWMWxqEfUPaJ_SOoWxfM3Y.tzHW57e0YMt3jlVeKDQV6mZzfu8h_2.cUd9ncyW6qykBXKVOd.feDrEF8zhs4GFwRfpsN2natPcPVTywBm6zZcjP_VCl3HI/Bid_Forms_C26863029.pdf",
+        "local_path": "attachments\\0000040673\\Bid_Forms_C26863029.pdf",
+        "size_bytes": 3308428
+      },
+      {
+        "file_name": "Drawings-Dormitory_Building_C26863029.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_27/viewredirect/%7bV2%7dZXIGckjIe5KEgMZY3XN2Msd9gQkE_QtYKKY7tJNjOW5PgDgbzh.uKXPsRSofyyFy.Duo4v8i7vZXtrchhMAMLJfjEbGClYgQsKrqly5WtrQ.DhhXP19pcfihP_Qk7CmUYqkbMuF5jYODAyO6Nb5CJY4cfZ7YUtf1JMAXVFmuc87BiPnkf1bEbMELo4a1mLrP9CAoLgcNd18nBDskIh8NCviQg8KRkkD_KMsUNSeCWqyZTtGT.jmM1_.9cfWqTUfu/Drawings-Dormitory_Building_C26863029.pdf",
+        "local_path": "attachments\\0000040673\\Drawings-Dormitory_Building_C26863029.pdf",
+        "size_bytes": 42316793
+      },
+      {
+        "file_name": "Drawings-Maintenance_Yard_Rebuild_C26863029.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_27/viewredirect/%7bV2%7d6VCNcN.AeCX_deABQZhXAxJQteV4MWWpcOql49SApoNuoQ6gTSqAiB_1A38rTgN6K8D1QKURVdz8PTKCj5MO2MC5KqB8nOlcLFnzqSxEI8dSV1AoVGtY_4StzsSk62qzJ3nGML3A4qbSrKgRswoJ.mB5.5GjGBi.DV49B323118SoPpabRLtGpdLuz6Ygl8nZqS5HJJSOg7NlkktcGWHr54MRnetzINC_p5PIycOf4h0xYg8lVPb3bEDl9mwQh7T8KI5tHPudoEQcWEF/Drawings-Maintenance_Yard_Rebuild_C26863029.pdf",
+        "local_path": "attachments\\0000040673\\Drawings-Maintenance_Yard_Rebuild_C26863029.pdf",
+        "size_bytes": 48400796
+      },
+      {
+        "file_name": "Project_Manual_C26863029.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_27/viewredirect/%7bV2%7dPq4IGzqKWRd7nUTUMZVY8bOxkR4ND_A0fuo.gX4ETmjNjnUFKjMxfkYj33RXLghiBk6EXicyFiYNLR_edFMopoUY5sU0AvDmPv7xr8IbjVIZLRoSlyZg8V5UJE07UKdRixWok6PDChVvF5tcRw49IJpXQHsG74kza0b7Xm6Umw0Rr8JJ3miFqO.izvu6d8xbNnIJGwvB_Z0gWtp.Vaf80wn37tssWA--/Project_Manual_C26863029.pdf",
+        "local_path": "attachments\\0000040673\\Project_Manual_C26863029.pdf",
+        "size_bytes": 17640554
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/3790/0000040673"
+  },
+  {
+    "Event Name": "C5613445-D American Sign Language (ASL) In-Person Interpreting (IPI) Services",
+    "Details": {
+      "Event ID": "0000040653",
+      "Dept": "Dept of Corrections & Rehab",
+      "Event End Date": "11/16/2026 11:00AM PST",
+      "Format/Type": "Sell / RFx"
+    },
+    "Contact Information": {
+      "Contact Name": "[Contact Name]",
+      "Phone": "[Phone Number]",
+      "Email": "[EmailAddress]"
+    },
+    "Description": "[Detail Description]",
+    "Attachments": [],
+    "Detail URL": "https://caleprocure.ca.gov/event/5225/0000040653"
+  },
+  {
+    "Event Name": "RFQ - 3742 Oakes College Housing Capital Improvements",
+    "Details": {
+      "Event ID": "3742",
+      "Dept": "UC Santa Cruz",
+      "Format/Type": "Request For Information / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 12:00PM PDT",
+      "Event End Date": "11/17/2026 2:00PM PST"
+    },
+    "Contact Information": {
+      "Contact Name": "Stacy Stone"
+    },
+    "Description": "The University of California, Santa Cruz (University; UC Santa Cruz) Department of Physical Planning, Development and Operations (PPDO) is soliciting qualifications from qualified Design Professional firms to provide programming and planning services for new construction, redevelopment, and renovation for the Oakes College Housing Capital Improvements (Oakes College Renewal Project; project).",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "81101508",
+        "UNSPSC Classification Description": "Professional engineering services - Civil engineering - Architectural engineering"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "RFQ_AD_-_Oakes_College_Housing_Capital_Improvements_(3742).pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_29/viewredirect/%7bV2%7dD0mGhhu2qN3XJMJVhXtcdS.sc.toAR40gnWr2lf26v4EhbN7p8JvCCQfk2kV5og98AT3sSwC.OL7ScVC6hZQACzAClXO8k__A3iDXg2N6bwb_YRESvkAitTvvdJlVRBasTJx.8ZMK_50MfsmM2elUCwSPKVE6Z2ZrpRywFEnO6pVh83IN_YZZeo8zi5xQM.FCY2f9q0XO6tQldgzSJ_6VukuvyYSuAMHgA3hojqUqqxi.Jb7dfGCLmV7Aa2KytpN8h0NTBvoZWTs0EtQ4bkwpQqendSAbqVm_z_urKtnagliIYZmp6548CXV/RFQ_AD_-_Oakes_College_Housing_Capital_Improvements_(3742).pdf",
+        "local_path": "attachments\\3742\\RFQ_AD_-_Oakes_College_Housing_Capital_Improvements_(3742).pdf",
+        "size_bytes": 166032
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/6580/3742"
+  },
+  {
+    "Event Name": "RFP # C26708001:  Aquatic Vegetation Control (Reposted)",
+    "Details": {
+      "Event ID": "0000040665",
+      "Dept": "Dept of Parks & Recreation",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 12:07PM PDT",
+      "Event End Date": "11/24/2026 12:00PM PST"
+    },
+    "Contact Information": {
+      "Contact Name": "Jeffrey Koff",
+      "Email": "jeffrey.koff@parks.ca.gov"
+    },
+    "Description": "The Department of Parks and Recreation, Division of Boating and Waterways, is seeking a qualified contractor to provide aquatic vegetation control services within the Sacramento-San Joaquin Delta, Suisun Marsh, and its tributaries that are within DBW Jurisdiction. Services include: Boat-based Herbicide Treatment for Floating Aquatic Vegetation Boat-based Herbicide Treatment for Submerged Aquatic Vegetation Drone Herbicide Treatment Mechanical Harvesting",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "10171700",
+        "UNSPSC Classification Description": "Herbicides"
+      },
+      {
+        "UNSPSC Classification": "70141604",
+        "UNSPSC Classification Description": "Farming contracting services - Crop protection - Herbicide services"
+      },
+      {
+        "UNSPSC Classification": "81171601",
+        "UNSPSC Classification Description": "Biological science services - Ecological science srvcs - Aquatic ecology srvcs"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "RFP__C26708001_-_Aquatic_Vegetation_Control.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_30/viewredirect/%7bV2%7dAVrncbfDtGeqUVGYkHGlcMm8iXx6oQmcBNBZsbs0PIlo.LRb339R42M4U0gwlZ3ZUqgRLNxTz7gec9_aPm9xBV0uHTO1iKtw0_rdP_kDMJKlP.3THVgd5ewkbBtj7NCuEjvW7HbLloodMcnDfMODRCfCQX0ZmcJ7iiEuOypIQQG5Bb02ROb30pIj3.0bHDLtQMUtivLDbdWlbgknam04AE8Uv36Dx7z.YX3nvmvlGeS6UzQscPtQqqMr._fdsuk8OhA_I_OzleMhUPMl/RFP__C26708001_-_Aquatic_Vegetation_Control.pdf",
+        "local_path": "attachments\\0000040665\\RFP__C26708001_-_Aquatic_Vegetation_Control.pdf",
+        "size_bytes": 6440047
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/3790/0000040665"
+  },
+  {
+    "Event Name": "Request for Qualifications - Task Order Construction Agreement - General Construction",
+    "Details": {
+      "Event ID": "0000040674",
+      "Dept": "CSU, Fresno",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 4:00PM PDT",
+      "Event End Date": "11/24/2026 2:00PM PST"
+    },
+    "Contact Information": {
+      "Contact Name": "David Sawyer",
+      "Phone": "559/278-3962",
+      "Email": "davidsawyer@mail.fresnostate.edu"
+    },
+    "Description": "https://vendors.planetbids.com/portal/26037/bo/bo-detail/147374 The Board of Trustees of the California State University is requesting Statements of Qualifications (SOQ) from interested and qualified general contractors (Respondents) to provide Design-Build (DB), Collaborative (Progressive) Design-Build (CDB), and Construction Manager at Risk (CMAR) services the design, preconstruction, construction management, and/or construction of a portfolio of general construction projects under a master enabling agreement at California State University, Fresno.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "46191505",
+        "UNSPSC Classification Description": "Fire protection - Fire prevention - Fire alarm systems"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "NTC_2026-10-12_GC_TI_TOCA-MEA_2627-04.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_31/viewredirect/%7bV2%7doCfpHJrQfoydTuI5sJ.7m.2kk7d_V2E_LD7HdVxSAt.q5mB5ouKvDCvgpkHShfVO7OFOMmdbkY3HIwPjEF852sZ.HoIOFoWVRaZjVzcMvF4FoaW4zypJWr3RDAgHFFrzEnuKw3YMCQ49Os10wzDF8fvV3sMyIIkTn.11wqZDV7sS0s.Y3.3WXinTKmqP.G.yRXK.PSRaeSaaeZDDwG7Vjg1ds3jU842alCJOxqAgcND7Pjm0Og8LB0nGGpQ_XVP1/NTC_2026-10-12_GC_TI_TOCA-MEA_2627-04.pdf",
+        "local_path": "attachments\\0000040674\\NTC_2026-10-12_GC_TI_TOCA-MEA_2627-04.pdf",
+        "size_bytes": 144947
+      },
+      {
+        "file_name": "RFQuals_2026-10-12_GC_TI_TOCA-MEA_2627-04.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_31/viewredirect/%7bV2%7dwlqYaZvB5I3TGmXjDVSCR7vGTp7RzE2Udod_lBQwvSOSQnPlkJHL1jqOnCQVV1th.esWwgguHvyBrbTe6PWZFx.ZZRkf.veV0hBYvH52NhAKGuBt8S.XByVSQu4ECLGTKpYh.mmjatuaizwxTqRkzFcL8v62KMqCL6YQ6Eidg3AXzEuCazOVLgR2rIPpiUJSl5rMWemBmHPJiDp.XAyl_rGf4PE.cmUXgu_vlLfop2HCWk5Nc3NPyzDr5oo4fqUGl_Pl.ceVP58-/RFQuals_2026-10-12_GC_TI_TOCA-MEA_2627-04.pdf",
+        "local_path": "attachments\\0000040674\\RFQuals_2026-10-12_GC_TI_TOCA-MEA_2627-04.pdf",
+        "size_bytes": 262786
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/6700/0000040674"
+  },
+  {
+    "Event Name": "Request for Qualifications - Task Order Construction Agreement - Elevator Repairs",
+    "Details": {
+      "Event ID": "0000040671",
+      "Dept": "CSU, Fresno",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 2:30PM PDT",
+      "Event End Date": "11/24/2026 2:00PM PST"
+    },
+    "Contact Information": {
+      "Contact Name": "David Sawyer",
+      "Phone": "559/278-3962",
+      "Email": "davidsawyer@mail.fresnostate.edu"
+    },
+    "Description": "https://vendors.planetbids.com/portal/26037/bo/bo-detail/147361 The Board of Trustees of the California State University is requesting Statements of Qualifications (SOQ) from interested and qualified general contractors (Respondents) to provide Design-Build (DB), Collaborative (Progressive) Design-Build (CDB), and Construction Manager at Risk (CMAR) services the design, preconstruction, construction management, and/or construction of a portfolio of elevator repair projects under a master enabling agreement at California State University, Fresno.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "46191505",
+        "UNSPSC Classification Description": "Fire protection - Fire prevention - Fire alarm systems"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "RFQuals_2026-10-12_Elevator_Repairs_TOCA-MEA_2627-03.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_32/viewredirect/%7bV2%7d7Np7Lf.n8Z8LMd8xwZlRaoX2Xa0oD1wFaccn8CvRqv72WeENTOn2EfYM9QSYlt6s.p1b64EDRs8t7lUte5eBxOsqWJCCYaVuLQKeEjJpcV8BgGsAK_9snZHAqfnf5ry3joznAxeLojC5XApZ82gIYCMNTc_V_dQzB0vRYol4xZsK_UO3TgUDXsUTO2jU1nPOyEx1AOOPM4T24r8Za2i3s4MTSbHW1OzHYOKnNsTgEPdydeFtuibrKfStFnp8kDIDOrQENi6Fed5WHtfLT9g3NjNuO4Z9nQw_FVhMiiWf/RFQuals_2026-10-12_Elevator_Repairs_TOCA-MEA_2627-03.pdf",
+        "local_path": "attachments\\0000040671\\RFQuals_2026-10-12_Elevator_Repairs_TOCA-MEA_2627-03.pdf",
+        "size_bytes": 263327
+      },
+      {
+        "file_name": "NTC_2026-10-12_Elevator_Repairs_TOCA-MEA_2627-03.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_32/viewredirect/%7bV2%7dhcFGQdBRxGiBieDt_I_GIjmNeK6p9ed1yoFQhLXQ7jz7uNqAJF5NqBRpQYx0hGFY4qWT.fijOSAoaRe6IS6YU632F8izTlZcFDTG5F0DTGKRbd_a5jrXu4vO8SPIrdQDftRz6eKYvEzMKKWo11g34XhD2u3G_qOstmf18Bi8w.Ri3VEABVTkB.0UPI85BaGfdo_PD7U3hVdohbxCiSJP11F3z966bPYp8scfN04Iin_axHHa8NJxnrJKEsTNtU8znniLCTIgkX9hdu16pOKdKblF22NbiQ--/NTC_2026-10-12_Elevator_Repairs_TOCA-MEA_2627-03.pdf",
+        "local_path": "attachments\\0000040671\\NTC_2026-10-12_Elevator_Repairs_TOCA-MEA_2627-03.pdf",
+        "size_bytes": 144932
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/6700/0000040671"
+  },
+  {
+    "Event Name": "Request for Qualifications - Task Order Construction Agreement - Fire Alarms",
+    "Details": {
+      "Event ID": "0000040669",
+      "Dept": "CSU, Fresno",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "2",
+      "Published Date": "10/15/2026 2:00PM PDT",
+      "Event End Date": "11/24/2026 2:00PM PST"
+    },
+    "Contact Information": {
+      "Contact Name": "David Sawyer",
+      "Phone": "559/278-3962",
+      "Email": "davidsawyer@mail.fresnostate.edu"
+    },
+    "Description": "https://vendors.planetbids.com/portal/26037/bo/bo-detail/147356 The Board of Trustees of the California State University is requesting Statements of Qualifications (SOQ) from interested and qualified general contractors (Respondents) to provide Design-Build (DB), Collaborative (Progressive) Design-Build (CDB), and Construction Manager at Risk (CMAR) services the design, preconstruction, construction management, and/or construction of a portfolio of fire alarm projects under a master enabling agreement at California State University, Fresno.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "72101500",
+        "UNSPSC Classification Description": "Building facility maintenance & repair services"
+      },
+      {
+        "UNSPSC Classification": "46191505",
+        "UNSPSC Classification Description": "Fire protection - Fire prevention - Fire alarm systems"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "NTC_2026-10-12_Fire_Alarm_Systems_TOCA-MEA_2627-02.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_33/viewredirect/%7bV2%7dePyw.iKzqG8KKaGHBDUxQqoYbn0hWUjhFuiWECXzmfpsElDNr2uOvxIe34ENE9nfi3Ee8LGm1JEs9x2AxPV80oDkpRjOJJ74ppnp8gNyOieAQvk6K3zgfRYxK4GbzQiU9PbTERNv0tsp1m3lUyti8iGYYjnd.A29tblyIqij7w0bEmCIKSkS4rzVgaV03v_HjjTotYxLpZ_QugmKjpNLnmTpK2.q4SpPkUIxpg.YJOnWCQ0RvoZ.YxHouMHYAXFx6G2Q1tAndKYm7pnjxQRR7j1Pi6QyRfuemGA-/NTC_2026-10-12_Fire_Alarm_Systems_TOCA-MEA_2627-02.pdf",
+        "local_path": "attachments\\0000040669\\NTC_2026-10-12_Fire_Alarm_Systems_TOCA-MEA_2627-02.pdf",
+        "size_bytes": 144885
+      },
+      {
+        "file_name": "RFQuals_2026-10-12_Fire_Alarm_Systems_TOCA-MEA_2627-02.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_33/viewredirect/%7bV2%7dsYj2e6n8IvLDR037gHrIe_29UzhRBHtSiC6dYdeCCAg7OmrKamZSeOtE3y0MViE2URoVHrRdoKC8dbevyrtl8UcRylftDGbc3zCw1r7ft6tey9sxCGJwtz0JxafqfOGPhcjphMIObHN8Af2sgQcNXzvUfr2xo8kJEkQx_3uAHKHj655G6aXj1cygbd.Y1RxQj0htfN97.kFI8eR7vFi89dBYvVT0pXHor3yP_4s0q7h3TMa7iJMpRYiVeLphlzgauwq5Zk8R5uhAoW_JEmvsLx8N7Snipk6iqrNJevM03GBwNg--/RFQuals_2026-10-12_Fire_Alarm_Systems_TOCA-MEA_2627-02.pdf",
+        "local_path": "attachments\\0000040669\\RFQuals_2026-10-12_Fire_Alarm_Systems_TOCA-MEA_2627-02.pdf",
+        "size_bytes": 262485
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/6700/0000040669"
+  },
+  {
+    "Event Name": "Request for Qualifications - Task Order Construction Agreement - Multiple Roofing Projects",
+    "Details": {
+      "Event ID": "0000040668",
+      "Dept": "CSU, Fresno",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 2:00PM PDT",
+      "Event End Date": "11/24/2026 2:00PM PST"
+    },
+    "Contact Information": {
+      "Contact Name": "David Sawyer",
+      "Phone": "559/278-3962",
+      "Email": "davidsawyer@mail.fresnostate.edu"
+    },
+    "Description": "https://vendors.planetbids.com/portal/26037/bo/bo-detail/147352 The Board of Trustees of the California State University is requesting Statements of Qualifications (SOQ) from interested and qualified general contractors (Respondents) to provide Design-Build (DB), Collaborative (Progressive) Design-Build (CDB), and Construction Manager at Risk (CMAR) services the design, preconstruction, construction management, and/or construction of a portfolio of roofing projects under a master enabling agreement at California State University, Fresno.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "30151500",
+        "UNSPSC Classification Description": "Construction Exterior finishing materials - Roofing"
+      },
+      {
+        "UNSPSC Classification": "72101500",
+        "UNSPSC Classification Description": "Building facility maintenance & repair services"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "NTC_2026-10-12_Roofing_TOCA-MEA_2627-01.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_34/viewredirect/%7bV2%7dJvrwxm_GOkZhqdlCZHhQxCF03mJrxtNDtUTmLM.tL7lB4Z5dgSPvX_GkU9zykSWPtb0.jc5GmfFVoz.JnQEOepJQGJC__TxzZPgFZUyD3ycA6LdFhC6yfz9c86VaInZJRWqDSyxVh9t3H7MSTOD_GhMbVIIzihWr2XI0hSrj1mJM7vLhDCfa8ZrRfPupiUdY.lOW3wZN7heVN9LoBVaYCAXTnB1hRFQO1jyCkWCnDdhnJCM7IBBpH2N31RDdd06pWCgqUg--/NTC_2026-10-12_Roofing_TOCA-MEA_2627-01.pdf",
+        "local_path": "attachments\\0000040668\\NTC_2026-10-12_Roofing_TOCA-MEA_2627-01.pdf",
+        "size_bytes": 145177
+      },
+      {
+        "file_name": "RFQuals_2026-10-12_Roofing_TOCA-MEA_2627-01.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_34/viewredirect/%7bV2%7dIlK4hC.Yb4OjRSosOPoy72.eFKuRdXEjKOySe3UDF0Q.fsBqLOdDvjTHfpdgsSKrPCVETVXTx6PyF9HaGSBIDnU5NSJJ.hfqXBrMYvv6vbX4_cdGb4BhzCVFqAiKPkGQ.0u.B_2avP4fW5gTVPKUsjIuXiseGXl2Y6KCXCBvJYxHfA9LxF3wNNkQQ5.KipO__i1G_qMShLDo8WRckfBDDnndFOQB7QX1NyVP34SHYkI4e4TWqlcTqVnKugHU8u5z3zAP_SWUdjUj7lSS/RFQuals_2026-10-12_Roofing_TOCA-MEA_2627-01.pdf",
+        "local_path": "attachments\\0000040668\\RFQuals_2026-10-12_Roofing_TOCA-MEA_2627-01.pdf",
+        "size_bytes": 262771
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/6700/0000040668"
+  },
+  {
+    "Event Name": "RFP No. OEPM 26-400 Business Development Marketing Communications Services",
+    "Details": {
+      "Event ID": "0000040677",
+      "Dept": "Office of Exposition Park",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 5:49PM PDT",
+      "Event End Date": "12/01/2026 5:00AM PST"
+    },
+    "Contact Information": {
+      "Contact Name": "Anita Powell",
+      "Email": "anita.powell@expositionpark.ca.gov"
+    },
+    "Description": "The Office of Exposition Park Management (OEPM) is soliciting proposals from qualified firms (Bidders) to provide all labor, personnel, materials, equipment, transportation, and related services necessary to perform business development, communications, marketing, partnership management, stakeholder engagement, and revenue-generation services for Exposition Park",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "80101500",
+        "UNSPSC Classification Description": "MGMT Business Prof & Admin Services - Business corporate MGMT consult srvcs"
+      },
+      {
+        "UNSPSC Classification": "80101513",
+        "UNSPSC Classification Description": "MGMT Business Prof & Admin Services - Business corporate MGMT consult srvcs - Process & procedures MGMT consult srvcs"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "RFP_OEPM_26-400_Business_Development_Marketing_Communication.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_35/viewredirect/%7bV2%7dJZOb3r.sk5egvuEtVyL0DbhJWGg1GGaf0SR9UKv.C3f.WSUkiuQM2fdKMKli7zUumPmtVkwQaPHLrFixDljkpFBM7o8vPuB8Xm8VzK1yYc4zIrAhO4o8JHK0uD8a.uD16mTM8l1LUumhXenWN0yh3kScmxpSv9BSqpdt7AulpkJkU95vrPirFUJOlfCVm9BhJtsHg8.8dTdFxGH0uDLxg6WkLil6xhkDDYWz0OfkjpkhKTa0PHm8uYKSL85qFYG2_mlK02mSGZ4i6fGAAx.mPSq3Vq_cwtdTip6GeHzWqQiaEvPPz9qgn_IK3qvryA--/RFP_OEPM_26-400_Business_Development_Marketing_Communication.pdf",
+        "local_path": "attachments\\0000040677\\RFP_OEPM_26-400_Business_Development_Marketing_Communication.pdf",
+        "size_bytes": 965945
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/31001/0000040677"
+  },
+  {
+    "Event Name": "FPCM-SATF-I001012-M0001-CS/Complete Roof System",
+    "Details": {
+      "Event ID": "0000040663",
+      "Dept": "Dept of Corrections & Rehab",
+      "Format/Type": "Sell Event / RFx",
+      "Event Version": "1",
+      "Published Date": "10/15/2026 10:00AM PDT",
+      "Event End Date": "12/17/2026 2:00PM PST"
+    },
+    "Contact Information": {
+      "Contact Name": "Cheng Saephan",
+      "Email": "cheng.saephan@cdcr.ca.gov"
+    },
+    "Description": "Please read the Invitation for Bid and addendums (if any) in their entirety as they contain information pertinent to the bidding process.",
+    "UNSPSC Codes": [
+      {
+        "UNSPSC Classification": "30151505",
+        "UNSPSC Classification Description": "Construction Exterior finishing materials - Roofing - Roofing membranes"
+      }
+    ],
+    "Attachments": [
+      {
+        "file_name": "12_-_FPCM-SATF-I001012-M0001-CS.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_36/viewredirect/%7bV2%7dIe8ly7niYPlV325R0JopSmZzdspPooT.LfFFnHurplPZ7piS7c_v327s0tkRc.oYbawm4d0OlLtf9gEok9iNl9TvsMzp_H69Vh7WHO.66h24wwluPopm0hmtH1aNOxUlF6EHT56l1Q11d2sDzaHCxvfeCQWsxoBWdmoYwKbnHEELacdAcKrK0e20.3cAeVaJNJSVRmvBRn22KifBARhJESm.n1iUok7Ny9hhariX1wZ3I1._/12_-_FPCM-SATF-I001012-M0001-CS.pdf",
+        "local_path": "attachments\\0000040663\\12_-_FPCM-SATF-I001012-M0001-CS.pdf",
+        "size_bytes": 2384230
+      },
+      {
+        "file_name": "14_-_Detail_Pages.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_36/viewredirect/%7bV2%7dc5VzeAv8MbqCjzUVaGv5of47w39acInblI.axKVQhfg6TIwEjOrOKbGb_O2hLT1TRmldSF7fNs1W28gzGyf_JYsawTAwMn6sNEjWlMbnweGeoQQrAjk6nMN9RppeZ30gM32GCnHTOj_OeuSXYdB0v2ZXkXErTEKNcLf.mgTekLkR4tCeepCwnuhOPazMvSaDvVuY44u8zYc-/14_-_Detail_Pages.pdf",
+        "local_path": "attachments\\0000040663\\14_-_Detail_Pages.pdf",
+        "size_bytes": 12789205
+      },
+      {
+        "file_name": "14_-_Plan_Sheets.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_36/viewredirect/%7bV2%7dbTRVehWPq4EZyN4bo4qa7.rx7utWcSVi2fHW1ydhQnPbeN7dWI.rIOeD1Q4Q3WTbtRxusursjKMcn6pUjreRlHJp_yq3l2Iqon7XK9BCXT6NvD2Azxiwm.0e.OeSndDCPNKtyIuSLs4xlj7ybMk9R7C4mmLNwE0HcaWNuOqymr2lDV0F05AR4vQmokSqGApy6GoKCoyv/14_-_Plan_Sheets.pdf",
+        "local_path": "attachments\\0000040663\\14_-_Plan_Sheets.pdf",
+        "size_bytes": 2534986
+      },
+      {
+        "file_name": "14_-_Plan_Specifications.pdf",
+        "download_url": "https://caleprocure.ca.gov/psc/psfpd1_36/viewredirect/%7bV2%7dVoW5qHw3ZCrZ83jW93QO.LftN.xUnDREXJi7SE1Mmu2rxnsvdQ8VxnAyRmrV8bIBpDI0ctIryBXPwbX7l8SWNWLNIlF97M0t1KNv.2RB5nrsNONamBAa6_cEeVA7g9LiIKvrVk4HEkP1dFYpKc4S.OieyRVMUic67114.yyz8H0lIypEewhC8egGX2lwqPZ4wHohkKjJIxo097x6JzEQj43iRWDO6A--/14_-_Plan_Specifications.pdf",
+        "local_path": "attachments\\0000040663\\14_-_Plan_Specifications.pdf",
+        "size_bytes": 911632
+      }
+    ],
+    "Detail URL": "https://caleprocure.ca.gov/event/5225/0000040663"
   }
 ]

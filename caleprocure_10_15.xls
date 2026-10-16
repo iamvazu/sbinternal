@@ -1,0 +1,3967 @@
+<!DOCTYPE html>
+<html class='pc chrome win psc_dir-ltr psc_form-xlarge' dir='ltr' lang='en'>
+<!-- Copyright (c) 2000, 2022, Oracle and/or its affiliates.  -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><body><table border='1' cellpadding='3' cellspacing='0'>
+<tr>
+<th>Department</th><th>Department Name</th><th>Event ID</th><th>Event Name</th><th>Format</th><th>Type</th><th>End Date</th><th>Status</th><th>Buyer Name</th><th>Buyer Email</th></tr>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040401</td>
+<td  >C5613450-D, Rebid 1, Electronic Smoke and Fire Detection Alarm System Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/16/2026 11:00AM PDT</td>
+<td  >Posted</td>
+<td  >Jessica Mendoza</td>
+<td  >jessica.mendoza1@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040484</td>
+<td  >Protective Clothing and Operational Supplies Rental Services - IFB 26C670002</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/16/2026 11:00AM PDT</td>
+<td  >Posted</td>
+<td  >DiAnna Marler</td>
+<td  >dianna.marler@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040192</td>
+<td  >26C135004 - HVAC Maintenance CHP Northern Division Office - Redding</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/16/2026  1:00PM PDT</td>
+<td  >Posted</td>
+<td  >James Bellefeuille</td>
+<td  >james.bellefeuille@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5160</td>
+<td  >Department of Rehabilitation</td>
+<td  style="mso-number-format:\@;"  >07-0784D</td>
+<td  >07-0784 Centinela State Prison</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/16/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Roxette Yabes</td>
+<td  >roxette.yabes@dor.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >10846575</td>
+<td  >RFQ 10846575 - Desktop Mill and Lathe</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/16/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Robin Adams</td>
+<td  >robin.adams@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >8940</td>
+<td  >California Military Department</td>
+<td  style="mso-number-format:\@;"  >0000040523</td>
+<td  >Crane Testing and Certification</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/16/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Ash Erickson</td>
+<td  >ash.erickson@cmd.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6850</td>
+<td  >CSU, Channel Islands</td>
+<td  style="mso-number-format:\@;"  >0000040545</td>
+<td  >CI-275 Solano Hall Rm 1201 AV Installation</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/16/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Daniel Brown</td>
+<td  >daniel.brown@csuci.edu</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >11A4457</td>
+<td  >SB Minor B-Roadside Rehabilitation, Plant Establishment-San Diego County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/16/2026  2:15PM PDT</td>
+<td  >Posted</td>
+<td  >Jomlonglak Kamaay</td>
+<td  >jomlonglak.kamaay@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >11A4454</td>
+<td  >SB Minor B-Replace existing soffit luminaire from HPS to LED lighting-San Diego County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/16/2026  2:15PM PDT</td>
+<td  >Posted</td>
+<td  >Jomlonglak Kamaay</td>
+<td  >jomlonglak.kamaay@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >0000040528</td>
+<td  >RFQ PCR-26-0440</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/16/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Phillip Lacy</td>
+<td  >phillip.lacy@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0850</td>
+<td  >CA State Lottery Commission</td>
+<td  style="mso-number-format:\@;"  >0000040206</td>
+<td  >RFP #R005840 Financial Auditing and Related Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/16/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Megan Madu</td>
+<td  >mmadueno@calottery.com</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5420</td>
+<td  >Correctional Trng Rehab Aut</td>
+<td  style="mso-number-format:\@;"  >0000040536</td>
+<td  >IFB RW2611006 Fresh Compressed Bakers Yeast</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/16/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Sadaqatullah Sahak</td>
+<td  >sadaqatullah.sahak@calctra.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3900</td>
+<td  >State Air Resources Board</td>
+<td  style="mso-number-format:\@;"  >0000040465</td>
+<td  >RFQ #2026038 - Forcepoint Licenses Subscription Renewal</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/16/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Jian Huang</td>
+<td  >jian.huang@arb.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040433</td>
+<td  >RESD-PMDB 2026-09 DSH PATTON STATE HOSPITAL ELECTRICAL INFRASTRUCTURE UPGRADE</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/16/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Sarah Mutschler</td>
+<td  >sarah.mutschler@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5160</td>
+<td  >Department of Rehabilitation</td>
+<td  style="mso-number-format:\@;"  >03-1055-4</td>
+<td  >03-1055-4 California Environmental Protection Agency (EPA)</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/16/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Jim Abad</td>
+<td  >jim.abad@dor.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040476</td>
+<td  >WANTED TO LEASE BY THE STATE OF CALIFORNIA - Chatsworth</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/16/2026  6:00PM PDT</td>
+<td  >Posted</td>
+<td  >Bronwyn Conklin</td>
+<td  >bronwyn.conklin@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >7CA07824</td>
+<td  >7CA07824 - Fire Alarm and Sprinkler System Monitoring, Inspection, Testing, and Maintenance Services ***CERTIFIED SMALL BUSINESSES ONLY***</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/16/2026 11:59PM PDT</td>
+<td  >Posted</td>
+<td  >Irina Yevseyev</td>
+<td  >irina.yevseyev@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0531</td>
+<td  >Ofc Technology and Solutions I</td>
+<td  style="mso-number-format:\@;"  >0000040652</td>
+<td  >33050876 - Rocket Reflection Renewal</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/19/2026 10:00AM PDT</td>
+<td  >Posted</td>
+<td  >LaTaisha Henderson</td>
+<td  >lataisha.henderson@otsi.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3790</td>
+<td  >Dept of Parks &amp; Recreation</td>
+<td  style="mso-number-format:\@;"  >0000040514</td>
+<td  >C26680039 - California State Parks, Contra-Solano Sector Septic Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/19/2026 10:00AM PDT</td>
+<td  >Posted</td>
+<td  >Vincent Houlihan</td>
+<td  >vincent.houlihan@parks.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0820</td>
+<td  >Department of Justice</td>
+<td  style="mso-number-format:\@;"  >0000040546</td>
+<td  >RFQ 25-221 Hamilton STARlet laboratory instrument</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/19/2026 11:00AM PDT</td>
+<td  >Posted</td>
+<td  >Steve Long</td>
+<td  >steve.long@doj.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >8940</td>
+<td  >California Military Department</td>
+<td  style="mso-number-format:\@;"  >0000040435</td>
+<td  >Fire Fighter Annual Physical Services. Fresno CA</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/19/2026 11:00AM PDT</td>
+<td  >Posted</td>
+<td  >Jessica Jauregui</td>
+<td  >jessica.jauregui@cmd.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040291</td>
+<td  >C5613534-D-Fire Door and Window Frame Certification and Labeling Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/19/2026 11:00AM PDT</td>
+<td  >Posted</td>
+<td  >Zaryab Durrani</td>
+<td  >zaryab.durrani@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040101</td>
+<td  >Pest Control Services - IFB #26C120001</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/19/2026 11:00AM PDT</td>
+<td  >Posted</td>
+<td  >Janine Kimzey</td>
+<td  >janine.kimzey@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >08A4031</td>
+<td  >SB/MB-IFPQ Roof Sealing, Silicone Coating and Repair</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/19/2026 12:00PM PDT</td>
+<td  >Posted</td>
+<td  >Wendy Kwong</td>
+<td  >wendy.kwong@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0840</td>
+<td  >State Controller</td>
+<td  style="mso-number-format:\@;"  >EUPD91526</td>
+<td  >RFP EUPD91526 Digital Financial Assets Consulting Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/19/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Jennifer Xiong</td>
+<td  >jxiong@sco.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3860</td>
+<td  >Department of Water Resources</td>
+<td  style="mso-number-format:\@;"  >0000040534</td>
+<td  >IFB # 10222841 - Transcription Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/19/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Nita Khushal</td>
+<td  >nita.khushal@water.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040537</td>
+<td  >Trellix Licenses</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/19/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Naseem Fallahi</td>
+<td  >naseem.fallahi@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >10A2938</td>
+<td  >Sidewalk Replacement Services in Merced and Mariposa Counties.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/19/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Queenann Herron</td>
+<td  >queenann.herron@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >77601</td>
+<td  >DGS - Statewide Procurement</td>
+<td  style="mso-number-format:\@;"  >0000037255</td>
+<td  >Bottled Drinking Water</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/19/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Jane Montes</td>
+<td  >jane.montes@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0840</td>
+<td  >State Controller</td>
+<td  style="mso-number-format:\@;"  >EEOS90326</td>
+<td  >Accounting Auditing Expertise and Technical Advisory Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/19/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Rachel Ortegon</td>
+<td  >rortegon@sco.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0531</td>
+<td  >Ofc Technology and Solutions I</td>
+<td  style="mso-number-format:\@;"  >0000040630</td>
+<td  >*CERTIFIED SB ONLY* 75350862 -Mockaroo Renewal</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/19/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Nicole Gottardo</td>
+<td  >nicole.gottardo@otsi.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >8940</td>
+<td  >California Military Department</td>
+<td  style="mso-number-format:\@;"  >0000040423</td>
+<td  >Groundwater, Soil Vapor Gas Monitoring &amp; Reporting - Stockton</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/19/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Christopher Russell</td>
+<td  >christopher.russell@cmd.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0531</td>
+<td  >Ofc Technology and Solutions I</td>
+<td  style="mso-number-format:\@;"  >0000040667</td>
+<td  >*CERTIFIED SB ONLY* 75350865 - CWDS ImageTrust Renewal</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/19/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Mel Keller</td>
+<td  >mel.keller@otsi.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >08A4034</td>
+<td  >SB/MB Option - IFPQ -Thermoplastic Polyolefin (TPO) Roofing System Installation and Repair Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/20/2026 12:00PM PDT</td>
+<td  >Posted</td>
+<td  >Wendy Kwong</td>
+<td  >wendy.kwong@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >32A0741</td>
+<td  >IFB 32A0741, HVAC Replacement Services in Humboldt County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/20/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >John Leyva</td>
+<td  >john.leyva@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040505</td>
+<td  >25-307770.OSP.Print&amp;MassMailingServices (Form 1095-B)</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/20/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Eliana Aranda</td>
+<td  >eliana.aranda@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3340</td>
+<td  >CA Conservation Corps</td>
+<td  style="mso-number-format:\@;"  >0000040330</td>
+<td  >CCC Camarillo Center: CCTV Security System Upgrade</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/20/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Kiran Varghese</td>
+<td  >kiran.varghese@ccc.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6250</td>
+<td  >School for the Deaf-Riverside</td>
+<td  style="mso-number-format:\@;"  >0000040441</td>
+<td  >Fire Alarm Monitoring, Testing &amp; Repair IFB DR260130</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/20/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >McKinley Carlisle</td>
+<td  >mcarlisle@cde.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040135</td>
+<td  >25-312368.FMD.Backflow</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/20/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Annette Allen</td>
+<td  >annette.allen@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >32A0731</td>
+<td  >IFB Plumbing Repair and Replacement Services in Yuba County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/20/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Shannon Miller</td>
+<td  >shannon.miller@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >02A2547</td>
+<td  >IFB 02A2547 - Multi-provider On-Call, and As-Needed Title and Escrow Services in Tehama County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/20/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Bonnie Rodriguez</td>
+<td  >bonnie.rodriguez@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >03-0J6304</td>
+<td  >Bridge scour mitigation.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/20/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Irma Y Mejia</td>
+<td  >irma.mejia@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >04A7653</td>
+<td  >Hazardous Waste Disposal Services in Alameda, Santa Clara, San Mateo, San Francisco, Contra Costa, Marin, Solano, Sonoma, Napa Counties</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/20/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Queenann Herron</td>
+<td  >queenann.herron@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >10A2923</td>
+<td  >IFB Multi-Provider On-Call and As-Needed Positive Location of Underground Utility Facility Services in Alpine, Amador, Calaveras, Mariposa, Merced, San Joaquin, Stanislaus, and Tuolumne Counties</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/20/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Cristina Martinez</td>
+<td  >cristina.martinez@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >10A2966</td>
+<td  >IFB Tree Trimming, Pruning, and Removal Services in Alpine, Amador, Calaveras, Mariposa, Merced, San Joaquin, Stanislaus, and Tuolumne Counties</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/20/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Gurinder Kaur</td>
+<td  >gurinder.kaur@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >12A2395</td>
+<td  >Hazardous Waste Disposal Services in Orange County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/20/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Queenann Herron</td>
+<td  >queenann.herron@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >12A2406</td>
+<td  >IFB TREE SERVICES IN ORANGE COUNTY</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/20/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >JoAnna Nevarez</td>
+<td  >joanna.nevarez@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3860</td>
+<td  >Department of Water Resources</td>
+<td  style="mso-number-format:\@;"  >0000040409</td>
+<td  >IFB 10221985 for four-wheel drive safety training</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/20/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Elizabeth Medeiros</td>
+<td  >elizabeth.medeiros@water.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3860</td>
+<td  >Department of Water Resources</td>
+<td  style="mso-number-format:\@;"  >10221289</td>
+<td  >IFB 10221289 - Industrial Hygiene and Hazardous Material Remediation Service</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/20/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Vinay Singh</td>
+<td  >vinay.singh@water.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2740</td>
+<td  >Department of Motor Vehicles</td>
+<td  style="mso-number-format:\@;"  >26-129</td>
+<td  >26-129 Landscape Cleanup and Maintenance</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026 10:00AM PDT</td>
+<td  >Posted</td>
+<td  >Feliciano Hernandez</td>
+<td  >feliciano.hernandez@dmv.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >8940</td>
+<td  >California Military Department</td>
+<td  style="mso-number-format:\@;"  >0000040088</td>
+<td  >Fire Monitoring Services, Various Locations, CA</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026 10:00AM PDT</td>
+<td  >Posted</td>
+<td  >Jessica Jauregui</td>
+<td  >jessica.jauregui@cmd.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >8660</td>
+<td  >Public Utilities Commission</td>
+<td  style="mso-number-format:\@;"  >0000040191</td>
+<td  >25NS1385 - CA CONNECT CONTRACT OVERSIGHT MANAGEMENT (COM)</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026 10:00AM PDT</td>
+<td  >Posted</td>
+<td  >Kellie Harris</td>
+<td  >kellie.harris@cpuc.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040342</td>
+<td  >C5612706-D, Rebid 6 - Fire Suppression System Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026 11:00AM PDT</td>
+<td  >Posted</td>
+<td  >Samantha J Sheckler</td>
+<td  >samantha.sheckler@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040243</td>
+<td  >C5613381-D Food and Green Waste Recycling and Recovery Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026 11:00AM PDT</td>
+<td  >Posted</td>
+<td  >Sonia Luna-Acosta</td>
+<td  >sonia.luna-acosta@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040354</td>
+<td  >IFB #26C165001 - Janitorial Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026 11:00AM PDT</td>
+<td  >Posted</td>
+<td  >Janine Kimzey</td>
+<td  >janine.kimzey@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >77601</td>
+<td  >DGS - Statewide Procurement</td>
+<td  style="mso-number-format:\@;"  >0000040452</td>
+<td  >RFx Premier Artificial Intelligence (AI) Systems &amp; Services (Florida State University ITN #6769-4)</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026 12:00PM PDT</td>
+<td  >Posted</td>
+<td  >Katelynne Leisenring</td>
+<td  >katelynne.leisenring@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2665</td>
+<td  >High Speed Rail Authority</td>
+<td  style="mso-number-format:\@;"  >HSR26-16</td>
+<td  >HSR26-16 M2M Collaborative Design-Build Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026 12:00PM PDT</td>
+<td  >Posted</td>
+<td  >Kelsey Van Wagner</td>
+<td  >kelsey.vanwagner@hsr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >77601</td>
+<td  >DGS - Statewide Procurement</td>
+<td  style="mso-number-format:\@;"  >0000039133</td>
+<td  >Sander Body With Anti-Ice, Directional, Roll-Off, 3CY &amp; 6CY</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Tayron Jackson</td>
+<td  >tayron.jackson@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040373</td>
+<td  >Project 13681. DOTD5. EVSE. Santa Barbara. Contract 26-334140</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Megan Sanchez</td>
+<td  >megan.sanchez@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040216</td>
+<td  >Project 11694.Chiller and Pump Replacement Chula Vista.Contract 26-331938</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Dana Clements</td>
+<td  >dana.clements@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040148</td>
+<td  >CONTRACT NUMBER: 26-330888; CHPERS I: REPLACEMENT OF TOWERS AND VAULTS ¿ LEVIATHAN PEAK CALIFORNIA HIGHWAY PATROL ALPINE COUNTY, CA ; PROJECT NUMBER: 122805LL</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Hector Cavazos</td>
+<td  >hector.cavazos@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040083</td>
+<td  >CONTRACT NUMBER: 26-329441; CALVET HEADQUARTERS ELECTRICAL UPGRADES CALIFORNIA DEPARTMENT OF VETERANS AFFAIRS SACRAMENTO, SACRAMENTO COUNTY, CALIFORNIA; PROJECT NUMBER: 12533</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Hector Cavazos</td>
+<td  >hector.cavazos@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040351</td>
+<td  >DOT D7 - EVSE - VENTURA FIELD OFFICE - PN</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Tiffany Kan</td>
+<td  >tiffany.kan@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040389</td>
+<td  >IFB 26C401001 - Central Division Evidence Impound, Tow, &amp; Storage Services Contract</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Kimberly Elston</td>
+<td  >kimberly.elston@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5420</td>
+<td  >Correctional Trng Rehab Aut</td>
+<td  style="mso-number-format:\@;"  >0000040450</td>
+<td  >BIT Inspections &amp; Emergency Roadside Assistance (IFB S13962610)</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Megan Kunkes</td>
+<td  >megan.kunkes@calctra.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3960</td>
+<td  >Dept. Toxic Substances Control</td>
+<td  style="mso-number-format:\@;"  >0000040498</td>
+<td  >IFB I-2627-04 Laboratory Equipment Calibration</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Hunter Witt</td>
+<td  >hunter.witt@dtsc.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5420</td>
+<td  >Correctional Trng Rehab Aut</td>
+<td  style="mso-number-format:\@;"  >0000040581</td>
+<td  >Backup Generator Maintenance &amp; Repair Services (IFB SP69902603)</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Alex Twilling</td>
+<td  >alex.twilling@calctra.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >7CA07875</td>
+<td  >IFB 7CA07875 - Hazardous Waste Removal Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Irina Yevseyev</td>
+<td  >irina.yevseyev@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2740</td>
+<td  >Department of Motor Vehicles</td>
+<td  style="mso-number-format:\@;"  >26-140</td>
+<td  >26-140¿ After-Hours Janitorial Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Anne Mearlon</td>
+<td  >anne.mearlon@dmv.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >9CA07882</td>
+<td  >IFB 9CA07882 - Underground Electrical Power Infrastructure Installation</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Irina Yevseyev</td>
+<td  >irina.yevseyev@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2740</td>
+<td  >Department of Motor Vehicles</td>
+<td  style="mso-number-format:\@;"  >26-134</td>
+<td  >26-134 After-hours Janitorial Services for the Bishop DMV Field Office</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/21/2026 11:59PM PDT</td>
+<td  >Posted</td>
+<td  >Cortney Branch</td>
+<td  >cortney.branch@dmv.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >SS246</td>
+<td  >32nd DAA -Costa Mesa</td>
+<td  style="mso-number-format:\@;"  >0000040527</td>
+<td  >Guest Survey</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026 11:00AM PDT</td>
+<td  >Posted</td>
+<td  >Kelly Vu</td>
+<td  >kvu@ocfair.com</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >01-0L1904</td>
+<td  >Construct sidewalk with fence, adjust and replace DIs.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Irma Y Mejia</td>
+<td  >irma.mejia@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >09-383804</td>
+<td  >Hot mix asphalt (Type A), culvert work, and minor concrete.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Michael Furmuzan</td>
+<td  >michael.furmuzan@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >07A6497</td>
+<td  >IFB 07A6497 Trash Hauling, Ventura County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Tim Murphy</td>
+<td  >timothy.murphy@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >07A6493</td>
+<td  >IFB Trash Service, Ventura County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Tim Murphy</td>
+<td  >timothy.murphy@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >07A6471</td>
+<td  >**Certified SB/DVBE Only** IFPQ Boiler Inspection, Maintenance, Repair, Testing, and Reporting in Los Angeles County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Aimee Rosales</td>
+<td  >aimee.rosales@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000039593</td>
+<td  >CHP Santa Cruz Area Office Protective Clothing and Operational Supply Rental Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Luke Lassila</td>
+<td  >luke.lassila@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040585</td>
+<td  >IFB 26C464003 - Rebid Chowchilla River CVEF CHP Area Office Protective Clothing and Operational Supply Rental Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Kimberly Elston</td>
+<td  >kimberly.elston@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >4CA07687</td>
+<td  >4CA07687 Elevator Maintenance Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Kimberly Allen</td>
+<td  >kimberly.allen@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3790</td>
+<td  >Dept of Parks &amp; Recreation</td>
+<td  style="mso-number-format:\@;"  >0000040583</td>
+<td  >C26635008 - Septic Pumping Services for Humboldt Redwoods and Grizzly Creek State Parks</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Jason Norris</td>
+<td  >jason.norris@parks.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >11-430884</td>
+<td  >Cold plane, RHMA-G, SAMI, drainage, curb ramps, and electrical.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Chinyere Okpala</td>
+<td  >chinyere.okpala@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >02-0K8904</td>
+<td  >Construct multi-use path, drainage, and rectangular rapid FB system.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Michael Furmuzan</td>
+<td  >michael.furmuzan@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >05A3037</td>
+<td  >*Certified SB/DVBE only* IFPQ HVAC Preventative Maintenance and Repair Services in San Luis Obispo County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Aimee Rosales</td>
+<td  >aimee.rosales@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >07A6465</td>
+<td  >IFB-Janitorial Service ¿ Los Angeles County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Jean Mallare</td>
+<td  >jean.mallare@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >09A1157</td>
+<td  >*SB/DVBE ONLY* IFPQ 09A1157 Antenna Lowering and Relocation, and Installation and Disposal of Above-Ground Fuel Tanks in Kern and Mono Counties</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Catherine Andersen</td>
+<td  >catherine.andersen@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3900</td>
+<td  >State Air Resources Board</td>
+<td  style="mso-number-format:\@;"  >0000040599</td>
+<td  >RFQ #2026036 - KnowBe4 Defend Subscription with Installation and Configuration Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Jian Huang</td>
+<td  >jian.huang@arb.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >4CA07932</td>
+<td  >IFB 4CA07932 - Hazardous Waste Removal and Disposal Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Gilbert Delpasen</td>
+<td  >gilbert.delpasen@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6750</td>
+<td  >CSU, Los Angeles</td>
+<td  style="mso-number-format:\@;"  >0000040274</td>
+<td  >Elevator Preventive Maintenance, Testing and Services for Cal State LA</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >April Waldron</td>
+<td  >awaldro@calstatela.edu</td>
+<tr>
+<td  style="mso-number-format:\@;"  >8260</td>
+<td  >CA Arts Council</td>
+<td  style="mso-number-format:\@;"  >0000040582</td>
+<td  >RFP-26-015 Reasonable Accommodation, Ergonomics and Training Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/22/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Carla Pareja</td>
+<td  >carla.pareja@cac.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >4440</td>
+<td  >Department of State Hospitals</td>
+<td  style="mso-number-format:\@;"  >0000040603</td>
+<td  >IDEA1496 NuHarbor Monitoring Splunk</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/23/2026 12:00PM PDT</td>
+<td  >Posted</td>
+<td  >Jasmine McKenzie</td>
+<td  >jasmine.mckenzie@dsh.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >SS247</td>
+<td  >22nd DAA</td>
+<td  style="mso-number-format:\@;"  >26-052</td>
+<td  >Media Planning &amp; Placement Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/23/2026  1:00PM PDT</td>
+<td  >Posted</td>
+<td  >Viktoriya Dyachuk</td>
+<td  >vdyachuk@sdfair.com</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3900</td>
+<td  >State Air Resources Board</td>
+<td  style="mso-number-format:\@;"  >0000040591</td>
+<td  >Small Business Option Request for Quote (RFQ) No. 26ASD008 North Facilities Unit Office Moving Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/23/2026  1:00PM PDT</td>
+<td  >Posted</td>
+<td  >Cayla Gray-Borghese</td>
+<td  >cayla.gray-borghese@arb.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3600</td>
+<td  >Department of Fish &amp; Wildlife</td>
+<td  style="mso-number-format:\@;"  >0000040592</td>
+<td  >PE-R1-0627-01, Invitation For Bid (IFB) - Tractor</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/23/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Brooke Greer</td>
+<td  >brooke.greer@wildlife.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3790</td>
+<td  >Dept of Parks &amp; Recreation</td>
+<td  style="mso-number-format:\@;"  >0000040461</td>
+<td  >C26863016 HEARST SAN SIMEON SHM - Reservoir #3 Water Treatment Plant Upgrade</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/23/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Merrilee Byrnes</td>
+<td  >merrilee.byrnes@parks.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >8570</td>
+<td  >Dept of Food &amp; Agriculture</td>
+<td  style="mso-number-format:\@;"  >0000040602</td>
+<td  >RFQ - Hard Drive and Media Destruction Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/23/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Peter Betschart</td>
+<td  >peter.betschart@cdfa.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3790</td>
+<td  >Dept of Parks &amp; Recreation</td>
+<td  style="mso-number-format:\@;"  >0000040458</td>
+<td  >C26863017 DOS RIOS RANCH STATE PARK - Phase 3 Interim Improvements</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/23/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Merrilee Byrnes</td>
+<td  >merrilee.byrnes@parks.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040553</td>
+<td  >IFB-SD26-00009-On-site Orientation and Mobility Training (In-person White Cane Training) Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/23/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Nahla Marmosh</td>
+<td  >nahla.marmosh@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6810</td>
+<td  >CSU, San Jose</td>
+<td  style="mso-number-format:\@;"  >0000040584</td>
+<td  >Task Order-CONSTRUCTION AGREEMENT FOR MULTIPLE PROJECTS - Master Enabling agreement</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/23/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Miguel Robles</td>
+<td  >miguel.robles@sjsu.edu</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3600</td>
+<td  >Department of Fish &amp; Wildlife</td>
+<td  style="mso-number-format:\@;"  >0000040428</td>
+<td  >RFQ-DTD-FY2026-002 - California Monitoring Program (CMP)</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/23/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Edward Drennan</td>
+<td  >edward.drennan@wildlife.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7730</td>
+<td  >Franchise Tax Board</td>
+<td  style="mso-number-format:\@;"  >0000040326</td>
+<td  >RFQ FTB-2627-00843 Imperva Data Secure Base Plan Software</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/23/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Trang Thi</td>
+<td  >Trang.Thi@ftb.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6756</td>
+<td  >CSU, Monterey Bay</td>
+<td  style="mso-number-format:\@;"  >0000040127</td>
+<td  >Campus Health Center Management RFP</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/23/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Oscar Lemus-Murgia</td>
+<td  >olemus@csumb.edu</td>
+<tr>
+<td  style="mso-number-format:\@;"  >4440</td>
+<td  >Department of State Hospitals</td>
+<td  style="mso-number-format:\@;"  >0000040601</td>
+<td  >I-1270 SkillBridge Program</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/23/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Daysy Soto</td>
+<td  >daysy.soto@dsh.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2740</td>
+<td  >Department of Motor Vehicles</td>
+<td  style="mso-number-format:\@;"  >26-152</td>
+<td  >26-152 Property Sweeping and Pressure Washing Services at the Oxnard DMV Field Office</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/23/2026 11:59PM PDT</td>
+<td  >Posted</td>
+<td  >Cortney Branch</td>
+<td  >cortney.branch@dmv.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6530</td>
+<td  >UCLA</td>
+<td  style="mso-number-format:\@;"  >0000040552</td>
+<td  >143 Triunfo Canyon Road-Tenant Improvements</td>
+<td  >RFI</td>
+<td  >RFx</td>
+<td  >10/26/2026 10:00AM PDT</td>
+<td  >Posted</td>
+<td  ></td>
+<td  ></td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040402</td>
+<td  >IFB 26C091005 - Hangar Door Hydraulic System Upgrade Services - CHP Academy Special Weapons and Tactics (SWAT)</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/26/2026 11:00AM PDT</td>
+<td  >Posted</td>
+<td  >Jared Cartwright</td>
+<td  >jared.cartwright@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0555</td>
+<td  >Sec., Environment Protection</td>
+<td  style="mso-number-format:\@;"  >0000040580</td>
+<td  >26-EPA001 First Aid Cabinets Installation and Maintenance Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/26/2026 12:00PM PDT</td>
+<td  >Posted</td>
+<td  >Lauren Crachy</td>
+<td  >lauren.crachy@calepa.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >08A4036</td>
+<td  >SB/MB Option - IFPQ - Painting and Repair Services in Riverside and San Bernardino Counties</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/26/2026 12:00PM PDT</td>
+<td  >Posted</td>
+<td  >Wendy Kwong</td>
+<td  >wendy.kwong@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >4CA07764</td>
+<td  >Diesel Exhaust Removal System Installation Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/26/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Susan Pasarow</td>
+<td  >susan.pasarow@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3790</td>
+<td  >Dept of Parks &amp; Recreation</td>
+<td  style="mso-number-format:\@;"  >0000040579</td>
+<td  >C26550006 Chemical Toilets SNO-Parks</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/26/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Amy Woodhull</td>
+<td  >amy.woodhull@parks.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >SD26-00012</td>
+<td  >IFB SD26-00012 Audiology Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/26/2026  4:00PM PDT</td>
+<td  >Posted</td>
+<td  >Esther Garcia</td>
+<td  >esther.garcia@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3860</td>
+<td  >Department of Water Resources</td>
+<td  style="mso-number-format:\@;"  >0000040486</td>
+<td  >IFB #10222357 - Boat Portage Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/26/2026  4:00PM PDT</td>
+<td  >Posted</td>
+<td  >Acacia Valenzuela</td>
+<td  >acacia.valenzuela@water.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >77601</td>
+<td  >DGS - Statewide Procurement</td>
+<td  style="mso-number-format:\@;"  >5269942</td>
+<td  >RFP 5269942 for Assessment and Monitoring (A&amp;M) Services for Disaster Debris and Hazard Tree Removal</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/26/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Tina Larios</td>
+<td  >tina.larios@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >8955</td>
+<td  >Dept of Veterans Affairs</td>
+<td  style="mso-number-format:\@;"  >0000040549</td>
+<td  >26VS0017, Water Management Plan, Testing and Remediation Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/26/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Ophelia DeOllas</td>
+<td  >ophelia.deollas@calvet.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5180</td>
+<td  >Department of Social Services</td>
+<td  style="mso-number-format:\@;"  >0000040608</td>
+<td  >RFQ# 900-10092026</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/26/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Stephen Bedsworth</td>
+<td  >stephen.bedsworth@dss.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040617</td>
+<td  >WANTED TO LEASE BY THE STATE OF CALIFORNIA ¿ SACRAMENTO</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/26/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Jennifer Bernstein</td>
+<td  >jennifer.bernstein@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >0000040544</td>
+<td  >IFB 1PA6V92126 CZU Flashover Simulator</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/26/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Corrine Johnson</td>
+<td  >corrine.johnson@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >1CA07935</td>
+<td  >1CA07935 CZU Headquarters Keyless Entry and Access Control System Installation</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/26/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Christopher Cabanes</td>
+<td  >christopher.cabanes@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >3CA07908</td>
+<td  >IFB 3CA07908 - Vehicle Wash Equipment Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/26/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Gilbert Delpasen</td>
+<td  >gilbert.delpasen@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040607</td>
+<td  >IFB C5613659-D, Rebid 1 Non-Hazardous Garbage Collection Removal and Disposal Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026 11:00AM PDT</td>
+<td  >Posted</td>
+<td  >Sonia Luna-Acosta</td>
+<td  >sonia.luna-acosta@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >SS246</td>
+<td  >32nd DAA -Costa Mesa</td>
+<td  style="mso-number-format:\@;"  >0000040535</td>
+<td  >Advertising &amp; Media Buying Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026 11:00AM PDT</td>
+<td  >Posted</td>
+<td  >Kelly Vu</td>
+<td  >kvu@ocfair.com</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040105</td>
+<td  >Climate Controlled Booth Installation - IFB 26C626001</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  1:00PM PDT</td>
+<td  >Posted</td>
+<td  >Zeanna Merilice</td>
+<td  >zeanna.merilice@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040482</td>
+<td  >FPCM-COR-BOOTHS-RS Privacy Booths</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Kim Morden</td>
+<td  >kim.morden@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040388</td>
+<td  >25-324655.FMD.FireLifeSafetyTesting</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Dana Clements</td>
+<td  >dana.clements@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040420</td>
+<td  >CONTRACT NUMBER: 26-334792; AUGMENTATION OF ELECTRICAL SERVICE CAPACITY, DEPARTMENT OF STATE HOSPITALS, NAPA STATE HOSPITAL, NAPA, NAPA COUNTY, CALIFORNIA, PROJECT NUMBER: 14109</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Hector Cavazos</td>
+<td  >hector.cavazos@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040500</td>
+<td  >25-316991.FMD.GreaseTrapSewerLiftMaintenance</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Paige Hughes-Hoover</td>
+<td  >paige.hugheshoover@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040508</td>
+<td  >25-301856.FMD.Boiler Maintenance Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Tim Dean</td>
+<td  >tim.dean@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040520</td>
+<td  >CR25-300826.FMD.UPS</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Luke Adair</td>
+<td  >luke.adair@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >09-374604</td>
+<td  >Cold plane AC pavement, place HMA, and construct minor concrete.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Michael Furmuzan</td>
+<td  >michael.furmuzan@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >74A1775</td>
+<td  >Salton Sea West Flood Resilience Study.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Sushrey Nepal</td>
+<td  >sushrey.nepal@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040481</td>
+<td  >FPCM-CMC-BOOTHS-RS Privacy Booths</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Kim Morden</td>
+<td  >kim.morden@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040479</td>
+<td  >FPCM-SAC-BOOTHS-RS Privacy Booths</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Kim Morden</td>
+<td  >kim.morden@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >8570</td>
+<td  >Dept of Food &amp; Agriculture</td>
+<td  style="mso-number-format:\@;"  >0000040512</td>
+<td  >Purchase and Installation of Trailers and Stairs-Los Alamitos, IFB 26-0042</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Molly Porter</td>
+<td  >molly.porter@cdfa.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040561</td>
+<td  >25-307507.FMD.StatewideLiftMaintenance</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Spencer Morton</td>
+<td  >spencer.morton@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >08A4043</td>
+<td  >**Certified SB, including MB, or a DVBE Only** IFPQ Designated Underground Storage Tank Operator (DUSTO) Services, San Bernardino County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Phuong Vu</td>
+<td  >phuong.vu@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >02A2541</td>
+<td  >IFB-On-Call and As-Needed Multi-Provider Title and Escrow Services in Siskiyou County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Jean Mallare</td>
+<td  >jean.mallare@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3790</td>
+<td  >Dept of Parks &amp; Recreation</td>
+<td  style="mso-number-format:\@;"  >0000040226</td>
+<td  >C26863011 McCLELLAN PARK - Bay G &amp; H Tenant Improvements</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Merrilee Byrnes</td>
+<td  >merrilee.byrnes@parks.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040335</td>
+<td  >IFB 26C730001 CHP Monterey Area office Evidence Impound Tow and Storage Services.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Luke Lassila</td>
+<td  >luke.lassila@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >4265</td>
+<td  >Department of Public Health</td>
+<td  style="mso-number-format:\@;"  >26-10083-1</td>
+<td  >Invitation For Bid (IFB) 26-10083 LFS Staffing Contract Rebid #1</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >David Silva</td>
+<td  >david.silva@cdph.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3790</td>
+<td  >Dept of Parks &amp; Recreation</td>
+<td  style="mso-number-format:\@;"  >0000040637</td>
+<td  >C26803015 Helicopter Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Rosann Garcia</td>
+<td  >annie.garcia@parks.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3790</td>
+<td  >Dept of Parks &amp; Recreation</td>
+<td  style="mso-number-format:\@;"  >0000040639</td>
+<td  >C26803019 Helicopter Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Rosann Garcia</td>
+<td  >annie.garcia@parks.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >3CA08015</td>
+<td  >3CA08015  Bathroom Demolition, Remodel, and Installation Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Gloria Pietromonaco</td>
+<td  >gloria.pietromonaco@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >0000040610</td>
+<td  >7PA6J00743 AMU Electronic Control-Unit Assembly</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Bradley Luna</td>
+<td  >bradley.luna@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3790</td>
+<td  >Dept of Parks &amp; Recreation</td>
+<td  style="mso-number-format:\@;"  >0000040638</td>
+<td  >C26803017 Helicopter Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/27/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Rosann Garcia</td>
+<td  >annie.garcia@parks.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040327</td>
+<td  >Water Conservation Landscape Services - IFB 26C330002</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026 11:00AM PDT</td>
+<td  >Posted</td>
+<td  >Elizabeth Lopez</td>
+<td  >elizabeth.lopez2@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040649</td>
+<td  >Farrier Services - IFB 26C025002</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026 11:00AM PDT</td>
+<td  >Posted</td>
+<td  >DiAnna Marler</td>
+<td  >dianna.marler@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >08A4035</td>
+<td  >SB/MB Option - IFPQ - Roof Removal and Installation Services in Riverside and San Bernardino Counties</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026 12:00PM PDT</td>
+<td  >Posted</td>
+<td  >Wendy Kwong</td>
+<td  >wendy.kwong@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3100</td>
+<td  >Exposition Park</td>
+<td  style="mso-number-format:\@;"  >0000040556</td>
+<td  >IFB CSC 26-215</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  1:30PM PDT</td>
+<td  >Posted</td>
+<td  >Erica Guzman</td>
+<td  >eguzman@californiasciencecenter.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7920</td>
+<td  >State Teachers&#039; Retirement Sys</td>
+<td  style="mso-number-format:\@;"  >0000040605</td>
+<td  >RFO 5888621197 Full Stack Developers</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Penny Palmertree</td>
+<td  >Ppalmertree@CalSTRS.com</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040548</td>
+<td  >IFB 26C456002 - CHP Oakhurst Area Office Protective Clothing &amp; Operational Supplies Contract</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Kimberly Elston</td>
+<td  >kimberly.elston@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >07-502204</td>
+<td  >Landscape visual and aesthetic improvement.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Irma Y Mejia</td>
+<td  >irma.mejia@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >02-1J3904</td>
+<td  >Trenchless culvert installation, cured-in-place pipeliner.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Irma Y Mejia</td>
+<td  >irma.mejia@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >01-0H6414</td>
+<td  >Construct bridge, roadway, streambed, delineation, remove culvert.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Irma Y Mejia</td>
+<td  >irma.mejia@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040645</td>
+<td  >IFB 26C266000 CHP Tracy Area office Evidence Impound Tow and Storage Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Luke Lassila</td>
+<td  >luke.lassila@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040590</td>
+<td  >CR 24-248134 Hazardous Waste Services - Northern &amp; LA East</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Jessica Garcia</td>
+<td  >jessica.garcia@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040506</td>
+<td  >CR 25-309442 Boiler &amp; Chiller Maintenance; Building #860</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Jessica Garcia</td>
+<td  >jessica.garcia@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040448</td>
+<td  >25-304743.OSP.ElectricMotorRepair</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Dana Clements</td>
+<td  >dana.clements@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040277</td>
+<td  >CONTRACT : 26-333577; PHASE V COMMUNICATION FACILITIES REPLACEMENT: GROUP A ;CALIFORNIA DEPARTMENT OF FORESTRY AND FIRE PROTECTION (CALFIRE);HUMBOLDT &amp; SHASTA COUNTIES, CALIFORNIA</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Pavan Randhawa</td>
+<td  >pavan.randhawa@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040635</td>
+<td  >FPCM-MCSP-I001145-M001-KR-C Jacketed wire</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Kirsten Ruesch</td>
+<td  >kirsten.ruesch@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2665</td>
+<td  >High Speed Rail Authority</td>
+<td  style="mso-number-format:\@;"  >0000040571</td>
+<td  >Re-Bid HSR26-24 Clearance and Demolition Services at 16608 8th Avenue, Hanford, CA 93230</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Lorraine Delfin-Carpio</td>
+<td  >l.delfincarpio@hsr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >0000040642</td>
+<td  >Request For Information 7PA6F00031 Moisture Barrier Fabric</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Bradley Luna</td>
+<td  >bradley.luna@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3860</td>
+<td  >Department of Water Resources</td>
+<td  style="mso-number-format:\@;"  >0000040470</td>
+<td  >Bacteriological Water Testing and Analysis Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Lisa Huff</td>
+<td  >lisa.huff@water.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040625</td>
+<td  >IFB SD26-00013</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Kristen McIlrath</td>
+<td  >kristen.mcilrath@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >1111</td>
+<td  >Department of Consumer Affairs</td>
+<td  style="mso-number-format:\@;"  >0000040522</td>
+<td  >RFP CSLB-26-01 Arbitration Program</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  >Amanda Mays</td>
+<td  >amanda.mays@dca.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >4440</td>
+<td  >Department of State Hospitals</td>
+<td  style="mso-number-format:\@;"  >0000040650</td>
+<td  >26-30024-000 - Date Time Stamp Machine Repair Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  4:00PM PDT</td>
+<td  >Posted</td>
+<td  >Aubreana Diaz</td>
+<td  >aubreana.diaz@dsh.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3860</td>
+<td  >Department of Water Resources</td>
+<td  style="mso-number-format:\@;"  >0000040578</td>
+<td  >IFB 10220934 Traffic Control Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  4:00PM PDT</td>
+<td  >Posted</td>
+<td  >Carley Porter</td>
+<td  >carley.porter@water.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >4440</td>
+<td  >Department of State Hospitals</td>
+<td  style="mso-number-format:\@;"  >0000040329</td>
+<td  >26-30612-000 - West Perimeter Bridge</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  4:30PM PDT</td>
+<td  >Posted</td>
+<td  >Pedro Magana</td>
+<td  >pedro.magana@dsh.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >7CA08045</td>
+<td  >7CA08045 Physical Training (PT) Clothing Laundering Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Christopher Cabanes</td>
+<td  >christopher.cabanes@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >4CA08086</td>
+<td  >IFB 4CA08086 - Fuel Vault Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Gilbert Delpasen</td>
+<td  >gilbert.delpasen@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >0000040611</td>
+<td  >Fire Station Lockers 4PA6M0028</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Kamarrian Jordan</td>
+<td  >kamarrian.jordan@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3900</td>
+<td  >State Air Resources Board</td>
+<td  style="mso-number-format:\@;"  >0000040657</td>
+<td  >RFQ #2026076 - SB option - Recast Endpoint Insights and Right Click Tools Subscription</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Jian Huang</td>
+<td  >jian.huang@arb.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3900</td>
+<td  >State Air Resources Board</td>
+<td  style="mso-number-format:\@;"  >0000040659</td>
+<td  >RFQ #2026039 ¿SB Option Canary Subscription Renewal 21 Canaries Hosted Console</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/28/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Lisa Espitia</td>
+<td  >lisa.espitia@arb.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >59A1428</td>
+<td  >59A1428 - A&amp;E On-Call Water &amp; Wastewater Project Development and Construction Design Support Services, District 59.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026 10:00AM PDT</td>
+<td  >Posted</td>
+<td  >Vanessa Usanmaz</td>
+<td  >vanessa.usanmaz@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3980</td>
+<td  >Env&#039;l Health Hazard Assessment</td>
+<td  style="mso-number-format:\@;"  >0000040664</td>
+<td  >IFB 26-E0010 Translation and Interpretation Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026 12:00PM PDT</td>
+<td  >Posted</td>
+<td  >Cindy Vang</td>
+<td  >cindy.vang@oehha.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3900</td>
+<td  >State Air Resources Board</td>
+<td  style="mso-number-format:\@;"  >0000040644</td>
+<td  >Invitation for Bid (IFB) No. 26EO007 Translation and Interpretation Services for CARBs Board Hearings/Meetings, Workshops, Conferences, Administrative Hearings, and Interviews</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  1:00PM PDT</td>
+<td  >Posted</td>
+<td  >Cayla Gray-Borghese</td>
+<td  >cayla.gray-borghese@arb.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >32A0732</td>
+<td  >Heating, Ventilation, Air Conditioning (HVAC) Installation in San Diego County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Shannon Miller</td>
+<td  >shannon.miller@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >11A4303</td>
+<td  >IFB - Hazardous Waste Disposal Services in San Diego and Imperial Counties.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Michael Dean</td>
+<td  >michael.dean@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0840</td>
+<td  >State Controller</td>
+<td  style="mso-number-format:\@;"  >EDIS90726</td>
+<td  >EDIS90726 RFQ-ITS Equipment and Software Maintenance - Quadient Inserters</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Gian Viggiano</td>
+<td  >gviggiano@sco.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >01A6673</td>
+<td  >IFB - Multi-provider On-Call, and As-Needed Title and Escrow Services in Del Norte County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Bonnie Rodriguez</td>
+<td  >bonnie.rodriguez@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >10A2959</td>
+<td  >Operated Equipment Rental in Alpine, Amador, Calaveras, Mariposa, Merced, San Joaquin, Stanislaus, and Tuolumne Counties</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Matthew Stephens</td>
+<td  >matthew.stephens@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >02A2548</td>
+<td  >IFB - Multi-provider On-Call, and As-Needed Title and Escrow Services in Modoc County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Bonnie Rodriguez</td>
+<td  >bonnie.rodriguez@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >03A4212</td>
+<td  >IFB-On-Call, and As-Needed Multi-Provider Title and Escrow Services in Glenn County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Jean Mallare</td>
+<td  >jean.mallare@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >03A4250</td>
+<td  >Hazardous Waste Disposal Services in Placer, Butte, Colusa, Sacramento, Yolo, Yuba, Nevada, Glenn, El Dorado, Sierra and Sutter Counties</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Matthew Stephens</td>
+<td  >matthew.stephens@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >04A7533</td>
+<td  >**Certified SB, including MB, SB-PW, or a DVBE Only** IFPQ 04A7533 Flooring Replacement Services in Contra Costa County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Angel Cervantes Jr</td>
+<td  >angel.cervantes.jr@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >04A7610</td>
+<td  >IFB Dry Dock Ferry Maintenance and Repair Services in Solano County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >JoAnna Nevarez</td>
+<td  >joanna.nevarez@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >04A7638</td>
+<td  >Landfill Disposal Site Services in Sonoma County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Wendy Kwong</td>
+<td  >wendy.kwong@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >04A7645</td>
+<td  >Guardrail Repair Services in Alameda, Contra Costa, Solano, and Sacramento Counties</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Matthew Stephens</td>
+<td  >matthew.stephens@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >06-1F4504X</td>
+<td  >HMA (Type A), cold plane and traffic control.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Michael Furmuzan</td>
+<td  >michael.furmuzan@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >06A3352</td>
+<td  >Hazardous Waste Disposal Services in Madera, Fresno, Tulare, Kings, and Kern Counties</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Matthew Stephens</td>
+<td  >matthew.stephens@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >07A6506</td>
+<td  >IFB Dewatering Well Water Pump Removal, Installation, and Repair Services, Los Angeles and Ventura Counties.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Kae Saechn</td>
+<td  >kae.saechin@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3790</td>
+<td  >Dept of Parks &amp; Recreation</td>
+<td  style="mso-number-format:\@;"  >0000040656</td>
+<td  >C26910005- JG Bus Transportation- Santa Barbara</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Robert Cabello</td>
+<td  >robert.cabello@parks.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040334</td>
+<td  >IFB 26C725002 CHP Hollister-Gilroy Area office Evidence Impound Tow and Storage Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Luke Lassila</td>
+<td  >luke.lassila@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >8940</td>
+<td  >California Military Department</td>
+<td  style="mso-number-format:\@;"  >0000040440</td>
+<td  >IFB No. 132845 Fire Suppression Systems Maintenance at Multiple Locations, Multiple Locations</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Joy Lubic</td>
+<td  >joy.lubic@cmd.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >02-1K4604</td>
+<td  >Structural concrete bridge (polymer fiber), bridge removal (portion).</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Irma Y Mejia</td>
+<td  >irma.mejia@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >32A0740</td>
+<td  >32A0740 Natural Gas Heater Unit and Thermostat Installation in San Joaquin County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  2:30PM PDT</td>
+<td  >Posted</td>
+<td  >Shannon Miller</td>
+<td  >shannon.miller@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >77601</td>
+<td  >DGS - Statewide Procurement</td>
+<td  style="mso-number-format:\@;"  >0000040641</td>
+<td  >RFI - NASPO ValuePoint Parks and Recreation Equipment and Installation (State of Oregon RFI # S-10700-00018166)</td>
+<td  >RFI</td>
+<td  >RFx</td>
+<td  >10/29/2026  3:00PM PDT</td>
+<td  >Posted</td>
+<td  ></td>
+<td  ></td>
+<tr>
+<td  style="mso-number-format:\@;"  >8955</td>
+<td  >Dept of Veterans Affairs</td>
+<td  style="mso-number-format:\@;"  >0000040629</td>
+<td  >26YS0015 - Automatic Door Maintenance Repair and Installation Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Eric Dahmen</td>
+<td  >eric.dahmen@calvet.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0509</td>
+<td  >Business &amp; Economic Developmnt</td>
+<td  style="mso-number-format:\@;"  >0000040623</td>
+<td  >California Medical Device Export Accelerator Request for Offer (RFO)</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/29/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Sarina Krastev</td>
+<td  >sarina.krastev@gobiz.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >SS246</td>
+<td  >32nd DAA -Costa Mesa</td>
+<td  style="mso-number-format:\@;"  >0000040577</td>
+<td  >Sponsorship and Advertising Sales Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/30/2026 11:00AM PDT</td>
+<td  >Posted</td>
+<td  >Kelly Vu</td>
+<td  >kvu@ocfair.com</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040540</td>
+<td  >26C126002 - Janitorial Services Garberville</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/30/2026 11:00AM PDT</td>
+<td  >Posted</td>
+<td  >Janine Kimzey</td>
+<td  >janine.kimzey@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >77601</td>
+<td  >DGS - Statewide Procurement</td>
+<td  style="mso-number-format:\@;"  >0000040646</td>
+<td  >RFI - NASPO ValuePoint Solid Waste Collection, Recycling, and Disposal (State of North Carolina RFI</td>
+<td  >RFI</td>
+<td  >RFx</td>
+<td  >10/30/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  ></td>
+<td  ></td>
+<tr>
+<td  style="mso-number-format:\@;"  >8940</td>
+<td  >California Military Department</td>
+<td  style="mso-number-format:\@;"  >0000040622</td>
+<td  >IFB No. 133701 Fire Alarm System Repair, Maintenance &amp; Modernization Services, Bldgs. 20, 21 &amp; 1000, Joint Forces Training Base</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/30/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Lana Ponomarenko</td>
+<td  >lana.ponomarenko@cmd.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040485</td>
+<td  >CR25-297282.FMD.Roll-Up Doors Maintenance</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/30/2026  2:00PM PDT</td>
+<td  >Posted</td>
+<td  >Phoebe Hsu</td>
+<td  >phoebe.hsu@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5180</td>
+<td  >Department of Social Services</td>
+<td  style="mso-number-format:\@;"  >0000040554</td>
+<td  >IFB 26-3044, Daily Courier Services - DDSD Oakland Branch</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/30/2026  3:30PM PDT</td>
+<td  >Posted</td>
+<td  >Scott Wilkinson</td>
+<td  >scott.wilkinson@dss.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000039664</td>
+<td  >RFP SD25-00019 Health Care Provider Network and Prior Authorization Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/30/2026  4:00PM PDT</td>
+<td  >Posted</td>
+<td  >Amanda Saragoza</td>
+<td  >amanda.saragoza@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >2CA08061</td>
+<td  >2CA08061 - Replacing Heating, Ventilation and Air Conditioning (HVAC) Units Services **Small Business Bidders ONLY**</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/30/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Austin Bristol</td>
+<td  >austin.bristol@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7600</td>
+<td  >Dept of Tax and Fee Admin</td>
+<td  style="mso-number-format:\@;"  >0000040555</td>
+<td  >IFB 2026-4091 Hazardous and Non-Hazardous Waste Removal, Transport and Destruction Services for the Northern California Facilities</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/30/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Jonny Hoang</td>
+<td  >jonny.hoang@cdtfa.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5227</td>
+<td  >State &amp; Community Corrections</td>
+<td  style="mso-number-format:\@;"  >0000040472</td>
+<td  >Technical Assistance, Training, and Capacity Building Support for Non Profit Organizations in the Community Violence Intervention (CVI) Field</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/30/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Jessica Espinoza</td>
+<td  >jessica.espinoza@bscc.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >4265</td>
+<td  >Department of Public Health</td>
+<td  style="mso-number-format:\@;"  >0000037035</td>
+<td  >CDPH Centralized Application Branch (CAB) Online - RFP  26-10053</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/31/2026 12:00PM PDT</td>
+<td  >Posted</td>
+<td  >Kerry Jones</td>
+<td  >kerry.jones@state.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0531</td>
+<td  >Ofc Technology and Solutions I</td>
+<td  style="mso-number-format:\@;"  >0000036719</td>
+<td  >CalHEERS SDMO RFP #73040873</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >10/31/2026  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Aaron Micka</td>
+<td  >aaron.micka@otsi.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >8660</td>
+<td  >Public Utilities Commission</td>
+<td  style="mso-number-format:\@;"  >0000038339</td>
+<td  >RFP 23NS0710 CAC Equipment Processing Center (EPC)</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/01/2026  5:00PM PST</td>
+<td  >Posted</td>
+<td  >Madelynn Saechao</td>
+<td  >madelynn.saechao@state.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040427</td>
+<td  >C5613433-D Grease Trap and Septic Tank Pumping Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/02/2026 11:00AM PST</td>
+<td  >Posted</td>
+<td  >Sonia Luna-Acosta</td>
+<td  >sonia.luna-acosta@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0250</td>
+<td  >Judicial Branch</td>
+<td  style="mso-number-format:\@;"  >0000040454</td>
+<td  >RFP-LSS-2026-02-LP Court Interpreter Education and Training Services for the California Court Interpreter Workforce Pilot Program</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/02/2026  1:00PM PST</td>
+<td  >Posted</td>
+<td  >Laila Picchi</td>
+<td  >laila.picchi@jud.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6850</td>
+<td  >CSU, Channel Islands</td>
+<td  style="mso-number-format:\@;"  >0000040573</td>
+<td  >Auxiliary Audit Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/02/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Daniel Brown</td>
+<td  >daniel.brown@csuci.edu</td>
+<tr>
+<td  style="mso-number-format:\@;"  >4440</td>
+<td  >Department of State Hospitals</td>
+<td  style="mso-number-format:\@;"  >0000040666</td>
+<td  >IFB 26-41111-000 Off-Site Records Storage and Retention Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/02/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Sabina Baffoe</td>
+<td  >sabina.baffoe@dsh.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >8955</td>
+<td  >Dept of Veterans Affairs</td>
+<td  style="mso-number-format:\@;"  >0000040218</td>
+<td  >26HS0511 - Access Point (AP) Devices Removal and Replacement</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/02/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Long Ho</td>
+<td  >long.ho@calvet.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >01A6677</td>
+<td  >SB Minor B - Construct communication system Mendocino County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/02/2026  2:15PM PST</td>
+<td  >Posted</td>
+<td  >Arlena Tedder</td>
+<td  >arlena.tedder@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2740</td>
+<td  >Department of Motor Vehicles</td>
+<td  style="mso-number-format:\@;"  >26-148</td>
+<td  >26-148 ¿ Landscape Cleanup and Maintenance Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/02/2026  5:00PM PST</td>
+<td  >Posted</td>
+<td  >Anne Mearlon</td>
+<td  >anne.mearlon@dmv.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >3CA08018</td>
+<td  >3CA08018 - Ramona Air Attack Base (AAB) - Helitack Site Improvements</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/02/2026  5:00PM PST</td>
+<td  >Posted</td>
+<td  >Antwanette Page</td>
+<td  >antwanette.page@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3355</td>
+<td  >Office of Energy Infrastructur</td>
+<td  style="mso-number-format:\@;"  >0000039868</td>
+<td  >RFQ 26-039868 2026 Independent Evaluator Lists</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/02/2026  5:00PM PST</td>
+<td  >Posted</td>
+<td  >Matt Freeman</td>
+<td  >matt.freeman@energysafety.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040615</td>
+<td  >C5613483-D, Welding Testing and Certification Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/03/2026 11:00AM PST</td>
+<td  >Posted</td>
+<td  >Monique Stephens</td>
+<td  >monique.stephens@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040614</td>
+<td  >C5613296-D, Rebid 1 Crane Rental and Operator Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/03/2026 11:00AM PST</td>
+<td  >Posted</td>
+<td  >Kristina Lopez</td>
+<td  >kristina.lopez@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040530</td>
+<td  >CHP Tecate Platform Scale - Janitorial Services - IFB #26C646000</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/03/2026 11:00AM PST</td>
+<td  >Posted</td>
+<td  >Cameron MacGregor</td>
+<td  >cameron.macgregor@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3860</td>
+<td  >Department of Water Resources</td>
+<td  style="mso-number-format:\@;"  >0000040616</td>
+<td  >Groundskeeping Services - IFB # 10221777</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/03/2026 12:00PM PST</td>
+<td  >Posted</td>
+<td  >Melissa Medrano</td>
+<td  >melissa.medrano@water.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5175</td>
+<td  >Dept of Child Support Services</td>
+<td  style="mso-number-format:\@;"  >0000040525</td>
+<td  >Child Support Guideline Calculator</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/03/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Ryan Micka</td>
+<td  >ryan.micka@dcss.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040337</td>
+<td  >IFB 26C870002 CHP Morongo Basin Area office Evidence Impound Tow and Storage Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/03/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Luke Lassila</td>
+<td  >luke.lassila@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >07-375204</td>
+<td  >Drainage system restoration.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/03/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Michael Furmuzan</td>
+<td  >michael.furmuzan@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >03-2J2004</td>
+<td  >RHMA, HMA, and concrete barrier.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/03/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Michael Furmuzan</td>
+<td  >michael.furmuzan@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >02A2539</td>
+<td  >Electrical Services in Shasta County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/03/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Shannon Miller</td>
+<td  >shannon.miller@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >11A4455</td>
+<td  >IFPQ-Certified SB including MB, SB-PW or a DVBE, Landscape Maintenance Service in San Diego County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/03/2026  3:00PM PST</td>
+<td  >Posted</td>
+<td  >Jean Mallare</td>
+<td  >jean.mallare@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0954</td>
+<td  >Scholarshare Investment Board</td>
+<td  style="mso-number-format:\@;"  >0000040576</td>
+<td  >SIB02-26 - Translation, Language Interpretation, and Design Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/03/2026  4:00PM PST</td>
+<td  >Posted</td>
+<td  >Alex Potter</td>
+<td  >alex.potter@treasurer.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >3CA08001</td>
+<td  >CONTRACT 3CA08001 - Flooring Replacement services **SB BIDDERS ONLY**</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/03/2026  5:00PM PST</td>
+<td  >Posted</td>
+<td  >Gilbert Delpasen</td>
+<td  >gilbert.delpasen@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040651</td>
+<td  >CHP HQ Data Center - 26C043000 - HVAC Repair and Installation</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/04/2026 11:00AM PST</td>
+<td  >Posted</td>
+<td  >Jeriell Emuslan</td>
+<td  >jeriell.emuslan@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >11-431804</td>
+<td  >Install capture housing, landscape, and electrical.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/04/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Michael Furmuzan</td>
+<td  >michael.furmuzan@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >02-2J6504</td>
+<td  >Temp bridge, deck portion Repl, hang conduit, &amp; polyester Conc overlay</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/04/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Michael Furmuzan</td>
+<td  >michael.furmuzan@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040598</td>
+<td  >CONTRACT:26-337609; DSH ¿ ATASCADERO ELECTRICAL UPGRADES; DEPARTMENT OF STATE HOSPITALS; ATASCADERO, SAN LUIS OBISPO COUNTY, CALIFORNIA; PROJECT:142452A</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/04/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Pavan Randhawa</td>
+<td  >pavan.randhawa@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040504</td>
+<td  >25-315494.FMD.BoilerMaintenance</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/04/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Annette Allen</td>
+<td  >annette.allen@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3790</td>
+<td  >Dept of Parks &amp; Recreation</td>
+<td  style="mso-number-format:\@;"  >0000040532</td>
+<td  >C26863023 CANDLESTICK POINT SRA - Restroom Repairs</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/04/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Merrilee Byrnes</td>
+<td  >merrilee.byrnes@parks.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6770</td>
+<td  >Polytechnic University Pomona</td>
+<td  style="mso-number-format:\@;"  >0000040655</td>
+<td  >Task Order Construction - Request for Qualifications  CPP-PW26007</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/04/2026  4:00PM PST</td>
+<td  >Posted</td>
+<td  >Duane Johnson</td>
+<td  >duanejohnson@cpp.edu</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >1CA08012</td>
+<td  >1CA08012 HVAC Annual Maintenance Inspection, Repair and Emergency Repair Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/04/2026  5:00PM PST</td>
+<td  >Posted</td>
+<td  >Christopher Cabanes</td>
+<td  >christopher.cabanes@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >SS246</td>
+<td  >32nd DAA -Costa Mesa</td>
+<td  style="mso-number-format:\@;"  >0000040596</td>
+<td  >Video Equipment &amp; Services For Pacific Amphitheatre</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/05/2026 11:00AM PST</td>
+<td  >Posted</td>
+<td  >Kelly Vu</td>
+<td  >kvu@ocfair.com</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040658</td>
+<td  >C5613670-D, Statewide Safety Training Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/05/2026 11:00AM PST</td>
+<td  >Posted</td>
+<td  >Monique Stephens</td>
+<td  >monique.stephens@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2665</td>
+<td  >High Speed Rail Authority</td>
+<td  style="mso-number-format:\@;"  >HSR25-29</td>
+<td  >HSR25-29 Invitation for Bids for OCS Components</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/05/2026 12:00PM PST</td>
+<td  >Posted</td>
+<td  >Malitha Chanthapadith</td>
+<td  >malitha.chanthapadith@hsr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6790</td>
+<td  >CSU, San Diego</td>
+<td  style="mso-number-format:\@;"  >7082</td>
+<td  >Professional Services for Public Works Projects</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/05/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Rachel Ascherl</td>
+<td  >rascherl@sdsu.edu</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >07A6466</td>
+<td  >IFB Engineering and Maintenance Staffing Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/05/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Phuong Vu</td>
+<td  >phuong.vu@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3790</td>
+<td  >Dept of Parks &amp; Recreation</td>
+<td  style="mso-number-format:\@;"  >0000040519</td>
+<td  >C26683004 - Chemical Toilet Rental and/or Service</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/05/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Charles Dobbs</td>
+<td  >charles.dobbs@parks.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >11-430974</td>
+<td  >ADA curb ramps, high tension cable barrier, and LED lighting.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/05/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Irma Y Mejia</td>
+<td  >irma.mejia@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >04-3Y7104</td>
+<td  >Mod Sig &amp; Ltg, Pvmt repair, SW, curb ramp, segmental Conc Ret system.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/05/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Chinyere Okpala</td>
+<td  >chinyere.okpala@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >03-3G5904</td>
+<td  >Furnish and place polyester concrete overlays &amp; replace joint seals.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/05/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Chinyere Okpala</td>
+<td  >chinyere.okpala@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040350</td>
+<td  >FPCM-HDSP-I001066-PH2-148-KR Roof Replacement for HDSP</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/05/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Kirsten Ruesch</td>
+<td  >kirsten.ruesch@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >02-0J71U4</td>
+<td  >Realign highway and add truck climbing lane.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/05/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Michael Furmuzan</td>
+<td  >michael.furmuzan@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >32A0737</td>
+<td  >Perimeter Fencing Replacement in Yuba County</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/05/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Shannon Miller</td>
+<td  >shannon.miller@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >10-1H2004</td>
+<td  >Bridge work, erosion control, and lighting system.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/05/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Chinyere Okpala</td>
+<td  >chinyere.okpala@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >8940</td>
+<td  >California Military Department</td>
+<td  style="mso-number-format:\@;"  >0000040236</td>
+<td  >IFB No. 130797 March ARB Annual Backflow Testing and Certification, March Air Reserve Base (ARB)</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/05/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Joy Lubic</td>
+<td  >joy.lubic@cmd.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3940</td>
+<td  >State Water Resources Control</td>
+<td  style="mso-number-format:\@;"  >26-012-210</td>
+<td  >Certified Court Reporting</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/05/2026  3:00PM PST</td>
+<td  >Posted</td>
+<td  >Panthea McDonald-Ryan</td>
+<td  >panthea.mcdonald-ryan@waterboards.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0250</td>
+<td  >Judicial Branch</td>
+<td  style="mso-number-format:\@;"  >0000040612</td>
+<td  >ID/IQ Staff Extension and Project Management Consulting Services, RFP-FS-2026-03-RZ</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/05/2026  3:00PM PST</td>
+<td  >Posted</td>
+<td  >Matthew Bagwill</td>
+<td  >matthew.bagwill@jud.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2665</td>
+<td  >High Speed Rail Authority</td>
+<td  style="mso-number-format:\@;"  >HSR26-20</td>
+<td  >HSR26-20 Cal CLEAN Partnership Agreement</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/06/2026 12:00PM PST</td>
+<td  >Posted</td>
+<td  >Gurleen Boparai</td>
+<td  >gurleen.boparai@hsr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6630</td>
+<td  >CSU Systemwide Offices</td>
+<td  style="mso-number-format:\@;"  >0000040597</td>
+<td  >CSUCO-RFI-00000845 / Artificial Intelligence Solution for Clery Act Compliance</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/06/2026 12:00PM PST</td>
+<td  >Posted</td>
+<td  >Erika Takenaka</td>
+<td  >etakenaka@calstate.edu</td>
+<tr>
+<td  style="mso-number-format:\@;"  >8940</td>
+<td  >California Military Department</td>
+<td  style="mso-number-format:\@;"  >0000040609</td>
+<td  >Certified SB, including MB, SB-PW, or DVBE Only IFB No. 132401 HVAC Repair, Ontario Armory</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/06/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Lana Ponomarenko</td>
+<td  >lana.ponomarenko@cmd.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7600</td>
+<td  >Dept of Tax and Fee Admin</td>
+<td  style="mso-number-format:\@;"  >0000040627</td>
+<td  >IFB 2026-4092 Hazardous and Non-Hazardous Waste Removal, Transport and Destruction Services for the Southern California facilities</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/06/2026  5:00PM PST</td>
+<td  >Posted</td>
+<td  >Jonny Hoang</td>
+<td  >jonny.hoang@cdtfa.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040456</td>
+<td  >RFI 09001-2026 - Employee Wellness Support Program Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/06/2026  5:00PM PST</td>
+<td  >Posted</td>
+<td  >Tiffany Thompson</td>
+<td  >tiffany.thompson@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6780</td>
+<td  >CSU, Sacramento</td>
+<td  style="mso-number-format:\@;"  >0000040429</td>
+<td  >Printing and Mailing of Diplomas, Certificates and Diploma Covers</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/07/2026  5:00PM PST</td>
+<td  >Posted</td>
+<td  >Holmberg Kim</td>
+<td  >kholmberg@csus.edu</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040497</td>
+<td  >C5613657-D Hood and Duct Cleaning Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/09/2026 11:00AM PST</td>
+<td  >Posted</td>
+<td  >Sonia Luna-Acosta</td>
+<td  >sonia.luna-acosta@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040559</td>
+<td  >C5613637-D, Boiler Maintenance, Inspection, Calibration and Repair Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/09/2026 11:00AM PST</td>
+<td  >Posted</td>
+<td  >Jessica Mendoza</td>
+<td  >jessica.mendoza1@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040613</td>
+<td  >Invitation for Bids (IFB) Number 26C801001 entitled, CHP INLAND DIVISION   ONSITE CONTROLLED SUBSTANCE AND BIOHAZARD DESTRUCTION SERVICES.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/09/2026 11:00AM PST</td>
+<td  >Posted</td>
+<td  >LuAnne Trazi</td>
+<td  >luanne.trazi@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0850</td>
+<td  >CA State Lottery Commission</td>
+<td  style="mso-number-format:\@;"  >0000040542</td>
+<td  >RFQ R005964 Statewide Architectural and Engineering Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/09/2026  3:00PM PST</td>
+<td  >Posted</td>
+<td  >Timur Kopbayev</td>
+<td  >tkopbayev@calottery.com</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3860</td>
+<td  >Department of Water Resources</td>
+<td  style="mso-number-format:\@;"  >0000040606</td>
+<td  >IFB # 10223001 for Wilderness First Aid and River Safety Training</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/09/2026  3:00PM PST</td>
+<td  >Posted</td>
+<td  >Elizabeth Medeiros</td>
+<td  >elizabeth.medeiros@water.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >77601</td>
+<td  >DGS - Statewide Procurement</td>
+<td  style="mso-number-format:\@;"  >0000040494</td>
+<td  >NASPO ValuePoint RFP for Medical Supplies (State of Idaho RFP# 1433)</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/09/2026  4:00PM PST</td>
+<td  >Posted</td>
+<td  >Maureen Seiferling</td>
+<td  >maureen.seiferling@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >4140</td>
+<td  >Health Care Access and Informa</td>
+<td  style="mso-number-format:\@;"  >0000040604</td>
+<td  >RFQ 26-27017 Structural Engineering A&amp;E</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/09/2026  4:00PM PST</td>
+<td  >Posted</td>
+<td  >Quica Teames</td>
+<td  >quica.teames@hcai.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >3CA08004</td>
+<td  >IFB 3CA08004 Elevator Maintenance</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/09/2026  5:00PM PST</td>
+<td  >Posted</td>
+<td  >Susan Pasarow</td>
+<td  >susan.pasarow@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2740</td>
+<td  >Department of Motor Vehicles</td>
+<td  style="mso-number-format:\@;"  >26-139</td>
+<td  >26-139 - Rental and Weekly Delivery of Linens, Mats, and Janitorial Supplies for Various DMV Offices in the Operation Division (OPS)</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/09/2026 11:59PM PST</td>
+<td  >Posted</td>
+<td  >Ada Davis</td>
+<td  >ada.davis@dmv.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3860</td>
+<td  >Department of Water Resources</td>
+<td  style="mso-number-format:\@;"  >0000040531</td>
+<td  >IFB # 10222002 Canine Forensics Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  9:00AM PST</td>
+<td  >Posted</td>
+<td  >Courtney Melissa Gray</td>
+<td  >courtneymelissa.gray@water.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >8570</td>
+<td  >Dept of Food &amp; Agriculture</td>
+<td  style="mso-number-format:\@;"  >0000040672</td>
+<td  >26-0062a - Winterhaven BPS Generator Replacement (Imperial County) Public Works</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Stefani Johnson</td>
+<td  >stefani.johnson@cdfa.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040558</td>
+<td  >25-320917.FMD.ChillerMaintenance&amp;Repair</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Dana Clements</td>
+<td  >dana.clements@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040538</td>
+<td  >CONTRACT: 26-336713; SITE COMPLIANCE AND IMPROVEMENTS ¿ NORTH TAHOE BEACH;CALIFORNIA TAHOE CONSERVANCY; TAHOE VISTA, PLACER COUNTY, CALIFORNIA; PROJECT: 13890</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Pavan Randhawa</td>
+<td  >pavan.randhawa@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040533</td>
+<td  >CONTRACT NUMBER: 26-336714; SITE COMPLIANCE AND IMPROVEMENTS ¿ PATTON LANDING CALIFORNIA TAHOE CONSERVANCY CARNELIAN BAY, PLACER COUNTY, CALIFORNIA; PROJECT NUMBER: 13891</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Hector Cavazos</td>
+<td  >hector.cavazos@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040371</td>
+<td  >FPCM-SVSP-I001020-103-KM COMPLETE ROOFING SYSTEM</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Roberta Sanchez</td>
+<td  >roberta.sanchez@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >12-0S5004</td>
+<td  >Multi-asset, pavement rehab, &amp; off-ramp widening at Artesia Blvd.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Irma Y Mejia</td>
+<td  >irma.mejia@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >12-086924</td>
+<td  >Construct RW, SW, HMA Pvmt, drainage, and Elect systems.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Irma Y Mejia</td>
+<td  >irma.mejia@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >10-1T2904</td>
+<td  >Bridge overlay, approach slab, joint seal, HMA, and cold plane.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Irma Y Mejia</td>
+<td  >irma.mejia@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >10-0V6904</td>
+<td  >Cold plane, HMA, RHMA, bridge rehab, culvert, and electrical work.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Irma Y Mejia</td>
+<td  >irma.mejia@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >08-1L8204</td>
+<td  >Reinforced concrete pipe trenchless installation method.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Chinyere Okpala</td>
+<td  >chinyere.okpala@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >07-379304</td>
+<td  >Construct DPP infiltration areas, capture housing, bioswales, &amp; MVPs.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Michael Furmuzan</td>
+<td  >michael.furmuzan@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >07-361904</td>
+<td  >Install and repair drainage system.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Chinyere Okpala</td>
+<td  >chinyere.okpala@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >06-1A8104</td>
+<td  >Building work.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Chinyere Okpala</td>
+<td  >chinyere.okpala@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >04-4Q3214</td>
+<td  >Replace bridge &amp; culverts, HMA, RHMA, Mod lighting &amp; erosion control.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Irma Y Mejia</td>
+<td  >irma.mejia@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >04-0AA214</td>
+<td  >RHMA (Gap Graded), cold plane AC Pvmt, HFST, Mod signals &amp; lighting.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Chinyere Okpala</td>
+<td  >chinyere.okpala@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >02-0J5904</td>
+<td  >Replace AC Surf, RHMA overlay, drainage, curb ramps, &amp; electrical.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Irma Y Mejia</td>
+<td  >irma.mejia@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >01-0M8504</td>
+<td  >HMA-A, cold plane AC, concrete barrier, and electrical.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Chinyere Okpala</td>
+<td  >chinyere.okpala@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3860</td>
+<td  >Department of Water Resources</td>
+<td  style="mso-number-format:\@;"  >0000040624</td>
+<td  >Plant Janitorial Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/10/2026  3:00PM PST</td>
+<td  >Posted</td>
+<td  >Lisa Huff</td>
+<td  >lisa.huff@water.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040586</td>
+<td  >Invitation for Bids (IFB) Number 26C875003 entitled, CHP Mountain Pass Joint Point of Entry (JPOE), Commercial Vehicle Enforcement Facility (CVEF) ¿ Generator Maintenance Services.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/11/2026 11:00AM PST</td>
+<td  >Posted</td>
+<td  >LuAnne Trazi</td>
+<td  >luanne.trazi@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >SS247</td>
+<td  >22nd DAA</td>
+<td  style="mso-number-format:\@;"  >27-001</td>
+<td  >Ride and Game Safety Inspection Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/11/2026  1:00PM PST</td>
+<td  >Posted</td>
+<td  >Charles Chambers</td>
+<td  >cchambers@sdfair.com</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3790</td>
+<td  >Dept of Parks &amp; Recreation</td>
+<td  style="mso-number-format:\@;"  >0000040515</td>
+<td  >C26683005 - Refuse Collection and Disposal</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/12/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Charles Dobbs</td>
+<td  >charles.dobbs@parks.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3790</td>
+<td  >Dept of Parks &amp; Recreation</td>
+<td  style="mso-number-format:\@;"  >0000040673</td>
+<td  >C26863029 GROVER HOT SPRINGS STATE PARK - Maintenance Yard Rebuild</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/12/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Merrilee Byrnes</td>
+<td  >merrilee.byrnes@parks.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3860</td>
+<td  >Department of Water Resources</td>
+<td  style="mso-number-format:\@;"  >0000040565</td>
+<td  >IFB 10222573 - Portable Toilet Rentals and Septic Holding Tank Pumping Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/12/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Mao Yang</td>
+<td  >mao.yang@water.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3860</td>
+<td  >Department of Water Resources</td>
+<td  style="mso-number-format:\@;"  >0000040564</td>
+<td  >IFB 10222572 - Portable Toilet Rentals and Septic Holding Tank Pumping Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/12/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Mao Yang</td>
+<td  >mao.yang@water.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040648</td>
+<td  >Janitorial Services - IFB 26C347002</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/13/2026 10:00AM PST</td>
+<td  >Posted</td>
+<td  >Elizabeth Lopez</td>
+<td  >elizabeth.lopez2@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2665</td>
+<td  >High Speed Rail Authority</td>
+<td  style="mso-number-format:\@;"  >HSR26-28</td>
+<td  >HSR26-28 Invitation for Bids for Copper Conductors</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/13/2026 12:00PM PST</td>
+<td  >Posted</td>
+<td  >Kelley Blackshear</td>
+<td  >kelley.blackshear@hsr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040640</td>
+<td  >RESD-PMDB 2026-10 Mechanical Engineering Retainer (STATEWIDE)</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/13/2026  5:00PM PST</td>
+<td  >Posted</td>
+<td  >Sarah Mutschler</td>
+<td  >sarah.mutschler@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040643</td>
+<td  >RESD-PMDB 2026-11 ELECTRICAL ENGINEERING - RETAINER SERVICES</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/13/2026  5:00PM PST</td>
+<td  >Posted</td>
+<td  >Therese Dominguez</td>
+<td  >therese.dominguez@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040653</td>
+<td  >C5613445-D American Sign Language (ASL) In-Person Interpreting (IPI) Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/16/2026 11:00AM PST</td>
+<td  >Posted</td>
+<td  >Kristina Lopez</td>
+<td  >kristina.lopez@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >8955</td>
+<td  >Dept of Veterans Affairs</td>
+<td  style="mso-number-format:\@;"  >0000040541</td>
+<td  >25HS0024 - NCVC Flooring Replacement Service</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/16/2026  4:00PM PST</td>
+<td  >Posted</td>
+<td  >Le&#039;Juan Bean</td>
+<td  >lejuan.bean@calvet.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040654</td>
+<td  >C5613538-D - Fire Alarm System Installation Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/17/2026 11:00AM PST</td>
+<td  >Posted</td>
+<td  >Diana Chiley</td>
+<td  >diana.chiley@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040562</td>
+<td  >CR25-319742.FMD.DataCenterEmergencyGenerator</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/17/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Phoebe Hsu</td>
+<td  >phoebe.hsu@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >05-1J9624</td>
+<td  >Modify existing drainage, replace lighting systems, and install TMS.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/17/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Michael Furmuzan</td>
+<td  >michael.furmuzan@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3600</td>
+<td  >Department of Fish &amp; Wildlife</td>
+<td  style="mso-number-format:\@;"  >0000040632</td>
+<td  >P2640008: Generator Maintenance and Repairs, at the Salmon Conservation and Research Facility (main and interim facilities), Fresno County, California</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/17/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Edith Derheim</td>
+<td  >edith.derheim@wildlife.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6580</td>
+<td  >UC Santa Cruz</td>
+<td  style="mso-number-format:\@;"  >3742</td>
+<td  >RFQ - 3742 Oakes College Housing Capital Improvements</td>
+<td  >RFI</td>
+<td  >RFx</td>
+<td  >11/17/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  ></td>
+<td  ></td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >10-1H0204</td>
+<td  >Curb ramp, CRCP, JPCP, HMA, electrical, erosion control, and planting.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/17/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Michael Furmuzan</td>
+<td  >michael.furmuzan@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6710</td>
+<td  >CSU, Fullerton</td>
+<td  style="mso-number-format:\@;"  >0000040223</td>
+<td  >ASI Wellness Initiative, Project No: FL-2673</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/17/2026  5:00PM PST</td>
+<td  >Posted</td>
+<td  >Loren Skoug</td>
+<td  >lskoug@fullerton.edu</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040464</td>
+<td  >C5613442-D Non-Hazardous Sludge Removal, Hauling and Refuse Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/18/2026 11:00AM PST</td>
+<td  >Posted</td>
+<td  >Kristina Lopez</td>
+<td  >kristina.lopez@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >10-1M4804</td>
+<td  >Cold plane, HMA, curb ramp, culvert, and modify electrical system.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/18/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Irma Y Mejia</td>
+<td  >irma.mejia@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >04-1Q76U4</td>
+<td  >Replace bridge, widen Rdwy, railroad, drainage, Elect and landscape.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/18/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Chinyere Okpala</td>
+<td  >chinyere.okpala@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >05-1K6804</td>
+<td  >Construct maintenance station.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/18/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Irma Y Mejia</td>
+<td  >irma.mejia@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2665</td>
+<td  >High Speed Rail Authority</td>
+<td  style="mso-number-format:\@;"  >HSR26-39</td>
+<td  >HSR26-39 Invitation for Bids for Aluminum Conductors</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/19/2026 12:00PM PST</td>
+<td  >Posted</td>
+<td  >Kelley Blackshear</td>
+<td  >kelley.blackshear@hsr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >05-316014</td>
+<td  >Construct new interchange, Rdwy Ex, IB, HMA, RHMA, &amp; structural Conc.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/19/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Michael Furmuzan</td>
+<td  >michael.furmuzan@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >07-367604</td>
+<td  >Construct treatment BMPs for stormwater mitigation.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/19/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Irma Y Mejia</td>
+<td  >irma.mejia@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >08-1L8004</td>
+<td  >Structural Conc, bar Reinf steel, Str Exc, and partially grouted RSP.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/19/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Chinyere Okpala</td>
+<td  >chinyere.okpala@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3860</td>
+<td  >Department of Water Resources</td>
+<td  style="mso-number-format:\@;"  >10219992</td>
+<td  >Progressive Design-Build Independent Cost Estimator Services for the Kane Spring Project</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/19/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Marissa Sharp</td>
+<td  >marissa.sharp@water.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0850</td>
+<td  >CA State Lottery Commission</td>
+<td  style="mso-number-format:\@;"  >0000040600</td>
+<td  >R005664 Hispanic Marketing and Advertising Agency RFP</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/23/2026  3:00PM PST</td>
+<td  >Posted</td>
+<td  >Timur Kopbayev</td>
+<td  >tkopbayev@calottery.com</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3790</td>
+<td  >Dept of Parks &amp; Recreation</td>
+<td  style="mso-number-format:\@;"  >0000040665</td>
+<td  >RFP # C26708001:  Aquatic Vegetation Control (Reposted)</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/24/2026 12:00PM PST</td>
+<td  >Posted</td>
+<td  >Jeffrey Koff</td>
+<td  >jeffrey.koff@parks.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6700</td>
+<td  >CSU, Fresno</td>
+<td  style="mso-number-format:\@;"  >0000040674</td>
+<td  >Request for Qualifications - Task Order Construction Agreement - General Construction</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/24/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >David Sawyer</td>
+<td  >davidsawyer@mail.fresnostate.edu</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6700</td>
+<td  >CSU, Fresno</td>
+<td  style="mso-number-format:\@;"  >0000040671</td>
+<td  >Request for Qualifications - Task Order Construction Agreement - Elevator Repairs</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/24/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >David Sawyer</td>
+<td  >davidsawyer@mail.fresnostate.edu</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6700</td>
+<td  >CSU, Fresno</td>
+<td  style="mso-number-format:\@;"  >0000040669</td>
+<td  >Request for Qualifications - Task Order Construction Agreement - Fire Alarms</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/24/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >David Sawyer</td>
+<td  >davidsawyer@mail.fresnostate.edu</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6700</td>
+<td  >CSU, Fresno</td>
+<td  style="mso-number-format:\@;"  >0000040668</td>
+<td  >Request for Qualifications - Task Order Construction Agreement - Multiple Roofing Projects</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/24/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >David Sawyer</td>
+<td  >davidsawyer@mail.fresnostate.edu</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0250</td>
+<td  >Judicial Branch</td>
+<td  style="mso-number-format:\@;"  >0000040595</td>
+<td  >RFP-IT-2026-214-RB-LAN WAN MSA</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/28/2026  3:00PM PST</td>
+<td  >Posted</td>
+<td  >Roderick Bustos</td>
+<td  >roderick.bustos@jud.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5180</td>
+<td  >Department of Social Services</td>
+<td  style="mso-number-format:\@;"  >0000040419</td>
+<td  >RFP 27-3001 - Workers Compensation Third Party Administrator</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/30/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Salman Amin</td>
+<td  >salman.amin@dss.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >31001</td>
+<td  >Office of Exposition Park</td>
+<td  style="mso-number-format:\@;"  >0000040677</td>
+<td  >RFP No. OEPM 26-400 Business Development Marketing Communications Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/01/2026  5:00AM PST</td>
+<td  >Posted</td>
+<td  >Anita Powell</td>
+<td  >anita.powell@expositionpark.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040618</td>
+<td  >C5613691-D - Fire House Fleet Maintenance and Repair Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/01/2026 11:00AM PST</td>
+<td  >Posted</td>
+<td  >Elizabeth Fisher</td>
+<td  >elizabeth.fisher@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >08-1L1704</td>
+<td  >RHMA, cold plane AC pavement, vegetation control (minor Conc) and MGS.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/01/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Chinyere Okpala</td>
+<td  >chinyere.okpala@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >11-430874</td>
+<td  >Clairemont drive bridge deck repair.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/01/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Chinyere Okpala</td>
+<td  >chinyere.okpala@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >12-0R9704</td>
+<td  >Slab replacement, RHMA paving, modify signal and lighting systems.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/01/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Chinyere Okpala</td>
+<td  >chinyere.okpala@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3540</td>
+<td  >CAL FIRE</td>
+<td  style="mso-number-format:\@;"  >9TSC0108</td>
+<td  >9TSC0108-Fresno Air Attack Base Infrastructure Improvements</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/01/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Dennis Schrader</td>
+<td  >dennis.schrader@fire.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040594</td>
+<td  >IFB Number 26C770000 - Janitorial Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/01/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Pesarlai Mukhtar</td>
+<td  >pesarlai.mukhtar@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >75021</td>
+<td  >Statewide STPD</td>
+<td  style="mso-number-format:\@;"  >0000039445</td>
+<td  >California Broadband Funding</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/01/2026  5:00PM PST</td>
+<td  >Posted</td>
+<td  >Raman Pabla</td>
+<td  >raman.pabla@state.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040626</td>
+<td  >Invitation for Bids (IFB) Number 26C830007 entitled,  CHP Inyo-Kern Resident Post (RP)    ROOF MAINTENANCE SERVICES</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/02/2026 11:00AM PST</td>
+<td  >Posted</td>
+<td  >LuAnne Trazi</td>
+<td  >luanne.trazi@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040550</td>
+<td  >25-279603.OSP.DestructionEquipmentServices</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/02/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Anna Beahm</td>
+<td  >anna.beahm@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >05-1K9014</td>
+<td  >Construct bridge structure for fish passage restoration.</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/03/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Irma Y Mejia</td>
+<td  >irma.mejia@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3860</td>
+<td  >Department of Water Resources</td>
+<td  style="mso-number-format:\@;"  >0000040201</td>
+<td  >RFQ/P Progressive Design-Build Project Reference No. DB-2026-01 - Kane Spring Project</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/04/2026  3:00PM PST</td>
+<td  >Posted</td>
+<td  >Michael Aicega</td>
+<td  >michael.aicega@water.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2720</td>
+<td  >Dept of the CA Highway Patrol</td>
+<td  style="mso-number-format:\@;"  >0000040620</td>
+<td  >Invitation for Bids (IFB) Number 26C830006 entitled,  CHP Cache Creek and Keene Platform Scales   Heating, Ventilating and Air Conditioning (HVAC) Maintenance Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/08/2026 11:00AM PST</td>
+<td  >Posted</td>
+<td  >LuAnne Trazi</td>
+<td  >luanne.trazi@chp.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >8955</td>
+<td  >Dept of Veterans Affairs</td>
+<td  style="mso-number-format:\@;"  >0000040575</td>
+<td  >25HS0023 - CCCVC HVAC Systems Repairs</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/08/2026  4:00PM PST</td>
+<td  >Posted</td>
+<td  >Le&#039;Juan Bean</td>
+<td  >lejuan.bean@calvet.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0531</td>
+<td  >Ofc Technology and Solutions I</td>
+<td  style="mso-number-format:\@;"  >-74050233</td>
+<td  >Office of Technology and Solutions Integration (OTSI) California Electronic Benefit Transfer (EBT)</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/14/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Leanne Nguyen</td>
+<td  >leanne.nguyen@state.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040018</td>
+<td  >C5613486-D-SMOKE CONTROL SYSTEM REPLACEMENT</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/15/2026 11:00AM PST</td>
+<td  >Posted</td>
+<td  >Zaryab Durrani</td>
+<td  >zaryab.durrani@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040660</td>
+<td  >FPCM-COR-I-001054-118-309A-RS Roof Replacement</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/17/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Roberta Sanchez</td>
+<td  >roberta.sanchez@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >5225</td>
+<td  >Dept of Corrections &amp; Rehab</td>
+<td  style="mso-number-format:\@;"  >0000040663</td>
+<td  >FPCM-SATF-I001012-M0001-CS/Complete Roof System</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/17/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Cheng Saephan</td>
+<td  >cheng.saephan@cdcr.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6760</td>
+<td  >CSU, Northridge</td>
+<td  style="mso-number-format:\@;"  >0000040365</td>
+<td  >PW2602 University Library (UL) Egress Stair</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/17/2026  3:00PM PST</td>
+<td  >Posted</td>
+<td  >Jenni Cox</td>
+<td  >jenni.cox@csun.edu</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >75A0605</td>
+<td  >IFB Locomotive Overhaul Services in Oakland, CA</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/22/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Gurinder Kaur</td>
+<td  >gurinder.kaur@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7760</td>
+<td  >Department of General Services</td>
+<td  style="mso-number-format:\@;"  >0000040569</td>
+<td  >Request for Qualifications for Solar, Wind, Battery Storage, Microgrids, and other Clean Energy Technologies</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/23/2026  5:00PM PST</td>
+<td  >Posted</td>
+<td  >Dorothy Godbold</td>
+<td  >dorothy.godbold@dgs.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >2660</td>
+<td  >Department of Transportation</td>
+<td  style="mso-number-format:\@;"  >10A2853</td>
+<td  >*Certified SB/MB or DVBE Only* Tree Trimming, Pruning, and Removal Services in Alpine, Amador, Calaveras, Mariposa, Merced, San Joaquin, Stanislaus, and Tuolumne Counties</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/24/2026  2:00PM PST</td>
+<td  >Posted</td>
+<td  >Gurinder Kaur</td>
+<td  >gurinder.kaur@dot.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7730</td>
+<td  >Franchise Tax Board</td>
+<td  style="mso-number-format:\@;"  >0000040621</td>
+<td  >RFP FTB-2627-00432 CalEITC Advertising Campaign</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/31/2026  3:00PM PST</td>
+<td  >Posted</td>
+<td  >Julia Gutierrez</td>
+<td  >julia.gutierrez@ftb.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >7730</td>
+<td  >Franchise Tax Board</td>
+<td  style="mso-number-format:\@;"  >0000040240</td>
+<td  >Real Estate Appraisal Consulting Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/31/2026  5:00PM PST</td>
+<td  >Posted</td>
+<td  >Doral Valley</td>
+<td  >doral.valley@ftb.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >4265</td>
+<td  >Department of Public Health</td>
+<td  style="mso-number-format:\@;"  >0000037662</td>
+<td  >CDPH SaPHIRE M&amp;O - IT Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >01/06/2027  1:00AM PST</td>
+<td  >Posted</td>
+<td  >Binh Thai</td>
+<td  >binh.thai@state.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3940</td>
+<td  >State Water Resources Control</td>
+<td  style="mso-number-format:\@;"  >0000037301</td>
+<td  >Water Technical Access Portal (WaterTAP)</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >01/15/2027 10:00AM PST</td>
+<td  >Posted</td>
+<td  >Nichole Gutierrez</td>
+<td  >nichole.gutierrez@state.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0650</td>
+<td  >Gov&#039;s Off of Lnd Use &amp; Clmt In</td>
+<td  style="mso-number-format:\@;"  >0000040574</td>
+<td  >RFP (Secondary) SGC26005 - TCC CRC Technical Assistance</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >01/15/2027  5:00PM PST</td>
+<td  >Posted</td>
+<td  >Amelyn Tadeo</td>
+<td  >ame.tadeo@lci.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >8570</td>
+<td  >Dept of Food &amp; Agriculture</td>
+<td  style="mso-number-format:\@;"  >0000040483</td>
+<td  >Blanket Advertisement for Fair-Time Services</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >04/02/2027  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Molly Porter</td>
+<td  >molly.porter@cdfa.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0515</td>
+<td  >Bus &amp; Consumer Services Agency</td>
+<td  style="mso-number-format:\@;"  >0000039767</td>
+<td  >Homeless Data Integration System - Maintenance and Operations (HDIS - M&amp;O)</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >06/04/2027  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Hashmat Mohmand</td>
+<td  >hashmat.mohmand@state.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >6690</td>
+<td  >CSU, Dominguez Hills</td>
+<td  style="mso-number-format:\@;"  >0000040619</td>
+<td  >ANNUAL BLANKET ADVERTISEMENT FOR POTENTIAL MINOR CAPITAL CONSTRUCTION PROJECTS (NOT A SPECIFIC PROJECT OR AWARD) 2026-2027</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >06/30/2027  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Maria Hernandez</td>
+<td  >mehernandez@csudh.edu</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3760</td>
+<td  >State Coastal Conservancy</td>
+<td  style="mso-number-format:\@;"  >0000040344</td>
+<td  >2026 Annual State Coastal Conservancy Request for Qualifications and Information</td>
+<td  >RFI</td>
+<td  >RFx</td>
+<td  >09/30/2027 12:00PM PDT</td>
+<td  >Posted</td>
+<td  >Jordan Fong</td>
+<td  >jordan.fong@scc.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >0890</td>
+<td  >Secretary of State</td>
+<td  style="mso-number-format:\@;"  >0000040309</td>
+<td  >Secretary of State (SOS)  Notary Automation Project (NAP) 2.0</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >09/30/2027  5:00PM PDT</td>
+<td  >Posted</td>
+<td  >Becky Fatur</td>
+<td  >becky.fatur@state.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >3940</td>
+<td  >State Water Resources Control</td>
+<td  style="mso-number-format:\@;"  >0000040529</td>
+<td  >Water Technical Access Portal (WaterTAP) 2.0</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >11/22/2027 12:00PM PST</td>
+<td  >Posted</td>
+<td  >Nichole Gutierrez</td>
+<td  >nichole.gutierrez@state.ca.gov</td>
+<tr>
+<td  style="mso-number-format:\@;"  >1115</td>
+<td  >Department of Cannabis Control</td>
+<td  style="mso-number-format:\@;"  >0000039409</td>
+<td  >Cannabis Integration System (CSI) - DCC</td>
+<td  >Sell</td>
+<td  >RFx</td>
+<td  >12/30/2027  5:00PM PST</td>
+<td  >Posted</td>
+<td  >Hashmat Mohmand</td>
+<td  >hashmat.mohmand@state.ca.gov</td>
+</table></body></html>
