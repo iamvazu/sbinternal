@@ -9,12 +9,14 @@ import threading
 import traceback
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import unquote, urlparse
+from urllib.parse import parse_qs, unquote, urlparse
 
 import analyze
 import config
 import insights
 import llm
+import matchapi
+import matcher
 from db import connect, loads
 
 conn = connect()
@@ -102,7 +104,9 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         try:
-            self.route_get(unquote(urlparse(self.path).path))
+            u = urlparse(self.path)
+            self.qs = {k: v[0] for k, v in parse_qs(u.query).items()}
+            self.route_get(unquote(u.path))
         except Exception as e:
             traceback.print_exc()
             self.send(500, {"error": str(e)})
@@ -119,6 +123,27 @@ class Handler(BaseHTTPRequestHandler):
             return self.send(200, (config.WEB_DIR / "index.html").read_bytes(), "text/html; charset=utf-8")
         if p == "/api/status":
             return self.send(200, llm.status())
+        # ---- bid <-> business matching (own sqlite connections; no shared lock needed)
+        if p == "/api/firms/stats":
+            return self.send(200, matcher.firm_stats())
+        if p == "/api/firms/search":
+            return self.send(200, matcher.search_firms(self.qs.get("q", ""), int(self.qs.get("limit", 25))))
+        if m := re.fullmatch(r"/api/bidmatch/([\w-]+)\.csv", p):
+            body = matchapi.export_csv(m.group(1), self.qs.get("role") or None)
+            self.send_response(200)
+            self.send_header("Content-Type", "text/csv; charset=utf-8")
+            self.send_header("Content-Disposition", f'attachment; filename="bid-{m.group(1)}-matches.csv"')
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            return self.wfile.write(body)
+        if m := re.fullmatch(r"/api/bidmatch/([\w-]+)", p):
+            res = matcher.match_bid(m.group(1), int(self.qs.get("limit", 100)), self.qs.get("role") or None)
+            if res:
+                res["review"] = matchapi.saved_review(m.group(1))
+            return self.send(200 if res else 404, res or {"error": "not found"})
+        if m := re.fullmatch(r"/api/firmmatch/([\w-]+)", p):
+            res = matcher.match_firm(m.group(1))
+            return self.send(200 if res else 404, res or {"error": "not found"})
         with lock:
             if p == "/api/bids":
                 return self.send(200, insights.load_rows(conn))
@@ -154,6 +179,13 @@ class Handler(BaseHTTPRequestHandler):
         if p == "/api/ask":
             b = self.body()
             return self.send(200, ask(b.get("question", ""), b.get("event_id")))
+        if m := re.fullmatch(r"/api/bidmatch/([\w-]+)/review", p):
+            with llm_busy:
+                res = matchapi.review(m.group(1))
+            return self.send(200 if res else 404, res or {"error": "not found"})
+        if m := re.fullmatch(r"/api/clients/from-firm/([\w-]+)", p):
+            c = matchapi.client_from_firm(m.group(1))
+            return self.send(200 if c else 404, c or {"error": "unknown firm"})
         if m := re.fullmatch(r"/api/analyze/([\w-]+)", p):
             with lock:
                 ev = conn.execute("SELECT * FROM events WHERE id=?", (m.group(1),)).fetchone()
@@ -177,6 +209,7 @@ class Handler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
+    threading.Thread(target=matcher.warm, daemon=True).start()  # firm index + bid profiles
     srv = ThreadingHTTPServer((config.HOST, config.PORT), Handler)
     print(f"STRONGERbuilt Bid Intelligence on http://{config.HOST}:{config.PORT}  (model {config.LLM_MODEL} @ {config.LLM_URL})")
     srv.serve_forever()

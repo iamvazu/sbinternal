@@ -23,6 +23,34 @@ python server.py            # http://127.0.0.1:8765
 The dashboard works before any AI runs. Rule signals, matching and the certification lens are instant.
 Bids get AI analysis in batches (`analyze.py --all`) or on demand from the bid drawer.
 
+## Bid Matching: bids ↔ 21k certified businesses
+
+```bash
+python firms.py              # load Caleprocure_businesses_final.xls (~3 s): 22.6k rows -> 21.4k firms
+python firms.py --embed      # optional semantic layer: ~1 h on this PC's CPU, minutes on the Jetson; resumable
+python eval_match.py         # quality report: coverage, P@10, codes-hidden ablation, latency
+```
+
+The **Bid Matching** tab (next to Client Match) works in two modes:
+- **By bid:** ranked certified firms with role filters (Prime, DVBE partner, SB subcontractor, DBE partner), the reasons and
+  warnings behind each score, a score breakdown, contact details, CSV export, an AI shortlist review, and "Add as client".
+- **By business:** search any firm and see its best open bids.
+
+How a score is built (`matcher.py`):
+1. **Recall:** firms sharing a UNSPSC family or tighter with the bid; BM25 over firm keywords and names, with the query
+   expanded by terms *learned from the firms themselves* (e.g. class 461916 → sprinkler, extinguisher, suppression);
+   and nearest neighbours in embedding space when vectors exist.
+2. **Relevance:** hierarchical UNSPSC match weighted by code rarity, keyword relevance (BM25 plus title coverage), and
+   semantic similarity calibrated per bid.
+3. **Fit:** location (bid addresses → county via a zip/city→county map learned from the firm data; HQ boilerplate
+   suppressed; weighted higher for on-site work), industry type, and certification programs (SB 5%, set-asides,
+   DVBE goal, SB-PW, DBE).
+4. **Eligibility:** CSLB license held vs. required (names mapped to classes), microbusiness on a large bid → sub
+   role, certification expiring before the due date.
+5. **Roles:** Prime candidate, DVBE partner, DBE partner, SB subcontractor.
+
+Ethnicity, race, gender identity, LGBQTIA and disability columns are never loaded or used.
+
 ## Configuration (environment variables)
 
 | Variable | Default | |

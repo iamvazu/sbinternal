@@ -7,8 +7,13 @@ attachments/
 *.db-shm
 bidintel/data/
 
+# Large archives & exports
+*.zip
+jetson_data.zip
+
 # Python cache & logs
 __pycache__/
 *.py[cod]
 *$py.class
 *.log
+

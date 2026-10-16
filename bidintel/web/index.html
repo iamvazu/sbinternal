@@ -119,6 +119,39 @@ aside .content { padding: 16px 20px 40px; display: grid; gap: 14px; }
 .legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--ink-2); margin-top: 6px; }
 label.f { display: grid; gap: 4px; font-size: 12px; color: var(--ink-2); }
 .formgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+/* bid matching */
+.seg { display: inline-flex; border: 1px solid var(--ring); border-radius: 9px; padding: 2px; background: var(--surface); }
+.seg button { border: 0; background: none; color: var(--ink-2); padding: 6px 12px; border-radius: 7px; }
+.seg button[aria-selected="true"] { background: var(--accent-wash); color: var(--ink); font-weight: 600; }
+.bm-grid { display: grid; grid-template-columns: 330px minmax(0, 1fr); gap: 16px; align-items: start; }
+@media (max-width: 900px) { .bm-grid { grid-template-columns: 1fr; } .bm-side { position: static; } .bm-list { max-height: 38vh; } }
+.bm-side { padding: 10px; position: sticky; top: 64px; }
+.bm-list { max-height: calc(100vh - 210px); overflow-y: auto; margin-top: 8px; }
+.bm-item { padding: 8px 8px; border-radius: 8px; cursor: pointer; border: 1px solid transparent; }
+.bm-item:hover { background: var(--surface-2); }
+.bm-item[aria-selected="true"] { background: var(--accent-wash); }
+.bm-item .t-name { font-size: 13px; line-height: 1.3; }
+.req { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px 18px; margin-top: 10px; }
+.req small { display: block; color: var(--muted); font-size: 11.5px; }
+.fm { display: grid; grid-template-columns: 30px minmax(0, 1fr) 92px; gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--grid); }
+.fm:last-child { border-bottom: 0; }
+.fm-rank { color: var(--muted); font-variant-numeric: tabular-nums; font-weight: 600; padding-top: 1px; }
+.fm-score { text-align: right; }
+.fm-score .big { font-size: 22px; font-weight: 650; letter-spacing: -.02em; }
+.fm-score .meter b { width: 72px; }
+.why { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12.5px; color: var(--ink-2); margin-top: 6px; }
+.why span::before { content: "✓ "; color: var(--good-ink); font-weight: 700; }
+.why span.warn::before { content: "! "; color: var(--critical); }
+.chip.role { background: var(--surface); border-color: var(--accent); color: var(--ink); }
+.chip.cert { background: var(--surface-2); color: var(--ink); font-weight: 600; }
+.chip.v-strong { border-color: var(--good); } .chip.v-possible { border-color: var(--warning); }
+.chip.v-weak, .chip.v-not { border-color: var(--critical); }
+details.more { margin-top: 8px; } details.more summary { cursor: pointer; color: var(--accent-ink); font-size: 12.5px; }
+.bars { display: grid; grid-template-columns: 110px 1fr 38px; gap: 4px 10px; align-items: center; font-size: 12px; margin: 10px 0; max-width: 460px; }
+.bars b { height: 6px; background: var(--grid); border-radius: 3px; overflow: hidden; display: block; }
+.bars b i { display: block; height: 100%; background: var(--accent); border-radius: 3px; }
+.contact { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 6px 16px; font-size: 12.5px; }
+.contact small { display: block; color: var(--muted); font-size: 11px; }
 </style>
 </head>
 <body>
@@ -129,6 +162,7 @@ label.f { display: grid; gap: 4px; font-size: 12px; color: var(--ink-2); }
       <button data-view="command" aria-selected="true">Command Center</button>
       <button data-view="bids">Bids</button>
       <button data-view="match">Client Match</button>
+      <button data-view="bidmatch">Bid Matching</button>
       <button data-view="lens">Certification Lens</button>
       <button data-view="ask">Ask</button>
     </nav>
@@ -193,6 +227,24 @@ label.f { display: grid; gap: 4px; font-size: 12px; color: var(--ink-2); }
     <div class="card" style="padding:0;margin-top:12px"><div class="tablewrap"><table>
       <thead><tr><th>Match</th><th>Bid</th><th>Closes</th><th>Why</th><th>Watch-outs</th></tr></thead>
       <tbody id="mrows"></tbody></table></div></div>
+  </section>
+
+  <!-- BID MATCHING -->
+  <section id="v-bidmatch" hidden>
+    <div class="row" style="justify-content:space-between;align-items:flex-end;margin-bottom:12px">
+      <div><h2>Bid matching</h2>
+        <p class="sub" style="margin:0">Every open bid matched against Cal eProcure's certified SB, MB, SB-PW and DVBE firms. Scores combine commodity codes, keywords, meaning, licenses, location and certification programs. Every reason is shown.</p></div>
+      <div class="seg" role="tablist" id="bm-mode">
+        <button data-mode="bid" aria-selected="true">By bid</button><button data-mode="firm">By business</button></div>
+    </div>
+    <div class="t-sub" id="bm-stats" style="margin-bottom:12px"></div>
+    <div class="bm-grid">
+      <div class="card bm-side">
+        <input type="search" id="bm-q" placeholder="Filter open bids…" style="width:100%">
+        <div id="bm-list" class="bm-list"></div>
+      </div>
+      <div id="bm-main" style="min-width:0"><div class="card empty">Pick a bid on the left.</div></div>
+    </div>
   </section>
 
   <!-- LENS -->
@@ -379,7 +431,8 @@ function renderDrawer(b) {
       <div style="min-width:0"><div class="t-sub">${esc(b.dept)} · ${b.id} · ${esc(b.format || "")}</div>
         <h2 style="margin:4px 0">${esc(b.name)}</h2>
         <div class="row">${when(r)}${r.method ? `<span class="chip">${r.method}</span>` : ""}<span class="chip">${esc(r.category)}</span></div></div>
-      <button class="btn" onclick="closeDrawer()" aria-label="Close">✕</button>
+      <div class="row" style="flex-wrap:nowrap"><button class="btn primary" onclick="closeDrawer();openBidMatch('${b.id}')" style="white-space:nowrap">Find businesses</button>
+      <button class="btn" onclick="closeDrawer()" aria-label="Close">✕</button></div>
     </div>
   </div>
   <div class="content">
@@ -540,11 +593,182 @@ $("#ask-form").onsubmit = async e => {
   catch (err) { $("#pending").outerHTML = `<div class="msg">Model error: ${esc(err.message)}</div>`; }
 };
 
+/* ---------------- bid matching ---------------- */
+const ROLE = {prime: "Prime candidate", dvbe: "DVBE partner", dbe: "DBE partner", sb_sub: "SB subcontractor", other: "Other"};
+let BM = {mode: "bid", bid: null, firm: null, role: "", data: null, stats: null};
+const pct = v => v == null ? "—" : Math.round(v * 100);
+const bar = (label, v) => v == null ? "" : `<span>${label}</span><b><i style="width:${Math.round(v * 100)}%"></i></b><span class="num t-sub">${pct(v)}</span>`;
+const certChips = f => [...f.certs, ...f.divcerts.filter(d => d !== "Other")].map(c => `<span class="chip cert">${esc(c)}</span>`).join("");
+
+async function renderBidMatch() {
+  if (!BM.stats) {
+    BM.stats = await api("/api/firms/stats");
+    const s = BM.stats, c = s.certs;
+    $("#bm-stats").textContent = `${s.active.toLocaleString()} actively certified firms (of ${s.firms.toLocaleString()}) · SB ${(c.SB || 0).toLocaleString()} · MB ${(c.MB || 0).toLocaleString()} · SB-PW ${(c["SB-PW"] || 0).toLocaleString()} · DVBE ${(c.DVBE || 0).toLocaleString()} · ${s.vectors ? s.vectors.toLocaleString() + " with semantic vectors" : "semantic layer off (run firms.py --embed)"}`;
+  }
+  renderBmList();
+  if (BM.mode === "bid" && BM.bid) loadBidMatch(BM.bid);
+}
+document.querySelectorAll("#bm-mode button").forEach(b => b.onclick = () => {
+  BM.mode = b.dataset.mode;
+  document.querySelectorAll("#bm-mode button").forEach(x => x.setAttribute("aria-selected", x === b));
+  $("#bm-q").value = ""; $("#bm-q").placeholder = BM.mode === "bid" ? "Filter open bids…" : "Search businesses by name, keyword or cert ID…";
+  $("#bm-main").innerHTML = `<div class="card empty">${BM.mode === "bid" ? "Pick a bid on the left." : "Search for a business on the left."}</div>`;
+  renderBmList();
+});
+let bmTimer;
+$("#bm-q").addEventListener("input", () => { clearTimeout(bmTimer); bmTimer = setTimeout(renderBmList, BM.mode === "firm" ? 250 : 0); });
+
+async function renderBmList() {
+  const q = $("#bm-q").value.trim().toLowerCase(), el = $("#bm-list");
+  if (BM.mode === "bid") {
+    const rows = BIDS.filter(r => r.urgency !== "closed" && (!q || `${r.name} ${r.dept} ${r.id} ${r.category}`.toLowerCase().includes(q))).slice(0, 250);
+    el.innerHTML = rows.map(r => `<div class="bm-item" data-bm="${r.id}" aria-selected="${r.id === BM.bid}">
+      <div class="t-name">${esc(r.name)}</div><div class="t-sub">${esc(r.category)} · ${r.days_left != null ? (r.days_left < 1 ? "<1 day" : Math.floor(r.days_left) + " days") : ""} · ${r.id}</div></div>`).join("") || `<div class="empty">No open bids match.</div>`;
+    el.querySelectorAll("[data-bm]").forEach(n => n.onclick = () => openBidMatch(n.dataset.bm, true));
+  } else {
+    if (q.length < 2) { el.innerHTML = `<div class="empty">Type at least 2 characters.</div>`; return; }
+    const firms = await api(`/api/firms/search?q=${encodeURIComponent(q)}`);
+    el.innerHTML = firms.map(f => `<div class="bm-item" data-fm="${f.id}" aria-selected="${f.id === BM.firm}">
+      <div class="t-name">${esc(f.name)}</div><div class="t-sub">${esc(f.city)} · ${esc(f.certs.join(", ") || "expired")} · ${f.id}</div></div>`).join("") || `<div class="empty">No businesses found.</div>`;
+    el.querySelectorAll("[data-fm]").forEach(n => n.onclick = () => loadFirmMatch(n.dataset.fm));
+  }
+}
+
+function openBidMatch(id, fromList) {
+  BM.mode = "bid"; BM.bid = id; BM.role = "";
+  document.querySelectorAll("#bm-mode button").forEach(x => x.setAttribute("aria-selected", x.dataset.mode === "bid"));
+  if (!fromList) show("bidmatch"); else { renderBmList(); loadBidMatch(id); }
+}
+
+async function loadBidMatch(id) {
+  document.querySelectorAll("#bm-list [data-bm]").forEach(n => n.setAttribute("aria-selected", n.dataset.bm === id));
+  if (innerWidth <= 900) $("#bm-main").scrollIntoView({behavior: "smooth"});
+  $("#bm-main").innerHTML = `<div class="card"><span class="spin"></span> Matching ${esc(id)} against certified businesses…</div>`;
+  try { BM.data = await api(`/api/bidmatch/${encodeURIComponent(id)}?limit=150${BM.role ? "&role=" + BM.role : ""}`); }
+  catch (e) { $("#bm-main").innerHTML = `<div class="card">Could not match: ${esc(e.message)}</div>`; return; }
+  drawBidMatch();
+}
+
+function drawBidMatch() {
+  const d = BM.data, b = d.bid, rc = d.role_counts, rev = d.review;
+  const verdict = {}; (rev?.firms || []).forEach(v => verdict[v.firm_id] = v);
+  const prog = [b.set_aside && "SB/DVBE set-aside", b.sb_pref && "SB 5% preference", b.dvbe && `DVBE ${b.dvbe_pct ? b.dvbe_pct + "%" : "participation"}`,
+    b.dbe && "Federal DBE goal", b.public_works && "Public works (SB-PW)"].filter(Boolean);
+  $("#bm-main").innerHTML = `
+  <div class="card">
+    <div class="row" style="justify-content:space-between;align-items:flex-start;flex-wrap:nowrap">
+      <div style="min-width:0"><div class="t-sub">${esc(b.dept)} · ${b.id} · ${esc(b.category)}</div>
+        <h2 style="margin:4px 0"><a href="#" data-bid="${b.id}" style="color:inherit;text-decoration:none">${esc(b.name)}</a></h2>
+        <div class="t-sub">${esc(b.summary || "")}</div></div>
+      <div class="row" style="flex-wrap:nowrap">
+        <button class="btn" id="bm-review" style="white-space:nowrap">${rev ? "Re-run AI review" : "AI shortlist review"}</button>
+        <a class="btn" href="/api/bidmatch/${b.id}.csv${BM.role ? "?role=" + BM.role : ""}" style="text-decoration:none;white-space:nowrap">Export CSV</a></div>
+    </div>
+    <div class="req">
+      <div><small>Commodity codes</small>${b.codes.map(c => `<div title="${esc(c.description)}">${c.code} <span class="t-sub">${esc((c.description || "").split(" - ").pop())}</span></div>`).join("") || "None listed: matched on text"}</div>
+      <div><small>Licenses required</small>${esc(b.licenses.join(", ") || "None found")}${b.licenses.length && !b.license_hard ? ` <span class="t-sub">(mentioned)</span>` : ""}</div>
+      <div><small>Place of performance</small>${esc(b.counties.join(", ") || (b.statewide ? "Statewide" : "Not found"))}</div>
+      <div><small>Programs</small>${prog.length ? prog.map(p => `<span class="chip key">${p}</span>`).join(" ") : "None detected"}</div>
+      <div><small>Industry sought</small>${esc(b.industry.join(" / "))}</div>
+      <div><small>Engine</small>${d.total.toLocaleString()} qualified · ${d.meta.candidates.toLocaleString()} screened · ${d.meta.ms} ms${d.meta.semantic ? " · semantic" : ""}</div>
+    </div>
+    ${d.meta.expansion.length ? `<div class="t-sub" style="margin-top:10px">Learned search terms from these codes: ${d.meta.expansion.map(t => `<span class="chip">${esc(t)}</span>`).join(" ")}</div>` : ""}
+    ${rev ? `<div class="msg" style="margin-top:12px"><b>AI shortlist review</b> <span class="t-sub">· ${esc(rev.model)} · ${new Date(rev.created).toLocaleString()}</span><p style="margin:6px 0 0">${esc(rev.shortlist_summary)}</p></div>` : ""}
+  </div>
+  <div class="row" style="margin:14px 0 10px">
+    <div class="seg" id="bm-roles">${["", "prime", "dvbe", "sb_sub", "dbe"].filter(r => !r || rc[r] || r === BM.role).map(r =>
+      `<button data-role="${r}" aria-selected="${r === BM.role}">${r ? ROLE[r] + "s" : "All matches"} <span class="t-sub">${r ? (rc[r] || 0) : ""}</span></button>`).join("")}</div>
+    <span class="t-sub">Showing top ${d.results.length} of ${d.total.toLocaleString()}</span>
+  </div>
+  <div class="card" style="padding:0">${d.results.map((r, n) => firmRow(r, n, verdict[r.firm.id])).join("") || `<div class="empty" style="padding:16px">No certified businesses match this bid${BM.role ? " in this role" : ""}.</div>`}</div>`;
+  $("#bm-roles").querySelectorAll("button").forEach(x => x.onclick = () => { BM.role = x.dataset.role; loadBidMatch(BM.bid); });
+  $("#bm-review").onclick = async e => {
+    const btn = e.target; btn.disabled = true; btn.innerHTML = `<span class="spin"></span> Reviewing top 12…`;
+    try { const r = await post(`/api/bidmatch/${b.id}/review`); BM.data.review = r; drawBidMatch(); }
+    catch (err) { btn.disabled = false; btn.textContent = "Failed: " + err.message; }
+  };
+  bindFirmActions();
+}
+
+function firmRow(r, n, v) {
+  const f = r.firm, c = r.components;
+  const why = [...r.codes.slice(0, 2).map(x => `${x.level} ${x.firm}`), r.words.length ? "keywords: " + r.words.slice(0, 5).join(", ") : null, ...r.reasons].filter(Boolean);
+  return `<div class="fm">
+    <div class="fm-rank">${n + 1}</div>
+    <div style="min-width:0">
+      <div class="row" style="gap:6px"><span class="t-name">${esc(f.name)}</span>${f.dba && f.dba.toLowerCase() !== f.name.toLowerCase() ? `<span class="t-sub">dba ${esc(f.dba)}</span>` : ""}
+        <span class="t-sub">· ${esc(f.city)}</span></div>
+      <div class="chips" style="margin-top:5px">${r.roles.map(x => `<span class="chip role">${ROLE[x]}</span>`).join("")}${certChips(f)}
+        ${f.licenses.slice(0, 5).map(l => `<span class="chip">${esc(l)}</span>`).join("")}
+        ${v ? `<span class="chip v-${v.verdict.split(" ")[0]}" title="${esc(v.reason)}">AI: ${esc(v.verdict)} · ${esc(v.best_role)}</span>` : ""}</div>
+      <div class="why">${why.map(w => `<span>${esc(w)}</span>`).join("")}${r.flags.map(w => `<span class="warn">${esc(w)}</span>`).join("")}</div>
+      ${v ? `<div class="t-sub" style="margin-top:4px">AI: ${esc(v.reason)}</div>` : ""}
+      <details class="more"><summary>Score breakdown, profile & contact</summary>
+        <div class="bars">${bar("Commodity codes", c.commodity)}${bar("Keywords", c.text)}${bar("Meaning (semantic)", c.semantic)}${bar("Location", c.geography)}${bar("Industry type", c.industry)}${bar("Programs", c.program)}</div>
+        <div class="t-sub" style="margin-bottom:8px">Relevance ${pct(c.relevance)} × fit × eligibility (license ${c.license}, capacity ${c.capacity}). Keywords on file: ${esc(f.keywords.join(", ") || "none")}. Service area: ${esc(f.areas)}.</div>
+        <div class="contact">
+          <div><small>Contact</small>${esc(f.contact || "—")}</div>
+          <div><small>Email</small>${f.email ? esc(f.email) : "—"}</div>
+          <div><small>Phone</small>${esc(f.phone || "—")}</div>
+          <div><small>Website</small>${f.url ? `<a href="${/^https?:/i.test(f.url) ? esc(f.url) : "https://" + esc(f.url)}" target="_blank" rel="noopener">${esc(f.url)}</a>` : "—"}</div>
+          <div><small>Certification</small>${f.id} · until ${esc(f.cert_end || "")}${f.expired_certs.length ? ` · expired: ${esc(f.expired_certs.join(", "))}` : ""}</div>
+        </div>
+        <div class="row" style="margin-top:10px"><button class="btn" data-add-client="${f.id}">Add as client</button>
+          <button class="btn" data-firm-bids="${f.id}">This firm's best bids</button></div>
+      </details>
+    </div>
+    <div class="fm-score"><div class="big">${Math.round(r.score)}</div><span class="meter"><b><i style="width:${Math.min(100, r.score)}%"></i></b></span></div>
+  </div>`;
+}
+
+function bindFirmActions() {
+  document.querySelectorAll("[data-add-client]").forEach(b => b.onclick = async () => {
+    b.disabled = true; try { const c = await post(`/api/clients/from-firm/${b.dataset.addClient}`); await loadClients(); b.textContent = "Added to Client Match ✓"; } catch (e) { b.textContent = "Failed: " + e.message; } });
+  document.querySelectorAll("[data-firm-bids]").forEach(b => b.onclick = () => {
+    BM.mode = "firm"; document.querySelectorAll("#bm-mode button").forEach(x => x.setAttribute("aria-selected", x.dataset.mode === "firm"));
+    $("#bm-q").placeholder = "Search businesses by name, keyword or cert ID…"; $("#bm-q").value = b.dataset.firmBids; renderBmList(); loadFirmMatch(b.dataset.firmBids); });
+}
+
+async function loadFirmMatch(fid) {
+  BM.firm = fid;
+  document.querySelectorAll("#bm-list [data-fm]").forEach(n => n.setAttribute("aria-selected", n.dataset.fm === fid));
+  $("#bm-main").innerHTML = `<div class="card"><span class="spin"></span> Scoring every open bid for this business…</div>`;
+  let d; try { d = await api(`/api/firmmatch/${encodeURIComponent(fid)}`); } catch (e) { $("#bm-main").innerHTML = `<div class="card">Failed: ${esc(e.message)}</div>`; return; }
+  const f = d.firm;
+  $("#bm-main").innerHTML = `
+  <div class="card">
+    <div class="row" style="justify-content:space-between;align-items:flex-start;flex-wrap:nowrap">
+      <div style="min-width:0"><div class="t-sub">Certification ${f.id} · ${esc(f.city)} · until ${esc(f.cert_end || "")}</div>
+        <h2 style="margin:4px 0">${esc(f.name)}</h2>${f.dba ? `<div class="t-sub">dba ${esc(f.dba)}</div>` : ""}
+        <div class="chips" style="margin-top:6px">${certChips(f)}${f.industry.map(i => `<span class="chip">${esc(i)}</span>`).join("")}${f.licenses.map(l => `<span class="chip">${esc(l)}</span>`).join("")}</div></div>
+      <button class="btn primary" data-add-client="${f.id}" style="white-space:nowrap">Add as client</button>
+    </div>
+    <div class="req">
+      <div><small>Keywords</small>${esc(f.keywords.join(", ") || "none")}</div>
+      <div><small>Service area</small>${esc(f.areas)}</div>
+      <div><small>Contact</small>${esc(f.contact || "")} ${f.email ? "· " + esc(f.email) : ""} ${f.phone ? "· " + esc(f.phone) : ""}</div>
+      <div><small>Commodity codes on file</small>${f.n_codes}</div>
+    </div>
+  </div>
+  <div class="t-sub" style="margin:14px 0 8px">${d.total} open bids are a match. Top ${d.results.length}:</div>
+  <div class="card" style="padding:0"><div class="tablewrap"><table><thead><tr><th>Score</th><th>Bid</th><th>Closes</th><th>Role</th><th>Why</th></tr></thead><tbody>
+  ${d.results.map(r => { const row = BIDS.find(x => x.id === r.bid.id) || {days_left: null, urgency: "unknown"};
+    return `<tr data-bid="${r.bid.id}"><td class="num">${meter(Math.round(r.score))}</td>
+    <td><div class="t-name">${esc(r.bid.name)}</div><div class="t-sub">${esc(r.bid.dept)} · ${r.bid.id}</div></td>
+    <td class="num">${when(row)}</td><td>${r.roles.map(x => `<span class="chip role">${ROLE[x]}</span>`).join(" ")}</td>
+    <td><div class="why">${[...r.codes.slice(0, 1).map(x => x.level), r.words.length ? "keywords: " + r.words.slice(0, 3).join(", ") : null, ...r.reasons.slice(0, 2)].filter(Boolean).map(w => `<span>${esc(w)}</span>`).join("")}${r.flags.slice(0, 2).map(w => `<span class="warn">${esc(w)}</span>`).join("")}</div></td></tr>`; }).join("")
+    || `<tr><td colspan="5" class="empty">No open bids match this business's codes and keywords.</td></tr>`}
+  </tbody></table></div></div>`;
+  bindFirmActions();
+}
+
 /* ---------------- shell ---------------- */
 function show(v) {
   document.querySelectorAll("#nav button").forEach(b => b.setAttribute("aria-selected", b.dataset.view === v));
   document.querySelectorAll("main > section").forEach(s => s.hidden = s.id !== "v-" + v);
   if (v === "command") renderCommand(); if (v === "match") renderMatch(); if (v === "lens") renderLens(); if (v === "bids") renderBids();
+  if (v === "bidmatch") renderBidMatch();
 }
 document.querySelectorAll("#nav button").forEach(b => b.onclick = () => show(b.dataset.view));
 async function refresh() { [BIDS, STATS] = await Promise.all([api("/api/bids"), api("/api/stats")]); }

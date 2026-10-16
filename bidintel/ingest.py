@@ -174,7 +174,7 @@ def ingest(rebuild=False):
             (eid, clean(ev.get("Event Name") or ""), d.get("Dept"), d.get("Department Code") or x.get("Department"),
              d.get("Format/Type"), d.get("Event Version"), d.get("Status") or x.get("Status"),
              parse_date(d.get("Published Date")), parse_date(d.get("Event End Date")) or parse_date(x.get("End Date")),
-             ev.get("Description"), c.get("Contact Name") or x.get("Buyer Name"),
+             clean(ev.get("Description") or "") or None, c.get("Contact Name") or x.get("Buyer Name"),
              c.get("Email") or x.get("Buyer Email"), c.get("Phone"), ev.get("Detail URL"),
              json.dumps(ev), now, now))
 
