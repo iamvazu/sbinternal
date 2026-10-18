@@ -84,6 +84,7 @@ td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
 .chips { display: flex; flex-wrap: wrap; gap: 4px; }
 .chip { font-size: 11.5px; border: 1px solid var(--ring); background: var(--surface-2); color: var(--ink-2); border-radius: 6px; padding: 1px 6px; white-space: nowrap; }
 .chip.key { background: var(--accent-wash); color: var(--ink); border-color: transparent; }
+.chip.src { background: var(--surface); color: var(--ink); font-weight: 600; border-color: var(--axis); }
 .chip.block { border-color: var(--critical); color: var(--ink); }
 .chip.unlock { border-style: dashed; border-color: var(--accent); color: var(--ink); }
 .urg { display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; white-space: nowrap; }
@@ -315,6 +316,7 @@ details.more { margin-top: 8px; } details.more summary { cursor: pointer; color:
   <section id="v-bids" hidden>
     <div class="filters">
       <input type="search" id="q" placeholder="Search title, department, summary…">
+      <select id="f-src"><option value="">All sources</option></select>
       <select id="f-dept"><option value="">All departments</option></select>
       <select id="f-cat"><option value="">All categories</option></select>
       <select id="f-sig"><option value="">Any program signal</option></select>
@@ -703,6 +705,8 @@ function when(r) {
   const date = r.end_date ? new Date(r.end_date).toLocaleDateString(undefined, {month: "short", day: "numeric"}) : "";
   return `<span class="urg ${r.urgency}" title="${URG[r.urgency]}"><i></i>${txt}</span><div class="t-sub">${date}</div>`;
 }
+// Source label comes only from the data (source + level). Never assume a source.
+const srcChip = r => `<span class="chip src" title="${esc(r.level ? r.level + " government" : "")}">${esc(r.source || "Unknown source")}${r.level ? " · " + esc(r.level) : ""}</span>`;
 const chips = (sigs, max = 4) => `<div class="chips">${sigs.filter(s => KEY_SIG.has(s)).slice(0, max)
   .map(s => `<span class="chip key">${SIG[s]}</span>`).join("")}${sigs.filter(s => !KEY_SIG.has(s)).length ? `<span class="chip">+${sigs.filter(s => !KEY_SIG.has(s)).length}</span>` : ""}</div>`;
 const meter = v => v == null ? `<span class="t-sub">—</span>` : `<span class="meter"><b><i style="width:${v}%"></i></b>${v}</span>`;
@@ -766,7 +770,8 @@ function columns(el, weeks) {
 function kpi(v, l, h) { return `<div class="card kpi"><div class="v">${v}</div><div class="l">${l}</div>${h ? `<div class="h">${h}</div>` : ""}</div>`; }
 function renderCommand() {
   const s = STATS;
-  $("#kpis").innerHTML = kpi(s.open, "Open bids", `${s.total} scraped`) + kpi(s.closing_7d, "Close within 7 days", `${s.closing_3d} within 3 days`)
+  const bySrc = Object.fromEntries(s.by_source || []);
+  $("#kpis").innerHTML = kpi(s.open, "Open bids", Object.entries(bySrc).map(([k, v]) => `${v} ${esc(k)}`).join(" · ")) + kpi(s.closing_7d, "Close within 7 days", `${s.closing_3d} within 3 days`)
     + kpi(s.sb_access, "SB preference / set-aside", "certified SBs get an edge") + kpi(s.dvbe, "DVBE participation", "primes need DVBE partners")
     + kpi(s.dbe, "Federal DBE goals", "federal-aid work, CUCP-certified") + kpi(s.mandatory_prebid, "Mandatory pre-bids", "miss it, can't bid")
     + kpi(`${s.analyzed}`, "AI-analyzed bids", `${Math.round(s.analyzed / Math.max(1, s.total) * 100)}% coverage`);
@@ -792,6 +797,9 @@ $("#brief-btn").onclick = async e => {
 
 /* ---------------- bids table ---------------- */
 function fillFilters() {
+  const srcs = {};
+  BIDS.forEach(b => { srcs[b.source || "Unknown source"] = b.level; });
+  Object.entries(srcs).sort().forEach(([s, lvl]) => $("#f-src").insertAdjacentHTML("beforeend", `<option value="${esc(s)}">${esc(s)}${lvl ? ` (${esc(lvl)})` : ""}</option>`));
   const opts = (sel, vals) => { const el = $(sel); vals.forEach(v => el.insertAdjacentHTML("beforeend", `<option>${esc(v)}</option>`)); };
   opts("#f-dept", [...new Set(BIDS.map(b => b.dept))].sort());
   opts("#f-cat", [...new Set(BIDS.map(b => b.category))].sort());
@@ -799,20 +807,21 @@ function fillFilters() {
 }
 function applyFilter(spec) { const [k, v] = spec.split(":"); if (k === "cat") { $("#f-cat").value = v; show("bids"); renderBids(); } }
 function renderBids() {
+  const src = $("#f-src").value;
   const q = $("#q").value.toLowerCase(), dept = $("#f-dept").value, cat = $("#f-cat").value, sig = $("#f-sig").value, urg = $("#f-urg").value, ai = $("#f-ai").value;
-  let rows = BIDS.filter(r => (!q || `${r.name} ${r.dept} ${r.summary} ${r.id}`.toLowerCase().includes(q)) && (!dept || r.dept === dept)
+  let rows = BIDS.filter(r => (!src || r.source === src) && (!q || `${r.name} ${r.dept} ${r.summary} ${r.id}`.toLowerCase().includes(q)) && (!dept || r.dept === dept)
     && (!cat || r.category === cat) && (!sig || r.signals.includes(sig))
     && (urg === "all" || (urg === "live" ? r.urgency !== "closed" : r.urgency === "critical" || r.urgency === "soon"))
     && (!ai || (ai === "yes") === r.analyzed));
   rows = rows.sort((a, b) => { const x = a[sortKey], y = b[sortKey]; return (x == null) - (y == null) || (x > y ? 1 : x < y ? -1 : 0) * sortDir; });
   $("#count").textContent = `${rows.length} bids`;
   $("#rows").innerHTML = rows.map(r => `<tr data-bid="${r.id}">
-    <td><div class="t-name">${esc(r.name)}</div><div class="t-sub">${esc(r.dept)} · ${r.id}${r.method ? " · " + r.method : ""}${r.value ? " · " + esc(r.value) : ""}</div></td>
+    <td><div class="t-name">${esc(r.name)}</div><div class="t-sub">${srcChip(r)} ${esc(r.dept)} · ${r.id}${r.method ? " · " + r.method : ""}${r.value ? " · " + esc(r.value) : ""}</div></td>
     <td>${esc(r.category)}</td><td class="num">${when(r)}</td><td>${chips(r.signals)}</td>
     <td class="num">${meter(r.fit)}</td><td class="num">${r.complexity ? r.complexity + " / 5" : "—"}</td></tr>`).join("")
     || `<tr><td colspan="6" class="empty">No bids match these filters.</td></tr>`;
 }
-["#q", "#f-dept", "#f-cat", "#f-sig", "#f-urg", "#f-ai"].forEach(s => $(s).addEventListener("input", renderBids));
+["#q", "#f-src", "#f-dept", "#f-cat", "#f-sig", "#f-urg", "#f-ai"].forEach(s => ["input", "change"].forEach(ev => $(s).addEventListener(ev, renderBids)));
 document.querySelectorAll("th[data-sort]").forEach(th => th.onclick = () => {
   sortDir = sortKey === th.dataset.sort ? -sortDir : (th.dataset.sort === "fit" ? -1 : 1); sortKey = th.dataset.sort; renderBids(); });
 
@@ -835,7 +844,7 @@ function renderDrawer(b) {
     <div class="row" style="justify-content:space-between;align-items:flex-start;flex-wrap:nowrap">
       <div style="min-width:0"><div class="t-sub">${esc(b.dept)} · ${b.id} · ${esc(b.format || "")}</div>
         <h2 style="margin:4px 0">${esc(b.name)}</h2>
-        <div class="row">${when(r)}${r.method ? `<span class="chip">${r.method}</span>` : ""}<span class="chip">${esc(r.category)}</span></div></div>
+        <div class="row">${when(r)}${srcChip(r)}${r.method ? `<span class="chip">${r.method}</span>` : ""}<span class="chip">${esc(r.category)}</span></div></div>
       <div class="row" style="flex-wrap:nowrap"><button class="btn primary" onclick="closeDrawer();openBidMatch('${b.id}')" style="white-space:nowrap">Find businesses</button>
       <button class="btn" onclick="closeDrawer()" aria-label="Close">✕</button></div>
     </div>
@@ -894,14 +903,34 @@ function renderDrawer(b) {
       ${(f.licenses || []).length ? `<div><b>License classes mentioned:</b> ${esc(f.licenses.join(", "))}</div>` : ""}
       ${(f.counties || []).length ? `<div><b>Counties mentioned:</b> ${esc(f.counties.join(", "))}</div>` : ""}
     </div>
+    ${b.source === "OpenGov" ? `<div class="card"><h3>OpenGov details <span class="t-sub">· ${esc(b.dept)}${b.extra["Department"] ? " · " + esc(b.extra["Department"]) : ""}</span></h3>
+      <div class="facts">
+        <div><small>Solicitation #</small>${esc(b.extra["Solicitation Number"] || "—")}</div>
+        <div><small>Questions due</small>${esc(b.extra["Question Deadline"] || "—")}</div>
+        <div><small>Pre-bid meeting</small>${esc(b.extra["Pre-Bid Meeting"] || "—")}</div>
+        <div><small>Sealed bid</small>${b.extra["Sealed Bid"] ? "Yes" : "No"}</div>
+        <div><small>Addenda</small>${esc(b.extra["Addenda"] ?? 0)}</div>
+        <div><small>Vendors notified</small>${esc(b.extra["Vendors Notified"] || "—")}</div>
+        <div><small>Procurement contact</small>${esc(Object.values(b.extra["Procurement Contact"] || {}).join(" · ") || "—")}</div>
+      </div>
+      ${(b.extra["Commodity Codes"] || []).length ? `<div class="chips" style="margin-top:10px">${b.extra["Commodity Codes"].map(c => `<span class="chip" title="NIGP">${esc(c.code)} ${esc(c.title)}</span>`).join("")}</div>` : ""}
+      ${(b.extra["Evaluation Criteria"] || []).length ? `<h3 style="margin-top:12px">How proposals are scored</h3><table><tbody>${b.extra["Evaluation Criteria"].map(e => `<tr style="cursor:default"><td>${esc(e.criterion)}${e.phase ? ` <span class="t-sub">· ${esc(e.phase)}</span>` : ""}</td><td class="num">${esc(e.weight ?? "")}</td></tr>`).join("")}</tbody></table>` : ""}
+      ${(b.extra["Price Items"] || []).length ? `<h3 style="margin-top:12px">Bid line items (${b.extra["Price Items"].length})</h3><table><tbody>${b.extra["Price Items"].slice(0, 15).map(i => `<tr style="cursor:default"><td>${esc(i.description)}</td><td class="num t-sub">${esc(i.quantity ?? "")} ${esc(i.unit || "")}</td></tr>`).join("")}</tbody></table>` : ""}
+      ${(b.extra["Submission Requirements"] || []).length ? `<h3 style="margin-top:12px">Submission requirements (from OpenGov)</h3>${li(b.extra["Submission Requirements"].slice(0, 25))}` : ""}
+      <div style="margin-top:8px"><a href="${esc(b.detail_url)}" target="_blank" rel="noopener">Open on OpenGov</a></div></div>` : ""}
+    ${b.source === "Caltrans DES" ? caltransCard(b) : ""}
+    ${b.source === "Bonfire" ? bonfireCard(b) : ""}
+    ${b.source === "CSU" ? `<div class="card"><h3>CSU details <span class="t-sub">· ${esc(b.extra.Campus || "")}</span></h3>
+      <p style="margin:0">${esc(b.extra["Documents Note"] || "")}</p>
+      <div style="margin-top:8px"><a href="${esc(b.detail_url)}" target="_blank" rel="noopener">Open CSU public bid site</a></div></div>` : ""}
     <div class="card"><h3>Description</h3><p style="margin:0;white-space:pre-wrap">${esc(b.description || "Not provided")}</p></div>
     <div class="card"><h3>Attachments (${b.attachments.length})</h3>
-      <table><tbody>${b.attachments.map(x => `<tr><td><a href="/files/${b.id}/${encodeURIComponent(x.file_name)}" target="_blank" rel="noopener">${esc(x.file_name)}</a>
+      <table><tbody>${b.attachments.map(x => `<tr><td>${x.size_bytes == null && !x.error ? `${esc(x.file_name)} <span class="t-sub">(indexed text)</span>` : `<a href="/files/${b.id}/${encodeURIComponent(x.file_name)}" target="_blank" rel="noopener">${esc(x.file_name)}</a>`}
         ${x.error ? `<div class="t-sub">Unreadable: ${esc(x.error)}</div>` : ""}</td><td class="num t-sub">${x.pages ? x.pages + " pp" : ""}</td>
         <td class="num t-sub">${x.size_bytes ? (x.size_bytes / 1048576).toFixed(1) + " MB" : ""}</td></tr>`).join("")}</tbody></table></div>
     <div class="card"><h3>Buyer</h3>${esc(b.contact_name || "")} ${b.contact_email ? `· ${esc(b.contact_email)}` : ""} ${b.contact_phone ? `· ${esc(b.contact_phone)}` : ""}
       <div class="t-sub">UNSPSC: ${b.unspsc.map(u => `${esc(u.code)} ${esc(u.description)}`).join("; ") || "none"}</div>
-      <div style="margin-top:6px"><a href="https://caleprocure.ca.gov/pages/Events-BS3/event-search.aspx" target="_blank" rel="noopener">Open Cal eProcure event search</a> and look up ${b.id}</div></div>
+      ${b.source === "OpenGov" ? "" : `<div style="margin-top:6px"><a href="https://caleprocure.ca.gov/pages/Events-BS3/event-search.aspx" target="_blank" rel="noopener">Open Cal eProcure event search</a> and look up ${b.id}</div>`}</div>
   </div>`;
   $("#run-ai").onclick = async e => {
     const btn = e.target; btn.disabled = true; btn.innerHTML = `<span class="spin"></span> Analyzing (can take a few minutes)…`;
@@ -912,6 +941,51 @@ function renderDrawer(b) {
     try { const res = await post("/api/ask", {question: btn.dataset.q, event_id: b.id}); out.innerHTML = `<div class="msg md">${md(res.answer)}</div>`; }
     catch (err) { out.innerHTML = `<div class="msg">Model error: ${esc(err.message)}</div>`; }
   });
+}
+
+/* Caltrans DES: contract facts + the teaming market around each contract (all public on the Caltrans portal) */
+function caltransCard(b) {
+  const x = b.extra || {}, primes = x["Primes Seeking Help"] || [], subs = x["Subcontractor Opt-Ins"] || [];
+  const contact = p => [p.Email, p.Phone].filter(Boolean).map(esc).join(" · ");
+  const certCount = {};
+  subs.forEach(s => String(s["Disadvantage Status"] || "").split(",").map(t => t.trim()).filter(t => t && t !== "N/A").forEach(t => certCount[t] = (certCount[t] || 0) + 1));
+  return `<div class="card"><h3>Caltrans DES details <span class="t-sub">· ${esc(b.extra.Department || "")}</span></h3>
+    <div class="facts">
+      <div><small>Engineer's estimate</small>${esc(x["Engineer's Estimate"] || "—")}</div>
+      <div><small>Working days</small>${esc(x["Working Days"] || "—")}</div>
+      <div><small>Counties</small>${esc((x.Counties || []).join(", ") || "—")}</div>
+      <div><small>Licenses</small>${esc(x.Licenses || "—")}</div>
+      <div><small>Goal</small>${esc([x["Goal Type"], x["DBE Goal"] && "DBE " + x["DBE Goal"], x["DVBE Goal"] && "DVBE " + x["DVBE Goal"], x["SBE Goal"] && "SBE " + x["SBE Goal"]].filter(Boolean).join(" · ") || "—")}</div>
+      <div><small>Post-mile</small>${esc(x["County-Route-PM"] || "—")}</div>
+      <div><small>Plan holders</small>${(x["Plan Holders"] || []).length}</div>
+      <div><small>Bid items · inquiries</small>${esc(x["Bid Items Count"] ?? 0)} · ${esc(x["Inquiries Count"] ?? 0)}</div>
+    </div>
+    <h3 style="margin-top:14px">Primes seeking subcontractors (${primes.length}) <span class="t-sub">· teaming leads for your clients</span></h3>
+    ${primes.length ? `<table><tbody>${primes.map(p => `<tr style="cursor:default"><td><div class="t-name">${esc(p["Prime Business"])}</div>
+      <div class="t-sub">${esc((p["Services Needed"] || "").slice(0, 220))}${(p["Services Needed"] || "").length > 220 ? "…" : ""}</div></td>
+      <td class="t-sub" style="white-space:nowrap">${contact(p)}</td></tr>`).join("")}</tbody></table>` : `<div class="t-sub">None posted yet.</div>`}
+    <h3 style="margin-top:14px">Subcontractor opt-ins (${subs.length}) ${Object.entries(certCount).map(([k, v]) => `<span class="chip">${esc(k)} ${v}</span>`).join(" ")}</h3>
+    ${subs.length ? `<table><tbody>${subs.slice(0, 20).map(s => `<tr style="cursor:default"><td><div class="t-name">${esc(s.Contractor)}</div>
+      <div class="t-sub">${esc(s["Services Offered"] || "")}</div></td><td>${esc(s["Disadvantage Status"] && s["Disadvantage Status"] !== "N/A" ? s["Disadvantage Status"] : "")}</td>
+      <td class="t-sub" style="white-space:nowrap">${contact(s)}</td></tr>`).join("")}</tbody></table>${subs.length > 20 ? `<div class="t-sub">+${subs.length - 20} more on the Caltrans page</div>` : ""}` : `<div class="t-sub">None yet.</div>`}
+    <p class="t-sub" style="margin-top:12px">${esc(x["Documents Note"] || "")} <a href="${esc(b.detail_url)}" target="_blank" rel="noopener">Open on Caltrans</a></p></div>`;
+}
+
+/* Bonfire (Euna): submission requirements, events, documents, and who is downloading (likely competition) */
+function bonfireCard(b) {
+  const x = b.extra || {}, takers = x["Document Takers"] || [], req = x["Requested Information"] || [];
+  const team = [...(x["Prime Contractors"] || []).map(p => ({...p, role: "Prime"})), ...(x["Subcontractors"] || []).map(p => ({...p, role: "Sub"}))];
+  return `<div class="card"><h3>Bonfire details <span class="t-sub">· ${esc(b.dept)}</span></h3>
+    ${req.length ? `<h3>Submission requirements (${req.length})</h3><table><tbody>${req.map(q => `<tr style="cursor:default"><td>${esc(q.Name)}</td>
+      <td class="t-sub">${esc(q.Type || "")}</td><td>${q.Requirement === "REQUIRED" ? `<span class="chip block">Required</span>` : esc(q.Requirement || "")}</td></tr>`).join("")}</tbody></table>` : ""}
+    ${(x["Important Events"] || []).length ? `<h3 style="margin-top:12px">Important events</h3><table><tbody>${x["Important Events"].map(e => `<tr style="cursor:default">
+      <td>${esc(e["Event Name"])}${e.Mandatory && e.Mandatory !== "N/A" ? ` <span class="chip block">Mandatory</span>` : ""}</td><td class="num t-sub">${esc(e.Dates)}</td></tr>`).join("")}</tbody></table>` : ""}
+    ${(x["Document List"] || []).length ? `<h3 style="margin-top:12px">Documents (${x["Document List"].length})</h3>${li(x["Document List"].map(dd => `${dd.File}${dd.Description ? " · " + dd.Description : ""}`))}` : ""}
+    ${team.length ? `<h3 style="margin-top:12px">Teaming (${team.length})</h3><table><tbody>${team.map(p => `<tr style="cursor:default"><td>${esc(p.Vendors)} <span class="chip">${p.role}</span>
+      <div class="t-sub">${esc(p["Subcontract Services"] || "")}</div></td><td class="t-sub">${esc([p.Contact, p.Email, p.Phone].filter(Boolean).join(" · "))}</td></tr>`).join("")}</tbody></table>` : ""}
+    <h3 style="margin-top:12px">Document takers (${takers.length}) <span class="t-sub">· vendors who downloaded the package: likely competition</span></h3>
+    ${takers.length ? `<div class="chips">${takers.slice(0, 60).map(t => `<span class="chip">${esc(t.Vendors)}</span>`).join("")}${takers.length > 60 ? `<span class="chip">+${takers.length - 60}</span>` : ""}</div>` : `<div class="t-sub">None yet.</div>`}
+    <p class="t-sub" style="margin-top:12px">${esc(x["Documents Note"] || "")} <a href="${esc(b.detail_url)}" target="_blank" rel="noopener">Open on Bonfire</a></p></div>`;
 }
 
 /* ---------------- client match ---------------- */
@@ -1029,7 +1103,7 @@ async function renderBmList() {
   if (BM.mode === "bid") {
     const rows = BIDS.filter(r => r.urgency !== "closed" && (!q || `${r.name} ${r.dept} ${r.id} ${r.category}`.toLowerCase().includes(q))).slice(0, 250);
     el.innerHTML = rows.map(r => `<div class="bm-item" data-bm="${r.id}" aria-selected="${r.id === BM.bid}">
-      <div class="t-name">${esc(r.name)}</div><div class="t-sub">${esc(r.category)} · ${r.days_left != null ? (r.days_left < 1 ? "<1 day" : Math.floor(r.days_left) + " days") : ""} · ${r.id}</div></div>`).join("") || `<div class="empty">No open bids match.</div>`;
+      <div class="t-name">${esc(r.name)}</div><div class="t-sub">${srcChip(r)} ${esc(r.category)} · ${r.days_left != null ? (r.days_left < 1 ? "<1 day" : Math.floor(r.days_left) + " days") : ""} · ${r.id}</div></div>`).join("") || `<div class="empty">No open bids match.</div>`;
     el.querySelectorAll("[data-bm]").forEach(n => n.onclick = () => openBidMatch(n.dataset.bm, true));
   } else {
     if (q.length < 2) { el.innerHTML = `<div class="empty">Type at least 2 characters.</div>`; return; }

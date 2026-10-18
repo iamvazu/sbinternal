@@ -1,0 +1,4745 @@
+[
+ {
+  "Key": "mtc-253613",
+  "Portal": "mtc",
+  "Agency": "Metropolitan Transportation Commission",
+  "Project ID": "253613",
+  "Reference ID": "PLNG-RFP-29283",
+  "Name": "RFP for Plan Bay Area 2060 Regional Growth Forecast Development Services",
+  "Close (portal time)": "2026-10-28 23:00:00",
+  "Department": null,
+  "Details": {
+   "Close Date": "Oct 28th 2026, 4:00 PM PDT",
+   "Contact Information": "Andrew W. Bell, Jr., abell@bayareametro.gov",
+   "Days Left": "11",
+   "Open Date": "Sep 10th 2026, 6:00 PM PDT",
+   "Project": "RFP for Plan Bay Area 2060 Regional Growth Forecast Development Services",
+   "Questions Due Date": "Oct 21st 2026, 4:00 PM PDT",
+   "Ref. #": "PLNG-RFP-29283",
+   "Status": "OPEN",
+   "Type": "RFP"
+  },
+  "Description": "Please review or download the Notice of Upcoming Opportunity under the Files tab for details on this upcoming opportunity.\n\n\n\n\n\nMTC and ABAG are jointly responsible for preparing a long-range regional plan for the nine-county Bay Area in order to satisfy federal and state planning requirements. The current long-range plan is entitled Plan Bay Area 2060+ and was adopted by MTC and ABAG in March 2026.\n\n\n\n\n\nThe Metropolitan Transportation Commission is seeking to hire a consultant to provide technical services to support development of the Regional Growth Forecast for Plan Bay Area 2060, the Bay Area’s long-range regional plan for transportation, housing, and the environment.  The Project is expected to begin on January 1, 2027, and be completed by March 31, 2029.",
+  "Events": [
+   {
+    "Dates": "Sep 10th 2026, 6:00 PM PDT",
+    "Description": "Posting date for the Opportunity",
+    "Event Name": "Open Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "ONGOING"
+   },
+   {
+    "Dates": "Oct 21st 2026, 4:00 PM PDT",
+    "Description": "Deadline to submit Questions",
+    "Event Name": "Questions Due Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "UPCOMING"
+   },
+   {
+    "Dates": "Oct 28th 2026, 4:00 PM PDT",
+    "Description": "Deadline for Submissions",
+    "Event Name": "Close Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "UPCOMING"
+   }
+  ],
+  "Documents": [
+   {
+    "Date Created": "Oct 7th 2026, 5:47 PM PDT",
+    "Description": "Attachment B - Cost Proposal Form",
+    "File": "Attachment B - Cost Proposal.xlsx",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 7th 2026, 5:46 PM PDT",
+    "Description": "Appendix D - Contract",
+    "File": "Contract DevelopmentServices v1.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Sep 10th 2026, 5:51 PM PDT",
+    "Description": "Notice of Upcoming Opportunity",
+    "File": "Notice of Upcoming Opportunity - Plan Bay Area 2060 Regional Growth Forecast (1).pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 7th 2026, 5:45 PM PDT",
+    "Description": "RFP Document",
+    "File": "RFP DevelopmentServices v1 (Executed).pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 7th 2026, 6:38 PM PDT",
+    "Description": "SBE Program Form",
+    "File": "SBE Program Form.xlsx",
+    "Type": "Documentation"
+   }
+  ],
+  "Requested Information": [
+   {
+    "# Files": "Multiple",
+    "Name": "Technical Proposal",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "References",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Resumes",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Written Technical Report (one sample)",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Description of Similar Project (one page maximum)",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Summary of Contracts",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Cost Proposal",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "California Levine Act Statement",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Insurance Acknowledgement",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "SBE Document",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "W-9",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   }
+  ],
+  "Document Takers": [
+   {
+    "# Files": "1",
+    "Vendors": "11427725 Canada Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Access Planning"
+   },
+   {
+    "# Files": "6",
+    "Vendors": "Advocacy Chiefs, LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "AECOM"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "AMBAG"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Arcadis, a California Partnership"
+   },
+   {
+    "# Files": "10",
+    "Vendors": "Ardent Technologies, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "ArtifexIT"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Bay Area Council Economic Institute"
+   },
+   {
+    "# Files": "6",
+    "Vendors": "BBR Printers"
+   },
+   {
+    "# Files": "10",
+    "Vendors": "BDO USA, P.A."
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Beacon Economics LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Bellwork"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Berkeley Economic Advising and Research (BEAR)"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "BidSparq LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "BuildCentral Inc"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Buro Happold Consulting Engineers, PC"
+   },
+   {
+    "# Files": "6",
+    "Vendors": "BuzzClan, LLC"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Cambridge Systematics, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Capitol CGS"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Capveon (YC F26)"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Caravann Consulting"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Cendien"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "CLEAResult Energetics LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Convey, Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "DCCM, LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Deloitte"
+   },
+   {
+    "# Files": "13",
+    "Vendors": "Deltek"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "DF Interactive LLC"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "DNV Energy Insights USA Inc."
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Economic & Planning Systems, Inc. (EPS)"
+   },
+   {
+    "# Files": "6",
+    "Vendors": "ECONorthwest"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "EMC Research, Inc."
+   },
+   {
+    "# Files": "6",
+    "Vendors": "Epik Solutions"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Estolano Advisors"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "EXARO Technologies Corp"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Fehr & Peers"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Fors Marsh"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Forward City Labs"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Gauge.io"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Gov Alpha Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "GovGuide"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "GovTron LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Gray-Bowen-Scott"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Gtech"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Guidehouse Inc"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "HR&A Advisors"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Huang Technology Consulting LLC"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Hubspire Corp"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "ICF"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "ICF Inc."
+   },
+   {
+    "# Files": "4",
+    "Vendors": "ICF Incorporated, LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Industrial Economics, Inc."
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Insight Transportation Consulting Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Integrated Design 360 LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Iteris"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "James Lima Planning and Development"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Kearns & West | Public Engagement, Facilitation & Communications"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Kilograph"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Kimley Horn"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "KPMG"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "KPMG LLP"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Legai BUild"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "LSA Associates, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "M-Group"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Maroon Society"
+   },
+   {
+    "# Files": "15",
+    "Vendors": "MIG, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Mobile Market Monitor LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "NDS– National Data & Surveying Services"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Nerds Inc"
+   },
+   {
+    "# Files": "48",
+    "Vendors": "Nobrainer Labs, LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Parametrix"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Personal"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "PlaceWorks"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Plain Language International Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "PremTech Solutions"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "PWXPress"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Raimi + Associates"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Raimi + Associates, an Alta Company"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "re"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Resource Refocus LLC"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "RSG"
+   },
+   {
+    "# Files": "6",
+    "Vendors": "S&P Global"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "S&P Global"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Sensing Places LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "SevenOutsource"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Slalom"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Smartprocure Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "SRI International"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Steer"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Straight Edge Roofing"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "SvN Architects + Planners"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "The North Highland Company, LLC"
+   },
+   {
+    "# Files": "6",
+    "Vendors": "The Ortiz Group"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "TRC Companies"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Urban Advising Collective"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "UrbanSyntropy LLC"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "USFCR"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Vander Weele Group"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "WSP UK LIMITED"
+   },
+   {
+    "# Files": "9",
+    "Vendors": "XlEagle"
+   }
+  ],
+  "Prime Contractors": [],
+  "Subcontractors": [],
+  "Documents Note": "To download files, log in to the Euna Supplier Network.",
+  "Detail URL": "https://mtc.bonfirehub.com/opportunities/253613",
+  "Raw Path": "data/bronze/bonfire/raw/mtc-253613.json",
+  "Scraped At": "2026-10-17T18:03:25",
+  "Listed": true
+ },
+ {
+  "Key": "mtc-255065",
+  "Portal": "mtc",
+  "Agency": "Metropolitan Transportation Commission",
+  "Project ID": "255065",
+  "Reference ID": "LPA-RFQ-29368",
+  "Name": "(UPCOMING)  Integrated Media and Marketing Support Services RFQ",
+  "Close (portal time)": "2026-10-30 00:00:00",
+  "Department": null,
+  "Details": {
+   "Close Date": "Oct 29th 2026, 5:00 PM PDT",
+   "Contact Information": "Edward Phillips, ephillips@bayareametro.gov",
+   "Days Left": "12",
+   "Open Date": "Sep 21st 2026, 1:00 PM PDT",
+   "Project": "(UPCOMING) Integrated Media and Marketing Support Services RFQ",
+   "Questions Due Date": "Oct 15th 2026, 5:00 PM PDT",
+   "Ref. #": "LPA-RFQ-29368",
+   "Status": "OPEN",
+   "Type": "RFSQ"
+  },
+  "Description": "NOTICE IS HEREBY GIVEN that the Metropolitan Transportation Commission (MTC), invites your firm to submit a Statement of Qualification (SOQ) for the 2026 Integrated Media and Marketing Support Services. MTC seeks a CONSULTANT to assist with the development of a robust and innovative, integrated media and marketing program, one that can adapt to the ever-changing media landscape to reach Bay Area residents where they are and where they get their information from. This is an upcoming procurement. All information, including dates, are preliminary and may change. Please see Notice of Upcoming Procurement for additional information.",
+  "Events": [
+   {
+    "Dates": "Sep 21st 2026, 1:00 PM PDT",
+    "Description": "Posting date for the Opportunity",
+    "Event Name": "Open Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "ONGOING"
+   },
+   {
+    "Dates": "Oct 29th 2026, 5:00 PM PDT",
+    "Description": "Deadline for Submissions",
+    "Event Name": "Close Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "UPCOMING"
+   },
+   {
+    "Dates": "Oct 15th 2026, 5:00 PM PDT",
+    "Description": "Deadline to submit Questions",
+    "Event Name": "Questions Due Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "PASSED"
+   }
+  ],
+  "Documents": [
+   {
+    "Date Created": "Sep 21st 2026, 11:16 AM PDT",
+    "Description": "Notice of Upcoming Procurement",
+    "File": "000 - Notice of Upcoming Procurement - 2026 Integrated Media and Marketing RFQ.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 6th 2026, 8:05 AM PDT",
+    "Description": "Question and Answer Document 1",
+    "File": "000a - Question and Answer Document 1 - Integrated Media and Marketing RFQ.pdf",
+    "Type": "Documentation"
+   }
+  ],
+  "Requested Information": [
+   {
+    "# Files": "Multiple",
+    "Name": "Statement of Qualifications",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Required Forms",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "SBE Program",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   }
+  ],
+  "Document Takers": [
+   {
+    "# Files": "2",
+    "Vendors": "11427725 Canada Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Accenture"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "AFFIRM Agency"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Agency Fix"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Ani & Cat LLC"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Ardent Technologies, Inc."
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Audacy"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Barbara Howard"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Bay Area Digital Solutions"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "BBR Printers"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Bellwork"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Ben-Her Marketing"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Bharmal Technologies"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "BidSparq LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "BuildCentral Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Capveon (YC F26)"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Cendien"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "CHROMIAL LLC"
+   },
+   {
+    "# Files": "6",
+    "Vendors": "Circa Now"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Civilian"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Commune Communication Corp"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Convey, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "D2 Creative"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Deltek"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "DF Interactive LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "DFFDWS"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Ecology Action"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "EMC Research, Inc."
+   },
+   {
+    "# Files": "2",
+    "Vendors": "eRepublic, Inc."
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Ethnicity Multicultural Marketing + Advertising"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "EXL Media"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Fifth Sun Pictures"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Fors Marsh"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Gauge.io"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Gov Alpha Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "GovGuide"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "GR0.com LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "HDR"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "HDR"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "HelpGood"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Hungry Heart Media Inc., DBA Wondros"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Infusion by Castells"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "J.R. Reingold & Associates, Inc. (d/b/a Reingold)"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Kiosk Creative LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Legai BUild"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "LEVINCE LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "lowercase productions"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Mach 11 Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Marketing Launch Kit LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Maximum Flavor Media"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "MIG, Inc."
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Moore & Associates"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Most Likely To, Inc"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Nerds Inc"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Next Steps Marketing"
+   },
+   {
+    "# Files": "24",
+    "Vendors": "Nobrainer Labs, LLC"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Optimism, LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Personal"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Polytechnic Marketing LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "PremTech Solutions"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Propaganda Creative"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Pulsar Advertising, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "PWXPress"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "re"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "REACH Strategies"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Redwood Resources"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Reingold"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Rock Paper Sushi LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "RSG"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Sagent Marketing"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Sangha Strategies LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Sensis"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "SevenOutsource"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Shay Enterprise"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Smartprocure Inc"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "SMG, Inc."
+   },
+   {
+    "# Files": "2",
+    "Vendors": "SocialBook"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Solejar Consulting Corporation"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "talkStrategy"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "The Axis Agency"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "The Celebrity Link"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "The Turnkey Agency"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Three65 Ideas, LLC"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "TRC Engineers Inc"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Unified Partnerships, iHeartMedia"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "UpHouse Inc."
+   },
+   {
+    "# Files": "2",
+    "Vendors": "USFCR"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "USFCR"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "VideoVets"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "VISUAL"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Wicked Bionic LLC"
+   },
+   {
+    "# Files": "9",
+    "Vendors": "XlEagle"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "ZONED"
+   }
+  ],
+  "Prime Contractors": [
+   {
+    "Contact": "Munir Haddad",
+    "Email": "partnerships@kioskagency.com",
+    "Phone": "4158955327",
+    "Subcontract Services": "Integrated media and marketing services",
+    "Vendors": "Kiosk Creative LLC"
+   }
+  ],
+  "Subcontractors": [
+   {
+    "Contact": "Zachary Shingles",
+    "Email": "Zachary@FifthSunPictures.com",
+    "Phone": "(323) 961-2104",
+    "Subcontract Services": "Video storytelling and production (short and long form, English and Spanish), multicultural creative and narrative strategy, graphic design and print-ready campaign assets, and in-house print and promotional fulfillment (banners, signage, event collateral, branded merchandise) for outreach events. Minority-led California small business; LA County LSBE; City of LA prequalified for Video and Content Production and Community Outreach and Engagement. Available as a task-order subconsultant under the prime’s direction.",
+    "Vendors": "Fifth Sun Pictures"
+   },
+   {
+    "Contact": "Daniel Reider",
+    "Email": "daniel@lowercaseproductions.com",
+    "Phone": "4159946653",
+    "Subcontract Services": "Graphic Design, including print, digital (web, mobile, interactive media), branding",
+    "Vendors": "lowercase productions"
+   },
+   {
+    "Contact": "Katharine Bierce",
+    "Email": "info@SanghaStrategies.com",
+    "Phone": "4154490959",
+    "Subcontract Services": "Marketing strategy, project management, translations",
+    "Vendors": "Sangha Strategies LLC"
+   },
+   {
+    "Contact": "Melissa Gilbert",
+    "Email": "melissa@thecelebritylink.com",
+    "Phone": "917-502-1883",
+    "Subcontract Services": "Celebrity and creator procurement, influencer partnerships, talent strategy, athletes, musicians, singers, comedians, actors, keynote speakers, celebrity spokespersons, on-camera and voiceover casting, event talent booking, celebrity appearances, event hosts and emcees, live performances, celebrity talent for PR campaigns, music and IP licensing, talent fee negotiations, usage rights, talent contracting, on-site talent coordination",
+    "Vendors": "The Celebrity Link"
+   },
+   {
+    "Contact": "Damien Lawson",
+    "Email": "damien@three65ideas.marketing",
+    "Phone": "",
+    "Subcontract Services": "copywriting, scriptwriting, graphic design, campaign strategy (management & analysis), media buying (traditional/digital), content creation & management, website personalization & analytics, mobile marketing, SEO, SEM, video marketing, geofencing advertising, social media marketing & advertising",
+    "Vendors": "Three65 Ideas, LLC"
+   }
+  ],
+  "Documents Note": "To download files, log in to the Euna Supplier Network.",
+  "Detail URL": "https://mtc.bonfirehub.com/opportunities/255065",
+  "Raw Path": "data/bronze/bonfire/raw/mtc-255065.json",
+  "Scraped At": "2026-10-17T18:03:35",
+  "Listed": true
+ },
+ {
+  "Key": "mtc-227142",
+  "Portal": "mtc",
+  "Agency": "Metropolitan Transportation Commission",
+  "Project ID": "227142",
+  "Reference ID": "CART-RFP-2026",
+  "Name": "UPCOMING -- OPEN ROAD TOLLING SYSTEM FOR THE BAY AREA TOLL BRIDGES (RFP)",
+  "Close (portal time)": "2026-10-31 00:00:00",
+  "Department": null,
+  "Details": {
+   "Close Date": "Oct 30th 2026, 5:00 PM PDT",
+   "Contact Information": "Edward Phillips, ephillips@bayareametro.gov",
+   "Days Left": "13",
+   "Open Date": "Mar 16th 2026, 6:30 PM PDT",
+   "Project": "UPCOMING -- OPEN ROAD TOLLING SYSTEM FOR THE BAY AREA TOLL BRIDGES (RFP)",
+   "Questions Due Date": "Never",
+   "Ref. #": "CART-RFP-2026",
+   "Status": "OPEN",
+   "Type": "RFP"
+  },
+  "Description": "The Bay Area Toll Authority (BATA) intends to release a Request for Proposal (RFP) for the design, installation, commission, and operation and maintenance of a new roadside toll collection system at the seven State-owned Toll Bridges in the San Francisco Bay Area. Operations and maintenance is planned through June 30, 2037 with options to extend up to eight additional years.  The procurement is expected to be released sometime later this summer or early fall.",
+  "Events": [
+   {
+    "Dates": "Never",
+    "Description": "The Q and A Period for this Opportunity is Ongoing",
+    "Event Name": "Questions Due Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "ONGOING"
+   },
+   {
+    "Dates": "Mar 16th 2026, 6:30 PM PDT",
+    "Description": "Posting date for the Opportunity",
+    "Event Name": "Open Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "ONGOING"
+   },
+   {
+    "Dates": "Oct 30th 2026, 5:00 PM PDT",
+    "Description": "Deadline for Submissions",
+    "Event Name": "Close Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "UPCOMING"
+   }
+  ],
+  "Documents": [
+   {
+    "Date Created": "Mar 16th 2026, 1:48 PM PDT",
+    "Description": "Notice of Upcoming BATA ORT RFP",
+    "File": "000 Notice of Upcoming BATA ORT RFP.pdf",
+    "Type": "Other"
+   }
+  ],
+  "Requested Information": [
+   {
+    "# Files": "Multiple",
+    "Name": "Proposal",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   }
+  ],
+  "Document Takers": [
+   {
+    "# Files": "1",
+    "Vendors": "11427725 Canada Inc."
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Accenture"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Accenture"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "AECOM"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Anna Rikkelman, VP/BD"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Ardent Technologies, Inc."
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Auriga Corporation"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "BayPac Consult Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "BBR Printers"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "BDO USA, P.A."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "BDO USA, P.C."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Bear Electrical Solutions, LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Bellwork"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "BidAmerica"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "BidSparq LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Bold Zebras LLC dba PowerApps911"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Bridge Technolgy, Inc."
+   },
+   {
+    "# Files": "4",
+    "Vendors": "BuildCentral Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "C3M Power Systems"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "CA TRAFFIC SOLUTION"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Cambridge Systematics, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Capveon (YC F26)"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Charles N Charge of your Freight LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "CJIS GROUP LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Clark Pest Control"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "ClearRoad Inc."
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Conduent"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Conduent State & Local Solutions, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Construct Connect"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Constructconnect"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Convey, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Countervail Engineering"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "CSG Systems, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Deloittte Consulting LLP"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Deltek"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Deltek"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Duncan Solutions, LLC"
+   },
+   {
+    "# Files": "9",
+    "Vendors": "Electronic Transaction Consultants (ETC), LLC, dba Quarterhill"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Emovis Technologies US, Inc."
+   },
+   {
+    "# Files": "7",
+    "Vendors": "Enterprise Pals, Inc."
+   },
+   {
+    "# Files": "3",
+    "Vendors": "eRepublic, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "EXARO Technologies Corp"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "GHD Inc."
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Global Agility Solutions"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Global Agility Solutions LLC."
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Gov Alpha Inc"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "GovGuide"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Halmar International"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Hubspire Corp"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "IBM Canada Limited"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "iEnet"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "IMS"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "ims"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Indra"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Indra USA Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Iteris"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Jacobs Engineering Group"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Kapsch"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Kapsch TrafficCom USA, Inc,"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Kapsch TrafficCom USA, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Kapsch TrafficCom USA, Inc."
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Kimley Horn"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Kimley-Horn and Associates, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "KPMG LLP"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Legai BUild"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Leidos"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Metropolitan Transportation Commission"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Milligan Partners"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "MJDSystems"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Movyon S.p.A."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "MZB Engineering Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Neology, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Nerds Inc"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Niti Systems Consultants Inc"
+   },
+   {
+    "# Files": "159",
+    "Vendors": "Nobrainer Labs, LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "OC Jones & Sons, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Parsons"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "PARSONS TRANSPORTATION GROUP"
+   },
+   {
+    "# Files": "13",
+    "Vendors": "Personal"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "PremTech Solutions"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Propagent"
+   },
+   {
+    "# Files": "6",
+    "Vendors": "Q-Free"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "re"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Redwood Resources"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Salesforce"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Service Response Partners LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "ServiceNow"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "SevenOutsource"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Seyond"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "SICE Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "SICE Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Sinelec"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Skyline Products"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Smartprocure Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "TMG Consulting, Inc. (an RIA Advisory, LLC., company)"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "TransCore"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "TransCore"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "TransSIGHT"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Transurban"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "USFCR"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "V2X"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Virginkar and Associates"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "VITRONIC Machine Vision, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "WSP"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "XlEagle"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Yunex LLC"
+   }
+  ],
+  "Prime Contractors": [],
+  "Subcontractors": [],
+  "Documents Note": "To download files, log in to the Euna Supplier Network.",
+  "Detail URL": "https://mtc.bonfirehub.com/opportunities/227142",
+  "Raw Path": "data/bronze/bonfire/raw/mtc-227142.json",
+  "Scraped At": "2026-10-17T18:03:45",
+  "Listed": true
+ },
+ {
+  "Key": "mtc-251446",
+  "Portal": "mtc",
+  "Agency": "Metropolitan Transportation Commission",
+  "Project ID": "251446",
+  "Reference ID": "Energy-RFP-29309",
+  "Name": "Request for Proposals (RFP) for BayREN Workforce Development Implementation",
+  "Close (portal time)": "2026-11-04 00:00:00",
+  "Department": null,
+  "Details": {
+   "Close Date": "Nov 3rd 2026, 4:00 PM PST",
+   "Contact Information": "Noah Cohen - (415) 778-5215, ncohen@bayareametro.gov",
+   "Days Left": "17",
+   "Open Date": "Sep 29th 2026, 4:00 PM PDT",
+   "Project": "Request for Proposals (RFP) for BayREN Workforce Development Implementation",
+   "Questions Due Date": "Oct 13th 2026, 4:00 PM PDT",
+   "Ref. #": "Energy-RFP-29309",
+   "Status": "OPEN",
+   "Type": "RFP"
+  },
+  "Description": "NOTICE IS HEREBY GIVEN that the Association of Bay Area Governments (ABAG), invites your firm to submit a proposal for BayREN Workforce Development Design and Implementation Services (Project). Through this RFP, ABAG is seeking qualified firm(s) to provide program implementation and regional marketing for BayREN’s workforce, education and training program - Climate Careers. This is an upcoming procurement. All dates and information are preliminary and will be revised when the procurement is finalized. See Notice of Upcoming Procurement for additional information.",
+  "Events": [
+   {
+    "Dates": "Sep 29th 2026, 4:00 PM PDT",
+    "Description": "Posting date for the Opportunity",
+    "Event Name": "Open Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "ONGOING"
+   },
+   {
+    "Dates": "Nov 3rd 2026, 4:00 PM PST",
+    "Description": "Deadline for Submissions",
+    "Event Name": "Close Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "UPCOMING"
+   },
+   {
+    "Dates": "Oct 13th 2026, 4:00 PM PDT",
+    "Description": "Deadline to submit Questions",
+    "Event Name": "Questions Due Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "PASSED"
+   }
+  ],
+  "Documents": [
+   {
+    "Date Created": "Sep 3rd 2026, 1:52 PM PDT",
+    "Description": "Notice of Upcoming Procurement",
+    "File": "000 - Notice of Upcoming Procurement - RFP for BayREN Workforce Development Implementation.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 7th 2026, 12:46 PM PDT",
+    "Description": "Submission Instructions",
+    "File": "000a - Submission Instructions - RFP for BayREN Workforce Development Implementation.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Sep 28th 2026, 7:47 AM PDT",
+    "Description": "RFP",
+    "File": "001 - RFP - BayREN Workforce Development Design and Implementation.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 9th 2026, 2:28 PM PDT",
+    "Description": "Addendum 1",
+    "File": "001a - Addendum 1 - RFP for BayREN Workforce Development Design and Implementation.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Sep 23rd 2026, 7:53 AM PDT",
+    "Description": "Cost Proposal",
+    "File": "002 - Appendix B - Cost Proposal.xlsx",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Sep 23rd 2026, 8:43 AM PDT",
+    "Description": "ABAG Contract Template",
+    "File": "003 - Appendix D - ABAG Contract Template.docx",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 8th 2026, 7:20 AM PDT",
+    "Description": "Pre-Submittal Conference Presentation\nRead more...",
+    "File": "004 - Pre-Submittal Conference Presentation - BayREN Workforce Development and Implementation.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 8th 2026, 7:20 AM PDT",
+    "Description": "Pre-Submittal Conference Registration List\nRead more...",
+    "File": "004a - Pre-Submittal Conference Registration List - BayREN Workforce Development RFP.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 8th 2026, 10:52 AM PDT",
+    "Description": "Question and Answers Doc 1",
+    "File": "005 - Question and Answers Doc 1 - BayREN Workforce Development RFP.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 15th 2026, 12:09 PM PDT",
+    "Description": "Question and Answers Doc 2",
+    "File": "005a - Question and Answers Doc 2 - BayREN Workforce Development RFP.pdf",
+    "Type": "Documentation"
+   }
+  ],
+  "Requested Information": [
+   {
+    "# Files": "Multiple",
+    "Name": "Proposal",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "1",
+    "Name": "Cost Proposal",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: Excel (.xls, .xlsx)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Required Forms",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "1",
+    "Name": "SBE Program",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   }
+  ],
+  "Document Takers": [
+   {
+    "# Files": "4",
+    "Vendors": "11427725 Canada Inc."
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Acterra"
+   },
+   {
+    "# Files": "15",
+    "Vendors": "Advocacy Chiefs, LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Alternative Energy Systems Consulting, Inc."
+   },
+   {
+    "# Files": "9",
+    "Vendors": "AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES"
+   },
+   {
+    "# Files": "31",
+    "Vendors": "Ardent Technologies, Inc."
+   },
+   {
+    "# Files": "9",
+    "Vendors": "BBR Printers"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "BidSparq LLC"
+   },
+   {
+    "# Files": "9",
+    "Vendors": "Blah Consulting"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Bradford Fitness LLC"
+   },
+   {
+    "# Files": "10",
+    "Vendors": "BuildCentral Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "CA TRAFFIC SOLUTION"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Capveon (YC F26)"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Cendien"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Central Coast Energy Services, Inc."
+   },
+   {
+    "# Files": "5",
+    "Vendors": "CHANIN KELLY-RAE CONSULTING LLC"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Citizen Group (Lab Communications, Inc - dba Citizen Group)"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "CivicMakers"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Civilian"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Colehour + Cohen"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Community Energy & Equity Resources"
+   },
+   {
+    "# Files": "20",
+    "Vendors": "Convey, Inc."
+   },
+   {
+    "# Files": "4",
+    "Vendors": "CSG Consultants, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "D&A Communications"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Deloittte Consulting LLP"
+   },
+   {
+    "# Files": "10",
+    "Vendors": "Deltek"
+   },
+   {
+    "# Files": "10",
+    "Vendors": "DF Interactive LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "DNV Energy Insights USA Inc."
+   },
+   {
+    "# Files": "4",
+    "Vendors": "ECONorthwest"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Emerson Human Capital Consulting"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "encinc"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Energy Infrastructure Partners LLC"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Energy Resources Integration"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Environmental Justice Solutions"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Epik Solutions"
+   },
+   {
+    "# Files": "11",
+    "Vendors": "Equity Accelerator"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "eRepublic, Inc."
+   },
+   {
+    "# Files": "8",
+    "Vendors": "Estolano Advisors"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Farallon Strategies"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Fors Marsh"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Fortuna BMC"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Frontier Energy, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Fulkrum Studio"
+   },
+   {
+    "# Files": "21",
+    "Vendors": "Gov Alpha Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "GovGuide"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "GR0.com LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Ground Works Consulting"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "HC Financial Consultants"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Hua Nani Partners"
+   },
+   {
+    "# Files": "18",
+    "Vendors": "IBM Canada Limited"
+   },
+   {
+    "# Files": "10",
+    "Vendors": "Integrated Design 360 LLC"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "KPMG LLP"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "KRA Corporation"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Legai BUild"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "MZB Engineering Inc"
+   },
+   {
+    "# Files": "10",
+    "Vendors": "Nerds Inc"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Newhouse Project Consulting"
+   },
+   {
+    "# Files": "63",
+    "Vendors": "Nobrainer Labs, LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "On the Move Careers, Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Open Minds"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Personal"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "Plain Language International Inc."
+   },
+   {
+    "# Files": "4",
+    "Vendors": "PremTech Solutions"
+   },
+   {
+    "# Files": "10",
+    "Vendors": "QuEST, Inc."
+   },
+   {
+    "# Files": "9",
+    "Vendors": "re"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Rebuilding Together East Bay Network"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Redesign to Align"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "Redwood Resources"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Resource Innovations"
+   },
+   {
+    "# Files": "21",
+    "Vendors": "Rewired Dynamics, LLC"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "Rising Sun Center for Opportunity"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Sapere Consulting"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Segal"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Service Response Partners LLC"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "SevenOutsource"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Shay Enterprise"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "Smartprocure Inc"
+   },
+   {
+    "# Files": "10",
+    "Vendors": "Strategic Energy Innovations"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Sunshine Enterprise USA LLC"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "The Cadmus Group"
+   },
+   {
+    "# Files": "9",
+    "Vendors": "The Energy Coalition"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "The North Highland Company, LLC"
+   },
+   {
+    "# Files": "12",
+    "Vendors": "The Ortiz Group"
+   },
+   {
+    "# Files": "10",
+    "Vendors": "The Ortiz Group"
+   },
+   {
+    "# Files": "10",
+    "Vendors": "USFCR"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "VeAssis, LLC"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "VISUAL"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "WestEd"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Winning Edge Solutions LLC"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "XlEagle"
+   }
+  ],
+  "Prime Contractors": [
+   {
+    "Contact": "Romina Marazzato Sparano",
+    "Email": "romina@plainlii.com",
+    "Phone": "8315957779",
+    "Subcontract Services": "plain language, AI readiness, translation, clarity strategy, team training, leadership training",
+    "Vendors": "Plain Language International Inc."
+   }
+  ],
+  "Subcontractors": [
+   {
+    "Contact": "Eric Noller",
+    "Email": "eric@eripacific.com",
+    "Phone": "415-500-2654",
+    "Subcontract Services": "Energy efficiency workforce training and curriculum development; utility program implementation; hands-on technical instruction and field training; residential energy assessments and electrification; field protocols, quality assurance, and performance evaluation. Bay Area-based engineering firm with extensive California utility program experience, including PG&E and BayREN-related initiatives. California DGS-certified Small Business (SBE) and San Francisco Local Business Enterprise (LBE).",
+    "Vendors": "Energy Resources Integration"
+   }
+  ],
+  "Documents Note": "To download files, log in to the Euna Supplier Network.",
+  "Detail URL": "https://mtc.bonfirehub.com/opportunities/251446",
+  "Raw Path": "data/bronze/bonfire/raw/mtc-251446.json",
+  "Scraped At": "2026-10-17T18:03:54",
+  "Listed": true
+ },
+ {
+  "Key": "mtc-252035",
+  "Portal": "mtc",
+  "Agency": "Metropolitan Transportation Commission",
+  "Project ID": "252035",
+  "Reference ID": "LPA-RFQ-29246",
+  "Name": "Request for Qualifications (RFQ) for Plan Bay Area 2060 Engagement Support",
+  "Close (portal time)": "2026-11-06 00:00:00",
+  "Department": null,
+  "Details": {
+   "Close Date": "Nov 5th 2026, 4:00 PM PST",
+   "Contact Information": "Noah Cohen, ncohen@bayareametro.gov",
+   "Days Left": "19",
+   "Open Date": "Sep 24th 2026, 4:00 PM PDT",
+   "Project": "Request for Qualifications (RFQ) for Plan Bay Area 2060 Engagement Support",
+   "Questions Due Date": "Oct 15th 2026, 4:00 PM PDT",
+   "Ref. #": "LPA-RFQ-29246",
+   "Status": "OPEN",
+   "Type": "RFSQ"
+  },
+  "Description": "NOTICE IS HEREBY GIVEN that the Metropolitan Transportation Commission (MTC) invites firms to submit a proposal for Plan Bay Area 2060 Engagement Support. Through this RFQ, MTC seeks a qualified Consultant or Consultant team (Consultant) to support the planning, development and implementation of a comprehensive public engagement program for Plan Bay Area 2060 and related plan elements.",
+  "Events": [
+   {
+    "Dates": "Sep 24th 2026, 4:00 PM PDT",
+    "Description": "Posting date for the Opportunity",
+    "Event Name": "Open Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "ONGOING"
+   },
+   {
+    "Dates": "Nov 5th 2026, 4:00 PM PST",
+    "Description": "Deadline for Submissions",
+    "Event Name": "Close Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "UPCOMING"
+   },
+   {
+    "Dates": "Oct 15th 2026, 4:00 PM PDT",
+    "Description": "Deadline to submit Questions",
+    "Event Name": "Questions Due Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "PASSED"
+   }
+  ],
+  "Documents": [
+   {
+    "Date Created": "Sep 1st 2026, 10:10 AM PDT",
+    "Description": "Notice of Upcoming Procurement",
+    "File": "000 - Notice of Upcoming Procurement - RFQ Plan Bay Area 2060 Engagement.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 7th 2026, 12:42 PM PDT",
+    "Description": "Submission Instructions",
+    "File": "000a - Submission Instructions - RFQ Plan Bay Area 2060 Engagement.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Sep 28th 2026, 1:58 PM PDT",
+    "Description": "RFQ",
+    "File": "001 - RFQ - Plan Bay Area 2060 Engagement.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Sep 21st 2026, 1:05 PM PDT",
+    "Description": "Contract Template",
+    "File": "002 - Appendix D - Contract Template.docx",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 2nd 2026, 1:24 PM PDT",
+    "Description": "Pre-Submittal Conference Registration List\nRead more...",
+    "File": "003 - Pre-Submittal Conference Registration List - Plan Bay Area 2060 Engagement RFQ.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 2nd 2026, 1:24 PM PDT",
+    "Description": "Pre-Submittal Conference Presentation",
+    "File": "003a - Pre-Submittal Conference Presentation - Plan Bay Area 2060 Engagement RFQ.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 6th 2026, 1:04 PM PDT",
+    "Description": "Question and Answer Doc 1",
+    "File": "004 - Question and Answer Doc 1 - Plan Bay Area 2060 Engagement RFQ.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 2nd 2026, 1:24 PM PDT",
+    "Description": "Engagement Report",
+    "File": "Final Plan Bay Area 2050 Plus Public Engagement Report.pdf",
+    "Type": "Documentation"
+   }
+  ],
+  "Requested Information": [
+   {
+    "# Files": "Multiple",
+    "Name": "Statement of Qualifications",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Required Forms",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "SBE Program",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   }
+  ],
+  "Document Takers": [
+   {
+    "# Files": "7",
+    "Vendors": "11427725 Canada Inc."
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Accenture"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "ActiveWayz Engineering, Inc."
+   },
+   {
+    "# Files": "6",
+    "Vendors": "Advocacy Chiefs, LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "AECOM"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "AECOM Technical Services, Inc."
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Agility Software Solutions, LLC"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Allison & Partners LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Alta Planning + Design"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Alvarado & Associates, LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Arcadis, a California Partnership"
+   },
+   {
+    "# Files": "16",
+    "Vendors": "Ardent Technologies, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Arellano Associates"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "BBR Printers"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "BDO USA, P.A."
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Bellwork"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "BidSparq LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "BluePoint Planning"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "Bodewell Group"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "BuildCentral Inc"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Cambridge Systematics, Inc."
+   },
+   {
+    "# Files": "8",
+    "Vendors": "Capitol CGS"
+   },
+   {
+    "# Files": "6",
+    "Vendors": "Capveon (YC F26)"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Caravann Consulting"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Cascadia Consulting Group"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Cendien"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "CERTIFER Canada Inc."
+   },
+   {
+    "# Files": "12",
+    "Vendors": "CHROMIAL LLC"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "Climate Resilient Communities"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Community Design + Architecture"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Community Planning Collaborative"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "Constructconnect"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Convey, Inc"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Convey, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Convey, Inc."
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Cordoba Corporation"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Corey, Canapary & Galanis"
+   },
+   {
+    "# Files": "9",
+    "Vendors": "D&A Communications"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Deloitte Consulting, LLP"
+   },
+   {
+    "# Files": "9",
+    "Vendors": "Deltek"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "DF Interactive LLC"
+   },
+   {
+    "# Files": "11",
+    "Vendors": "DKS Associates"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Drago Vantage"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Eastern Research Group"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Ecology Action"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "ECONorthwest"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "EMC Research, Inc."
+   },
+   {
+    "# Files": "8",
+    "Vendors": "emergent labs"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "encinc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Enterprise Resource Services, Inc."
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Epik Solutions"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Equity First Consulting"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Estolano Advisors"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "ETC INSTITUTE"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Farallon Strategies"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Fehr & Peers"
+   },
+   {
+    "# Files": "11",
+    "Vendors": "Forward City Labs"
+   },
+   {
+    "# Files": "9",
+    "Vendors": "Gauge.io"
+   },
+   {
+    "# Files": "13",
+    "Vendors": "Gov Alpha Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "GovGuide"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "GR0.com LLC"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Greenbelt Alliance"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Ground Works Consulting"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Ground Works Consulting"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "HC Financial Consultants"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "HDR"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "HDR"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "HERE"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "HR&A Advisors"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Hubspire Corp"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Hungry Heart Media Inc., DBA Wondros"
+   },
+   {
+    "# Files": "6",
+    "Vendors": "IBM Canada Limited"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "ICF"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Industrial Economics, Inc."
+   },
+   {
+    "# Files": "7",
+    "Vendors": "Integrated Design 360 LLC"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "InterEthnica, Inc."
+   },
+   {
+    "# Files": "5",
+    "Vendors": "KARA Consults LLC"
+   },
+   {
+    "# Files": "21",
+    "Vendors": "Kearns & West | Public Engagement, Facilitation & Communications"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Kilograph"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Kimley-Horn and Associates, Inc."
+   },
+   {
+    "# Files": "2",
+    "Vendors": "KPMG LLP"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "LBY Mobility LLC"
+   },
+   {
+    "# Files": "6",
+    "Vendors": "Legai BUild"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "M-Group"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Mariposa Planning Solutions"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "Mentee"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "MIG, Inc."
+   },
+   {
+    "# Files": "7",
+    "Vendors": "MZB Engineering Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Nelson\\Nygaard Consulting Associates, Inc."
+   },
+   {
+    "# Files": "7",
+    "Vendors": "Nerds Inc"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Nexien Inc"
+   },
+   {
+    "# Files": "6",
+    "Vendors": "Next Steps Marketing"
+   },
+   {
+    "# Files": "87",
+    "Vendors": "Nobrainer Labs, LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Omnia Associates"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Outreach by Design LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Pear Street Consulting"
+   },
+   {
+    "# Files": "14",
+    "Vendors": "Personal"
+   },
+   {
+    "# Files": "6",
+    "Vendors": "PremTech Solutions"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Pulsar Advertising, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Raimi + Associates"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "RBA Creative"
+   },
+   {
+    "# Files": "9",
+    "Vendors": "re"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "REACH Strategies"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "Redwood Resources"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Resource Refocus LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Ronny Kraft Consulting"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "RSCA Corporation"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "SevenOutsource"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Shay Enterprise"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Smartprocure Inc"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "SmithGroup"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Stanton Global Communications"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Steer"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Steer"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "TD Thornton"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "Test"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "The Catalyst Group, Inc."
+   },
+   {
+    "# Files": "3",
+    "Vendors": "The North Highland Company, LLC"
+   },
+   {
+    "# Files": "18",
+    "Vendors": "The Ortiz Group"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "The Solis Group"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "TransForm"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "TRC Companies"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "TRC Engineers Inc"
+   },
+   {
+    "# Files": "9",
+    "Vendors": "TRI Commercial Real Estate Services"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "TriSynk"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "Urban Advising Collective"
+   },
+   {
+    "# Files": "6",
+    "Vendors": "Urban Habitat"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Urban Planning Partners, Inc."
+   },
+   {
+    "# Files": "8",
+    "Vendors": "USFCR"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "VSCE, Inc."
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Winter Consulting Group"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "WSP"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "WSP"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "XlEagle"
+   }
+  ],
+  "Prime Contractors": [
+   {
+    "Contact": "Audrey Ronningen",
+    "Email": "aronningen@greenbelt.org",
+    "Phone": "510-926-9629",
+    "Subcontract Services": "Climate resilience planning, land use planning, community engagement,",
+    "Vendors": "Greenbelt Alliance"
+   },
+   {
+    "Contact": "Daniel Carfora",
+    "Email": "daniel.carfora-hale@smithgroup.com",
+    "Phone": "4153653412",
+    "Subcontract Services": "Urban planning, architecture, engineering, etc.",
+    "Vendors": "SmithGroup"
+   }
+  ],
+  "Subcontractors": [
+   {
+    "Contact": "Carlos Alvarado",
+    "Email": "alvaradoandassociates@gmail.com",
+    "Phone": "703-342-9088",
+    "Subcontract Services": "DBE-certified firm. Project management support; schedule and deliverable tracking; risk and issue management; cost and financial analysis; contract administration; stakeholder coordination; meeting and action-item management; quality control; transportation and infrastructure program support.",
+    "Vendors": "Alvarado & Associates, LLC"
+   }
+  ],
+  "Documents Note": "To download files, log in to the Euna Supplier Network.",
+  "Detail URL": "https://mtc.bonfirehub.com/opportunities/252035",
+  "Raw Path": "data/bronze/bonfire/raw/mtc-252035.json",
+  "Scraped At": "2026-10-17T18:04:03",
+  "Listed": true
+ },
+ {
+  "Key": "mtc-256605",
+  "Portal": "mtc",
+  "Agency": "Metropolitan Transportation Commission",
+  "Project ID": "256605",
+  "Reference ID": "PLNG-RFP-29295",
+  "Name": "2027-2028 Bay Area Travel Study RFP",
+  "Close (portal time)": "2026-11-10 00:00:00",
+  "Department": null,
+  "Details": {
+   "Close Date": "Nov 9th 2026, 4:00 PM PST",
+   "Contact Information": "Andrew L. Nguyen, alnguyen@bayareametro.gov",
+   "Days Left": "23",
+   "Open Date": "Oct 5th 2026, 12:00 AM PDT",
+   "Project": "2027-2028 Bay Area Travel Study RFP",
+   "Questions Due Date": "Never",
+   "Ref. #": "PLNG-RFP-29295",
+   "Status": "OPEN",
+   "Type": "RFP"
+  },
+  "Description": "The Metropolitan Transportation Commission (MTC) is seeking to hire a consultant or consultant team (Consultant) that will that will collect comprehensive information on how people travel throughout the nine-county Bay Area, including trip purposes, travel modes,\nfrequency, and origin-destination patterns. The study will use a primarily smartphone-based travel diary survey, supplemented by web and/or telephone methods, to collect data from a representative sample of Bay Area households. The resulting data will support regional\ntransportation planning, travel demand modeling, and analysis of evolving travel patterns. Please see Appendix A, Scope of Work for full details.",
+  "Events": [
+   {
+    "Dates": "Never",
+    "Description": "The Q and A Period for this Opportunity is Ongoing",
+    "Event Name": "Questions Due Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "ONGOING"
+   },
+   {
+    "Dates": "Oct 5th 2026, 12:00 AM PDT",
+    "Description": "Posting date for the Opportunity",
+    "Event Name": "Open Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "ONGOING"
+   },
+   {
+    "Dates": "Nov 9th 2026, 4:00 PM PST",
+    "Description": "Deadline for Submissions",
+    "Event Name": "Close Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "UPCOMING"
+   },
+   {
+    "Dates": "Oct 13th 2026, 11:00 AM PDT - Oct 13th 2026, 12:00 PM PDT",
+    "Description": "A non-mandatory Proposers’ Conference will be held at 11:00 a.m. (Pacific Time) on Wednesday, October 13, 2026. The Conference will be conducted as a Zoom meeting. Proposers may appear via Zoom Teleconference by registering in advance at the following link: https://bayareametro.zoom.us/meeting/register/lBgjmgtOSaaGUUUqJh3N0w After registering, registrants will receive a confirmation email containing information about how to join the meeting and the hyperlink to access the meeting.",
+    "Event Name": "Non-Mandatory Proposer's Conference",
+    "Location": "https://bayareametro.zoom.us/meeting/register/lBgjmgtOSaaGUUUqJh3N0w",
+    "Mandatory": "No",
+    "Status": "PASSED"
+   }
+  ],
+  "Documents": [
+   {
+    "Date Created": "Oct 5th 2026, 4:58 PM PDT",
+    "Description": "Appendix B - Cost Proposal Form (Corrected)",
+    "File": "Appendix B - Cost Proposal Form (Corrected).xlsx",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Sep 30th 2026, 12:38 PM PDT",
+    "Description": "Appendix D - Contract",
+    "File": "Appendix D - Contract.docx",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Sep 30th 2026, 12:51 PM PDT",
+    "Description": "Appendix F-4 - Prime and Subcontractor Reporting Form\nRead more...",
+    "File": "Appendix F-4 - Prime and Subcontractor Reporting Form.xlsx",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 13th 2026, 12:11 PM PDT",
+    "Description": "Proposers Conference Presentation",
+    "File": "Proposers Conference Presentation - 2026 Bay Area Travel Study RFP.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 13th 2026, 12:11 PM PDT",
+    "Description": "Proposers Conference Registration",
+    "File": "Proposers Conference Registration - 2026 Bay Area Travel Study RFP.xlsx",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 14th 2026, 12:09 PM PDT",
+    "Description": "Q&A No. 1",
+    "File": "Questions and Answers 1.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 5th 2026, 3:21 PM PDT",
+    "Description": "RFP",
+    "File": "RFP - 2027 Bay Area Travel Study - PLNG-RFP-29295.pdf",
+    "Type": "Documentation"
+   }
+  ],
+  "Requested Information": [
+   {
+    "# Files": "Multiple",
+    "Name": "Technical Proposal",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: Any (.*)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Travel Data Collection App Description",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: Any (.*)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Resumes",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: Any (.*)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Work Samples (minimum of 1)",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: Any (.*)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Cost Proposal",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: Excel (.xls, .xlsx)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Additional Required Forms",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: Any (.*)"
+   }
+  ],
+  "Document Takers": [
+   {
+    "# Files": "4",
+    "Vendors": "11427725 Canada Inc."
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Alta Planning + Design"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "AMERICAN INSTITUTES FOR RESEARCH IN THE BEHAVIORAL SCIENCES"
+   },
+   {
+    "# Files": "10",
+    "Vendors": "Ardent Technologies, Inc."
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Auriga Corporation"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "BBR Printers"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "BidSparq LLC"
+   },
+   {
+    "# Files": "13",
+    "Vendors": "Blah Consulting"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Bradford Fitness LLC"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "BuildCentral Inc"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Cambridge Systematics, Inc."
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Capitol CGS"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Capveon (YC F26)"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "CCS Global Tech"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "CDM Smith"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Cendien"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Circlepoint"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Compunnel Software Group, Inc."
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Convey, Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Convey, Inc."
+   },
+   {
+    "# Files": "6",
+    "Vendors": "DCCM, LLC"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Decision Information Resources, Inc."
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Deloittte Consulting LLP"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "Deltek"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "DF Interactive LLC"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Dikita Enterprises Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Domain Experts Corporation"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "EMC Research, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "emergent labs"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Enterprise Pals, Inc."
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Estrada Consulting, Inc."
+   },
+   {
+    "# Files": "4",
+    "Vendors": "ETC Institute"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "ETC INSTITUTE"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Fehr & Peers"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Fors Marsh"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Foursquare ITP"
+   },
+   {
+    "# Files": "6",
+    "Vendors": "Gauge.io"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "GHD Inc."
+   },
+   {
+    "# Files": "20",
+    "Vendors": "Gov Alpha Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "GovGuide"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Gtech"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "HR&A Advisors, Inc"
+   },
+   {
+    "# Files": "6",
+    "Vendors": "Huang Technology Consulting LLC"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "IBM Canada Limited"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "ICF Incorporated, LLC"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Insight Transportation Consulting Inc."
+   },
+   {
+    "# Files": "6",
+    "Vendors": "Ipsos Public Affairs, LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Jones Legacy Cleaning Services LLC"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "KPMG"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "KPMG LLP"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Left Turn Right Turn (LTRT)"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "LOCUS Inc."
+   },
+   {
+    "# Files": "4",
+    "Vendors": "MIG, Inc."
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Mobile Market Monitor LLC"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "MZB Engineering Inc"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "NCE"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "NDS– National Data & Surveying Services"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Nelson\\Nygaard Consulting Associates, Inc."
+   },
+   {
+    "# Files": "7",
+    "Vendors": "Nerds Inc"
+   },
+   {
+    "# Files": "24",
+    "Vendors": "Nobrainer Labs, LLC"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Parametrix"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Perry Consulting"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Personal"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "PremTech Solutions"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Pulsar Advertising, Inc."
+   },
+   {
+    "# Files": "4",
+    "Vendors": "re"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "Redwood Resources"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Resonance Consultancy Ltd"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "RSCA Corporation"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "RSG"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "Rwazi, Inc."
+   },
+   {
+    "# Files": "4",
+    "Vendors": "SevenOutsource"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Smartprocure Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Steer"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Steer"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "StreetLight Data"
+   },
+   {
+    "# Files": "10",
+    "Vendors": "The Henne Group"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "The Wathen Group LLC"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "TJKM"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "Toole Design Group, LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "TPGI CPA"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Transit app"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Transportation Mobility Solutions"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "TransSIGHT"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "USFCR"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Velocia Inc"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Via Transportation Inc"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Westat"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "WSP"
+   }
+  ],
+  "Prime Contractors": [],
+  "Subcontractors": [],
+  "Documents Note": "To download files, log in to the Euna Supplier Network.",
+  "Detail URL": "https://mtc.bonfirehub.com/opportunities/256605",
+  "Raw Path": "data/bronze/bonfire/raw/mtc-256605.json",
+  "Scraped At": "2026-10-17T18:04:11",
+  "Listed": true
+ },
+ {
+  "Key": "mtc-255523",
+  "Portal": "mtc",
+  "Agency": "Metropolitan Transportation Commission",
+  "Project ID": "255523",
+  "Reference ID": "Energy-RFQ-29311",
+  "Name": "Request for Qualifications (RFQ) for 2027 Regional Energy Network Legal and Regulatory Support Services Bench",
+  "Close (portal time)": "2026-11-13 00:00:00",
+  "Department": null,
+  "Details": {
+   "Close Date": "Nov 12th 2026, 4:00 PM PST",
+   "Contact Information": "Noah Cohen - (415) 778-5215, ncohen@bayareametro.gov",
+   "Days Left": "26",
+   "Open Date": "Sep 30th 2026, 4:00 PM PDT",
+   "Project": "Request for Qualifications (RFQ) for 2027 Regional Energy Network Legal and Regulatory Support Services Bench",
+   "Questions Due Date": "Oct 14th 2026, 4:00 PM PDT",
+   "Ref. #": "Energy-RFQ-29311",
+   "Status": "OPEN",
+   "Type": "RFSQ"
+  },
+  "Description": "The Association of Bay Area Governments (ABAG) invites your firm to submit a Statement of Qualification (SOQ) for BayREN Legal and Regulatory Support Services Bench (Consultant Bench). Through this Request for Qualifications (RFQ), ABAG will select one or more qualified consultants with which ABAG may contract to provide services related to this project on an as-needed basis.  Proposers may apply to be approved for any one or more of the five Service Categories on the Consultant Bench.  Consultants may be contracted to perform Legal and Regulatory Support Services to ensure compliance with California Public Utilities Commission (CPUC) reporting and other compliance activities. This is an upcoming procurement. All dates, and other information, are preliminary and will be updated when procurement is finalized. See Notice of Upcoming Procurement for additional details.",
+  "Events": [
+   {
+    "Dates": "Sep 30th 2026, 4:00 PM PDT",
+    "Description": "Posting date for the Opportunity",
+    "Event Name": "Open Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "ONGOING"
+   },
+   {
+    "Dates": "Nov 12th 2026, 4:00 PM PST",
+    "Description": "Deadline for Submissions",
+    "Event Name": "Close Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "UPCOMING"
+   },
+   {
+    "Dates": "Oct 14th 2026, 4:00 PM PDT",
+    "Description": "Deadline to submit Questions",
+    "Event Name": "Questions Due Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "PASSED"
+   }
+  ],
+  "Documents": [
+   {
+    "Date Created": "Sep 3rd 2026, 1:53 PM PDT",
+    "Description": "Notice of Upcoming Procurement",
+    "File": "000 - Notice of Upcoming Procurement - 2027 BayREN Legal and Regulatory Bench.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 7th 2026, 12:37 PM PDT",
+    "Description": "Submission Instructions",
+    "File": "000a - Submission Instructions - RFQ) for 2027 REN Legal and Regulatory Support Services Bench.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Sep 28th 2026, 7:50 AM PDT",
+    "Description": "Bench RFQ",
+    "File": "001 - Bench RFQ - 2027 Regional Energy Network Legal and Regulatory Support Services Bench.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Sep 23rd 2026, 8:42 AM PDT",
+    "Description": "Resource Rate Schedule",
+    "File": "002 - Appendix B - Resource Rate Schedule.xlsx",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Sep 23rd 2026, 8:42 AM PDT",
+    "Description": "Contract Template",
+    "File": "003 - Appendix D - Contract Template.docx",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 8th 2026, 3:28 PM PDT",
+    "Description": "Pre-Submittal Conference Presentation\nRead more...",
+    "File": "004 - Pre-Submittal Conference Presentation - REN Legal and Regulatory Support Services Bench.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 8th 2026, 3:29 PM PDT",
+    "Description": "Pre-Submittal Conference Registration List\nRead more...",
+    "File": "004 - Pre-Submittal Conference Registration List - REN Legal and Regulatory Support Services Bench.pdf",
+    "Type": "Documentation"
+   },
+   {
+    "Date Created": "Oct 15th 2026, 8:39 AM PDT",
+    "Description": "Question and Answers Doc 1",
+    "File": "005 - Question and Answers Doc 1 - 2027 REN Legal and Regulatory Support Services Bench.pdf",
+    "Type": "Documentation"
+   }
+  ],
+  "Requested Information": [
+   {
+    "# Files": "Multiple",
+    "Name": "Proposal",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Required Forms",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "1",
+    "Name": "Appendix B Resource Rate Schedule",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: Excel (.xls, .xlsx)"
+   },
+   {
+    "# Files": "1",
+    "Name": "SBE Program",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   }
+  ],
+  "Document Takers": [
+   {
+    "# Files": "4",
+    "Vendors": "11427725 Canada Inc."
+   },
+   {
+    "# Files": "14",
+    "Vendors": "Ardent Technologies, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Arellano Associates"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Arup US, Inc."
+   },
+   {
+    "# Files": "7",
+    "Vendors": "BBR Printers"
+   },
+   {
+    "# Files": "10",
+    "Vendors": "Best Best & Krieger LLP"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "BidSparq LLC"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "BluePoint Planning"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Bradford Fitness LLC"
+   },
+   {
+    "# Files": "6",
+    "Vendors": "BuildCentral Inc"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Capveon (YC F26)"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "Cascade Energy, Inc."
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Cendien"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Deloittte Consulting LLP"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "Deltek"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "DF Interactive LLC"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "DNV Energy Insights USA Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Eastern Research Group"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "encinc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Energy and Environmental Economics, Inc."
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Estolano Advisors"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "Frontier Energy, Inc."
+   },
+   {
+    "# Files": "6",
+    "Vendors": "Gtech"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "IBM Canada Limited"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "ICF Incorporated, LLC"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "ICF Resources, L.L.C."
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Industrial Economics, Inc."
+   },
+   {
+    "# Files": "8",
+    "Vendors": "Industrial Economics, Inc."
+   },
+   {
+    "# Files": "15",
+    "Vendors": "Jennifer K. Berg"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Kaplan Kirsch LLP"
+   },
+   {
+    "# Files": "6",
+    "Vendors": "Keyes & Fox LLP"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "Nerds Inc"
+   },
+   {
+    "# Files": "43",
+    "Vendors": "Nobrainer Labs, LLC"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Personal"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "PremTech Solutions"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "PWXPress"
+   },
+   {
+    "# Files": "9",
+    "Vendors": "re"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Redwood Resources"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Sapere Consulting"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "SevenOutsource"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Shay Enterprise"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Shute, Mihaly & Weinberger LLP"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Smartprocure Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Speridian Technologies LLC"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "The Cadmus Group"
+   },
+   {
+    "# Files": "7",
+    "Vendors": "The Energy Coalition"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "TRC Companies"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "USFCR"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "VISUAL"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Whyte Analysts"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "WSP UK LIMITED"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "XlEagle"
+   }
+  ],
+  "Prime Contractors": [],
+  "Subcontractors": [],
+  "Documents Note": "To download files, log in to the Euna Supplier Network.",
+  "Detail URL": "https://mtc.bonfirehub.com/opportunities/255523",
+  "Raw Path": "data/bronze/bonfire/raw/mtc-255523.json",
+  "Scraped At": "2026-10-17T18:04:20",
+  "Listed": true
+ },
+ {
+  "Key": "mtc-240987",
+  "Portal": "mtc",
+  "Agency": "Metropolitan Transportation Commission",
+  "Project ID": "240987",
+  "Reference ID": "TBD",
+  "Name": "(UPCOMING) RFP for 2026 511 and Express Lanes Operational Services",
+  "Close (portal time)": "2026-11-20 01:00:00",
+  "Department": null,
+  "Details": {
+   "Close Date": "Nov 19th 2026, 5:00 PM PST",
+   "Contact Information": "Noah Cohen, ncohen@bayareametro.gov",
+   "Days Left": "33",
+   "Open Date": "Jul 20th 2026, 12:00 PM PDT",
+   "Project": "(UPCOMING) RFP for 2026 511 and Express Lanes Operational Services",
+   "Questions Due Date": "Oct 29th 2026, 5:00 PM PDT",
+   "Ref. #": "TBD",
+   "Status": "OPEN",
+   "Type": "RFP"
+  },
+  "Description": "[UPCOMING: August 2026] Metropolitan Transportation Commission (MTC), invites your firm to submit a proposal for 511 and Express Lanes Operational Services. As a result of this RFP, MTC intends to contract with an Operational Services Contractor (“OS Contractor”) to provide staffing and management services, collectively “operational services,” for MTC’s 511 Operations Center and Express Lanes Operations Center, in support of real-time operations for MTC’s 511 Traveler Information and Bay Area Express Lanes Programs. It is MTC’s intent that the selected OS Contractor will staff both operations centers and will provide coordination and management between the two functional areas. The OS Contractor will be responsible for ensuring that staffing coverage is provided during normal operating hours as well as during emergency conditions affecting the transportation network.  Additionally, the OS Contractor will be required to coordinate with Caltrans District 4, California Highway Patrol (CHP), local transit agencies, and other MTC contractors.  The staff in the 511 Operations Center and the Express Lane Operations Center are not currently unionized. Dates are preliminary until procurement documents are finalized. See \"Notice of Upcoming Procurement\" for additional details.",
+  "Events": [
+   {
+    "Dates": "Jul 20th 2026, 12:00 PM PDT",
+    "Description": "Posting date for the Opportunity",
+    "Event Name": "Open Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "ONGOING"
+   },
+   {
+    "Dates": "Oct 29th 2026, 5:00 PM PDT",
+    "Description": "Deadline to submit Questions",
+    "Event Name": "Questions Due Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "UPCOMING"
+   },
+   {
+    "Dates": "Nov 19th 2026, 5:00 PM PST",
+    "Description": "Deadline for Submissions",
+    "Event Name": "Close Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "UPCOMING"
+   }
+  ],
+  "Documents": [
+   {
+    "Date Created": "Jul 22nd 2026, 11:32 AM PDT",
+    "Description": "Notice of Upcoming Procurement",
+    "File": "000 - Notice of Upcoming Procurement - 511 and Express Lanes Operational Services.pdf",
+    "Type": "Documentation"
+   }
+  ],
+  "Requested Information": [
+   {
+    "# Files": "Multiple",
+    "Name": "Proposal",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Appendix B - Cost Proposal Forms",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: Excel (.xls, .xlsx)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Financial Statements",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Best and Final Offer (Redline Version)",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Best and Final Offer (Clean Version)",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Appendix B - Cost Proposal Forms (revised based on BAFO, if applicable)",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: Excel (.xls, .xlsx)"
+   },
+   {
+    "# Files": "Multiple",
+    "Name": "Best and FInal Offer - Audited schedule of indirect expenses and rates",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: PDF (.pdf)"
+   }
+  ],
+  "Document Takers": [
+   {
+    "# Files": "2",
+    "Vendors": "Accenture"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Acro Service Corporation"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Arcadis, a California Partnership"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Ardent Technologies, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "BBR Printers"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Bellwork"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "BidSparq LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "BuildCentral Inc"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Cambridge Systematics, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Capveon (YC F26)"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Deltek"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "DF Interactive LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Diskriter Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Electronic Transaction Consultants (ETC), LLC, dba Quarterhill"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Emovis Technologies US, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "encinc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "eRepublic, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Global Agility Solutions"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "HDR"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "HNTB"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "IronCore Systems"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Iteris"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Iteris, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Kearns & West | Public Engagement, Facilitation & Communications"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Kimley Horn"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Kimley-Horn and Associates, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Mindhop, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Mozamo Engineering, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Nerds Inc"
+   },
+   {
+    "# Files": "64",
+    "Vendors": "Nobrainer Labs, LLC"
+   },
+   {
+    "# Files": "14",
+    "Vendors": "Personal"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "PremTech Solutions"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Protiviti Government Services, Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Q-Free"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Quarterhill"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "re"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Service Response Partners LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "SevenOutsource"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "TransSIGHT"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "USFCR"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "USI Insurance Services"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "WSP"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "WSP USA Inc."
+   },
+   {
+    "# Files": "9",
+    "Vendors": "XlEagle"
+   }
+  ],
+  "Prime Contractors": [],
+  "Subcontractors": [],
+  "Documents Note": "To download files, log in to the Euna Supplier Network.",
+  "Detail URL": "https://mtc.bonfirehub.com/opportunities/240987",
+  "Raw Path": "data/bronze/bonfire/raw/mtc-240987.json",
+  "Scraped At": "2026-10-17T18:04:28",
+  "Listed": true
+ },
+ {
+  "Key": "mtc-255448",
+  "Portal": "mtc",
+  "Agency": "Metropolitan Transportation Commission",
+  "Project ID": "255448",
+  "Reference ID": "TBD",
+  "Name": "[UPCOMING POTENTIAL OPPORTUNITY] SB 63 Financial Efficiency Review - Phase 2 - Request for Proposals (RFP)",
+  "Close (portal time)": "2027-01-14 00:00:00",
+  "Department": null,
+  "Details": {
+   "Close Date": "Jan 13th 2027, 4:00 PM PST",
+   "Contact Information": "Mey Phu, mphu@bayareametro.gov",
+   "Days Left": "88",
+   "Open Date": "Sep 22nd 2026, 4:30 PM PDT",
+   "Project": "[UPCOMING POTENTIAL OPPORTUNITY] SB 63 Financial Efficiency Review - Phase 2 - Request for Proposals (RFP)",
+   "Questions Due Date": "Nov 11th 2026, 4:00 PM PST",
+   "Ref. #": "TBD",
+   "Status": "OPEN",
+   "Type": "RFP"
+  },
+  "Description": "[UPCOMING POTENTIAL OPPORTUNITY]\nIf voters approve the measure in November, SB 63 requires MTC to submit a proposal to conduct Phase 2 of the Financial Efficiency Review. The third-party consultant would conduct the review in consultation with the subject operators and an oversight committee established by MTC, pursuant to SB 63 (see California Government Code § 67764). \n\n\n\n\n\nDates are preliminary until procurement documents are finalized and released, if released.  See \"Notice of Potential Upcoming Opportunity\" for additional details.",
+  "Events": [
+   {
+    "Dates": "Sep 22nd 2026, 4:30 PM PDT",
+    "Description": "Posting date for the Opportunity",
+    "Event Name": "Open Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "ONGOING"
+   },
+   {
+    "Dates": "Nov 11th 2026, 4:00 PM PST",
+    "Description": "Deadline to submit Questions",
+    "Event Name": "Questions Due Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "UPCOMING"
+   },
+   {
+    "Dates": "Jan 13th 2027, 4:00 PM PST",
+    "Description": "Deadline for Submissions",
+    "Event Name": "Close Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "UPCOMING"
+   }
+  ],
+  "Documents": [
+   {
+    "Date Created": "Sep 22nd 2026, 4:57 PM PDT",
+    "Description": "Notice of Potential Upcoming Opportunity\nRead more...",
+    "File": "Notice of Potential Upcoming Opportunity - SB 63 Financial Efficiency Review Phase 2.pdf",
+    "Type": "Documentation"
+   }
+  ],
+  "Requested Information": [
+   {
+    "# Files": "Multiple",
+    "Name": "Proposal",
+    "Requirement": "OPTIONAL",
+    "Type": "File Type: PDF (.pdf)"
+   }
+  ],
+  "Document Takers": [
+   {
+    "# Files": "1",
+    "Vendors": "Ardent Technologies, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "BBR Printers"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Bellwork"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "BidSparq LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Blah Consulting"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "BuildCentral Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Cambridge Systematics, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Capveon (YC F26)"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Cendien"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Deltek"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "DF Interactive LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "encinc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Fehr & Peers"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "HC Financial Consultants"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "HDR"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "MZB Engineering Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Nerds Inc"
+   },
+   {
+    "# Files": "17",
+    "Vendors": "Nobrainer Labs, LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Personal"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "PremTech Solutions"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "re"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "SevenOutsource"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Smartprocure Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Sperry Capital"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Steer"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "The North Highland Company, LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "USFCR"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "VISUAL"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "XlEagle"
+   }
+  ],
+  "Prime Contractors": [],
+  "Subcontractors": [],
+  "Documents Note": "To download files, log in to the Euna Supplier Network.",
+  "Detail URL": "https://mtc.bonfirehub.com/opportunities/255448",
+  "Raw Path": "data/bronze/bonfire/raw/mtc-255448.json",
+  "Scraped At": "2026-10-17T18:04:36",
+  "Listed": true
+ },
+ {
+  "Key": "mtc-247417",
+  "Portal": "mtc",
+  "Agency": "Metropolitan Transportation Commission",
+  "Project ID": "247417",
+  "Reference ID": "RFP-29258",
+  "Name": "UPCOMING -- RFP for Regional Safety Operations Program Development and Capacity Building",
+  "Close (portal time)": "2027-02-01 00:00:00",
+  "Department": null,
+  "Details": {
+   "Close Date": "Jan 31st 2027, 4:00 PM PST",
+   "Contact Information": "Jerry Finer, jfiner@bayaremetro.gov",
+   "Days Left": "106",
+   "Open Date": "Aug 3rd 2026, 1:30 PM PDT",
+   "Project": "UPCOMING -- RFP for Regional Safety Operations Program Development and Capacity Building",
+   "Questions Due Date": "Never",
+   "Ref. #": "RFP-29258",
+   "Status": "OPEN",
+   "Type": "RFP"
+  },
+  "Description": "The Metropolitan Transportation Commission (MTC) works in partnership with the California Highway Patrol (CHP), Caltrans, and other regional counterparts to improve safety, mobility, and operational coordination across the Bay Area transportation system. A key component of this effort is the Bay Area Incident Management Task Force (IMTF), a multidisciplinary partnership that advances regional collaboration, information sharing, and operational best practices among agencies responsible for managing incidents and supporting safe, reliable transportation networks. MTC seeks consultant support to strengthen organizational systems, stakeholder engagement, leadership development opportunities, and performance management practices that underpin program success. The goal of this effort is to build long-term organizational capacity, reduce ongoing administrative burden, and create a scalable foundation that enables MTC staff to focus on strategic leadership and program advancement.",
+  "Events": [
+   {
+    "Dates": "Never",
+    "Description": "The Q and A Period for this Opportunity is Ongoing",
+    "Event Name": "Questions Due Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "ONGOING"
+   },
+   {
+    "Dates": "Aug 3rd 2026, 1:30 PM PDT",
+    "Description": "Posting date for the Opportunity",
+    "Event Name": "Open Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "ONGOING"
+   },
+   {
+    "Dates": "Jan 31st 2027, 4:00 PM PST",
+    "Description": "Deadline for Submissions",
+    "Event Name": "Close Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "UPCOMING"
+   }
+  ],
+  "Documents": [
+   {
+    "Date Created": "Aug 3rd 2026, 1:30 PM PDT",
+    "Description": "Solicitation Builder",
+    "File": "Solicitation Document",
+    "Type": "Form"
+   },
+   {
+    "Date Created": "Aug 3rd 2026, 12:48 PM PDT",
+    "Description": "Notice Of Upcoming Opportunity",
+    "File": "Notice of Upcoming Opportunity.pdf",
+    "Type": "Other"
+   }
+  ],
+  "Requested Information": [],
+  "Document Takers": [
+   {
+    "# Files": "1",
+    "Vendors": "11427725 Canada Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Aanko Technologies Inc."
+   },
+   {
+    "# Files": "2",
+    "Vendors": "AECOM"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "AECOM"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "BBR Printers"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Bellwork"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "BidSparq LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "BuildCentral Inc"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Cambridge Systematics, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Capveon (YC F26)"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Cendien"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Circlepoint"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Citizen Engineers LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "CONSTANT ASSOCIATES"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Convey, Inc."
+   },
+   {
+    "# Files": "6",
+    "Vendors": "Deltek"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "DF Interactive LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "DKS Associates"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "dss+ Transportation"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Dynamis, Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "encinc"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Fehr & Peers"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Gauge.io"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Gov Alpha Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "GovGuide"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "HNTB"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "HNTB"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "ICF"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Impact Associates"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Iteris"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Iteris, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Jacobs Engineering"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Jacobs Engineering Group Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Kimley Horn"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "Kimley-Horn and Associates, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "MZB Engineering Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Nerds Inc"
+   },
+   {
+    "# Files": "56",
+    "Vendors": "Nobrainer Labs, LLC"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "Parsons Corp"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Partners in Public Innovation"
+   },
+   {
+    "# Files": "18",
+    "Vendors": "Personal"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Popdega LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "PremTech Solutions"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "RDA Consulting, SPC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "re"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Redwood Resources"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "RSCA Corporation"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Saccharo"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "SevenOutsource"
+   },
+   {
+    "# Files": "8",
+    "Vendors": "Shay Enterprise"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Smartprocure Inc"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "STV"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "The Policy & Research Group"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "The Wathen Group LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Titan Global Management"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Transit Safety Security and Solutions"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Transportation Resource Associates"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "trellyz"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Two Lynchpin Road"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "USFCR"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "USI Insurance Services"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "VISUAL"
+   },
+   {
+    "# Files": "4",
+    "Vendors": "WSP"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "WSP USA Inc."
+   },
+   {
+    "# Files": "10",
+    "Vendors": "XlEagle"
+   }
+  ],
+  "Prime Contractors": [
+   {
+    "Contact": "Chuck Dankocsik",
+    "Email": "chuck.dankocsik@aecom.com",
+    "Phone": "2132009691",
+    "Subcontract Services": "Traffic Incident Management Services (Planning, Advisory, Operations, Engineering, ITS, Response Plans, Development, Consulting, Assessment, Support, etc.)",
+    "Vendors": "AECOM"
+   }
+  ],
+  "Subcontractors": [],
+  "Documents Note": "To download files, log in to the Euna Supplier Network.",
+  "Detail URL": "https://mtc.bonfirehub.com/opportunities/247417",
+  "Raw Path": "data/bronze/bonfire/raw/mtc-247417.json",
+  "Scraped At": "2026-10-17T18:04:44",
+  "Listed": true
+ },
+ {
+  "Key": "mtc-241021",
+  "Portal": "mtc",
+  "Agency": "Metropolitan Transportation Commission",
+  "Project ID": "241021",
+  "Reference ID": "TBD",
+  "Name": "[UPCOMING: Summer 2026] RFQ for Construction Management Services for West Oakland Link Project",
+  "Close (portal time)": "2027-06-01 07:00:00",
+  "Department": null,
+  "Details": {
+   "Close Date": "Jun 1st 2027, 12:00 AM PDT",
+   "Contact Information": "Lillian Tse, ltse@bayareametro.gov",
+   "Days Left": "227",
+   "Open Date": "Jun 16th 2026, 8:00 PM PDT",
+   "Project": "[UPCOMING: Summer 2026] RFQ for Construction Management Services for West Oakland Link Project",
+   "Questions Due Date": "Never",
+   "Ref. #": "TBD",
+   "Status": "OPEN",
+   "Type": "RFSQ"
+  },
+  "Description": "[UPCOMING: Summer 2026] Please review or download the Notice of Upcoming Opportunity under the Files tab of the procurement for details on this upcoming opportunity.   All dates for this Project page, including submission dates, are placeholders only and will be updated when the procurement is officially released.\n\n\n\n\n\nBRIEF PROJECT DESCRIPTION\nThe Metropolitan Transportation Commission (MTC) is seeking to hire a consultant to provide and perform constructability review, value engineering, construction management and contract administration services in accordance with the Caltrans Construction Manual and Caltrans Standard Specifications and Plans for the West Oakland Link (WOL) Project. Construction management and contract administration services include, but are not limited to, review of construction progress and progress payments, change management, field review and coordination, review of contractor submittals, and contract item work inspection.",
+  "Events": [
+   {
+    "Dates": "Never",
+    "Description": "The Q and A Period for this Opportunity is Ongoing",
+    "Event Name": "Questions Due Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "ONGOING"
+   },
+   {
+    "Dates": "Jun 16th 2026, 8:00 PM PDT",
+    "Description": "Posting date for the Opportunity",
+    "Event Name": "Open Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "ONGOING"
+   },
+   {
+    "Dates": "Jun 1st 2027, 12:00 AM PDT",
+    "Description": "Deadline for Submissions",
+    "Event Name": "Close Date",
+    "Location": "Online Portal",
+    "Mandatory": "N/A",
+    "Status": "UPCOMING"
+   }
+  ],
+  "Documents": [
+   {
+    "Date Created": "Jun 16th 2026, 8:24 PM PDT",
+    "Description": "Notice of Upcoming Opportunity",
+    "File": "Notice of Upcoming Opportunity - CM for WOL.pdf",
+    "Type": "Other"
+   }
+  ],
+  "Requested Information": [
+   {
+    "# Files": "Multiple",
+    "Name": "TBD",
+    "Requirement": "REQUIRED",
+    "Type": "File Type: Any (.*)"
+   }
+  ],
+  "Document Takers": [
+   {
+    "# Files": "3",
+    "Vendors": "AECOM"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "Alfred Martinez Engineering"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Auriga Corporation"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "BBR Printers"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Bellwork"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "BidAmerica"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "BidSparq LLC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "BuildCentral Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "C3M Power Systems"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Capveon (YC F26)"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "ConstructConnect"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Construction Management West Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Cumming Management Group, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Deltek"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "DF Interactive LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "encinc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Enterprise Pals, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "EXARO Technologies Corp"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Ghirardelli Associates, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "GovGuide"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Hadin Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "HDR"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "HNTB"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "ims"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Jacobs"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Jacobs Engineering"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "KARA Consults LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Kearns & West | Public Engagement, Facilitation & Communications"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Keish Environmental, PC"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Kleinfelder, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Lanark Development Company LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Lund Opsahl"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Mark Thomas"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "MNS Engineers"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Mozamo Engineering, Inc."
+   },
+   {
+    "# Files": "2",
+    "Vendors": "MTC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Nerds Inc"
+   },
+   {
+    "# Files": "101",
+    "Vendors": "Nobrainer Labs, LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Parsons"
+   },
+   {
+    "# Files": "13",
+    "Vendors": "Personal"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "PremTech Solutions"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "PSM Associates [DVBE/MSBE/SBE/SDVOSB]"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "re"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "RSCA Corporation"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "SevenOutsource"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "Shay Enterprise"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Smartprocure Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "Swinerton Management & Consulting, LLC"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "T.Y. Lin International"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "TD Thornton"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "TechSME Inc"
+   },
+   {
+    "# Files": "2",
+    "Vendors": "TransSIGHT"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "TRC Engineers, Inc"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "USFCR"
+   },
+   {
+    "# Files": "1",
+    "Vendors": "VISUAL"
+   },
+   {
+    "# Files": "3",
+    "Vendors": "VSCE, Inc."
+   },
+   {
+    "# Files": "1",
+    "Vendors": "WSP"
+   },
+   {
+    "# Files": "5",
+    "Vendors": "XlEagle"
+   }
+  ],
+  "Prime Contractors": [
+   {
+    "Contact": "Pam Ching",
+    "Email": "pam.ching@tylin.com",
+    "Phone": "415-291-3845",
+    "Subcontract Services": "Engineering and CM Services",
+    "Vendors": "T.Y. Lin International"
+   }
+  ],
+  "Subcontractors": [],
+  "Documents Note": "To download files, log in to the Euna Supplier Network.",
+  "Detail URL": "https://mtc.bonfirehub.com/opportunities/241021",
+  "Raw Path": "data/bronze/bonfire/raw/mtc-241021.json",
+  "Scraped At": "2026-10-17T18:04:52",
+  "Listed": true
+ }
+]

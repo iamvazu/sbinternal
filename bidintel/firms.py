@@ -23,9 +23,15 @@ def get_firms_files():
     if custom:
         return [Path(custom)]
     files = sorted(config.PROJECT.glob("*businesses*.xls"), key=lambda p: (p.stat().st_mtime, p.name))
-    return files if files else [config.PROJECT / "Caleprocure_businesses_final.xls"]
+    if files:
+        return files
+    if hasattr(config, "FIRMS_FILE") and config.FIRMS_FILE.exists():
+        return [config.FIRMS_FILE]
+    return [config.PROJECT / "Caleprocure_businesses_final.xls"]
 
 FIRMS_FILES = get_firms_files()
+FIRMS_FILE = FIRMS_FILES[0] if FIRMS_FILES else getattr(config, "FIRMS_FILE", config.PROJECT / "Caleprocure_businesses_final.xls")
+
 EMBED_MODEL = config.os.getenv("BI_EMBED_MODEL", "nomic-embed-text")
 
 PROTECTED = {"Ethnicity", "Race", "Gender Identity", "LGBQTIA", "Disabled"}

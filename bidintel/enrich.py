@@ -7,7 +7,7 @@ import json
 import re
 from datetime import datetime
 
-from db import connect
+from db import connect, loads
 
 COUNTIES = """Alameda Alpine Amador Butte Calaveras Colusa Contra_Costa Del_Norte El_Dorado Fresno Glenn
 Humboldt Imperial Inyo Kern Kings Lake Lassen Los_Angeles Madera Marin Mariposa Mendocino Merced Modoc
@@ -67,18 +67,32 @@ CATEGORY_RULES = [  # (UNSPSC prefix, category); longest prefix wins
     ("92", "Safety & Security"), ("46", "Safety & Security"), ("25", "Vehicles & Equipment"),
     ("22", "Vehicles & Equipment"), ("21", "Vehicles & Equipment"),
 ]
-KEYWORD_CATEGORY = [
-    (r"construct|paving|bridge|roof|asphalt|striping|grading|culvert|highway", "Construction"),
-    (r"software|\bIT\b|network|cloud|cyber|data|computer|technology", "IT & Software"),
+KEYWORD_CATEGORY = [  # tried on the title + commodity-code titles first, then on the description
+    (r"medical|health|clinic|behavioral|mental|pharmac|vaccin|hospital|nursing|homeless|housing support|"
+     r"substance use|social services|child care|senior services|ambulatory|residential care", "Health & Human Services"),
+    # specific professional/engineering phrases first, so e.g. "Construction Management Services" isn't Construction
+    (r"construction management|inspection services|design services|architect", "Engineering & Architecture"),
+    (r"advisory|strateg|program management|program development|capacity build|forecast|travel study|marketing|"
+     r"\bmedia\b|engagement support|workforce development|efficiency review|legal and regulatory|regulatory|"
+     r"compliance review|financial review|consultant services", "Professional Services"),
+    (r"artificial intelligence|tolling system|express lanes operational|\b511\b|digital strategy", "IT & Software"),
+    (r"deposition|laboratory instrument|spectromet|microscope|analyzer", "Goods & Supplies"),
+    (r"construct|paving|bridge|roof|asphalt|striping|grading|culvert|highway|renovat|moderniz|demolition|"
+     r"\bCIP\b|capital improvement|pipeline|sewer|storm drain|seismic", "Construction"),
+    (r"software|network|cloud|cyber|computer|information technology|telecom|telephone|website|"
+     r"data cent|\bSaaS\b|technology services", "IT & Software"),
     (r"engineer|architect|design services|survey", "Engineering & Architecture"),
-    (r"janitor|custodial|landscap|maintenance|repair|hvac|elevator|pest", "Facilities & Maintenance"),
-    (r"waste|refuse|hazardous|recycl|environmental|abatement", "Environmental & Waste"),
-    (r"lease|real estate|office space", "Real Estate & Leasing"),
-    (r"consult|training|audit|study|evaluation|outreach", "Professional Services"),
+    (r"janitor|custodial|landscap|maintenance|repair|hvac|elevator|pest|tree trim|sweeping|uniform rental", "Facilities & Maintenance"),
+    (r"waste|refuse|hazardous|recycl|environmental|abatement|salvage", "Environmental & Waste"),
+    (r"transit|paratransit|shuttle|transportation services|towing|bus service", "Transportation & Logistics"),
+    (r"lease|real estate|office space|master developer", "Real Estate & Leasing"),
+    (r"consult|training|audit|study|evaluation|outreach|legal|insurance|banking|financial|administration|art services", "Professional Services"),
+    (r"supplies|supply|equipment|vehicle|furniture|purchase of|machine|parts", "Goods & Supplies"),
 ]
+IT_CAPS = re.compile(r"\bIT\b")  # "IT" only in capitals - re.I would match the word "it"
 
 
-def categorize(codes, text):
+def categorize(codes, text, primary="", title=""):
     best = None
     for code in codes:
         for prefix, cat in CATEGORY_RULES:
@@ -88,9 +102,12 @@ def categorize(codes, text):
         return best[1]
     if codes and int(codes[0][:2]) < 60:
         return "Goods & Supplies"
-    for pat, cat in KEYWORD_CATEGORY:
-        if re.search(pat, text, re.I):
-            return cat
+    for source in (title, primary, text):  # the bid's own title wins over code titles, then the description
+        for pat, cat in KEYWORD_CATEGORY:
+            if re.search(pat, source, re.I):
+                return cat
+        if IT_CAPS.search(source):
+            return "IT & Software"
     return "Other"
 
 
@@ -126,6 +143,12 @@ def first_pct(rx, sources):
     return None
 
 
+def ai_work_type(conn, eid):
+    row = conn.execute("SELECT json FROM analysis WHERE event_id=? AND json IS NOT NULL", (eid,)).fetchone()
+    wt = (loads(row["json"], {}) if row else {}).get("work_type")
+    return wt if wt and wt != "Other" else None
+
+
 def enrich_event(conn, ev):
     eid = ev["id"]
     codes = [r["code"] for r in conn.execute("SELECT code FROM unspsc WHERE event_id=?", (eid,))]
@@ -140,7 +163,9 @@ def enrich_event(conn, ev):
             return 2
         return 1
     atts = sorted(atts, key=rank)
-    head = f"{ev['name'] or ''}\n{ev['description'] or ''}"
+    extra = loads(ev["extra"], {}) if "extra" in ev.keys() else {}
+    nigp = "; ".join(c.get("title") or "" for c in extra.get("Commodity Codes") or [])
+    head = f"{ev['name'] or ''}\n{ev['description'] or ''}" + (f"\nNIGP categories: {nigp}" if nigp else "")
     sources = [("Description", head)] + [(a["file_name"], a["text"]) for a in atts]
     alltext = "\n".join(t for _, t in sources)
 
@@ -173,7 +198,9 @@ def enrich_event(conn, ev):
     districts = sorted({int(m.group(1)) for m in DISTRICT.finditer(head)} if ev["dept"] == "Department of Transportation" else set())
 
     facts = {
-        "category": categorize(codes, head),
+        # precedence: category stated by the source > AI work_type (it read the documents) > keyword rules
+        "category": extra.get("Category") or ai_work_type(conn, eid)
+                    or categorize(codes, head, f"{ev['name'] or ''} {nigp}", ev["name"] or ""),
         "method": method,
         "signals": find_signals(sources),
         "dvbe_pct": first_pct(PCT_DVBE, sources),

@@ -8,6 +8,12 @@ import argparse
 from typing import List, Dict, Optional, Tuple
 import bs4
 
+
+# Pipeline layout: scraper code lives in scrapers/caleprocure/, its output is the bronze layer.
+_PROJECT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+BRONZE_DIR = os.path.join(_PROJECT, "data", "bronze", "caleprocure")
+EXPORTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "exports")
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
@@ -470,10 +476,13 @@ def get_latest_excel() -> str:
 
 def main():
     parser = argparse.ArgumentParser(description="Caleprocure Targeted Scraper based on Excel Export")
-    parser.add_argument("--excel", default=None, help="Path to caleprocure Excel export (defaults to latest)")
-    parser.add_argument("--existing-json", default="Caleprocure_Events_Data.json", help="Path to existing JSON dataset")
-    parser.add_argument("--out-json", default="Caleprocure_Events_Data.json", help="Path for output JSON dataset")
-    parser.add_argument("--attachments-dir", default="attachments", help="Directory for attachments")
+    default_json = os.path.join(BRONZE_DIR, "Caleprocure_Events_Data.json") if os.path.exists(BRONZE_DIR) else "Caleprocure_Events_Data.json"
+    default_att = os.path.join(BRONZE_DIR, "attachments") if os.path.exists(os.path.join(BRONZE_DIR, "attachments")) else "attachments"
+    default_excel = (sorted(__import__("glob").glob(os.path.join(EXPORTS_DIR, "caleprocure_*.xls"))) or [""])[-1]
+    parser.add_argument("--excel", default=default_excel, help="Path to caleprocure Excel export (default: newest in exports/)")
+    parser.add_argument("--existing-json", default=default_json, help="Path to existing JSON dataset")
+    parser.add_argument("--out-json", default=default_json, help="Path for output JSON dataset")
+    parser.add_argument("--attachments-dir", default=default_att, help="Directory for attachments")
     parser.add_argument("--headless", action="store_true", help="Run browser in headless mode")
     parser.add_argument("--ids", nargs="*", help="Specific Event IDs to re-scrape")
     parser.add_argument("--placeholders-only", action="store_true", help="Only re-scrape events with placeholder text")

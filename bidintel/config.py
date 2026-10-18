@@ -6,9 +6,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 PROJECT = ROOT.parent
 
-EVENTS_JSON = Path(os.getenv("BI_EVENTS_JSON", PROJECT / "Caleprocure_Events_Data.json"))
-ATTACHMENTS_DIR = Path(os.getenv("BI_ATTACHMENTS_DIR", PROJECT / "attachments"))
-EXCEL_GLOB = os.getenv("BI_EXCEL_GLOB", "caleprocure_*.xls")
+# Pipeline layers (see pipeline/paths.py): bidintel is the GOLD layer and only reads SILVER.
+DATA = PROJECT / "data"
+SILVER_BIDS = Path(os.getenv("BI_SILVER_BIDS", DATA / "silver" / "bids.jsonl"))
+FIRMS_FILE = Path(os.getenv("BI_FIRMS_FILE", DATA / "reference" / "Caleprocure_businesses_final.xls"))
+ATTACHMENTS_DIR = PROJECT / "attachments"
+ATTACHMENT_ROOTS = [DATA / "bronze", ATTACHMENTS_DIR]
 DB_PATH = Path(os.getenv("BI_DB", ROOT / "data" / "bidintel.db"))
 CLIENTS_JSON = Path(os.getenv("BI_CLIENTS", ROOT / "clients.json"))
 WEB_DIR = ROOT / "web"

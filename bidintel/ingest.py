@@ -1,11 +1,11 @@
-"""Load scraped Cal eProcure events + attachments into SQLite, extract attachment text,
-and build a full-text index for search / retrieval.
+"""Gold loader: silver bids (data/silver/bids.jsonl, every source in one schema) -> bidintel.db.
+Extracts attachment text and builds the full-text index used by search, AI analysis and matching.
+Source-specific logic lives in pipeline/adapters/, never here.
 
-    python ingest.py              # incremental: only new or changed attachments are re-read
-    python ingest.py --rebuild    # wipe extracted text and redo everything
+    python -m pipeline.build_silver && python ingest.py     # or simply: python -m pipeline.run
+    python ingest.py --rebuild                              # wipe extracted text and redo everything
 """
 import argparse
-import glob
 import io
 import json
 import re
@@ -14,7 +14,7 @@ import zipfile
 from datetime import datetime
 from pathlib import Path
 
-from config import ATTACHMENTS_DIR, EVENTS_JSON, EXCEL_GLOB, PROJECT
+from config import PROJECT, SILVER_BIDS
 from db import connect
 
 MAX_PDF_PAGES = 150
@@ -117,115 +117,110 @@ def extract(path: Path):
         return None, None, f"{type(exc).__name__}: {exc}"
 
 
-# ---------------------------------------------------------------- excel exports
-
-def read_exports():
-    """Cal eProcure's 'Excel' export is really an HTML table. Newest file wins."""
-    from bs4 import BeautifulSoup
-    rows = {}
-    for f in sorted(glob.glob(str(PROJECT / EXCEL_GLOB))):
-        soup = BeautifulSoup(Path(f).read_text(encoding="utf-8", errors="ignore"), "html.parser")
-        table = soup.find("table")
-        if not table:
-            continue
-        trs = table.find_all("tr")
-        headers = [th.get_text(strip=True) for th in trs[0].find_all(["th", "td"])]
-        for tr in trs[1:]:
-            cells = [td.get_text(strip=True) for td in tr.find_all("td")]
-            if len(cells) == len(headers):
-                rec = dict(zip(headers, cells))
-                rows[rec.get("Event ID")] = rec
-    return rows
 
 
-# ---------------------------------------------------------------- main
+# ---------------------------------------------------------------- silver -> gold
+
+def ingest_attachment(conn, eid, a):
+    """Extract (or reuse cached) text for one attachment and index it. The stored path is always refreshed,
+    so moving bronze folders never forces a re-extraction."""
+    fname = a.get("file_name")
+    lp = a.get("local_path")
+    path = PROJECT / lp if lp else None
+    size = path.stat().st_size if path and path.is_file() else None
+    ext = Path(fname or "").suffix.lower().lstrip(".")
+    row = conn.execute("SELECT size_bytes, text FROM attachments WHERE event_id=? AND file_name=?", (eid, fname)).fetchone()
+    if row and row["size_bytes"] == size and row["text"] is not None:
+        text = row["text"]
+        conn.execute("UPDATE attachments SET local_path=?, download_url=? WHERE event_id=? AND file_name=?",
+                     (lp, a.get("url"), eid, fname))
+    else:
+        if size is not None:
+            text, pages, err = extract(path)
+        else:
+            text, pages, err = None, None, a.get("error") or "file missing on disk"
+        conn.execute("INSERT OR REPLACE INTO attachments VALUES (?,?,?,?,?,?,?,?,?,?)",
+                     (eid, fname, lp, ext, size, a.get("url"), pages, len(text or ""), text, err))
+        msg = ("ERR " + err) if err else f"{len(text or ''):>8} chars"
+        print(f"  {eid}  {(fname or '')[:70]:70}  {msg}")
+    for body in chunk(text or ""):
+        conn.execute("INSERT INTO chunks VALUES (?,?,?)", (eid, fname, body))
+
+
+def ingest_document(conn, eid, doc):
+    """Solicitation text a source provides as data (e.g. OpenGov), indexed like an attachment."""
+    text = clean(doc["text"])
+    conn.execute("INSERT OR REPLACE INTO attachments VALUES (?,?,?,?,?,?,?,?,?,?)",
+                 (eid, doc["name"], None, "txt", None, None, None, len(text), text, None))
+    for body in chunk(text):
+        conn.execute("INSERT INTO chunks VALUES (?,?,?)", (eid, doc["name"], body))
+
+
+def gold_extra(b):
+    """events.extra: source-specific fields + the canonical fields the bid drawer shows."""
+    extra = dict(b.get("extra") or {})
+    extra.setdefault("Solicitation Number", b.get("solicitation_number"))
+    extra.setdefault("Department", b.get("department"))
+    extra.setdefault("Agency City", b.get("agency_city"))
+    extra.setdefault("Question Deadline", b.get("question_deadline"))
+    extra.setdefault("Pre-Bid Meeting", b.get("prebid_meeting"))
+    extra["Platform"] = b.get("platform")
+    extra["Contacts"] = b.get("contacts") or []
+    extra["Codes"] = b.get("codes") or []
+    extra["Raw Ref"] = b.get("raw_ref")
+    return {k: v for k, v in extra.items() if v not in (None, "", [], {})}
+
 
 def ingest(rebuild=False):
     conn = connect()
     now = datetime.now().isoformat(timespec="seconds")
-    events = json.loads(EVENTS_JSON.read_text(encoding="utf-8"))
-    exports = read_exports()
-    print(f"{len(events)} events in JSON, {len(exports)} rows in Excel exports")
-
+    bids = [json.loads(line) for line in SILVER_BIDS.read_text(encoding="utf-8").splitlines() if line.strip()]
+    print(f"{len(bids)} silver bids from {SILVER_BIDS.name}")
     if rebuild:
         conn.execute("DELETE FROM attachments")
     conn.execute("DELETE FROM chunks")
     conn.execute("DELETE FROM unspsc")
 
-    seen = set()
-    for ev in events:
-        d = ev.get("Details") or {}
-        eid = d.get("Event ID")
-        if not eid:
-            continue
-        seen.add(eid)
-        c = ev.get("Contact Information") or {}
-        x = exports.get(eid, {})
+    for b in bids:
+        eid = b["id"]
+        buyer = next(iter(b.get("contacts") or []), {})
         conn.execute(
-            """INSERT INTO events (id,name,dept,dept_code,format,version,status,published,end_date,
-                   description,contact_name,contact_email,contact_phone,detail_url,raw,first_seen,last_seen)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
-               ON CONFLICT(id) DO UPDATE SET name=excluded.name, dept=excluded.dept,
-                   dept_code=excluded.dept_code, format=excluded.format, version=excluded.version,
-                   status=excluded.status, published=excluded.published, end_date=excluded.end_date,
-                   description=excluded.description, contact_name=excluded.contact_name,
-                   contact_email=excluded.contact_email, contact_phone=excluded.contact_phone,
-                   detail_url=excluded.detail_url, raw=excluded.raw, last_seen=excluded.last_seen""",
-            (eid, clean(ev.get("Event Name") or ""), d.get("Dept"), d.get("Department Code") or x.get("Department"),
-             d.get("Format/Type"), d.get("Event Version"), d.get("Status") or x.get("Status"),
-             parse_date(d.get("Published Date")), parse_date(d.get("Event End Date")) or parse_date(x.get("End Date")),
-             clean(ev.get("Description") or "") or None, c.get("Contact Name") or x.get("Buyer Name"),
-             c.get("Email") or x.get("Buyer Email"), c.get("Phone"), ev.get("Detail URL"),
-             json.dumps(ev), now, now))
-
-        for u in ev.get("UNSPSC Codes") or []:
-            desc = u.get("UNSPSC Classification Description") or ""
-            conn.execute("INSERT OR REPLACE INTO unspsc VALUES (?,?,?,?)",
-                         (eid, u.get("UNSPSC Classification"), desc, desc.split(" - ")[0].strip()))
-
-        if ev.get("Description"):
-            for body in chunk(clean(ev["Description"])):
-                conn.execute("INSERT INTO chunks VALUES (?,?,?)", (eid, "Description", body))
-
-        for a in ev.get("Attachments") or []:
-            fname = a.get("file_name")
-            path = PROJECT / (a.get("local_path") or "").replace("\\", "/")
-            ext = path.suffix.lower().lstrip(".")
-            row = conn.execute("SELECT size_bytes, text FROM attachments WHERE event_id=? AND file_name=?",
-                               (eid, fname)).fetchone()
-            size = path.stat().st_size if path.is_file() else None
-            if row and row["size_bytes"] == size and row["text"] is not None:
-                text = row["text"]
-            else:
-                if path.is_file():
-                    text, pages, err = extract(path)
-                else:
-                    text, pages, err = None, None, "file missing on disk"
-                conn.execute("INSERT OR REPLACE INTO attachments VALUES (?,?,?,?,?,?,?,?,?,?)",
-                             (eid, fname, str(path.relative_to(PROJECT)) if path.is_file() else a.get("local_path"),
-                              ext, size, a.get("download_url"), pages, len(text or ""), text, err))
-                n_chars = len(text or "")
-                msg = ("ERR " + err) if err else f"{n_chars:>8} chars"
-                print(f"  {eid}  {fname[:70]:70}  {msg}")
-            for body in chunk(text or ""):
-                conn.execute("INSERT INTO chunks VALUES (?,?,?)", (eid, fname, body))
+            """INSERT INTO events (id,name,dept,dept_code,format,version,status,published,end_date,description,
+                   contact_name,contact_email,contact_phone,detail_url,raw,first_seen,last_seen,source,level,extra)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+               ON CONFLICT(id) DO UPDATE SET name=excluded.name, dept=excluded.dept, dept_code=excluded.dept_code,
+                   format=excluded.format, version=excluded.version, status=excluded.status,
+                   published=excluded.published, end_date=excluded.end_date, description=excluded.description,
+                   contact_name=excluded.contact_name, contact_email=excluded.contact_email,
+                   contact_phone=excluded.contact_phone, detail_url=excluded.detail_url, raw=excluded.raw,
+                   last_seen=excluded.last_seen, source=excluded.source, level=excluded.level, extra=excluded.extra""",
+            (eid, b["title"], b.get("agency"), b.get("agency_code"), b.get("procurement_type"), b.get("version"),
+             b.get("status"), b.get("published_at"), b.get("due_at"), b.get("description"),
+             buyer.get("name"), buyer.get("email"), buyer.get("phone"), b.get("url"),
+             json.dumps({k: v for k, v in b.items() if k != "documents"}), now, now,
+             b["source_label"], b["level"], json.dumps(gold_extra(b))))
+        for c in b.get("codes") or []:
+            if c.get("system") == "UNSPSC" and c.get("code"):
+                desc = c.get("title") or ""
+                conn.execute("INSERT OR REPLACE INTO unspsc VALUES (?,?,?,?)", (eid, c["code"], desc, desc.split(" - ")[0].strip()))
+        head = clean(b.get("description") or "")
+        other = [c for c in b.get("codes") or [] if c.get("system") != "UNSPSC"]
+        if other:
+            head += "\n\nCommodity categories: " + "; ".join(f"{c['system']} {c['code']} {c.get('title') or ''}" for c in other)
+        for body in chunk(head):
+            conn.execute("INSERT INTO chunks VALUES (?,?,?)", (eid, "Description", body))
+        for doc in b.get("documents") or []:
+            ingest_document(conn, eid, doc)
+        for a in b.get("attachments") or []:
+            ingest_attachment(conn, eid, a)
         conn.commit()
-
-    # Events that appear in the latest Excel export but were never scraped in detail.
-    for eid, x in exports.items():
-        if eid and eid not in seen:
-            conn.execute(
-                """INSERT OR IGNORE INTO events (id,name,dept,dept_code,format,status,end_date,
-                       contact_name,contact_email,first_seen,last_seen) VALUES (?,?,?,?,?,?,?,?,?,?,?)""",
-                (eid, x.get("Event Name"), x.get("Department Name"), x.get("Department"),
-                 f"{x.get('Format', '')} / {x.get('Type', '')}", x.get("Status"), parse_date(x.get("End Date")),
-                 x.get("Buyer Name"), x.get("Buyer Email"), now, now))
-    conn.commit()
 
     s = conn.execute("""SELECT (SELECT COUNT(*) FROM events) e, (SELECT COUNT(*) FROM attachments) a,
                         (SELECT COUNT(*) FROM attachments WHERE error IS NOT NULL) ae,
                         (SELECT COUNT(*) FROM chunks) c""").fetchone()
-    print(f"done: {s['e']} events, {s['a']} attachments ({s['ae']} unreadable), {s['c']} search chunks")
+    by = conn.execute("SELECT source, level, COUNT(*) FROM events GROUP BY 1, 2").fetchall()
+    print(f"gold: {s['e']} events ({', '.join(f'{r[0]} {r[1]}: {r[2]}' for r in by)}), "
+          f"{s['a']} attachments ({s['ae']} unreadable), {s['c']} search chunks")
 
 
 if __name__ == "__main__":

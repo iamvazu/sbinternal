@@ -1,0 +1,50 @@
+297 OpenGov records
+
+NORMALIZED FIELDS (share of records with a value)
+  Description                           100%
+  Detail URL                            100%
+  Details.Agency City                   100%
+  Details.Department                    100%
+  Details.Department Code               100%
+  Details.Dept                          100%
+  Details.Event End Date                100%
+  Details.Event ID                      100%
+  Details.Format/Type                   100%
+  Details.Last Updated                  100%
+  Details.Listed                        100%
+  Details.Published Date                100%
+  Details.State                         100%
+  Details.Status                        100%
+  Event Name                            100%
+  Raw Path                              100%
+  Scraped At                            100%
+  Source                                100%
+  Submission Requirements               100%
+  Solicitation Text                     100%
+  Details.Vendors Notified               99%
+  Attachments                            97%
+  Details.Solicitation Number            92%
+  Details.Question Deadline              91%
+  Details.Sealed Bid                     88%
+  Commodity Codes                        80%
+  Contact Information.Address            74%
+  Contact Information.Contact Name       74%
+  Contact Information.Email              74%
+  Contact Information.Phone              74%
+  Contact Information.Title              74%
+  Evaluation Criteria                    49%
+  Price Items                            48%
+  Details.Addenda                        42%
+  Timeline                               40%
+  Procurement Contact.Email              36%
+  Procurement Contact.Name               36%
+  Procurement Contact.Phone              36%
+  Procurement Contact.Title              36%
+  Details.Pre-Bid Meeting                32%
+  Details.Q&A Response Deadline          29%
+  UNSPSC Codes                           16%
+
+RAW OPENGOV PROJECT FIELDS: 118 distinct keys with data across 298 projects
+  auctionMaxFractionDigits(297), contactAddress1(297), contactCity(297), contactCountry(297), contactCountryCode(297), contactDisplayName(297), contactEmail(297), contactFirstName(297), contactFullName(297), contactInitials(297), contactLastName(297), contactPhone(297), contactPhoneComplete(297), contactPhoneCountry(297), contactState(297), contactTitle(297), contactZipCode(297), contact_id(297), created_at(297), department(297), departmentHead(297), departmentHeadTitle(297), departmentName(297), department_id(297), government(297), government_id(297), id(297), lastUpdatedAt(297), postedAt(297), poster_id(297), procurementAddress1(297), procurementCity(297), procurementCountry(297), procurementCountryCode(297), procurementDisplayName(297), procurementEmail(297), procurementFirstName(297), procurementFullName(297), procurementInitials(297), procurementLastName(297), procurementPhone(297), procurementPhoneComplete(297), procurementPhoneCountry(297), procurementState(297), procurementTitle(297), procurementZipCode(297), procurement_contact_id(297), projectSections(297), proposalDeadline(297), questionnaires(297), rawSummary(297), releaseProjectDate(297), status(297), summary(297), template(297), template_id(297), timelineConfig(297), title(297), type(297), updated_at(297), user(297), user_id(297), wasPosted(297), criteria(296), notifyVendorsOnPosting(295), notifiedVendors(294), subscribersNotified(287), qaEnabled(277), upfrontQuestions(276), financialId(272), attachments(271), qaDeadline(270), questionLogics(268), hasSealedBid(261), showPlanholders(255), streamingRefreshDate(251), sectionDescriptions(242), categories(238), documentAttachment(226), document_attachment_id(226), hideProcurementContact(189), background(180), rawBackground(180), evaluationPhases(148), standard_document_id(147), priceTables(143), addendums(124), timelines(119), lastAddendum(106), preProposalDate(94), preProposalLocation(94), preProposalText(94), postScheduledAt(89), qaResponseDeadline(87), hideContactAddress(86), hideContact(78), intake_id(67), contactAddress2(66), procurementAddress2(59), isAutoBidUnsealed(53), contractorSelectedDate(51), isPublicBidPricingResult(49), showBids(39), showBidsWithPricing(39), recordCloseDate(35), isPublicBidResult(32), useSectionDividers(18), contactPhoneExt(12), procurementPhoneExt(11), isPublicBidTotalOnly(9), hideTimeline(5), allowSubstitutionRequests(5), project_association_id(3), isBidPricingUnsealed(3), isBidUnsealed(3), useManualNumbering(2), isEmergency(2), solicitationClosedDate(2)
+
+ATTACHMENTS: 2001 files, 2001 downloaded, 12196 MB, 0 errors

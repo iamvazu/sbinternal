@@ -1,33 +1,52 @@
-CaleProcure Events Scraper
-This repository contains a Selenium-based scraper for extracting detailed bid opportunity information from the California State procurement portal (CaleProcure).
+# STRONGERbuilt California Procurement Data Pipeline
 
-Features
-•	Navigates the CaleProcure event search page and iterates through event rows.
-•	Opens each event’s detail page in a separate tab and extracts structured data.
-•	Captures core fields: Event Name, Event ID, Dept, Format/Type, Event Version, Published Date, Event End Date.
-•	Extracts Contact Information, Pre-Bid Conference details, Description text, and UNSPSC codes.
-•	Follows the "View Event Package" link and collects attachment download URLs from the "Download Attachment" popup.
-•	Handles common UI issues: loading screen, blocked popup notices, stale elements, and other intermittent Selenium errors.
-•	Supports partial/segmented scraping using a row range argument so large runs can be split across multiple executions.
-•	Writes results as a structured JSON file.
+Scrapes California public bids from every platform agencies use, normalizes them into one schema, and serves
+them to **Bid Intelligence** (AI analysis, search, client and certified-firm matching).
 
-Command-Line Usage
-Basic run (scrape all rows until completion or an unrecoverable error).
-    python Caleprocure_events_scraper.py --out-json caleprocure_all.json
-Run in headless mode:
-    python Caleprocure_events_scraper.py --out-json caleprocure_all.json --headless
-Limit maximum pages (for testing):
-    python Caleprocure_events_scraper.py --out-json test.json --max-pages 2
-Limit number of events (for testing):
-    python Caleprocure_events_scraper.py --out-json test.json --limit 50
+```
+scrapers/<source>/   ──►  data/bronze/<source>/   ──►  data/silver/bids.jsonl   ──►  bidintel/data/bidintel.db
+   (code only)            BRONZE: exactly what          SILVER: one canonical          GOLD: enrichment, AI analysis,
+                          the scraper produced          bid schema, every source       search, matching, dashboard
+                          (JSON, attachments, raw)      (pipeline/adapters/)           (bidintel/)
+```
 
-Output Format
-The output JSON file is a list of objects. Each object can contain:
-•	`Event Name`
-•	`Details` (sub-object: Event ID, Dept, Format/Type, Event Version, Published Date, Event End Date)
-•	`Contact Information` (sub-object)
-•	`Pre Bid Conference` (sub-object)
-•	`Description`
-•	`UNSPSC Codes` (list of sub-objects)
-•	`Attachments` (list of attachment URLs from Download Attachment buttons)
-•	`Detail URL` (URL of the event details page)
+| Layer | Path | Owner | Rule |
+|---|---|---|---|
+| Scrapers | `scrapers/caleprocure/`, `scrapers/opengov/`, `scrapers/caltrans_des/`, ... | one folder per **platform** | write only to `data/bronze/<source>/` |
+| Bronze | `data/bronze/<source>/` | scraper | never edited by hand; source of truth for reprocessing |
+| Silver | `data/silver/bids.jsonl` + `_manifest.json` | `pipeline/adapters/<source>.py` | schema in `pipeline/schema.py`; validated; rebuilt from bronze any time |
+| Gold | `bidintel/data/bidintel.db` | `bidintel/ingest.py` | reads **only** silver; no source-specific code |
+| Reference | `data/reference/` | | certified-firm directory (SB/MB/SB-PW/DVBE) used by Bid Matching |
+
+## Run it
+
+```bash
+python -m pipeline.run --status                 # what every layer holds
+python -m pipeline.run                          # bronze -> silver -> gold (no scraping)
+python -m pipeline.run --scrape opengov         # re-scrape one source first
+python -m pipeline.run --scrape all --analyze 25
+cd bidintel && python server.py                 # dashboard: http://127.0.0.1:8765 (restart after a pipeline run)
+```
+
+## Sources
+
+Each bid is labelled with its real source everywhere in the app (`source` + `level`): Cal eProcure bids are
+`Cal eProcure · State`, OpenGov bids are `OpenGov · Local`. Ids are prefixed per source (`OG-301748`) so they never
+collide. The full registry, including verified targets not yet built, is `pipeline/sources.py`.
+
+| Source | Level | Status | Scraper |
+|---|---|---|---|
+| Cal eProcure | State | active | `scrapers/caleprocure/` |
+| OpenGov | Local | active (46 agencies + County of Napa) | `scrapers/opengov/` |
+| Caltrans DES | State | active (50 contracts, $1.23B) | `scrapers/caltrans_des/` |
+| PlanetBids | Local | **blocked**: AWS WAF bot control on its data API (11 portals verified) | needs a sanctioned data route |
+| CSU (Jaggaer, all 23 campuses) | State | active | `scrapers/csu/` |
+| Bonfire (MTC; add agencies as config) | Local | active | `scrapers/bonfire/` |
+| BidNet, Biddingo, QuestCDN, CivicPlus, agency portals | Local | planned | see `pipeline/sources.py` |
+
+Adding a source: see `scrapers/README.md`.
+
+## Other folders
+
+- `bidintel/`: the gold layer and app (see `bidintel/README.md`)
+- `docs/`: Jetson AI setup, data and certification strategy, build prompts

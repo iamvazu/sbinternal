@@ -14,6 +14,7 @@ from collections import Counter, defaultdict
 from datetime import datetime
 
 import config
+import insights
 from db import connect, loads
 
 EMBED_MODEL = config.os.getenv("BI_EMBED_MODEL", "nomic-embed-text")
@@ -330,13 +331,16 @@ def bid_profile(conn, eid, ix=None):
     a = loads((conn.execute("SELECT json FROM analysis WHERE event_id=?", (eid,)).fetchone() or [None])[0], {})
     codes = [dict(r) for r in conn.execute("SELECT code, description FROM unspsc WHERE event_id=?", (eid,))]
     codes = [c for c in codes if re.fullmatch(r"\d{8}", c["code"] or "")]
+    extra = loads(ev["extra"], {}) if "extra" in ev.keys() else {}
     sig = set((facts.get("signals") or {}).keys())
     sa = a.get("set_aside_and_preferences") or {}
     category = facts.get("category") or "Other"
 
     lic_ai = parse_license_classes(a.get("required_licenses"))
     lic_rules = set(facts.get("licenses") or [])
-    construction = category in ("Construction", "Facilities & Maintenance") or "prevailing_wage" in sig
+    # Rule-found license classes come from long documents full of multi-trade boilerplate, so they only
+    # count as a requirement on construction bids; AI-extracted licenses (read in context) count everywhere.
+    construction = category == "Construction"
     licenses = lic_ai or (lic_rules if construction else set())
     licenses = {l for l in licenses if l not in ("HIC",)}
 
@@ -355,10 +359,18 @@ def bid_profile(conn, eid, ix=None):
         industry = {"Service"}
 
     counties, statewide = bid_counties(ev, facts, a, conn, ix)
+    if insights.level_of(ev) == "Local" and not counties:
+        # a city/county/district buys for its own area: agency name ("County of Orange") or its city
+        found = {m.group(1) for m in COUNTY_RE.finditer(ev["dept"] or "")}
+        c = ix.locate(None, extra.get("Agency City")) if ix else None
+        counties = sorted(found or ({c} if c else set()))
     money = [m["value"] for m in facts.get("money") or []]
     title = ev["name"] or ""
     body = " ".join([ev["description"] or "", a.get("what_is_being_bought") or "", a.get("plain_summary") or ""])
     code_text = " ".join(c["description"].split(" - ")[-1] for c in codes if c.get("description"))
+    nigp = [c.get("title") or "" for c in extra.get("Commodity Codes") or []]
+    if nigp:  # OpenGov classifies with NIGP; its titles are strong, buyer-chosen search terms
+        code_text = (code_text + " " + " ".join(nigp)).strip()
 
     q = Counter()
     for t in tokens(title):
@@ -375,6 +387,7 @@ def bid_profile(conn, eid, ix=None):
             q.pop(t)
     return {
         "id": eid, "name": title, "dept": ev["dept"], "end_date": ev["end_date"], "category": category,
+        "source": insights.source_of(ev), "level": insights.level_of(ev), "nigp": nigp,
         "codes": codes, "query": dict(q), "title_terms": [w for w in dict.fromkeys(tokens(title)) if w in q], "text": f"{title}. {code_text}. {body}"[:1800],
         "licenses": sorted(licenses), "license_hard": bool(lic_ai) or (construction and bool(lic_rules)),
         "counties": counties, "statewide": statewide, "industry": sorted(industry),
@@ -593,7 +606,7 @@ def run_match(prof, ix, conn=None, semantic=True, only=None, cand_limit=600):
             reasons.append("Eligible for SB/DVBE set-aside")
         if prof["sb_pref"] and certs & {"SB", "MB"}:
             prog += 0.2
-            reasons.append("5% SB preference")
+            reasons.append("5% SB preference" if prof["level"] == "State" else "Agency small-business preference (see bid)")
         if prof["dvbe"] and "DVBE" in certs:
             prog += 0.3
             reasons.append("DVBE: counts toward " + (f"{prof['dvbe_pct']:g}% " if prof["dvbe_pct"] else "") + "DVBE goal")

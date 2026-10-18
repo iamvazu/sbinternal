@@ -38,6 +38,30 @@ def urgency(d):
     return "open"
 
 
+# Gold rows carry source/level from the silver layer. If one is ever missing, infer it from the id prefix;
+# never default an unknown bid to a particular source (that is how OpenGov bids got shown as Cal eProcure).
+ID_PREFIX_SOURCE = {"OG-": ("OpenGov", "Local"), "PB-": ("PlanetBids", "Local"), "CT-": ("Caltrans DES", "State"),
+                    "CSU-": ("CSU", "State"), "BF-": ("Bonfire", "Local"), "BN-": ("BidNet Direct", "Local"),
+                    "BG-": ("Biddingo", "Local"), "QC-": ("QuestCDN", "Local"), "CP-": ("CivicPlus Bids", "Local"),
+                    "AG-": ("Agency portals", "Local")}
+
+
+def _infer(ev):
+    eid = ev["id"] or ""
+    for prefix, sl in ID_PREFIX_SOURCE.items():
+        if eid.startswith(prefix):
+            return sl
+    return ("Cal eProcure", "State") if eid[:1].isdigit() or eid[:2].isdigit() else ("Unknown", None)
+
+
+def source_of(ev):
+    return (ev["source"] if "source" in ev.keys() and ev["source"] else None) or _infer(ev)[0]
+
+
+def level_of(ev):
+    return (ev["level"] if "level" in ev.keys() and ev["level"] else None) or _infer(ev)[1]
+
+
 def bid_row(ev, facts, analysis):
     f = facts or {}
     a = analysis or {}
@@ -46,6 +70,7 @@ def bid_row(ev, facts, analysis):
     sa = a.get("set_aside_and_preferences") or {}
     return {
         "id": ev["id"], "name": ev["name"], "dept": ev["dept"], "end_date": ev["end_date"],
+        "source": source_of(ev), "level": level_of(ev),
         "published": ev["published"], "days_left": d, "urgency": urgency(d),
         "category": f.get("category") or "Other", "method": f.get("method"),
         "signals": sorted(sig.keys()),
@@ -91,6 +116,7 @@ def stats(rows):
         "closing_7d": sum(1 for r in live if r["days_left"] is not None and r["days_left"] <= 7),
         "closing_3d": sum(1 for r in live if r["urgency"] == "critical"),
         "analyzed": sum(1 for r in rows if r["analyzed"]),
+        "by_source": Counter(r["source"] for r in live).most_common(),
         "sb_access": sum(1 for r in live if {"sb_set_aside", "sb_dvbe_option", "sb_preference"} & set(r["signals"])),
         "dvbe": sum(1 for r in live if r["dvbe_pct"] or "dvbe_participation" in r["signals"]),
         "dbe": sum(1 for r in live if r["dbe_pct"] or "dbe_goal" in r["signals"]),
