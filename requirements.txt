@@ -1,0 +1,8 @@
+beautifulsoup4
+numpy
+openpyxl
+pymupdf
+python-docx
+requests
+selenium
+webdriver-manager

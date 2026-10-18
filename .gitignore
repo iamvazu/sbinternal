@@ -19,3 +19,6 @@ __pycache__/
 *.log
 attachments/
 caleprocure_businesses_10_15.xls
+
+# local Python environment
+.venv/
