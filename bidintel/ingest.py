@@ -130,7 +130,9 @@ def ingest_attachment(conn, eid, a):
     size = path.stat().st_size if path and path.is_file() else None
     ext = Path(fname or "").suffix.lower().lstrip(".")
     row = conn.execute("SELECT size_bytes, text FROM attachments WHERE event_id=? AND file_name=?", (eid, fname)).fetchone()
-    if row and row["size_bytes"] == size and row["text"] is not None:
+    # reuse cached text when the file is unchanged, or when this machine does not hold the file at all
+    # (e.g. a Jetson with limited disk that received extracted text but not every attachment)
+    if row and row["text"] is not None and (row["size_bytes"] == size or size is None):
         text = row["text"]
         conn.execute("UPDATE attachments SET local_path=?, download_url=? WHERE event_id=? AND file_name=?",
                      (lp, a.get("url"), eid, fname))
