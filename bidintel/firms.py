@@ -18,7 +18,14 @@ from pathlib import Path
 import config
 from db import connect
 
-FIRMS_FILE = Path(config.os.getenv("BI_FIRMS_FILE", config.PROJECT / "Caleprocure_businesses_final.xls"))
+def get_firms_files():
+    custom = config.os.getenv("BI_FIRMS_FILE")
+    if custom:
+        return [Path(custom)]
+    files = sorted(config.PROJECT.glob("*businesses*.xls"), key=lambda p: (p.stat().st_mtime, p.name))
+    return files if files else [config.PROJECT / "Caleprocure_businesses_final.xls"]
+
+FIRMS_FILES = get_firms_files()
 EMBED_MODEL = config.os.getenv("BI_EMBED_MODEL", "nomic-embed-text")
 
 PROTECTED = {"Ethnicity", "Race", "Gender Identity", "LGBQTIA", "Disabled"}
@@ -119,36 +126,38 @@ def ingest():
     """)
     firms = {}
     n = 0
-    for r in read_rows(FIRMS_FILE):
-        n += 1
-        fid = r["Certification ID"]
-        f = firms.setdefault(fid, {
-            "id": fid, "name": r["Legal Business Name"], "dba": clean(r["Doing Business As 1"]),
-            "other_dbas": clean(r["Other DBAs"]), "certs": {}, "email": clean(r["Email ID"]),
-            "contact": " ".join(x for x in (r["First Name"], r["Last Name"]) if x).strip() or None,
-            "url": clean(r["URLID"]), "phone": clean(r["Telephone"]),
-            "address": ", ".join(x for x in (r["Address Line 1"], r["Address Line 2"]) if clean(x)),
-            "city": r["City"].strip().title(), "state": r["State"], "zip": r["Postal Code"][:5],
-            "unspsc": set(), "keywords": set(), "naics": set(), "areas": set(), "licenses": {},
-            "industry": set(), "divcerts": set()})
-        start, end = date(r["Start Date"]), date(r["End Date"])
-        for c in certs_of(r["Certification Type"]):
-            prev = f["certs"].get(c)
-            if not prev or (end or "") > prev["end"]:
-                f["certs"][c] = {"start": start, "end": end or ""}
-        f["unspsc"] |= {c for c in quoted_list(r["UNSPSC"]) if re.fullmatch(r"\d{8}", c)}
-        f["naics"] |= {c for c in quoted_list(r["NAICS"]) if c.isdigit()}
-        f["areas"] |= set(quoted_list(r["Service Areas"]))
-        f["industry"] |= set(quoted_list(r["Industry Type"]))
-        for kw in re.split(r"[,;]", r["Keywords"] or ""):
-            kw = kw.strip(" .'\"").lower()
-            if 2 <= len(kw) <= 60:
-                f["keywords"].add(kw)
-        for lic in quoted_list(r["License"]):
-            f["licenses"][lic] = license_class(lic)
-        for needle, code in DIVCERTS:
-            if needle.lower() in (r["Supplier Diversity Certs"] or "").lower():
-                f["divcerts"].add(code)
+    for fpath in FIRMS_FILES:
+        print(f"Reading {fpath.name}...")
+        for r in read_rows(fpath):
+            n += 1
+            fid = r["Certification ID"]
+            f = firms.setdefault(fid, {
+                "id": fid, "name": r["Legal Business Name"], "dba": clean(r["Doing Business As 1"]),
+                "other_dbas": clean(r["Other DBAs"]), "certs": {}, "email": clean(r["Email ID"]),
+                "contact": " ".join(x for x in (r["First Name"], r["Last Name"]) if x).strip() or None,
+                "url": clean(r["URLID"]), "phone": clean(r["Telephone"]),
+                "address": ", ".join(x for x in (r["Address Line 1"], r["Address Line 2"]) if clean(x)),
+                "city": r["City"].strip().title(), "state": r["State"], "zip": r["Postal Code"][:5],
+                "unspsc": set(), "keywords": set(), "naics": set(), "areas": set(), "licenses": {},
+                "industry": set(), "divcerts": set()})
+            start, end = date(r["Start Date"]), date(r["End Date"])
+            for c in certs_of(r["Certification Type"]):
+                prev = f["certs"].get(c)
+                if not prev or (end or "") > prev["end"]:
+                    f["certs"][c] = {"start": start, "end": end or ""}
+            f["unspsc"] |= {c for c in quoted_list(r["UNSPSC"]) if re.fullmatch(r"\d{8}", c)}
+            f["naics"] |= {c for c in quoted_list(r["NAICS"]) if c.isdigit()}
+            f["areas"] |= set(quoted_list(r["Service Areas"]))
+            f["industry"] |= set(quoted_list(r["Industry Type"]))
+            for kw in re.split(r"[,;]", r["Keywords"] or ""):
+                kw = kw.strip(" .'\"").lower()
+                if 2 <= len(kw) <= 60:
+                    f["keywords"].add(kw)
+            for lic in quoted_list(r["License"]):
+                f["licenses"][lic] = license_class(lic)
+            for needle, code in DIVCERTS:
+                if needle.lower() in (r["Supplier Diversity Certs"] or "").lower():
+                    f["divcerts"].add(code)
 
     now = datetime.now().isoformat(timespec="seconds")
     conn.execute("DELETE FROM firms")

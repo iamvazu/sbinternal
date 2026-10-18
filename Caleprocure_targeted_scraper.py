@@ -52,7 +52,30 @@ def build_driver(headless: bool = False, attachments_dir: str = "attachments") -
     }
     opts.add_experimental_option("prefs", prefs)
 
-    driver = webdriver.Chrome(options=opts)
+    service = None
+    possible_paths = [
+        "/home/iamvazu/.wdm/drivers/chromedriver/linux-arm64/154.0.8037.92/chromedriver-linux-arm64/chromedriver",
+        "/usr/bin/chromedriver",
+        "/usr/local/bin/chromedriver",
+    ]
+    for p in possible_paths:
+        if os.path.isfile(p) and os.access(p, os.X_OK):
+            from selenium.webdriver.chrome.service import Service
+            service = Service(executable_path=p)
+            break
+    if not service:
+        try:
+            from webdriver_manager.chrome import ChromeDriverManager
+            from selenium.webdriver.chrome.service import Service
+            service = Service(executable_path=ChromeDriverManager().install())
+        except Exception:
+            service = None
+
+    if service:
+        driver = webdriver.Chrome(service=service, options=opts)
+    else:
+        driver = webdriver.Chrome(options=opts)
+
     try:
         driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
             "source": "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
@@ -199,13 +222,15 @@ def extract_contact(driver, fallback_meta: Dict[str, str]) -> Dict[str, str]:
     try:
         c_name = driver.find_element(By.XPATH, "//*[@data-if-label='contactName']")
         val = clean_text(get_text(c_name))
-        if val: contact["Contact Name"] = val
+        if val and not (val.startswith("[") and val.endswith("]")):
+            contact["Contact Name"] = val
     except Exception:
         pass
     try:
         phone = driver.find_element(By.XPATH, "//*[@data-if-label='phoneText']")
         val = clean_text(get_text(phone))
-        if val: contact["Phone"] = val
+        if val and not (val.startswith("[") and val.endswith("]")):
+            contact["Phone"] = val
     except Exception:
         pass
     try:
@@ -214,7 +239,8 @@ def extract_contact(driver, fallback_meta: Dict[str, str]) -> Dict[str, str]:
         if not val and email.tag_name == "a":
             href = email.get_attribute("href") or ""
             val = href.replace("mailto:", "").split("?", 1)[0].strip()
-        if val: contact["Email"] = val
+        if val and not (val.startswith("[") and val.endswith("]")):
+            contact["Email"] = val
     except Exception:
         pass
 
@@ -252,7 +278,8 @@ def extract_description(driver, fallback_meta: Dict[str, str]) -> Optional[str]:
     try:
         el = driver.find_element(By.XPATH, "//*[@data-if-label='descriptiondetails'] | //*[@id='AUC_HDR_DESCRLONG']")
         txt = clean_text(get_text(el))
-        if txt: return txt
+        if txt and not (txt.startswith("[") and txt.endswith("]")):
+            return txt
     except Exception:
         pass
     return None
@@ -285,29 +312,46 @@ def extract_unspsc(driver) -> List[Dict[str, str]]:
 def get_attachments(driver, event_id: str, attachments_dir: str = "attachments") -> List[Dict]:
     attachments: List[Dict] = []
     try:
-        vp_list = driver.find_elements(
-            By.XPATH,
-            "//a[contains(normalize-space(),'View Event Package')]"
-            " | //button[contains(normalize-space(),'View Event Package')]"
-        )
-        if not vp_list:
+        vp_btn = None
+        selectors = [
+            "//button[@id='RESP_INQ_DL0_WK_AUC_DOWNLOAD_PB']",
+            "//a[@id='RESP_INQ_DL0_WK_AUC_DOWNLOAD_PB']",
+            "//button[contains(normalize-space(),'View Event Package')]",
+            "//a[contains(normalize-space(),'View Event Package')]",
+            "//button[contains(normalize-space(),'Comments and Attachments')]",
+            "//a[contains(normalize-space(),'Comments and Attachments')]",
+            "//button[contains(normalize-space(),'View Attachments')]",
+            "//a[contains(normalize-space(),'View Attachments')]",
+        ]
+        xpath_query = " | ".join(selectors)
+        try:
+            vp_btn = WebDriverWait(driver, 8).until(
+                EC.element_to_be_clickable((By.XPATH, xpath_query))
+            )
+        except Exception:
+            cands = driver.find_elements(By.XPATH, xpath_query)
+            if cands:
+                vp_btn = cands[0]
+
+        if not vp_btn:
             return attachments
-        driver.execute_script("arguments[0].scrollIntoView({block:'center'}); arguments[0].click();", vp_list[0])
+
+        driver.execute_script("arguments[0].scrollIntoView({block:'center'}); arguments[0].click();", vp_btn)
         time.sleep(2.5)
-    except Exception:
+    except Exception as e:
         return attachments
 
     table_xpath = "//table[.//th[contains(.,'Attached File') or contains(.,'File Name') or contains(.,'Attachment')]]"
     try:
-        WebDriverWait(driver, 6).until(
-            EC.presence_of_element_located((By.XPATH, table_xpath + "//tbody/tr[.//td]"))
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, table_xpath + "//tbody/tr[.//td] | " + table_xpath + "//tr[.//td]"))
         )
     except TimeoutException:
         return attachments
 
     i = 0
     while True:
-        rows = driver.find_elements(By.XPATH, table_xpath + "//tbody/tr[.//td]")
+        rows = driver.find_elements(By.XPATH, table_xpath + "//tbody/tr[.//td] | " + table_xpath + "//tr[.//td]")
         if i >= len(rows):
             break
         tr = rows[i]
@@ -318,7 +362,7 @@ def get_attachments(driver, event_id: str, attachments_dir: str = "attachments")
         if not lines:
             continue
         first_line = lines[0]
-        if first_line.lower() in ["delete", "upload", ""]:
+        if first_line.lower() in ["delete", "upload", "attached file", ""] or "attached file" in first_line.lower():
             continue
 
         file_name = clean_text(first_line) or f"attachment_{i}"
@@ -418,28 +462,47 @@ def get_attachments(driver, event_id: str, attachments_dir: str = "attachments")
 
     return attachments
 
+def get_latest_excel() -> str:
+    import glob
+    files = [f for f in glob.glob("caleprocure_*.xls") if "business" not in f.lower()]
+    files.sort(key=lambda p: os.path.getmtime(p), reverse=True)
+    return files[0] if files else "caleprocure_10_15.xls"
+
 def main():
     parser = argparse.ArgumentParser(description="Caleprocure Targeted Scraper based on Excel Export")
-    parser.add_argument("--excel", default="caleprocure_10_14.xls", help="Path to caleprocure Excel export")
+    parser.add_argument("--excel", default=None, help="Path to caleprocure Excel export (defaults to latest)")
     parser.add_argument("--existing-json", default="Caleprocure_Events_Data.json", help="Path to existing JSON dataset")
     parser.add_argument("--out-json", default="Caleprocure_Events_Data.json", help="Path for output JSON dataset")
     parser.add_argument("--attachments-dir", default="attachments", help="Directory for attachments")
     parser.add_argument("--headless", action="store_true", help="Run browser in headless mode")
-    parser.add_argument("--force-all", action="store_true", help="Force re-scrape of all events in Excel")
+    parser.add_argument("--ids", nargs="*", help="Specific Event IDs to re-scrape")
+    parser.add_argument("--placeholders-only", action="store_true", help="Only re-scrape events with placeholder text")
+    parser.add_argument("--missing-attachments-only", action="store_true", help="Re-scrape events that have 0 attachments")
+    parser.add_argument("--force-all", action="store_true", help="Force re-scrape all events")
     args = parser.parse_args()
 
-    excel_file = args.excel
     out_json = args.out_json
     existing_json = args.existing_json
     attachments_dir = args.attachments_dir
 
-    if not os.path.exists(excel_file):
-        print(f"[ERROR] Excel file not found: {excel_file}")
-        sys.exit(1)
-
-    print(f"[1] Parsing Excel export: {excel_file}...")
-    excel_records = parse_excel_export(excel_file)
-    print(f"[OK] Found {len(excel_records)} bid records in {excel_file}")
+    if args.excel:
+        if not os.path.exists(args.excel):
+            print(f"[ERROR] Excel file not found: {args.excel}")
+            sys.exit(1)
+        print(f"[1] Parsing Excel export: {args.excel}...")
+        excel_records = parse_excel_export(args.excel)
+    else:
+        import glob
+        excel_files = sorted([f for f in glob.glob("caleprocure_*.xls") if "business" not in f.lower()], reverse=True)
+        print(f"[1] Parsing all Excel exports: {excel_files}...")
+        all_rec_map = {}
+        for f in excel_files:
+            for r in parse_excel_export(f):
+                eid = r.get("Event ID")
+                if eid and eid not in all_rec_map:
+                    all_rec_map[eid] = r
+        excel_records = list(all_rec_map.values())
+    print(f"[OK] Found {len(excel_records)} unique bid records across exports")
 
     # Build map of clean existing scraped records
     existing_events: Dict[str, Dict] = {}
@@ -457,15 +520,32 @@ def main():
             existing_events = {}
 
     # Identify targets to scrape:
-    # A record is considered complete if it has a non-empty Description OR attachments OR UNSPSC
     targets = []
     for rec in excel_records:
         eid = rec.get("Event ID")
+        if args.ids and eid not in args.ids:
+            continue
+        if args.ids and eid in args.ids:
+            targets.append(rec)
+            continue
         existing = existing_events.get(eid)
         if args.force_all or not existing:
             targets.append(rec)
+            continue
+
+        desc = existing.get("Description") or ""
+        cname = (existing.get("Contact Information") or {}).get("Contact Name") or ""
+        email = (existing.get("Contact Information") or {}).get("Email") or ""
+        has_placeholder = ("[" in desc) or ("[" in cname) or ("[" in email)
+
+        if args.missing_attachments_only:
+            if not existing.get("Attachments"):
+                targets.append(rec)
+        elif args.placeholders_only:
+            if has_placeholder:
+                targets.append(rec)
         else:
-            is_full = bool(existing.get("Description") or existing.get("Attachments") or existing.get("UNSPSC Codes"))
+            is_full = (not has_placeholder) and bool(desc or existing.get("Attachments") or existing.get("UNSPSC Codes"))
             if not is_full:
                 targets.append(rec)
 
@@ -533,11 +613,28 @@ def main():
                     event_data["Attachments"] = []
                     event_data["Detail URL"] = canonical_url
                 else:
-                    # Clean page loaded
+                    # Clean page loaded: wait for SPA hydration
                     try:
-                        WebDriverWait(driver, 15).until(
-                            EC.presence_of_element_located((By.XPATH, "//*[normalize-space()='Details'] | //*[@data-if-label='eventId']"))
-                        )
+                        def is_page_hydrated(d):
+                            # check description
+                            d_els = d.find_elements(By.XPATH, "//*[@data-if-label='descriptiondetails'] | //*[@id='AUC_HDR_DESCRLONG']")
+                            if d_els:
+                                t = d_els[0].text.strip()
+                                if t and t != "[Detail Description]" and not (t.startswith("[") and t.endswith("]")):
+                                    return True
+                            # check contact
+                            c_els = d.find_elements(By.XPATH, "//*[@data-if-label='contactName']")
+                            if c_els:
+                                t = c_els[0].text.strip()
+                                if t and t != "[Contact Name]":
+                                    return True
+                            # check download button
+                            if d.find_elements(By.ID, "RESP_INQ_DL0_WK_AUC_DOWNLOAD_PB"):
+                                return True
+                            return False
+
+                        WebDriverWait(driver, 20).until(is_page_hydrated)
+                        time.sleep(1.5)
                     except Exception:
                         pass
 

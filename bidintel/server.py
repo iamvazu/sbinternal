@@ -12,6 +12,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlparse
 
 import analyze
+import auth
 import config
 import insights
 import llm
@@ -20,6 +21,7 @@ import matcher
 from db import connect, loads
 
 conn = connect()
+auth.seed_default_accounts(conn)
 lock = threading.Lock()  # one sqlite connection shared by request threads
 llm_busy = threading.Semaphore(1)  # the Jetson runs one generation at a time; queue the rest
 
@@ -89,18 +91,53 @@ class Handler(BaseHTTPRequestHandler):
     def log_message(self, fmt, *args):
         pass
 
-    def send(self, code, body, ctype="application/json"):
+    def send(self, code, body, ctype="application/json", headers=None):
         data = body if isinstance(body, bytes) else json.dumps(body, default=str).encode()
         self.send_response(code)
         self.send_header("Content-Type", ctype)
         self.send_header("Content-Length", str(len(data)))
         self.send_header("Cache-Control", "no-store")
+        if headers:
+            for k, v in headers.items():
+                self.send_header(k, v)
         self.end_headers()
         self.wfile.write(data)
 
     def body(self):
         n = int(self.headers.get("Content-Length") or 0)
         return json.loads(self.rfile.read(n) or b"{}")
+
+    def client_ip(self):
+        return self.client_address[0] if self.client_address else ""
+
+    def get_token(self):
+        auth_header = self.headers.get("Authorization") or ""
+        if auth_header.startswith("Bearer "):
+            return auth_header[7:].strip()
+        cookie_header = self.headers.get("Cookie") or ""
+        for part in cookie_header.split(";"):
+            if "=" in part:
+                k, v = part.strip().split("=", 1)
+                if k == "bi_session":
+                    return v.strip()
+        return None
+
+    def get_current_user(self):
+        token = self.get_token()
+        if not token:
+            return None
+        with lock:
+            return auth.get_user_from_token(conn, token)
+
+    def require_user(self, allowed_roles=None):
+        user = self.get_current_user()
+        if not user:
+            self.send(401, {"error": "Authentication required"})
+            return None
+        if allowed_roles and user.get("role") not in allowed_roles:
+            self.send(403, {"error": f"Permission denied for role: {user.get('role', '')}"})
+            return None
+        return user
 
     def do_GET(self):
         try:
@@ -118,11 +155,42 @@ class Handler(BaseHTTPRequestHandler):
             traceback.print_exc()
             self.send(500, {"error": str(e)})
 
+    def do_DELETE(self):
+        try:
+            self.route_delete(unquote(urlparse(self.path).path))
+        except Exception as e:
+            traceback.print_exc()
+            self.send(500, {"error": str(e)})
+
     def route_get(self, p):
         if p in ("/", "/index.html"):
             return self.send(200, (config.WEB_DIR / "index.html").read_bytes(), "text/html; charset=utf-8")
         if p == "/api/status":
             return self.send(200, llm.status())
+
+        # ---- Auth & Profile
+        if p == "/api/auth/me":
+            user = self.get_current_user()
+            if not user:
+                return self.send(401, {"error": "unauthorized"})
+            return self.send(200, {"user": user})
+
+        # ---- Admin & Superadmin
+        if p == "/api/admin/users":
+            user = self.require_user(("admin", "superadmin"))
+            if not user:
+                return
+            with lock:
+                return self.send(200, auth.list_users(conn))
+
+        if p == "/api/superadmin/system":
+            user = self.require_user(("superadmin",))
+            if not user:
+                return
+            with lock:
+                diag = auth.get_system_diagnostics(conn)
+            return self.send(200, diag)
+
         # ---- bid <-> business matching (own sqlite connections; no shared lock needed)
         if p == "/api/firms/stats":
             return self.send(200, matcher.firm_stats())
@@ -168,14 +236,120 @@ class Handler(BaseHTTPRequestHandler):
                 row = conn.execute("SELECT local_path FROM attachments WHERE event_id=? AND file_name=?",
                                    m.groups()).fetchone()
                 if row:
-                    f = (config.PROJECT / row["local_path"]).resolve()
+                    clean_path = str(row["local_path"]).replace("\\", "/")
+                    f = (config.PROJECT / clean_path).resolve()
                     if f.is_file() and config.ATTACHMENTS_DIR.resolve() in f.parents:
                         ctype = "application/pdf" if f.suffix.lower() == ".pdf" else "application/octet-stream"
                         return self.send(200, f.read_bytes(), ctype)
                 return self.send(404, {"error": "file not found"})
         self.send(404, {"error": "no route"})
 
+    def route_delete(self, p):
+        if m := re.fullmatch(r"/api/superadmin/users/([\w-]+)", p):
+            user = self.require_user(("superadmin",))
+            if not user:
+                return
+            with lock:
+                ok, err = auth.delete_user(conn, m.group(1), actor_user=user, ip=self.client_ip())
+            if not ok:
+                return self.send(400, {"error": err})
+            return self.send(200, {"ok": True})
+        self.send(404, {"error": "no route"})
+
     def route_post(self, p):
+        # ---- Auth endpoints
+        if p == "/api/auth/login":
+            b = self.body()
+            ua = self.headers.get("User-Agent") or ""
+            with lock:
+                user, token, err = auth.authenticate(conn, b.get("email", ""), b.get("password", ""), ip=self.client_ip(), user_agent=ua)
+            if err:
+                return self.send(401, {"error": err})
+            cookie = f"bi_session={token}; Path=/; HttpOnly; SameSite=Lax; Max-Age={auth.SESSION_DAYS*86400}"
+            return self.send(200, {"user": user, "token": token}, headers={"Set-Cookie": cookie})
+
+        if p == "/api/auth/signup":
+            b = self.body()
+            with lock:
+                user, err = auth.create_user(
+                    conn, b.get("email", ""), b.get("password", ""),
+                    b.get("first_name", ""), b.get("last_name", ""),
+                    b.get("business_name", ""), role="employee", ip=self.client_ip()
+                )
+            if err:
+                return self.send(400, {"error": err})
+            with lock:
+                user, token, _ = auth.authenticate(conn, b.get("email", ""), b.get("password", ""), ip=self.client_ip())
+            cookie = f"bi_session={token}; Path=/; HttpOnly; SameSite=Lax; Max-Age={auth.SESSION_DAYS*86400}"
+            return self.send(200, {"user": user, "token": token}, headers={"Set-Cookie": cookie})
+
+        if p == "/api/auth/logout":
+            token = self.get_token()
+            with lock:
+                auth.logout(conn, token)
+            cookie = "bi_session=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0"
+            return self.send(200, {"ok": True}, headers={"Set-Cookie": cookie})
+
+        if p == "/api/auth/change-password":
+            user = self.require_user()
+            if not user:
+                return
+            b = self.body()
+            with lock:
+                ok, err = auth.change_password(conn, user["id"], b.get("old_password", ""), b.get("new_password", ""), ip=self.client_ip())
+            if not ok:
+                return self.send(400, {"error": err})
+            return self.send(200, {"ok": True})
+
+        # ---- User management endpoints
+        if p == "/api/admin/users":
+            user = self.require_user(("admin", "superadmin"))
+            if not user:
+                return
+            b = self.body()
+            with lock:
+                new_user, err = auth.create_user(
+                    conn, b.get("email", ""), b.get("password", ""),
+                    b.get("first_name", ""), b.get("last_name", ""),
+                    b.get("business_name", ""), role=b.get("role", "employee"),
+                    actor_user=user, ip=self.client_ip()
+                )
+            if err:
+                return self.send(400, {"error": err})
+            return self.send(200, new_user)
+
+        if m := re.fullmatch(r"/api/superadmin/users/([\w-]+)/role", p):
+            user = self.require_user(("superadmin",))
+            if not user:
+                return
+            b = self.body()
+            with lock:
+                ok, err = auth.update_user_role(conn, m.group(1), b.get("role", ""), actor_user=user, ip=self.client_ip())
+            if not ok:
+                return self.send(400, {"error": err})
+            return self.send(200, {"ok": True})
+
+        if m := re.fullmatch(r"/api/superadmin/users/([\w-]+)/status", p):
+            user = self.require_user(("superadmin", "admin"))
+            if not user:
+                return
+            b = self.body()
+            with lock:
+                ok, err = auth.toggle_user_status(conn, m.group(1), b.get("is_active", True), actor_user=user, ip=self.client_ip())
+            if not ok:
+                return self.send(400, {"error": err})
+            return self.send(200, {"ok": True})
+
+        if m := re.fullmatch(r"/api/superadmin/users/([\w-]+)/delete", p):
+            user = self.require_user(("superadmin",))
+            if not user:
+                return
+            with lock:
+                ok, err = auth.delete_user(conn, m.group(1), actor_user=user, ip=self.client_ip())
+            if not ok:
+                return self.send(400, {"error": err})
+            return self.send(200, {"ok": True})
+
         if p == "/api/ask":
             b = self.body()
             return self.send(200, ask(b.get("question", ""), b.get("event_id")))

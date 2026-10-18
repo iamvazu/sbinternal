@@ -48,7 +48,7 @@ nav button[aria-selected="true"] { background: var(--accent-wash); color: var(--
   border: 1px solid var(--ring); border-radius: 999px; padding: 4px 10px; }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); }
 main { padding: 20px 24px 60px; max-width: 1440px; margin: 0 auto; }
-section[hidden] { display: none; }
+[hidden] { display: none !important; }
 h2 { font-size: 18px; margin: 0 0 4px; letter-spacing: -.01em; }
 h3 { font-size: 14px; margin: 0 0 10px; }
 .sub { color: var(--ink-2); margin: 0 0 16px; }
@@ -152,6 +152,99 @@ details.more { margin-top: 8px; } details.more summary { cursor: pointer; color:
 .bars b i { display: block; height: 100%; background: var(--accent); border-radius: 3px; }
 .contact { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 6px 16px; font-size: 12.5px; }
 .contact small { display: block; color: var(--muted); font-size: 11px; }
+
+/* ---- Auth & RBAC styles ---- */
+.user-profile-wrap { margin-left: auto; display: flex; align-items: center; gap: 10px; position: relative; }
+.badge-role { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; padding: 3px 9px; border-radius: 999px; }
+.badge-role.superadmin { background: linear-gradient(135deg, #7c3aed, #4f46e5); color: #fff; box-shadow: 0 2px 8px rgba(124,58,237,.35); }
+.badge-role.admin { background: linear-gradient(135deg, #2563eb, #1d4ed8); color: #fff; box-shadow: 0 2px 8px rgba(37,99,235,.3); }
+.badge-role.employee { background: linear-gradient(135deg, #059669, #047857); color: #fff; box-shadow: 0 2px 8px rgba(5,150,105,.3); }
+.user-btn { display: flex; align-items: center; gap: 8px; border: 1px solid var(--ring); background: var(--surface); color: var(--ink); padding: 4px 10px 4px 5px; border-radius: 999px; font-size: 13px; font-weight: 550; }
+.user-btn:hover { background: var(--surface-2); }
+.user-avatar { width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; }
+.user-caret { font-size: 10px; color: var(--muted); }
+.user-dropdown { position: absolute; top: calc(100% + 8px); right: 0; width: 250px; background: var(--surface); border: 1px solid var(--ring); border-radius: 12px; box-shadow: 0 12px 32px rgba(0,0,0,.15); padding: 8px; z-index: 50; display: grid; gap: 4px; }
+.dropdown-header { padding: 8px 10px; border-bottom: 1px solid var(--grid); margin-bottom: 4px; }
+.dd-email { font-size: 12px; font-weight: 600; color: var(--ink); overflow: hidden; text-overflow: ellipsis; }
+.dd-role { font-size: 11px; color: var(--muted); text-transform: uppercase; margin-top: 2px; }
+.dropdown-section { padding: 6px 10px; border-bottom: 1px solid var(--grid); margin-bottom: 4px; }
+.dd-label { font-size: 11px; color: var(--muted); margin-bottom: 4px; font-weight: 600; }
+.role-switch-pills { display: flex; gap: 4px; flex-wrap: wrap; }
+.role-pill-btn { border: 1px solid var(--ring); background: var(--surface-2); color: var(--ink-2); font-size: 10.5px; padding: 2px 6px; border-radius: 6px; cursor: pointer; }
+.role-pill-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 600; }
+.dd-item { border: 0; background: none; text-align: left; padding: 8px 10px; border-radius: 7px; color: var(--ink); font-size: 12.5px; cursor: pointer; display: flex; align-items: center; gap: 8px; }
+.dd-item:hover { background: var(--surface-2); }
+.dd-item.danger { color: var(--critical); }
+.dd-item.danger:hover { background: rgba(208,59,59,0.08); }
+
+/* Split screen auth modal */
+.auth-overlay { position: fixed; inset: 0; z-index: 1000; background: rgba(10,12,18,.84); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; padding: 20px; }
+.auth-card { width: min(1060px, 100%); min-height: 620px; background: var(--surface); border-radius: 20px; overflow: hidden; display: grid; grid-template-columns: 1.15fr 1fr; box-shadow: 0 30px 80px -15px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.08); }
+@media (max-width: 860px) { .auth-card { grid-template-columns: 1fr; max-height: 94vh; overflow-y: auto; } .auth-hero { display: none; } }
+.auth-hero {
+  background: linear-gradient(145deg, rgba(12,22,40,0.92) 0%, rgba(18,34,62,0.85) 55%, rgba(194,103,14,0.4) 100%),
+              radial-gradient(ellipse at 80% 20%, rgba(245,158,11,0.25), transparent 60%),
+              radial-gradient(circle at 20% 80%, rgba(37,99,235,0.3), transparent 50%),
+              #0c1424;
+  color: #fff; padding: 48px 44px; display: flex; flex-direction: column; justify-content: space-between; position: relative;
+}
+.auth-hero::before {
+  content: ""; position: absolute; inset: 0; opacity: 0.12; pointer-events: none;
+  background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;
+}
+.auth-hero-content { position: relative; z-index: 1; display: flex; flex-direction: column; height: 100%; justify-content: space-between; }
+.auth-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 36px; }
+.auth-brand-badge { width: 34px; height: 34px; border-radius: 9px; background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; box-shadow: 0 4px 12px rgba(245,158,11,.35); }
+.auth-brand-name { font-size: 18px; font-weight: 750; letter-spacing: -.02em; color: #fff; }
+.auth-brand-name span { color: #f59e0b; }
+.auth-headline { font-size: clamp(26px, 3vw, 34px); font-weight: 800; line-height: 1.2; letter-spacing: -.025em; margin: 0 0 16px; color: #ffffff; }
+.auth-headline .highlight { color: #f59e0b; text-shadow: 0 0 24px rgba(245,158,11,.35); }
+.auth-subhead { font-size: 14.5px; line-height: 1.55; color: rgba(255,255,255,0.78); margin: 0 0 36px; max-width: 440px; }
+.auth-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); padding: 20px 0; margin-bottom: 28px; }
+.auth-metric .num { display: block; font-size: 24px; font-weight: 800; color: #ffffff; letter-spacing: -.02em; }
+.auth-metric .lbl { font-size: 10px; font-weight: 650; color: rgba(255,255,255,0.6); letter-spacing: .06em; margin-top: 3px; display: block; }
+.auth-guide-link { color: #fcd34d; font-size: 13px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+.auth-guide-link:hover { text-decoration: underline; color: #ffffff; }
+
+.auth-panel { padding: 44px 48px; display: flex; flex-direction: column; justify-content: center; background: var(--surface); }
+@media (max-width: 540px) { .auth-panel { padding: 28px 20px; } }
+.auth-header { margin-bottom: 20px; }
+.auth-header h2 { font-size: 24px; font-weight: 750; letter-spacing: -.02em; margin: 0 0 6px; color: var(--ink); }
+.auth-header .sub { margin: 0; font-size: 13.5px; color: var(--ink-2); }
+.auth-toggle { display: grid; grid-template-columns: 1fr 1fr; background: var(--surface-2); border-radius: 10px; padding: 3px; margin-bottom: 18px; border: 1px solid var(--ring); }
+.auth-tab { border: 0; background: none; color: var(--ink-2); font-size: 13px; font-weight: 600; padding: 8px 14px; border-radius: 8px; cursor: pointer; transition: all .15s ease; }
+.auth-tab.active { background: var(--surface); color: var(--ink); box-shadow: 0 2px 6px rgba(0,0,0,.08); }
+.demo-bar { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; font-size: 11.5px; padding: 8px 12px; background: var(--surface-2); border-radius: 8px; border: 1px solid var(--ring); }
+.demo-lbl { color: var(--muted); font-weight: 600; }
+.demo-btn { border: 1px solid var(--axis); background: var(--surface); color: var(--ink-2); font-size: 11px; padding: 3px 8px; border-radius: 6px; cursor: pointer; }
+.demo-btn:hover { background: var(--accent-wash); color: var(--ink); border-color: var(--accent); }
+.auth-alert { padding: 10px 14px; border-radius: 8px; font-size: 12.5px; margin-bottom: 16px; background: rgba(208,59,59,0.1); border: 1px solid var(--critical); color: var(--critical); }
+.auth-alert.success { background: rgba(12,163,12,0.1); border-color: var(--good); color: var(--good-ink); }
+.auth-field { display: grid; gap: 5px; font-size: 12px; font-weight: 600; color: var(--ink-2); margin-bottom: 14px; }
+.auth-field input, .auth-field select { font-size: 13.5px; padding: 10px 12px; border: 1px solid var(--axis); border-radius: 8px; background: var(--surface); color: var(--ink); }
+.auth-field input:focus, .auth-field select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-wash); }
+.pwd-input-wrap { position: relative; display: flex; align-items: center; }
+.pwd-input-wrap input { width: 100%; padding-right: 38px; }
+.pwd-toggle { position: absolute; right: 8px; border: 0; background: none; color: var(--muted); cursor: pointer; font-size: 14px; padding: 6px; }
+.form-row.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.auth-submit-btn { width: 100%; padding: 12px 18px; border: 0; border-radius: 9px; background: #2251a3; color: #fff; font-size: 14px; font-weight: 650; cursor: pointer; margin-top: 6px; transition: filter .15s; box-shadow: 0 4px 14px rgba(34,81,163,.3); }
+.auth-submit-btn:hover { filter: brightness(1.08); }
+.auth-submit-btn:disabled { opacity: .6; cursor: wait; }
+.auth-legal { margin-top: 22px; text-align: center; font-size: 11.5px; color: var(--muted); display: grid; gap: 8px; }
+.auth-legal a { color: var(--muted); text-decoration: none; }
+.auth-legal a:hover { color: var(--ink-2); text-decoration: underline; }
+.trust-badge { font-size: 11.5px; color: var(--ink-2); display: flex; justify-content: center; gap: 10px; }
+
+/* Modals */
+.modal-card { width: min(480px, 92%); background: var(--surface); border-radius: 14px; box-shadow: 0 20px 60px rgba(0,0,0,.25); border: 1px solid var(--ring); overflow: hidden; margin: 40px auto; }
+.modal-head { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; border-bottom: 1px solid var(--grid); }
+.modal-head h3 { margin: 0; font-size: 15px; }
+
+/* Superadmin Console styles */
+.badge-status { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; padding: 2px 7px; border-radius: 999px; font-weight: 600; }
+.badge-status.active { background: rgba(12,163,12,0.12); color: var(--good-ink); }
+.badge-status.inactive { background: rgba(208,59,59,0.12); color: var(--critical); }
+.select-role { font-size: 12px; padding: 4px 8px; border-radius: 6px; border: 1px solid var(--axis); background: var(--surface); color: var(--ink); }
 </style>
 </head>
 <body>
@@ -165,8 +258,33 @@ details.more { margin-top: 8px; } details.more summary { cursor: pointer; color:
       <button data-view="bidmatch">Bid Matching</button>
       <button data-view="lens">Certification Lens</button>
       <button data-view="ask">Ask</button>
+      <button data-view="superadmin" id="nav-superadmin" hidden>Superadmin Console</button>
     </nav>
     <span class="pill" id="model"><span class="dot"></span>checking model…</span>
+    <div id="user-profile-wrap" class="user-profile-wrap">
+      <div id="user-role-badge" class="badge-role superadmin">Superadmin</div>
+      <button id="user-btn" class="user-btn" title="Account profile">
+        <span id="user-avatar" class="user-avatar">IV</span>
+        <span id="user-name" class="user-name">Iam Vazu</span>
+        <span class="user-caret">▾</span>
+      </button>
+      <div id="user-dropdown" class="user-dropdown" hidden>
+        <div class="dropdown-header">
+          <div id="dd-email" class="dd-email">iamvazu@gmail.com</div>
+          <div id="dd-role" class="dd-role">Superadmin</div>
+        </div>
+        <div class="dropdown-section" id="role-preview-section">
+          <div class="dd-label">Preview Role View:</div>
+          <div class="role-switch-pills">
+            <button class="role-pill-btn active" data-preview-role="superadmin">Superadmin</button>
+            <button class="role-pill-btn" data-preview-role="admin">Admin</button>
+            <button class="role-pill-btn" data-preview-role="employee">Employee</button>
+          </div>
+        </div>
+        <button class="dd-item" id="btn-change-pwd">Change Password</button>
+        <button class="dd-item danger" id="btn-logout">Sign Out</button>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -267,17 +385,304 @@ details.more { margin-top: 8px; } details.more summary { cursor: pointer; color:
       <button class="btn primary">Ask</button>
     </form>
   </section>
+  <!-- SUPERADMIN CONSOLE -->
+  <section id="v-superadmin" hidden>
+    <div class="row" style="justify-content:space-between;align-items:flex-start;margin-bottom:16px">
+      <div>
+        <h2 style="font-size:22px;margin:0 0 4px">Superadmin Console</h2>
+        <div class="t-sub">Manage platform accounts, security permissions, database metrics, and audit telemetry.</div>
+      </div>
+      <div class="row">
+        <button class="btn primary" id="sa-add-user-btn">+ Add New User</button>
+        <button class="btn" id="sa-refresh-btn">Refresh Metrics</button>
+      </div>
+    </div>
+
+    <!-- Superadmin Sub Tabs -->
+    <div class="seg" id="sa-tabs" style="margin-bottom:16px">
+      <button data-satab="users" class="sa-tab-btn" aria-selected="true">User Management (<span id="sa-user-count">0</span>)</button>
+      <button data-satab="diagnostics" class="sa-tab-btn">System Diagnostics</button>
+      <button data-satab="audit" class="sa-tab-btn">Audit Log Trail</button>
+    </div>
+
+    <!-- TAB 1: USERS -->
+    <div id="sa-tab-users">
+      <div class="card" style="padding:0">
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th>User / Name</th>
+                <th>Email</th>
+                <th>Business</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Created</th>
+                <th>Last Login</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="sa-users-table">
+              <tr><td colspan="8"><span class="spin"></span> Loading users…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: SYSTEM DIAGNOSTICS -->
+    <div id="sa-tab-diagnostics" hidden>
+      <div class="grid three" id="sa-diag-kpis" style="margin-bottom:16px"></div>
+      <div class="grid two">
+        <div class="card">
+          <h3 style="margin-top:0">Database Tables &amp; Records</h3>
+          <table id="sa-db-table"><tbody></tbody></table>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Infrastructure &amp; Model Status</h3>
+          <div id="sa-infra-info" style="display:grid;gap:10px"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: AUDIT LOGS -->
+    <div id="sa-tab-audit" hidden>
+      <div class="card" style="padding:0">
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr><th>Timestamp</th><th>User</th><th>Role</th><th>Action</th><th>Details</th><th>IP</th></tr>
+            </thead>
+            <tbody id="sa-audit-table"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <div class="tip" id="tip"></div>
 <div class="scrim" id="scrim" hidden></div>
 <aside id="drawer" hidden></aside>
 
+<!-- AUTH SPLIT SCREEN OVERLAY -->
+<div id="auth-overlay" class="auth-overlay" hidden>
+  <div class="auth-card">
+    <!-- LEFT HERO (Matching FindBids Reference Screenshot) -->
+    <div class="auth-hero">
+      <div class="auth-hero-content">
+        <div class="auth-brand">
+          <span class="auth-brand-badge">FS</span>
+          <span class="auth-brand-name">STRONGER<span>built</span></span>
+        </div>
+        <div>
+          <h1 class="auth-headline">
+            Find and Win Government Contracts <span class="highlight">in California.</span>
+          </h1>
+          <p class="auth-subhead">
+            Surface and draft responses towards the best bids - for you, from every new solicitation across California.
+          </p>
+        </div>
+        <div class="auth-metrics">
+          <div class="auth-metric">
+            <span class="num">400+</span>
+            <span class="lbl">PORTALS MONITORED</span>
+          </div>
+          <div class="auth-metric">
+            <span class="num">4.9★</span>
+            <span class="lbl">CUSTOMER RATING</span>
+          </div>
+          <div class="auth-metric">
+            <span class="num">20hrs</span>
+            <span class="lbl">SAVED PER WEEK</span>
+          </div>
+        </div>
+        <div class="auth-hero-footer">
+          <a href="#" class="auth-guide-link">New to government bidding? Start here →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="auth-panel">
+      <div class="auth-form-wrap">
+        <div class="auth-header">
+          <h2 id="auth-title">Start your free trial</h2>
+          <p class="sub" id="auth-subtitle">No credit card required · 7-day free trial</p>
+        </div>
+
+        <!-- Segmented Toggle -->
+        <div class="auth-toggle">
+          <button id="auth-tab-login" type="button" class="auth-tab">Log In</button>
+          <button id="auth-tab-signup" type="button" class="auth-tab active">Sign Up</button>
+        </div>
+
+        <!-- Quick Demo Switcher -->
+        <div class="demo-bar">
+          <span class="demo-lbl">Demo Fast Fill:</span>
+          <button type="button" class="demo-btn" data-email="iamvazu@gmail.com" data-pass="Admin#2026!" title="Login as Superadmin">iamvazu (Superadmin)</button>
+          <button type="button" class="demo-btn" data-email="admin@strongerbuilt.com" data-pass="Admin#2026!" title="Login as Admin">admin</button>
+          <button type="button" class="demo-btn" data-email="employee@strongerbuilt.com" data-pass="Admin#2026!" title="Login as Employee">employee</button>
+        </div>
+
+        <!-- Alert Banner -->
+        <div id="auth-alert" class="auth-alert" hidden></div>
+
+        <!-- SIGN UP FORM -->
+        <form id="signup-form">
+          <div class="form-row two-col">
+            <label class="auth-field">
+              <span>First Name</span>
+              <input type="text" id="su-first" placeholder="Jane" required>
+            </label>
+            <label class="auth-field">
+              <span>Last Name</span>
+              <input type="text" id="su-last" placeholder="Doe" required>
+            </label>
+          </div>
+          <label class="auth-field">
+            <span>Business Name</span>
+            <input type="text" id="su-biz" placeholder="Acme Corp" required>
+          </label>
+          <label class="auth-field">
+            <span>Email address</span>
+            <input type="email" id="su-email" placeholder="you@company.com" required autocomplete="email">
+          </label>
+          <label class="auth-field">
+            <span>Password</span>
+            <div class="pwd-input-wrap">
+              <input type="password" id="su-pwd" placeholder="Min. 8 characters" required minlength="8" autocomplete="new-password">
+              <button type="button" class="pwd-toggle" data-for="su-pwd" aria-label="Toggle password visibility">👁</button>
+            </div>
+          </label>
+          <button type="submit" class="auth-submit-btn" id="su-submit">Start Free Trial</button>
+        </form>
+
+        <!-- LOG IN FORM -->
+        <form id="login-form" hidden>
+          <label class="auth-field">
+            <span>Email address</span>
+            <input type="email" id="li-email" placeholder="you@company.com" required autocomplete="email">
+          </label>
+          <label class="auth-field">
+            <span>Password</span>
+            <div class="pwd-input-wrap">
+              <input type="password" id="li-pwd" placeholder="Enter your password" required autocomplete="current-password">
+              <button type="button" class="pwd-toggle" data-for="li-pwd" aria-label="Toggle password visibility">👁</button>
+            </div>
+          </label>
+          <button type="submit" class="auth-submit-btn" id="li-submit">Log In</button>
+        </form>
+
+        <div class="auth-legal">
+          <div class="legal-links">
+            <a href="#">Terms of Service</a> · <a href="#">Privacy Policy</a> · <a href="#">Refund Policy</a> · <a href="#">Cookie Policy</a>
+          </div>
+          <div class="trust-badge">
+            <span>🔒 Encrypted &amp; secure</span> · <span>📍 California-based</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CHANGE PASSWORD MODAL -->
+<div id="modal-pwd" class="scrim" hidden style="display:none;align-items:center;justify-content:center">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h3>Change Password</h3>
+      <button class="btn" id="modal-pwd-close">✕</button>
+    </div>
+    <form id="pwd-form" style="padding:16px 20px;display:grid;gap:12px">
+      <div id="pwd-alert" class="auth-alert" hidden></div>
+      <label class="auth-field">
+        <span>Current Password</span>
+        <input type="password" id="pwd-old" required>
+      </label>
+      <label class="auth-field">
+        <span>New Password (min 8 chars)</span>
+        <input type="password" id="pwd-new" minlength="8" required>
+      </label>
+      <label class="auth-field">
+        <span>Confirm New Password</span>
+        <input type="password" id="pwd-confirm" minlength="8" required>
+      </label>
+      <div class="row" style="justify-content:flex-end;margin-top:8px">
+        <button type="button" class="btn" id="modal-pwd-cancel">Cancel</button>
+        <button type="submit" class="btn primary">Update Password</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- CREATE USER MODAL (SUPERADMIN / ADMIN) -->
+<div id="modal-create-user" class="scrim" hidden style="display:none;align-items:center;justify-content:center">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h3>Add New Platform User</h3>
+      <button class="btn" id="modal-cu-close">✕</button>
+    </div>
+    <form id="cu-form" style="padding:16px 20px;display:grid;gap:12px">
+      <div id="cu-alert" class="auth-alert" hidden></div>
+      <div class="form-row two-col">
+        <label class="auth-field">
+          <span>First Name</span>
+          <input type="text" id="cu-first" required>
+        </label>
+        <label class="auth-field">
+          <span>Last Name</span>
+          <input type="text" id="cu-last" required>
+        </label>
+      </div>
+      <label class="auth-field">
+        <span>Business Name</span>
+        <input type="text" id="cu-biz" placeholder="e.g. Acme Contracting">
+      </label>
+      <label class="auth-field">
+        <span>Email Address</span>
+        <input type="email" id="cu-email" required>
+      </label>
+      <label class="auth-field">
+        <span>Temporary Password</span>
+        <input type="password" id="cu-pwd" minlength="8" value="Admin#2026!" required>
+      </label>
+      <label class="auth-field">
+        <span>Assigned Role</span>
+        <select id="cu-role">
+          <option value="employee">Employee (Operational Bids &amp; Matches)</option>
+          <option value="admin">Admin (Team, Clients &amp; Reports)</option>
+          <option value="superadmin">Superadmin (Full System Control)</option>
+        </select>
+      </label>
+      <div class="row" style="justify-content:flex-end;margin-top:8px">
+        <button type="button" class="btn" id="modal-cu-cancel">Cancel</button>
+        <button type="submit" class="btn primary">Create User</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 <script>
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const api = async (p, o) => { const r = await fetch(p, o); const j = await r.json(); if (!r.ok) throw new Error(j.error || r.status); return j; };
-const post = (p, body) => api(p, {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body || {})});
+let CURRENT_USER = null, PREVIEW_ROLE = null;
+const api = async (p, o = {}) => {
+  const headers = Object.assign({}, o.headers || {});
+  const token = localStorage.getItem("bi_token");
+  if (token && !headers["Authorization"]) headers["Authorization"] = "Bearer " + token;
+  const opts = Object.assign({}, o, { headers, credentials: "same-origin" });
+  const r = await fetch(p, opts);
+  const j = await r.json().catch(() => ({}));
+  if (r.status === 401 && !p.startsWith("/api/auth/")) {
+    showAuthModal("login");
+    throw new Error("Authentication required");
+  }
+  if (!r.ok) throw new Error(j.error || r.statusText || r.status);
+  return j;
+};
+const post = (p, body, o = {}) => api(p, Object.assign({}, o, {method: "POST", headers: Object.assign({"Content-Type": "application/json"}, o.headers || {}), body: JSON.stringify(body || {})}));
+const del = (p, o = {}) => api(p, Object.assign({}, o, {method: "DELETE"}));
 
 const SIG = {
   sb_set_aside: "SB set-aside", sb_dvbe_option: "SB/DVBE option", sb_preference: "SB 5% preference",
@@ -763,23 +1168,477 @@ async function loadFirmMatch(fid) {
   bindFirmActions();
 }
 
+/* ---------------- auth & user management ---------------- */
+function effectiveRole() {
+  return PREVIEW_ROLE || (CURRENT_USER ? CURRENT_USER.role : "employee");
+}
+
+function showAuthModal(mode = "signup") {
+  const o = $("#auth-overlay");
+  o.hidden = false;
+  switchAuthTab(mode);
+}
+
+function hideAuthModal() {
+  $("#auth-overlay").hidden = true;
+  $("#auth-alert").hidden = true;
+}
+
+function switchAuthTab(tab) {
+  const isLogin = tab === "login";
+  $("#auth-tab-login").classList.toggle("active", isLogin);
+  $("#auth-tab-signup").classList.toggle("active", !isLogin);
+  $("#login-form").hidden = !isLogin;
+  $("#signup-form").hidden = isLogin;
+  $("#auth-title").textContent = isLogin ? "Welcome back" : "Start your free trial";
+  $("#auth-subtitle").textContent = isLogin ? "Log in to access your intelligence dashboard" : "No credit card required · 7-day free trial";
+  $("#auth-alert").hidden = true;
+}
+
+$("#auth-tab-login").onclick = () => switchAuthTab("login");
+$("#auth-tab-signup").onclick = () => switchAuthTab("signup");
+
+// Password visibility toggle
+document.querySelectorAll(".pwd-toggle").forEach(btn => {
+  btn.onclick = () => {
+    const inp = $("#" + btn.dataset.for);
+    if (inp) inp.type = inp.type === "password" ? "text" : "password";
+  };
+});
+
+// Demo fast fill buttons
+document.querySelectorAll(".demo-btn").forEach(btn => {
+  btn.onclick = () => {
+    switchAuthTab("login");
+    $("#li-email").value = btn.dataset.email;
+    $("#li-pwd").value = btn.dataset.pass;
+    $("#login-form").requestSubmit();
+  };
+});
+
+// Login submit
+$("#login-form").onsubmit = async e => {
+  e.preventDefault();
+  const btn = $("#li-submit");
+  btn.disabled = true;
+  btn.innerHTML = `<span class="spin"></span> Signing in…`;
+  $("#auth-alert").hidden = true;
+  try {
+    const res = await post("/api/auth/login", {
+      email: $("#li-email").value.trim(),
+      password: $("#li-pwd").value
+    });
+    localStorage.setItem("bi_token", res.token);
+    CURRENT_USER = res.user;
+    hideAuthModal();
+    await initApp();
+  } catch (err) {
+    const al = $("#auth-alert");
+    al.hidden = false;
+    al.textContent = err.message || "Invalid email or password";
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Log In";
+  }
+};
+
+// Signup submit
+$("#signup-form").onsubmit = async e => {
+  e.preventDefault();
+  const btn = $("#su-submit");
+  btn.disabled = true;
+  btn.innerHTML = `<span class="spin"></span> Creating account…`;
+  $("#auth-alert").hidden = true;
+  try {
+    const res = await post("/api/auth/signup", {
+      first_name: $("#su-first").value.trim(),
+      last_name: $("#su-last").value.trim(),
+      business_name: $("#su-biz").value.trim(),
+      email: $("#su-email").value.trim(),
+      password: $("#su-pwd").value
+    });
+    localStorage.setItem("bi_token", res.token);
+    CURRENT_USER = res.user;
+    hideAuthModal();
+    await initApp();
+  } catch (err) {
+    const al = $("#auth-alert");
+    al.hidden = false;
+    al.textContent = err.message || "Could not create account";
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Start Free Trial";
+  }
+};
+
+// User Profile Bar
+function renderUserProfile() {
+  if (!CURRENT_USER) return;
+  const role = effectiveRole();
+  const badge = $("#user-role-badge");
+  badge.className = `badge-role ${role}`;
+  badge.textContent = role === "superadmin" ? "★ Superadmin" : (role === "admin" ? "🛡️ Admin" : "👤 Employee");
+
+  const initials = ((CURRENT_USER.first_name?.[0] || "") + (CURRENT_USER.last_name?.[0] || "")).toUpperCase() || "U";
+  $("#user-avatar").textContent = initials;
+  $("#user-name").textContent = `${CURRENT_USER.first_name} ${CURRENT_USER.last_name}`;
+  $("#dd-email").textContent = CURRENT_USER.email;
+  $("#dd-role").textContent = `Active Role: ${role.toUpperCase()}`;
+
+  // Superadmin view preview controls
+  const prevSec = $("#role-preview-section");
+  if (CURRENT_USER.role === "superadmin") {
+    prevSec.hidden = false;
+    document.querySelectorAll(".role-pill-btn").forEach(b => {
+      b.classList.toggle("active", b.dataset.previewRole === role);
+      b.onclick = () => {
+        PREVIEW_ROLE = b.dataset.previewRole === "superadmin" ? null : b.dataset.previewRole;
+        renderUserProfile();
+        applyRolePermissions();
+        if (effectiveRole() !== "superadmin" && !$("#v-superadmin").hidden) {
+          show("command");
+        }
+      };
+    });
+  } else {
+    prevSec.hidden = true;
+  }
+}
+
+// User dropdown toggle
+$("#user-btn").onclick = e => {
+  e.stopPropagation();
+  const dd = $("#user-dropdown");
+  dd.hidden = !dd.hidden;
+};
+document.addEventListener("click", e => {
+  if (!e.target.closest("#user-profile-wrap")) {
+    $("#user-dropdown").hidden = true;
+  }
+});
+
+// Logout
+$("#btn-logout").onclick = async () => {
+  try { await post("/api/auth/logout"); } catch {}
+  localStorage.removeItem("bi_token");
+  CURRENT_USER = null;
+  PREVIEW_ROLE = null;
+  $("#user-dropdown").hidden = true;
+  showAuthModal("login");
+};
+
+// Change Password Modal
+$("#btn-change-pwd").onclick = () => {
+  $("#user-dropdown").hidden = true;
+  $("#modal-pwd").hidden = false;
+  $("#modal-pwd").style.display = "flex";
+  $("#pwd-alert").hidden = true;
+};
+$("#modal-pwd-close").onclick = $("#modal-pwd-cancel").onclick = () => {
+  $("#modal-pwd").hidden = true;
+  $("#modal-pwd").style.display = "none";
+};
+$("#pwd-form").onsubmit = async e => {
+  e.preventDefault();
+  const p1 = $("#pwd-new").value, p2 = $("#pwd-confirm").value;
+  if (p1 !== p2) {
+    const al = $("#pwd-alert"); al.hidden = false; al.className = "auth-alert"; al.textContent = "New passwords do not match"; return;
+  }
+  try {
+    await post("/api/auth/change-password", {
+      old_password: $("#pwd-old").value,
+      new_password: p1
+    });
+    const al = $("#pwd-alert"); al.hidden = false; al.className = "auth-alert success"; al.textContent = "Password updated successfully!";
+    setTimeout(() => { $("#modal-pwd-close").click(); $("#pwd-form").reset(); }, 1200);
+  } catch (err) {
+    const al = $("#pwd-alert"); al.hidden = false; al.className = "auth-alert"; al.textContent = err.message || "Failed to change password";
+  }
+};
+
+// Role permissions
+function applyRolePermissions() {
+  const role = effectiveRole();
+  const isSuper = role === "superadmin";
+  const isAdmin = role === "admin" || isSuper;
+
+  $("#nav-superadmin").hidden = !isSuper;
+
+  // Admin controls
+  const briefBtn = $("#brief-btn");
+  if (briefBtn) briefBtn.style.display = isAdmin ? "inline-block" : "none";
+  const newClientBtn = $("#new-client");
+  if (newClientBtn) newClientBtn.style.display = isAdmin ? "inline-block" : "none";
+}
+
+/* ---------------- superadmin console ---------------- */
+let SA_USERS = [], SA_TAB = "users";
+
+document.querySelectorAll(".sa-tab-btn").forEach(btn => {
+  btn.onclick = () => {
+    SA_TAB = btn.dataset.satab;
+    document.querySelectorAll(".sa-tab-btn").forEach(b => b.setAttribute("aria-selected", b === btn));
+    $("#sa-tab-users").hidden = SA_TAB !== "users";
+    $("#sa-tab-diagnostics").hidden = SA_TAB !== "diagnostics";
+    $("#sa-tab-audit").hidden = SA_TAB !== "audit";
+  };
+});
+
+async function renderSuperadmin() {
+  if (effectiveRole() !== "superadmin") return;
+  await loadSuperadminData();
+}
+
+async function loadSuperadminData() {
+  try {
+    const [users, diag] = await Promise.all([
+      api("/api/admin/users"),
+      api("/api/superadmin/system")
+    ]);
+    SA_USERS = users;
+    $("#sa-user-count").textContent = users.length;
+    renderSuperadminUsers(users);
+    renderSuperadminDiagnostics(diag);
+    renderSuperadminAudit(diag.recent_audit || []);
+  } catch (err) {
+    console.error("Superadmin load error:", err);
+  }
+}
+
+function renderSuperadminUsers(users) {
+  const tbody = $("#sa-users-table");
+  if (!users.length) {
+    tbody.innerHTML = `<tr><td colspan="8" class="empty">No users found.</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = users.map(u => {
+    const isPrimary = u.email === "iamvazu@gmail.com";
+    const statusClass = u.is_active ? "active" : "inactive";
+    const statusLabel = u.is_active ? "Active" : "Suspended";
+    const created = u.created_at ? new Date(u.created_at).toLocaleDateString(undefined, {month: "short", day: "numeric", year: "numeric"}) : "—";
+    const login = u.last_login ? new Date(u.last_login).toLocaleString(undefined, {month: "short", day: "numeric", hour: "2-digit", minute: "2-digit"}) : "Never";
+
+    return `<tr>
+      <td>
+        <div class="t-name">${esc(u.first_name)} ${esc(u.last_name)}</div>
+        <div class="t-sub">${isPrimary ? `<span style="color:#d97706;font-weight:700">★ Primary Owner</span>` : esc(u.id)}</div>
+      </td>
+      <td><code>${esc(u.email)}</code></td>
+      <td>${esc(u.business_name || "—")}</td>
+      <td>
+        <select class="select-role" data-uid="${u.id}" ${isPrimary ? "disabled title='Primary owner cannot be demoted'" : ""}>
+          <option value="superadmin" ${u.role === "superadmin" ? "selected" : ""}>Superadmin</option>
+          <option value="admin" ${u.role === "admin" ? "selected" : ""}>Admin</option>
+          <option value="employee" ${u.role === "employee" ? "selected" : ""}>Employee</option>
+        </select>
+      </td>
+      <td>
+        <span class="badge-status ${statusClass}">${statusLabel}</span>
+      </td>
+      <td class="num">${created}</td>
+      <td class="num">${login}</td>
+      <td>
+        <div class="row">
+          ${!isPrimary ? `
+            <button class="btn" data-act-toggle="${u.id}" data-cur="${u.is_active}" style="padding:4px 8px;font-size:11.5px">
+              ${u.is_active ? "Suspend" : "Activate"}
+            </button>
+            <button class="btn" data-act-del="${u.id}" style="padding:4px 8px;font-size:11.5px;color:var(--critical)">
+              Delete
+            </button>
+          ` : `<span class="t-sub">Protected</span>`}
+        </div>
+      </td>
+    </tr>`;
+  }).join("");
+
+  // Bind role change
+  tbody.querySelectorAll(".select-role").forEach(sel => {
+    sel.onchange = async () => {
+      const uid = sel.dataset.uid;
+      const newRole = sel.value;
+      try {
+        await post(`/api/superadmin/users/${uid}/role`, { role: newRole });
+        loadSuperadminData();
+      } catch (e) {
+        alert("Failed to update role: " + e.message);
+        loadSuperadminData();
+      }
+    };
+  });
+
+  // Bind status toggle
+  tbody.querySelectorAll("[data-act-toggle]").forEach(btn => {
+    btn.onclick = async () => {
+      const uid = btn.dataset.actToggle;
+      const cur = btn.dataset.cur === "1" || btn.dataset.cur === "true";
+      try {
+        await post(`/api/superadmin/users/${uid}/status`, { is_active: !cur });
+        loadSuperadminData();
+      } catch (e) {
+        alert("Status update failed: " + e.message);
+      }
+    };
+  });
+
+  // Bind delete
+  tbody.querySelectorAll("[data-act-del]").forEach(btn => {
+    btn.onclick = async () => {
+      const uid = btn.dataset.actDel;
+      if (!confirm("Are you sure you want to delete this user? This cannot be undone.")) return;
+      try {
+        await del(`/api/superadmin/users/${uid}`);
+        loadSuperadminData();
+      } catch (e) {
+        alert("Delete failed: " + e.message);
+      }
+    };
+  });
+}
+
+function renderSuperadminDiagnostics(diag) {
+  const u = diag.users || {};
+  const db = diag.database || {};
+  $("#sa-diag-kpis").innerHTML = `
+    <div class="card kpi">
+      <div class="v">${u.total || 0}</div>
+      <div class="l">Registered Users</div>
+      <div class="h">${u.by_role?.superadmin || 0} Superadmin, ${u.by_role?.admin || 0} Admin, ${u.by_role?.employee || 0} Employee</div>
+    </div>
+    <div class="card kpi">
+      <div class="v">${u.active_sessions || 0}</div>
+      <div class="l">Active Sessions</div>
+      <div class="h">Valid non-expired session tokens</div>
+    </div>
+    <div class="card kpi">
+      <div class="v">${db.events || 0}</div>
+      <div class="l">Tracked Solicitations</div>
+      <div class="h">${db.attachments || 0} attachments · ${db.chunks || 0} chunks</div>
+    </div>
+  `;
+
+  // DB Table
+  $("#sa-db-table").innerHTML = Object.entries(db).map(([tbl, count]) => `
+    <tr>
+      <td style="font-weight:600"><code>${esc(tbl)}</code></td>
+      <td class="num" style="font-weight:700">${Number(count).toLocaleString()} rows</td>
+    </tr>
+  `).join("");
+
+  // Infrastructure info
+  $("#sa-infra-info").innerHTML = `
+    <div class="card" style="padding:12px;background:var(--surface-2)">
+      <div style="font-weight:600">LLM Inference Node</div>
+      <div class="t-sub">Ollama at <code>http://localhost:11434</code></div>
+      <div style="margin-top:4px">Model: <b>gemma4:26b</b> (25.2B Q4_K_M)</div>
+    </div>
+    <div class="card" style="padding:12px;background:var(--surface-2)">
+      <div style="font-weight:600">Storage Architecture</div>
+      <div class="t-sub">SQLite WAL mode at <code>bidintel/data/bidintel.db</code></div>
+      <div style="margin-top:4px">Attachments Directory: <code>attachments/</code> (1,115 files)</div>
+    </div>
+    <div class="card" style="padding:12px;background:var(--surface-2)">
+      <div style="font-weight:600">Host Environment</div>
+      <div class="t-sub">Linux aarch64 (Jetson) · Python 3.8 Standard Library Server</div>
+    </div>
+  `;
+}
+
+function renderSuperadminAudit(logs) {
+  const tbody = $("#sa-audit-table");
+  if (!logs.length) {
+    tbody.innerHTML = `<tr><td colspan="6" class="empty">No recent audit events.</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = logs.map(l => `
+    <tr>
+      <td class="num">${l.created_at ? new Date(l.created_at).toLocaleString() : "—"}</td>
+      <td>${esc(l.email || "System / Anon")}</td>
+      <td><span class="chip">${esc(l.role || "none")}</span></td>
+      <td><b>${esc(l.action)}</b></td>
+      <td>${esc(l.details || "")}</td>
+      <td><code>${esc(l.ip_address || "local")}</code></td>
+    </tr>
+  `).join("");
+}
+
+// Add user modal
+$("#sa-add-user-btn").onclick = () => {
+  $("#modal-create-user").hidden = false;
+  $("#modal-create-user").style.display = "flex";
+  $("#cu-alert").hidden = true;
+};
+$("#modal-cu-close").onclick = $("#modal-cu-cancel").onclick = () => {
+  $("#modal-create-user").hidden = true;
+  $("#modal-create-user").style.display = "none";
+};
+$("#cu-form").onsubmit = async e => {
+  e.preventDefault();
+  try {
+    await post("/api/admin/users", {
+      first_name: $("#cu-first").value.trim(),
+      last_name: $("#cu-last").value.trim(),
+      business_name: $("#cu-biz").value.trim(),
+      email: $("#cu-email").value.trim(),
+      password: $("#cu-pwd").value,
+      role: $("#cu-role").value
+    });
+    $("#modal-cu-close").click();
+    $("#cu-form").reset();
+    loadSuperadminData();
+  } catch (err) {
+    const al = $("#cu-alert"); al.hidden = false; al.textContent = err.message || "Failed to create user";
+  }
+};
+$("#sa-refresh-btn").onclick = loadSuperadminData;
+
 /* ---------------- shell ---------------- */
 function show(v) {
   document.querySelectorAll("#nav button").forEach(b => b.setAttribute("aria-selected", b.dataset.view === v));
   document.querySelectorAll("main > section").forEach(s => s.hidden = s.id !== "v-" + v);
-  if (v === "command") renderCommand(); if (v === "match") renderMatch(); if (v === "lens") renderLens(); if (v === "bids") renderBids();
+  if (v === "command") renderCommand();
+  if (v === "match") renderMatch();
+  if (v === "lens") renderLens();
+  if (v === "bids") renderBids();
   if (v === "bidmatch") renderBidMatch();
+  if (v === "superadmin") renderSuperadmin();
 }
 document.querySelectorAll("#nav button").forEach(b => b.onclick = () => show(b.dataset.view));
 async function refresh() { [BIDS, STATS] = await Promise.all([api("/api/bids"), api("/api/stats")]); }
 async function status() {
-  try { const s = await api("/api/status");
+  try {
+    const s = await api("/api/status");
     $("#model").innerHTML = `<span class="dot" style="background:${s.ok ? "var(--good)" : "var(--critical)"}"></span>${s.ok ? "AI ready" : "AI offline"} · ${esc(s.model)}`;
     $("#model").title = s.ok ? s.url : (s.error || `model ${s.model} not pulled at ${s.url}`);
   } catch { }
 }
+
+async function initApp() {
+  renderUserProfile();
+  applyRolePermissions();
+  await refresh();
+  fillFilters();
+  await loadClients();
+  renderCommand();
+  loadBrief();
+  status();
+}
+
+async function checkAuth() {
+  try {
+    const res = await api("/api/auth/me");
+    if (res && res.user) {
+      CURRENT_USER = res.user;
+      hideAuthModal();
+      await initApp();
+      return;
+    }
+  } catch {}
+  showAuthModal("signup");
+}
+
 (async () => {
-  await refresh(); fillFilters(); await loadClients(); renderCommand(); loadBrief(); status();
+  await checkAuth();
   addEventListener("resize", () => { if (!$("#v-command").hidden) renderCommand(); });
 })();
 </script>

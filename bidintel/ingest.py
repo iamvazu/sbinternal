@@ -204,7 +204,9 @@ def ingest(rebuild=False):
                 conn.execute("INSERT OR REPLACE INTO attachments VALUES (?,?,?,?,?,?,?,?,?,?)",
                              (eid, fname, str(path.relative_to(PROJECT)) if path.is_file() else a.get("local_path"),
                               ext, size, a.get("download_url"), pages, len(text or ""), text, err))
-                print(f"  {eid}  {fname[:70]:70}  {'ERR ' + err if err else f'{len(text or ''):>8} chars'}")
+                n_chars = len(text or "")
+                msg = ("ERR " + err) if err else f"{n_chars:>8} chars"
+                print(f"  {eid}  {fname[:70]:70}  {msg}")
             for body in chunk(text or ""):
                 conn.execute("INSERT INTO chunks VALUES (?,?,?)", (eid, fname, body))
         conn.commit()
