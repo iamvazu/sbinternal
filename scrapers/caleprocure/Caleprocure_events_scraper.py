@@ -7,6 +7,12 @@ import base64
 import argparse
 from typing import List, Dict, Optional
 
+
+# Pipeline layout: scraper code lives in scrapers/caleprocure/, its output is the bronze layer.
+_PROJECT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+BRONZE_DIR = os.path.join(_PROJECT, "data", "bronze", "caleprocure")
+EXPORTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "exports")
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
@@ -381,11 +387,11 @@ def get_next_page_button(driver):
 
 def main():
     parser = argparse.ArgumentParser(description="Caleprocure Events Scraper")
-    parser.add_argument("--out-json", default="Caleprocure_Events_Data.json", help="Output JSON path")
+    parser.add_argument("--out-json", default=os.path.join(BRONZE_DIR, "Caleprocure_Events_Data.json"), help="Output JSON path")
     parser.add_argument("--limit", type=int, default=0, help="Target number of events to scrape (0 for all)")
     parser.add_argument("--max-pages", type=int, default=0, help="Maximum number of pages to scrape (0 for all)")
     parser.add_argument("--headless", action="store_true", help="Run browser in headless mode")
-    parser.add_argument("--attachments-dir", default="attachments", help="Directory for attachments")
+    parser.add_argument("--attachments-dir", default=os.path.join(BRONZE_DIR, "attachments"), help="Directory for attachments")
     parser.add_argument("--attachments-only", action="store_true", help="Only save events that contain attachments")
     args = parser.parse_args()
 

@@ -8,6 +8,12 @@ import argparse
 from typing import List, Dict, Optional, Tuple
 import bs4
 
+
+# Pipeline layout: scraper code lives in scrapers/caleprocure/, its output is the bronze layer.
+_PROJECT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+BRONZE_DIR = os.path.join(_PROJECT, "data", "bronze", "caleprocure")
+EXPORTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "exports")
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
@@ -420,10 +426,10 @@ def get_attachments(driver, event_id: str, attachments_dir: str = "attachments")
 
 def main():
     parser = argparse.ArgumentParser(description="Caleprocure Targeted Scraper based on Excel Export")
-    parser.add_argument("--excel", default="caleprocure_10_14.xls", help="Path to caleprocure Excel export")
-    parser.add_argument("--existing-json", default="Caleprocure_Events_Data.json", help="Path to existing JSON dataset")
-    parser.add_argument("--out-json", default="Caleprocure_Events_Data.json", help="Path for output JSON dataset")
-    parser.add_argument("--attachments-dir", default="attachments", help="Directory for attachments")
+    parser.add_argument("--excel", default=(sorted(__import__("glob").glob(os.path.join(EXPORTS_DIR, "caleprocure_*.xls"))) or [""])[-1], help="Path to caleprocure Excel export (default: newest in exports/)")
+    parser.add_argument("--existing-json", default=os.path.join(BRONZE_DIR, "Caleprocure_Events_Data.json"), help="Path to existing JSON dataset")
+    parser.add_argument("--out-json", default=os.path.join(BRONZE_DIR, "Caleprocure_Events_Data.json"), help="Path for output JSON dataset")
+    parser.add_argument("--attachments-dir", default=os.path.join(BRONZE_DIR, "attachments"), help="Directory for attachments")
     parser.add_argument("--headless", action="store_true", help="Run browser in headless mode")
     parser.add_argument("--force-all", action="store_true", help="Force re-scrape of all events in Excel")
     args = parser.parse_args()

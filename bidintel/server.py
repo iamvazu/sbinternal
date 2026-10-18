@@ -36,7 +36,8 @@ def bid_detail(eid):
     facts = loads((conn.execute("SELECT json FROM facts WHERE event_id=?", (eid,)).fetchone() or {"json": None})["json"], {})
     arow = conn.execute("SELECT * FROM analysis WHERE event_id=?", (eid,)).fetchone()
     a = loads(arow["json"], {}) if arow else {}
-    out = {k: ev[k] for k in ev.keys() if k != "raw"}
+    out = {k: ev[k] for k in ev.keys() if k not in ("raw", "extra")}
+    out["extra"] = loads(ev["extra"], {})
     out["row"] = insights.bid_row(ev, facts, a)
     out["facts"] = facts
     out["analysis"] = a
@@ -169,7 +170,7 @@ class Handler(BaseHTTPRequestHandler):
                                    m.groups()).fetchone()
                 if row:
                     f = (config.PROJECT / row["local_path"]).resolve()
-                    if f.is_file() and config.ATTACHMENTS_DIR.resolve() in f.parents:
+                    if f.is_file() and any(r.resolve() in f.parents for r in config.ATTACHMENT_ROOTS):
                         ctype = "application/pdf" if f.suffix.lower() == ".pdf" else "application/octet-stream"
                         return self.send(200, f.read_bytes(), ctype)
                 return self.send(404, {"error": "file not found"})

@@ -1,19 +1,19 @@
-# Large binary attachments
-attachments/
+# ---- data lake: large / regenerable / sensitive
+data/bronze/**/attachments/
+data/bronze/**/raw/
+data/bronze/**/*.log
+data/silver/
+bidintel/data/
 
-# Databases and runtime data
+# ---- secrets & browser state (scrapers keep credentials in a local .env)
+.env
+**/.chrome_profile/
+
+# ---- databases, archives, caches
 *.db
 *.db-wal
 *.db-shm
-bidintel/data/
-
-# Large archives & exports
 *.zip
-jetson_data.zip
-
-# Python cache & logs
 __pycache__/
 *.py[cod]
-*$py.class
 *.log
-

@@ -18,7 +18,7 @@ from pathlib import Path
 import config
 from db import connect
 
-FIRMS_FILE = Path(config.os.getenv("BI_FIRMS_FILE", config.PROJECT / "Caleprocure_businesses_final.xls"))
+FIRMS_FILE = config.FIRMS_FILE
 EMBED_MODEL = config.os.getenv("BI_EMBED_MODEL", "nomic-embed-text")
 
 PROTECTED = {"Ethnicity", "Race", "Gender Identity", "LGBQTIA", "Disabled"}

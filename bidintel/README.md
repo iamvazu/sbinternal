@@ -13,7 +13,8 @@ scrapers (repo root) ──► ingest.py ──► enrich.py ──► analyze.p
 ```bash
 pip install pymupdf python-docx openpyxl beautifulsoup4
 cd bidintel
-python ingest.py            # ~2-5 min first time (1.9 GB of attachments), incremental afterwards
+python -m pipeline.build_silver   # (from the project root) bronze -> silver
+python ingest.py            # silver -> gold; extracts attachment text (slow first time, cached afterwards)
 python enrich.py            # seconds
 python analyze.py --limit 5 # AI analysis of the 5 soonest-closing open bids
 python analyze.py --brief   # portfolio brief
@@ -22,6 +23,18 @@ python server.py            # http://127.0.0.1:8765
 
 The dashboard works before any AI runs. Rule signals, matching and the certification lens are instant.
 Bids get AI analysis in batches (`analyze.py --all`) or on demand from the bid drawer.
+
+## Gold layer of the data pipeline
+
+bidintel is the **gold** layer: `ingest.py` reads only `data/silver/bids.jsonl` (one schema for every source,
+built by `pipeline/adapters/`), so there is no source-specific code here. Every bid carries its own `source`
+(`Cal eProcure`, `OpenGov`, ...) and `level` (`State` | `Local`), shown on every row and in the Source filter.
+Non-Cal-eProcure ids are prefixed (`OG-301748`). Source-only fields (solicitation #, Q&A deadline, procurement
+contact, NIGP/NAICS codes, evaluation criteria, price items...) sit in `events.extra`. See `../README.md`.
+
+```bash
+cd .. && python -m pipeline.run       # bronze -> silver -> gold (ingest + enrich)
+```
 
 ## Bid Matching: bids ↔ 21k certified businesses
 
