@@ -138,9 +138,13 @@ def build_context(conn, ev):
         parts.append(c["body"])
     return "\n".join(parts)
 
-
 def build_messages(conn, ev):
-    facts = loads(conn.execute("SELECT json FROM facts WHERE event_id=?", (ev["id"],)).fetchone()["json"], {})
+    frow = conn.execute("SELECT json FROM facts WHERE event_id=?", (ev["id"],)).fetchone()
+    if not frow:
+        import enrich
+        enrich.enrich_event(conn, ev)
+        frow = conn.execute("SELECT json FROM facts WHERE event_id=?", (ev["id"],)).fetchone()
+    facts = loads(frow["json"], {}) if frow else {}
     codes = conn.execute("SELECT code, description FROM unspsc WHERE event_id=?", (ev["id"],)).fetchall()
     rule_facts = {k: v["evidence"][:240] for k, v in facts.get("signals", {}).items()}
     header = f"""Event ID: {ev['id']}
@@ -181,10 +185,17 @@ def analyze_event(conn, ev, force=False):
     except Exception as e:
         err, body = str(e)[:500], None
     secs = round(time.time() - t, 1)
-    conn.execute("INSERT OR REPLACE INTO analysis VALUES (?,?,?,?,?,?,?)",
-                 (ev["id"], config.LLM_MODEL, h if body else None, body, secs,
-                  datetime.now().isoformat(timespec="seconds"), err))
-    conn.commit()
+    for attempt in range(5):
+        try:
+            conn.execute("INSERT OR REPLACE INTO analysis VALUES (?,?,?,?,?,?,?)",
+                         (ev["id"], config.LLM_MODEL, h if body else None, body, secs,
+                          datetime.now().isoformat(timespec="seconds"), err))
+            conn.commit()
+            break
+        except sqlite3.OperationalError:
+            if attempt == 4:
+                raise
+            time.sleep(2)
     return ("error: " + err) if err else "ok", secs
 
 

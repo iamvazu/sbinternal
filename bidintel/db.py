@@ -72,9 +72,10 @@ CREATE INDEX IF NOT EXISTS idx_audit_created ON audit_logs(created_at);
 
 def connect() -> sqlite3.Connection:
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(DB_PATH, timeout=30, check_same_thread=False)
+    conn = sqlite3.connect(DB_PATH, timeout=60, check_same_thread=False)
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA journal_mode=WAL")
+    conn.execute("PRAGMA busy_timeout = 60000")
     conn.executescript(SCHEMA)
     # v2: multi-source bids. source = 'Cal eProcure' | 'OpenGov'; level = 'State' | 'Local';
     # extra = source-specific fields (solicitation #, NIGP codes, Q&A deadline, procurement contact, ...)
