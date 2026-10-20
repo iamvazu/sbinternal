@@ -270,5 +270,42 @@
     ],
     "statewide": false,
     "notes": "Imported from Cal eProcure certified firm 2041245 \u00b7 Jacquelinne Abigail Samano jackie@primecleanba.com 415/572-8733"
+  },
+  {
+    "id": "firm-1060620",
+    "name": "TRIANGLE TRUCK PARTS, INC.",
+    "certifications": [
+      "MB",
+      "SB"
+    ],
+    "unspsc": [
+      "101113",
+      "101316",
+      "101917",
+      "251715",
+      "251719",
+      "251720",
+      "251722",
+      "251725",
+      "251748"
+    ],
+    "keywords": [
+      "aftermarket parts",
+      "automotive parts",
+      "boats and marine supply",
+      "bus parts",
+      "car parts",
+      "compressor and  welder parts",
+      "electric vehicle",
+      "engines",
+      "equipment parts",
+      "heavy duty fleet parts",
+      "industrial parts",
+      "maintenance parts"
+    ],
+    "licenses": [],
+    "counties": [],
+    "statewide": true,
+    "notes": "Imported from Cal eProcure certified firm 1060620 \u00b7 Carrie Scott triangletruckparts@yahoo.com 626/334-0271"
   }
 ]

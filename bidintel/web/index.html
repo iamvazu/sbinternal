@@ -713,9 +713,34 @@ const meter = v => v == null ? `<span class="t-sub">—</span>` : `<span class="
 
 function md(text) {
   const lines = esc(text || "").split(/\n/); let out = "", inList = false;
+  const bidIdSet = (window.BIDS && Array.isArray(window.BIDS)) ? new Set(window.BIDS.map(b => b.id)) : null;
+
   for (let l of lines) {
-    l = l.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\[(\w{6,12})\]/g, (m, id) => `<a href="#" data-bid="${id}">${id}</a>`)
-         .replace(/\b(0000\d{6})\b(?![^<]*<\/a>)/g, `<a href="#" data-bid="$1">$1</a>`);
+    // Bold formatting
+    l = l.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+
+    // Bracketed IDs: [OG-299766], [08A4031], [0000040514]
+    l = l.replace(/\[([\w-]+)\]/g, (m, id) => `<a href="#" data-bid="${id}">${id}</a>`);
+
+    // Match all procurement bid formats:
+    // - OpenGov: OG-123456
+    // - CSU: CSU-1234567
+    // - Bonfire: BF-mtc-123456
+    // - Caltrans DES: CT-08-1L1704
+    // - Cal eProcure: 0000040514
+    // - Caltrans contracts: 08A4031, 11A4455, 04A7533, 10A2938
+    // - State agency formats: 03-1055-4, 05-1K9014, 27-001, 26-1...
+    // - Controller / agency codes: EUPD91526, EEOS90326, HSR26-28, 75A0605, 9TSC0108, 7CA07824
+    const idPattern = /\b(OG-\d+|CSU-\d+|BF-[\w-]+|CT-[\w-]+|0000\d{6}|\d{2}[A-Z]\d{4}|\d{2}-[\w]+|EUPD\d+|EEOS\d+|HSR\d+-\d+|75A\d+|9TSC\d+|7CA\d+|\d{8,10})\b(?![^<]*<\/a>)/g;
+    l = l.replace(idPattern, (m, id) => {
+      if (bidIdSet && !bidIdSet.has(id)) {
+        if (!id.startsWith("OG-") && !id.startsWith("0000") && !id.startsWith("CT-") && !id.startsWith("CSU-") && !id.startsWith("BF-")) {
+          return m;
+        }
+      }
+      return `<a href="#" data-bid="${id}">${id}</a>`;
+    });
+
     if (/^\s*[-*]\s+/.test(l)) { if (!inList) { out += "<ul>"; inList = true; } out += `<li>${l.replace(/^\s*[-*]\s+/, "")}</li>`; continue; }
     if (inList) { out += "</ul>"; inList = false; }
     if (/^#{1,4}\s/.test(l)) out += `<h3>${l.replace(/^#+\s/, "")}</h3>`;
@@ -889,14 +914,39 @@ function renderDrawer(b) {
       <div class="card"><h3>Ideal bidder</h3><p style="margin:0">${esc(a.ideal_bidder)}</p>
         ${(a.missing_information || []).length ? `<h3 style="margin-top:12px">Not in the documents</h3>${li(a.missing_information)}` : ""}</div>
     </div>` : ""}
-    <div class="card"><h3>AI drafting tools</h3>
-      <div class="row" id="tools">
-        <button class="btn" data-q="Draft a short, persuasive email from STRONGERbuilt to a client explaining this opportunity, why it fits a California small business, the deadline, and what we need from them to bid.">Client outreach email</button>
-        <button class="btn" data-q="Write 5 clarifying questions a bidder should submit to the buyer before the question deadline, based on gaps or ambiguities in the documents.">Questions for the buyer</button>
-        <button class="btn" data-q="Build a compliance matrix: each requirement, where it appears in the documents, and what the bidder must provide. Use a markdown bullet list.">Compliance matrix</button>
-        <button class="btn" data-q="Which kinds of small, DVBE or DBE subcontractors should a prime team with on this bid, and for which scope?">Teaming partners</button>
+    <div class="card" id="bid-chat-card">
+      <div class="row" style="justify-content:space-between; align-items:flex-start;">
+        <div>
+          <h3 style="margin:0; display:flex; align-items:center; gap:8px;">
+            <span>Bid & Attachment Intelligence Chat</span>
+            <span class="chip" style="font-size:10.5px; font-weight:700; background:rgba(37,99,235,0.12); color:#2563eb; border:1px solid rgba(37,99,235,0.25);">California Capture SME</span>
+          </h3>
+          <p class="t-sub" style="margin:4px 0 0">Interrogate all ${b.attachments.length} attachments, scopes of work, and contract terms with document citations.</p>
+        </div>
       </div>
-      <div class="chat" id="tool-out" style="margin-top:10px"></div>
+
+      <div style="margin-top:12px;">
+        <div style="font-size:11px; font-weight:600; color:var(--muted); text-transform:uppercase; margin-bottom:6px;">Quick Consultant Inquiries</div>
+        <div class="row" id="bid-chat-presets">
+          <button class="btn sm" type="button" data-q="Build a comprehensive compliance matrix: list each mandatory qualification, where it appears in the documents, and what the bidder must provide.">Compliance Matrix</button>
+          <button class="btn sm" type="button" data-q="What are the exact minimum qualifications, prior experience thresholds, and square footage or project size requirements to bid?">Experience & Qualifications</button>
+          <button class="btn sm" type="button" data-q="What are the key submission forms, checklists, and required attachments that must be included in the bid package?">Submission Checklist</button>
+          <button class="btn sm" type="button" data-q="Write 5 sharp, tactical clarifying questions a bidder should submit to the buyer before the question deadline.">Questions for Buyer</button>
+          <button class="btn sm" type="button" data-q="What pricing schedule, unit rates, bid bonds, and insurance coverage are required under this contract?">Pricing & Bonds</button>
+          <button class="btn sm" type="button" data-q="Draft a short, persuasive email to a client explaining why this bid fits them, key deadlines, and what we need from them to bid.">Client Outreach Email</button>
+        </div>
+      </div>
+
+      <div class="chat" id="bid-chat-stream" style="margin-top:14px; max-height:420px; overflow-y:auto; padding:2px 0; display:grid; gap:10px;">
+        <div class="msg" style="background:var(--surface-2); font-size:12.5px; color:var(--ink-2);">
+          💡 <b>Government Capture Consultant Active:</b> Ask any specific question about this solicitation or its attachments (e.g. <i>"What are the floor care specs in Attachment 2?"</i> or <i>"What was clarified in Addendum 3?"</i>).
+        </div>
+      </div>
+
+      <form id="bid-chat-form" style="display:flex; gap:8px; margin-top:12px;">
+        <input type="text" id="bid-chat-input" placeholder="Ask anything about this bid or attachments..." style="flex:1; padding:9px 13px; border-radius:8px; border:1px solid var(--axis); background:var(--surface); color:var(--ink); font-size:13px;" required>
+        <button type="submit" class="btn primary" id="bid-chat-submit" style="padding:0 16px; font-weight:600; white-space:nowrap;">Ask AI</button>
+      </form>
     </div>
     <div class="card"><h3>Rule-detected signals <span class="t-sub">· with the text that triggered them</span></h3>
       ${sigs.length ? sigs.map(([k, v]) => `<div><b>${esc(v.label)}</b> <span class="t-sub">— ${esc(v.source)}</span><div class="ev">${esc(v.evidence)}</div></div>`).join("") : `<div class="t-sub">None detected.</div>`}
@@ -936,10 +986,56 @@ function renderDrawer(b) {
     const btn = e.target; btn.disabled = true; btn.innerHTML = `<span class="spin"></span> Analyzing (can take a few minutes)…`;
     try { const res = await post(`/api/analyze/${b.id}`); renderDrawer(res.bid); refresh(); } catch (err) { btn.textContent = "Failed: " + err.message; btn.disabled = false; }
   };
-  $("#tools").querySelectorAll("button").forEach(btn => btn.onclick = async () => {
-    const out = $("#tool-out"); out.innerHTML = `<div class="msg"><span class="spin"></span> ${esc(btn.textContent)}…</div>`;
-    try { const res = await post("/api/ask", {question: btn.dataset.q, event_id: b.id}); out.innerHTML = `<div class="msg md">${md(res.answer)}</div>`; }
-    catch (err) { out.innerHTML = `<div class="msg">Model error: ${esc(err.message)}</div>`; }
+  const chatStream = $("#bid-chat-stream");
+  const chatInput = $("#bid-chat-input");
+  const chatForm = $("#bid-chat-form");
+  const submitBtn = $("#bid-chat-submit");
+
+  async function askBidQuestion(q) {
+    if (!q || submitBtn.disabled) return;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `<span class="spin"></span>`;
+    chatInput.value = "";
+
+    chatStream.insertAdjacentHTML("beforeend", `<div class="msg me" style="max-width:85%; justify-self:end;">${esc(q)}</div>`);
+    const pendingId = "bid-pending-" + Date.now();
+    chatStream.insertAdjacentHTML("beforeend", `
+      <div class="msg" id="${pendingId}">
+        <span class="spin"></span> <i>Interrogating attachments and procurement rules…</i>
+      </div>`);
+    chatStream.scrollTop = chatStream.scrollHeight;
+
+    try {
+      const res = await post("/api/ask", {question: q, event_id: b.id});
+      const pendingEl = $("#" + pendingId);
+      if (pendingEl) {
+        const sources = res.attachments_consulted || [...new Set((res.sources || []).map(s => s.source))];
+        const sourceChips = sources.filter(Boolean).map(s => `<span class="chip" style="font-size:10.5px; margin:2px 4px 2px 0; max-width:260px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${esc(s)}">📄 ${esc(s)}</span>`).join("");
+
+        pendingEl.outerHTML = `
+          <div class="msg md" style="font-size:13px; line-height:1.55;">
+            ${md(res.answer)}
+            ${sourceChips ? `<div style="margin-top:10px; padding-top:8px; border-top:1px solid var(--grid); font-size:11px; color:var(--muted);"><b>Attachments & documents consulted:</b><div class="row" style="margin-top:4px;">${sourceChips}</div></div>` : ""}
+          </div>`;
+      }
+    } catch (err) {
+      const pendingEl = $("#" + pendingId);
+      if (pendingEl) pendingEl.outerHTML = `<div class="msg" style="color:var(--critical)">Error: ${esc(err.message)}</div>`;
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Ask AI";
+      chatStream.scrollTop = chatStream.scrollHeight;
+    }
+  }
+
+  chatForm.onsubmit = e => {
+    e.preventDefault();
+    const q = chatInput.value.trim();
+    if (q) askBidQuestion(q);
+  };
+
+  $("#bid-chat-presets").querySelectorAll("button").forEach(btn => {
+    btn.onclick = () => askBidQuestion(btn.dataset.q);
   });
 }
 

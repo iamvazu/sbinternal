@@ -251,14 +251,61 @@ def fts_query(q):
 
 def retrieve(conn, question, event_id=None, k=10):
     q = fts_query(question)
-    sql = "SELECT event_id, source, body, bm25(chunks) AS rank FROM chunks WHERE chunks MATCH ?"
-    args = [q]
+    hits = []
+    seen = set()
+
+    # 1. Direct document / attachment targeting if mentioned in question (e.g. "attachment 2", "exhibit b")
     if event_id:
-        sql += " AND event_id = ?"
-        args.append(event_id)
-    sql += " ORDER BY rank LIMIT ?"
-    args.append(k)
-    try:
-        return [dict(r) for r in conn.execute(sql, args)]
-    except Exception:
-        return []
+        doc_matches = re.findall(r"(?:attachment|exhibit|addendum|schedule|appendix)\s*#?\s*([a-z0-9]+)", question.lower())
+        for doc_key in doc_matches:
+            try:
+                for r in conn.execute(
+                    "SELECT event_id, source, body, 0.0 AS rank FROM chunks WHERE event_id = ? AND (source LIKE ? OR body LIKE ?) LIMIT ?",
+                    (event_id, f"%{doc_key}%", f"%{doc_key}%", 6)
+                ):
+                    h = dict(r)
+                    h_key = (h["source"], h["body"][:80])
+                    if h_key not in seen:
+                        seen.add(h_key)
+                        hits.append(h)
+            except Exception:
+                pass
+
+    # 2. Full-Text Search (FTS5) using BM25
+    if q and q != '""':
+        sql = "SELECT event_id, source, body, bm25(chunks) AS rank FROM chunks WHERE chunks MATCH ?"
+        args = [q]
+        if event_id:
+            sql += " AND event_id = ?"
+            args.append(event_id)
+        sql += " ORDER BY rank LIMIT ?"
+        args.append(k)
+        try:
+            for r in conn.execute(sql, args):
+                h = dict(r)
+                h_key = (h["source"], h["body"][:80])
+                if h_key not in seen:
+                    seen.add(h_key)
+                    hits.append(h)
+        except Exception:
+            pass
+
+    # 3. Fallback / supplement for specific bid deep dives if few hits found
+    if event_id and len(hits) < k:
+        needed = k - len(hits)
+        try:
+            for r in conn.execute(
+                "SELECT event_id, source, body, 99.0 AS rank FROM chunks WHERE event_id = ? AND source != 'Description' ORDER BY rowid LIMIT ?",
+                (event_id, needed * 2)
+            ):
+                h = dict(r)
+                h_key = (h["source"], h["body"][:80])
+                if h_key not in seen:
+                    seen.add(h_key)
+                    hits.append(h)
+                    if len(hits) >= k:
+                        break
+        except Exception:
+            pass
+
+    return hits[:k]
