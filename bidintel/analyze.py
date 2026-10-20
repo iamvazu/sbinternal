@@ -257,6 +257,7 @@ def main():
     ap.add_argument("--limit", type=int, default=10)
     ap.add_argument("--all", action="store_true", help="every open bid")
     ap.add_argument("--include-closed", action="store_true")
+    ap.add_argument("--state", help="filter by state (e.g. TX, VA, GA, OR, FL, PA, or 'other' for non-CA)")
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--brief", action="store_true")
     a = ap.parse_args()
@@ -271,8 +272,18 @@ def main():
         events = [conn.execute("SELECT * FROM events WHERE id=?", (i,)).fetchone() for i in a.ids]
         events = [e for e in events if e]
     else:
-        where = "" if a.include_closed else "WHERE end_date >= ?"
-        args = [] if a.include_closed else [datetime.now().strftime("%Y-%m-%dT%H:%M")]
+        clauses = []
+        args = []
+        if not a.include_closed:
+            clauses.append("end_date >= ?")
+            args.append(datetime.now().strftime("%Y-%m-%dT%H:%M"))
+        if a.state:
+            if a.state.lower() in ("other", "non-ca"):
+                clauses.append("(state != 'CA' OR state IS NULL)")
+            else:
+                clauses.append("state = ?")
+                args.append(a.state.upper())
+        where = ("WHERE " + " AND ".join(clauses)) if clauses else ""
         events = conn.execute(f"SELECT * FROM events {where} ORDER BY end_date", args).fetchall()
         if not a.all:
             events = events[:a.limit]
