@@ -1,4 +1,5 @@
 """Single source of truth for where each pipeline layer lives."""
+import os
 from pathlib import Path
 
 PROJECT = Path(__file__).resolve().parent.parent
@@ -14,4 +15,6 @@ GOLD_APP = PROJECT / "bidintel"            # gold: bidintel.db + enrichment, AI,
 
 def rel(path) -> str:
     """Project-relative path with forward slashes (portable between Windows and the Jetson)."""
-    return Path(path).resolve().relative_to(PROJECT).as_posix()
+    # abspath, not resolve(): attachment folders may be symlinks to an external drive (Jetson), and the stored
+    # path must stay inside the project either way
+    return Path(os.path.abspath(path)).relative_to(PROJECT).as_posix()
