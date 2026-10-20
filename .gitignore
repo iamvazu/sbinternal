@@ -1,5 +1,7 @@
 # ---- data lake: large / regenerable / sensitive
 data/bronze/**/attachments/
+# ...also when it is a symlink to external storage (the Jetson keeps attachments on its USB drive)
+data/bronze/**/attachments
 data/bronze/**/raw/
 data/bronze/**/*.log
 data/silver/

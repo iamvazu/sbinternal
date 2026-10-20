@@ -12,6 +12,8 @@ SILVER_BIDS = Path(os.getenv("BI_SILVER_BIDS", DATA / "silver" / "bids.jsonl"))
 FIRMS_FILE = Path(os.getenv("BI_FIRMS_FILE", DATA / "reference" / "Caleprocure_businesses_final.xls"))
 ATTACHMENTS_DIR = PROJECT / "attachments"
 ATTACHMENT_ROOTS = [DATA / "bronze", ATTACHMENTS_DIR]
+# On the Jetson, data/bronze/<source>/attachments are symlinks to the external drive; serve their targets too.
+ATTACHMENT_ROOTS += [p.resolve() for p in (DATA / "bronze").glob("*/attachments") if p.is_symlink()]
 DB_PATH = Path(os.getenv("BI_DB", ROOT / "data" / "bidintel.db"))
 CLIENTS_JSON = Path(os.getenv("BI_CLIENTS", ROOT / "clients.json"))
 WEB_DIR = ROOT / "web"
