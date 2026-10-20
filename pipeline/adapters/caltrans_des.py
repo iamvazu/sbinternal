@@ -98,7 +98,7 @@ def records():
                 f"{p.get('Prime Business')}: {p.get('Services Needed') or ''} {p.get('Other requirements') or ''}" for p in primes)})
         yield schema.empty(
             bid_uid=f"{SRC}:{ea}", id=f"{META['id_prefix']}{ea}", source=SRC, source_label=META["label"],
-            platform=META["platform"], level=META["level"], source_id=ea,
+            platform=META["platform"], level=META["level"], state="CA", source_id=ea,
             agency="Caltrans - Division of Engineering Services", agency_code=f"D{district}",
             department=f"Caltrans District {district}", title=f"{ea} - {clean(c.get('Work Description')) or ''}".strip(" -"),
             description=desc, procurement_type="Construction contract (IFB, lowest responsible bidder)",

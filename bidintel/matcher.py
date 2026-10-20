@@ -358,8 +358,9 @@ def bid_profile(conn, eid, ix=None):
     else:
         industry = {"Service"}
 
-    counties, statewide = bid_counties(ev, facts, a, conn, ix)
-    if insights.level_of(ev) == "Local" and not counties:
+    state = insights.state_of(ev)
+    counties, statewide = bid_counties(ev, facts, a, conn, ix) if state == "CA" else ([], False)
+    if state == "CA" and insights.level_of(ev) == "Local" and not counties:
         # a city/county/district buys for its own area: agency name ("County of Orange") or its city
         found = {m.group(1) for m in COUNTY_RE.finditer(ev["dept"] or "")}
         c = ix.locate(None, extra.get("Agency City")) if ix else None
@@ -369,7 +370,8 @@ def bid_profile(conn, eid, ix=None):
     body = " ".join([ev["description"] or "", a.get("what_is_being_bought") or "", a.get("plain_summary") or ""])
     code_text = " ".join(c["description"].split(" - ")[-1] for c in codes if c.get("description"))
     nigp = [c.get("title") or "" for c in extra.get("Commodity Codes") or []]
-    if nigp:  # OpenGov classifies with NIGP; its titles are strong, buyer-chosen search terms
+    nigp += [c.get("title") or "" for c in extra.get("Codes") or [] if c.get("system") == "NIGP" and c.get("title") not in nigp]
+    if nigp:  # OpenGov / OR / TX / GA / VA classify with NIGP; its titles are strong, buyer-chosen search terms
         code_text = (code_text + " " + " ".join(nigp)).strip()
 
     q = Counter()
@@ -385,9 +387,17 @@ def bid_profile(conn, eid, ix=None):
     for t in list(q):
         if t in drop or any(ch.isdigit() for ch in t):
             q.pop(t)
+    if state != "CA":
+        # California programs (SB/DVBE set-asides, 5% SB preference, SB-PW) and CSLB license classes do not apply
+        # to another state's bids; that state's own certification and contractor licensing do.
+        sig = sig - {"sb_set_aside", "sb_dvbe_option", "sb_preference", "dvbe_participation"}
+        sa = {k: v for k, v in sa.items() if k not in ("sb_set_aside", "sb_preference_available", "dvbe_requirement_pct")}
+        facts = {**facts, "dvbe_pct": None}
+        licenses, lic_ai, lic_rules = set(), [], set()
     return {
         "id": eid, "name": title, "dept": ev["dept"], "end_date": ev["end_date"], "category": category,
-        "source": insights.source_of(ev), "level": insights.level_of(ev), "nigp": nigp,
+        "source": insights.source_of(ev), "level": insights.level_of(ev), "state": state,
+        "state_program": extra.get("State Program"), "nigp": nigp,
         "codes": codes, "query": dict(q), "title_terms": [w for w in dict.fromkeys(tokens(title)) if w in q], "text": f"{title}. {code_text}. {body}"[:1800],
         "licenses": sorted(licenses), "license_hard": bool(lic_ai) or (construction and bool(lic_rules)),
         "counties": counties, "statewide": statewide, "industry": sorted(industry),
@@ -454,6 +464,9 @@ def commodity(ix, prof, i):
 
 
 def geography(prof, f):
+    if prof.get("state", "CA") != "CA":
+        # the certified-firm directory holds California service areas only: neutral, and say so
+        return 0.5, f"Out-of-state bid ({prof['state']}): CA service areas don't apply"
     if not prof["counties"]:
         return 0.6, None
     areas = set(f["areas"])
@@ -594,7 +607,7 @@ def run_match(prof, ix, conn=None, semantic=True, only=None, cand_limit=600):
 
         geo, geo_note = geography(prof, f)
         if geo_note:
-            (flags if geo < 0.5 else reasons).append(geo_note)
+            (flags if geo < 0.5 or geo_note.startswith("Out-of-state") else reasons).append(geo_note)
 
         ind = 0.7 if not f["industry"] else (1.0 if set(f["industry"]) & set(prof["industry"]) else 0.4)
         if ind < 0.5:
@@ -616,6 +629,9 @@ def run_match(prof, ix, conn=None, semantic=True, only=None, cand_limit=600):
         if prof["dbe"] and "DBE" in f["divcerts"]:
             prog += 0.3
             reasons.append("DBE: counts toward federal goal")
+        if prof.get("state", "CA") != "CA":
+            flags.append(f"CA certifications don't apply in {prof['state']}"
+                         + (f" - needs {prof['state_program'].split(' - ')[0]}" if prof.get("state_program") else ""))
         prog = min(1.0, prog)
         # location matters most when the work is performed on site; far less for goods, IT or consulting
         fit = (0.60 * geo + 0.15 * ind + 0.25 * prog) if prof["category"] in ON_SITE else (0.25 * geo + 0.35 * ind + 0.40 * prog)

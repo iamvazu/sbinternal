@@ -1,6 +1,7 @@
-# STRONGERbuilt California Procurement Data Pipeline
+# STRONGERbuilt Procurement Data Pipeline
 
-Scrapes California public bids from every platform agencies use, normalizes them into one schema, and serves
+Scrapes public bids from every platform California agencies use, plus the official state portals of Oregon,
+Florida, Texas, Georgia, Virginia and Pennsylvania, normalizes them into one schema, and serves
 them to **Bid Intelligence** (AI analysis, search, client and certified-firm matching).
 
 ```
@@ -43,6 +44,20 @@ collide. The full registry, including verified targets not yet built, is `pipeli
 | CSU (Jaggaer, all 23 campuses) | State | active | `scrapers/csu/` |
 | Bonfire (MTC; add agencies as config) | Local | active | `scrapers/bonfire/` |
 | BidNet, Biddingo, QuestCDN, CivicPlus, agency portals | Local | planned | see `pipeline/sources.py` |
+
+**Other states** (`state` field, `OR-`/`FL-`/`TX-`/`GA-`/`VA-`/`PA-` ids; times converted to Pacific, local time kept):
+
+| Source | State | Level | Notes | Scraper |
+|---|---|---|---|---|
+| OregonBuys | OR | State + Local | rate-limits bursts; paced 2.5 s with back-off | `scrapers/oregonbuys/` |
+| Florida MFMP | FL | State | public JSON; UNSPSC; attachments | `scrapers/mfmp/` |
+| Texas ESBD | TX | State + Local (SmartBuy members) | public JSON; NIGP, est. value, attachments | `scrapers/tx_esbd/` |
+| Georgia GPR | GA | State + Local | NIGP; attachments | `scrapers/ga_gpr/` |
+| Virginia eVA | VA | State + Local | public Solr feed via visible Chrome; documents behind reCAPTCHA (linked, not scraped) | `scrapers/eva/` |
+| PA eMarketplace | PA | State | WebForms; public FileDownload attachments | `scrapers/pa_emarketplace/` |
+
+Arizona and Washington are deferred. California SB/DVBE certifications do not apply on out-of-state bids: the
+matcher drops CA program credit and CA geography there, and flags the state's own program instead.
 
 Adding a source: see `scrapers/README.md`.
 

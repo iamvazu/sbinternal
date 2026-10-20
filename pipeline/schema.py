@@ -10,6 +10,7 @@ source                registry key: "caleprocure" | "opengov" | "planetbids" ...
 source_label          human label shown in the app: "Cal eProcure" | "OpenGov" | "PlanetBids" ...
 platform              underlying software: "Cal eProcure (PeopleSoft)" | "OpenGov Procurement" ...
 level                 "State" | "Local"
+state                 2-letter US state of the buying agency: "CA", "OR", "FL", "TX", "GA", "VA", "PA"
 source_id             the id on the source system
 agency                buying organisation ("Dept of Corrections & Rehab", "County of Orange")
 agency_code           short code on the source (dept code, OpenGov portal code, PlanetBids portal id)
@@ -20,7 +21,8 @@ procurement_type      "Sell Event / RFx", "IFB / Invitation For Bid" ...
 solicitation_number   agency's own number, if any
 version               event version / addendum count as text
 status                as published ("open", "Posted" ...)
-published_at, due_at  "YYYY-MM-DDTHH:MM" in Pacific time (None if unknown)
+published_at, due_at  "YYYY-MM-DDTHH:MM" in Pacific time, the app's clock (None if unknown).
+                      The agency's own local time is kept in extra["Due (local)"] for non-Pacific states.
 question_deadline     free text or ISO
 prebid_meeting        free text
 contacts              [{role, name, title, email, phone}]
@@ -33,14 +35,15 @@ raw_ref               project-relative path to the bronze record / raw object
 scraped_at            ISO timestamp
 """
 
-REQUIRED = ("bid_uid", "id", "source", "source_label", "platform", "level", "source_id", "title", "url")
+REQUIRED = ("bid_uid", "id", "source", "source_label", "platform", "level", "state", "source_id", "title", "url")
+STATES = {"CA", "OR", "FL", "TX", "GA", "VA", "PA", "AZ", "WA"}
 LEVELS = {"State", "Local"}
 CODE_SYSTEMS = {"UNSPSC", "NIGP", "NAICS", "Other"}
 
 
 def empty(**kw):
     rec = {
-        "bid_uid": None, "id": None, "source": None, "source_label": None, "platform": None, "level": None,
+        "bid_uid": None, "id": None, "source": None, "source_label": None, "platform": None, "level": None, "state": None,
         "source_id": None, "agency": None, "agency_code": None, "department": None, "agency_city": None,
         "title": None, "description": None, "procurement_type": None, "solicitation_number": None,
         "version": None, "status": None, "published_at": None, "due_at": None, "question_deadline": None,
@@ -54,6 +57,8 @@ def empty(**kw):
 def validate(rec):
     """Return a list of problems (empty = valid). Problems are reported in the manifest, never silently fixed."""
     errs = [f"missing {k}" for k in REQUIRED if not rec.get(k)]
+    if rec.get("state") not in STATES:
+        errs.append(f"bad state {rec.get('state')!r}")
     if rec.get("level") not in LEVELS:
         errs.append(f"bad level {rec.get('level')!r}")
     for c in rec.get("codes") or []:

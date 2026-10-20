@@ -61,6 +61,52 @@ SOURCES = {
         "notes": "Listing = public JSON; detail pages behind Cloudflare -> visible Chrome, human-in-the-loop. "
                  "Document files need a Euna Supplier Network login. Add agencies to 'portals'.",
     },
+    # ---- other states (official state portals; sources found via publicbidtracker.com/about) ----------------
+    # California SB/DVBE certifications do not apply here; each state runs its own program (see "program").
+    "oregonbuys": {
+        "label": "OregonBuys", "platform": "Periscope BuySpeed", "level": "State", "state": "OR", "status": "active",
+        "id_prefix": "OR-", "url": "https://oregonbuys.gov/bso/view/search/external/advancedSearchBid.xhtml?openBids=true",
+        "program": "COBID (MBE/WBE/SDV/ESB)",
+        "scraper": "scrapers/oregonbuys/oregonbuys_scraper.py", "adapter": "pipeline.adapters.oregonbuys",
+        "notes": "Oregon state agencies + cities, counties, school/transit districts. JSF/PrimeFaces paging; rate-limits "
+                 "bursts (serves empty pages), so the scraper paces 2.5 s and backs off.",
+    },
+    "mfmp": {
+        "label": "Florida MFMP", "platform": "MyFloridaMarketPlace (VBS)", "level": "State", "state": "FL",
+        "status": "active", "id_prefix": "FL-", "url": "https://vendor.myfloridamarketplace.com/search/bids",
+        "program": "OSD (MBE/WBE/SDVBE)",
+        "scraper": "scrapers/mfmp/mfmp_scraper.py", "adapter": "pipeline.adapters.mfmp",
+        "notes": "Florida state agencies. Public JSON search + detail; UNSPSC codes; public attachments.",
+    },
+    "tx_esbd": {
+        "label": "Texas ESBD", "platform": "Texas SmartBuy (NetSuite)", "level": "State", "state": "TX",
+        "status": "active", "id_prefix": "TX-", "url": "https://www.txsmartbuy.gov/esbd",
+        "program": "HUB",
+        "scraper": "scrapers/tx_esbd/tx_esbd_scraper.py", "adapter": "pipeline.adapters.tx_esbd",
+        "notes": "Texas state agencies (numeric agency no.) + SmartBuy members (letter-prefixed = local). Public JSON services.",
+    },
+    "ga_gpr": {
+        "label": "Georgia GPR", "platform": "Georgia Procurement Registry", "level": "State", "state": "GA",
+        "status": "active", "id_prefix": "GA-", "url": "https://ssl.doas.state.ga.us/gpr/",
+        "program": "GOSBO small/minority business",
+        "scraper": "scrapers/ga_gpr/ga_gpr_scraper.py", "adapter": "pipeline.adapters.ga_gpr",
+        "notes": "Georgia state agencies + counties, cities, K-12. DataTables JSON listing, HTML detail, public files.",
+    },
+    "eva": {
+        "label": "Virginia eVA", "platform": "eVA (CGI)", "level": "State", "state": "VA", "status": "active",
+        "id_prefix": "VA-", "url": "https://mvendor.cgieva.com/Vendor/public/AllOpportunities.jsp",
+        "program": "SBSD SWaM",
+        "scraper": "scrapers/eva/eva_scraper.py", "adapter": "pipeline.adapters.eva",
+        "notes": "Virginia agencies, universities, localities. Public Solr feed read from a visible Chrome (AWS firewall "
+                 "admits real browsers only). Detail pages/documents are reCAPTCHA-gated: not scraped, linked instead.",
+    },
+    "pa_emarketplace": {
+        "label": "PA eMarketplace", "platform": "PA eMarketplace (ASP.NET)", "level": "State", "state": "PA",
+        "status": "active", "id_prefix": "PA-", "url": "https://www.emarketplace.state.pa.us/Search.aspx",
+        "program": "DGS Small Diverse / Small Business",
+        "scraper": "scrapers/pa_emarketplace/pa_emarketplace_scraper.py", "adapter": "pipeline.adapters.pa_emarketplace",
+        "notes": "Commonwealth agencies. WebForms postback (all rows), detail page, public FileDownload attachments.",
+    },
     "bidnet": {
         "label": "BidNet Direct", "platform": "BidNet Direct", "level": "Local", "status": "planned", "id_prefix": "BN-",
         "portals": {"cityofsantaclara": "City of Santa Clara", "cityofukiah": "City of Ukiah"},
@@ -100,3 +146,7 @@ def active():
 
 def label_for(source_key):
     return SOURCES.get(source_key, {}).get("label", source_key)
+
+
+def state_of(source_key):
+    return SOURCES.get(source_key, {}).get("state", "CA")

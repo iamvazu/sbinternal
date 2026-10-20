@@ -85,6 +85,8 @@ td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
 .chip { font-size: 11.5px; border: 1px solid var(--ring); background: var(--surface-2); color: var(--ink-2); border-radius: 6px; padding: 1px 6px; white-space: nowrap; }
 .chip.key { background: var(--accent-wash); color: var(--ink); border-color: transparent; }
 .chip.src { background: var(--surface); color: var(--ink); font-weight: 600; border-color: var(--axis); }
+.chip.st { font-weight: 700; letter-spacing: .04em; }
+.chip.st.oos { border-color: #b7791f; color: #b7791f; }
 .chip.block { border-color: var(--critical); color: var(--ink); }
 .chip.unlock { border-style: dashed; border-color: var(--accent); color: var(--ink); }
 .urg { display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; white-space: nowrap; }
@@ -308,6 +310,7 @@ details.more { margin-top: 8px; } details.more summary { cursor: pointer; color:
     <div class="grid three" style="margin-top:16px">
       <div class="card"><h3>Open bids by department</h3><div id="c-dept"></div></div>
       <div class="card"><h3>Open bids by category</h3><div id="c-cat"></div></div>
+      <div class="card"><h3>Open bids by state</h3><div id="c-state"></div></div>
       <div class="card"><h3>Program signals in open bids</h3><div id="c-sig"></div></div>
     </div>
   </section>
@@ -316,6 +319,7 @@ details.more { margin-top: 8px; } details.more summary { cursor: pointer; color:
   <section id="v-bids" hidden>
     <div class="filters">
       <input type="search" id="q" placeholder="Search title, department, summary…">
+      <select id="f-state"><option value="">All states</option></select>
       <select id="f-src"><option value="">All sources</option></select>
       <select id="f-dept"><option value="">All departments</option></select>
       <select id="f-cat"><option value="">All categories</option></select>
@@ -706,7 +710,9 @@ function when(r) {
   return `<span class="urg ${r.urgency}" title="${URG[r.urgency]}"><i></i>${txt}</span><div class="t-sub">${date}</div>`;
 }
 // Source label comes only from the data (source + level). Never assume a source.
-const srcChip = r => `<span class="chip src" title="${esc(r.level ? r.level + " government" : "")}">${esc(r.source || "Unknown source")}${r.level ? " · " + esc(r.level) : ""}</span>`;
+const STATE_NAMES = {CA: "California", OR: "Oregon", FL: "Florida", TX: "Texas", GA: "Georgia", VA: "Virginia", PA: "Pennsylvania", AZ: "Arizona", WA: "Washington"};
+const stChip = r => `<span class="chip st${(r.state || "CA") !== "CA" ? " oos" : ""}" title="${esc(STATE_NAMES[r.state || "CA"] || r.state)}${(r.state || "CA") !== "CA" ? " - California SB/DVBE certifications don't apply" : ""}">${esc(r.state || "CA")}</span>`;
+const srcChip = r => stChip(r) + ` <span class="chip src" title="${esc(r.level ? r.level + " government" : "")}">${esc(r.source || "Unknown source")}${r.level ? " · " + esc(r.level) : ""}</span>`;
 const chips = (sigs, max = 4) => `<div class="chips">${sigs.filter(s => KEY_SIG.has(s)).slice(0, max)
   .map(s => `<span class="chip key">${SIG[s]}</span>`).join("")}${sigs.filter(s => !KEY_SIG.has(s)).length ? `<span class="chip">+${sigs.filter(s => !KEY_SIG.has(s)).length}</span>` : ""}</div>`;
 const meter = v => v == null ? `<span class="t-sub">—</span>` : `<span class="meter"><b><i style="width:${v}%"></i></b>${v}</span>`;
@@ -720,7 +726,7 @@ function md(text) {
     l = l.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
 
     // Bracketed IDs: [OG-299766], [08A4031], [0000040514]
-    l = l.replace(/\[([\w-]+)\]/g, (m, id) => `<a href="#" data-bid="${id}">${id}</a>`);
+    l = l.replace(/\[((?:OR|FL|TX|GA|VA|PA)-[^\]]+|[\w-]+)\]/g, (m, id) => `<a href="#" data-bid="${id}">${id}</a>`);
 
     // Match all procurement bid formats:
     // - OpenGov: OG-123456
@@ -731,10 +737,11 @@ function md(text) {
     // - Caltrans contracts: 08A4031, 11A4455, 04A7533, 10A2938
     // - State agency formats: 03-1055-4, 05-1K9014, 27-001, 26-1...
     // - Controller / agency codes: EUPD91526, EEOS90326, HSR26-28, 75A0605, 9TSC0108, 7CA07824
-    const idPattern = /\b(OG-\d+|CSU-\d+|BF-[\w-]+|CT-[\w-]+|0000\d{6}|\d{2}[A-Z]\d{4}|\d{2}-[\w]+|EUPD\d+|EEOS\d+|HSR\d+-\d+|75A\d+|9TSC\d+|7CA\d+|\d{8,10})\b(?![^<]*<\/a>)/g;
+    // - Other states: OR-S-…, FL-AD-17250, TX-RFP-…, GA-PE-…, VA-IV128881, PA-…
+    const idPattern = /\b((?:OR|FL|TX|GA|VA|PA)-[\w.()-]+|OG-\d+|CSU-\d+|BF-[\w-]+|CT-[\w-]+|0000\d{6}|\d{2}[A-Z]\d{4}|\d{2}-[\w]+|EUPD\d+|EEOS\d+|HSR\d+-\d+|75A\d+|9TSC\d+|7CA\d+|\d{8,10})\b(?![^<]*<\/a>)/g;
     l = l.replace(idPattern, (m, id) => {
       if (bidIdSet && !bidIdSet.has(id)) {
-        if (!id.startsWith("OG-") && !id.startsWith("0000") && !id.startsWith("CT-") && !id.startsWith("CSU-") && !id.startsWith("BF-")) {
+        if (!id.startsWith("OG-") && !id.startsWith("0000") && !id.startsWith("CT-") && !id.startsWith("CSU-") && !id.startsWith("BF-") && !/^(OR|FL|TX|GA|VA|PA)-/.test(id)) {
           return m;
         }
       }
@@ -796,13 +803,16 @@ function kpi(v, l, h) { return `<div class="card kpi"><div class="v">${v}</div><
 function renderCommand() {
   const s = STATS;
   const bySrc = Object.fromEntries(s.by_source || []);
-  $("#kpis").innerHTML = kpi(s.open, "Open bids", Object.entries(bySrc).map(([k, v]) => `${v} ${esc(k)}`).join(" · ")) + kpi(s.closing_7d, "Close within 7 days", `${s.closing_3d} within 3 days`)
+  const bySt = s.by_state || [];
+  $("#kpis").innerHTML = kpi(s.open, "Open bids", bySt.map(([k, v]) => `${v} ${esc(k)}`).join(" · ") || Object.entries(bySrc).map(([k, v]) => `${v} ${esc(k)}`).join(" · "))
+    + kpi(bySt.length, "States covered", `${Object.keys(bySrc).length} portals`) + kpi(s.closing_7d, "Close within 7 days", `${s.closing_3d} within 3 days`)
     + kpi(s.sb_access, "SB preference / set-aside", "certified SBs get an edge") + kpi(s.dvbe, "DVBE participation", "primes need DVBE partners")
     + kpi(s.dbe, "Federal DBE goals", "federal-aid work, CUCP-certified") + kpi(s.mandatory_prebid, "Mandatory pre-bids", "miss it, can't bid")
     + kpi(`${s.analyzed}`, "AI-analyzed bids", `${Math.round(s.analyzed / Math.max(1, s.total) * 100)}% coverage`);
   columns($("#c-weeks"), s.by_week);
   hbars($("#c-dept"), s.by_dept.slice(0, 10).map(([k, v]) => [k.replace(/^Department of |^Dept of (the )?/, ""), v, k]), {});
   hbars($("#c-cat"), s.by_category, {click: "cat"});
+  hbars($("#c-state"), bySt.map(([k, v]) => [STATE_NAMES[k] || k, v, k]), {click: "state"});
   hbars($("#c-sig"), Object.entries(s.signals).filter(([k]) => SIG[k]).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([k, v]) => [SIG[k], v]), {});
   const must = BIDS.filter(r => r.urgency === "critical" || (r.urgency !== "closed" && r.signals.includes("mandatory_prebid") && r.days_left <= 14)).slice(0, 9);
   $("#mustact").innerHTML = must.length ? `<table><tbody>${must.map(r => `<tr data-bid="${r.id}"><td><div class="t-name">${esc(r.name)}</div>
@@ -822,6 +832,8 @@ $("#brief-btn").onclick = async e => {
 
 /* ---------------- bids table ---------------- */
 function fillFilters() {
+  [...new Set(BIDS.map(b => b.state || "CA"))].sort().forEach(s => $("#f-state").insertAdjacentHTML("beforeend",
+    `<option value="${esc(s)}">${esc(STATE_NAMES[s] || s)} (${BIDS.filter(b => (b.state || "CA") === s).length})</option>`));
   const srcs = {};
   BIDS.forEach(b => { srcs[b.source || "Unknown source"] = b.level; });
   Object.entries(srcs).sort().forEach(([s, lvl]) => $("#f-src").insertAdjacentHTML("beforeend", `<option value="${esc(s)}">${esc(s)}${lvl ? ` (${esc(lvl)})` : ""}</option>`));
@@ -830,11 +842,14 @@ function fillFilters() {
   opts("#f-cat", [...new Set(BIDS.map(b => b.category))].sort());
   Object.entries(SIG).forEach(([k, l]) => $("#f-sig").insertAdjacentHTML("beforeend", `<option value="${k}">${l}</option>`));
 }
-function applyFilter(spec) { const [k, v] = spec.split(":"); if (k === "cat") { $("#f-cat").value = v; show("bids"); renderBids(); } }
+function applyFilter(spec) { let [k, v] = spec.split(":");
+  if (k === "state") v = Object.keys(STATE_NAMES).find(c => STATE_NAMES[c] === v) || v;
+  const sel = {cat: "#f-cat", state: "#f-state"}[k];
+  if (sel) { $(sel).value = v; show("bids"); renderBids(); } }
 function renderBids() {
-  const src = $("#f-src").value;
+  const src = $("#f-src").value, st = $("#f-state").value;
   const q = $("#q").value.toLowerCase(), dept = $("#f-dept").value, cat = $("#f-cat").value, sig = $("#f-sig").value, urg = $("#f-urg").value, ai = $("#f-ai").value;
-  let rows = BIDS.filter(r => (!src || r.source === src) && (!q || `${r.name} ${r.dept} ${r.summary} ${r.id}`.toLowerCase().includes(q)) && (!dept || r.dept === dept)
+  let rows = BIDS.filter(r => (!st || (r.state || "CA") === st) && (!src || r.source === src) && (!q || `${r.name} ${r.dept} ${r.summary} ${r.id}`.toLowerCase().includes(q)) && (!dept || r.dept === dept)
     && (!cat || r.category === cat) && (!sig || r.signals.includes(sig))
     && (urg === "all" || (urg === "live" ? r.urgency !== "closed" : r.urgency === "critical" || r.urgency === "soon"))
     && (!ai || (ai === "yes") === r.analyzed));
@@ -846,7 +861,7 @@ function renderBids() {
     <td class="num">${meter(r.fit)}</td><td class="num">${r.complexity ? r.complexity + " / 5" : "—"}</td></tr>`).join("")
     || `<tr><td colspan="6" class="empty">No bids match these filters.</td></tr>`;
 }
-["#q", "#f-src", "#f-dept", "#f-cat", "#f-sig", "#f-urg", "#f-ai"].forEach(s => ["input", "change"].forEach(ev => $(s).addEventListener(ev, renderBids)));
+["#q", "#f-state", "#f-src", "#f-dept", "#f-cat", "#f-sig", "#f-urg", "#f-ai"].forEach(s => ["input", "change"].forEach(ev => $(s).addEventListener(ev, renderBids)));
 document.querySelectorAll("th[data-sort]").forEach(th => th.onclick = () => {
   sortDir = sortKey === th.dataset.sort ? -sortDir : (th.dataset.sort === "fit" ? -1 : 1); sortKey = th.dataset.sort; renderBids(); });
 
@@ -969,13 +984,14 @@ function renderDrawer(b) {
       ${(b.extra["Submission Requirements"] || []).length ? `<h3 style="margin-top:12px">Submission requirements (from OpenGov)</h3>${li(b.extra["Submission Requirements"].slice(0, 25))}` : ""}
       <div style="margin-top:8px"><a href="${esc(b.detail_url)}" target="_blank" rel="noopener">Open on OpenGov</a></div></div>` : ""}
     ${b.source === "Caltrans DES" ? caltransCard(b) : ""}
+    ${(b.state || "CA") !== "CA" ? stateCard(b) : ""}
     ${b.source === "Bonfire" ? bonfireCard(b) : ""}
     ${b.source === "CSU" ? `<div class="card"><h3>CSU details <span class="t-sub">· ${esc(b.extra.Campus || "")}</span></h3>
       <p style="margin:0">${esc(b.extra["Documents Note"] || "")}</p>
       <div style="margin-top:8px"><a href="${esc(b.detail_url)}" target="_blank" rel="noopener">Open CSU public bid site</a></div></div>` : ""}
     <div class="card"><h3>Description</h3><p style="margin:0;white-space:pre-wrap">${esc(b.description || "Not provided")}</p></div>
     <div class="card"><h3>Attachments (${b.attachments.length})</h3>
-      <table><tbody>${b.attachments.map(x => `<tr><td>${x.size_bytes == null && !x.error ? `${esc(x.file_name)} <span class="t-sub">(indexed text)</span>` : `<a href="/files/${b.id}/${encodeURIComponent(x.file_name)}" target="_blank" rel="noopener">${esc(x.file_name)}</a>`}
+      <table><tbody>${b.attachments.map(x => `<tr><td>${x.size_bytes == null && !x.error ? `${esc(x.file_name)} <span class="t-sub">(indexed text)</span>` : `<a href="/files/${encodeURIComponent(b.id)}/${encodeURIComponent(x.file_name)}" target="_blank" rel="noopener">${esc(x.file_name)}</a>`}
         ${x.error ? `<div class="t-sub">Unreadable: ${esc(x.error)}</div>` : ""}</td><td class="num t-sub">${x.pages ? x.pages + " pp" : ""}</td>
         <td class="num t-sub">${x.size_bytes ? (x.size_bytes / 1048576).toFixed(1) + " MB" : ""}</td></tr>`).join("")}</tbody></table></div>
     <div class="card"><h3>Buyer</h3>${esc(b.contact_name || "")} ${b.contact_email ? `· ${esc(b.contact_email)}` : ""} ${b.contact_phone ? `· ${esc(b.contact_phone)}` : ""}
@@ -984,7 +1000,7 @@ function renderDrawer(b) {
   </div>`;
   $("#run-ai").onclick = async e => {
     const btn = e.target; btn.disabled = true; btn.innerHTML = `<span class="spin"></span> Analyzing (can take a few minutes)…`;
-    try { const res = await post(`/api/analyze/${b.id}`); renderDrawer(res.bid); refresh(); } catch (err) { btn.textContent = "Failed: " + err.message; btn.disabled = false; }
+    try { const res = await post(`/api/analyze/${encodeURIComponent(b.id)}`); renderDrawer(res.bid); refresh(); } catch (err) { btn.textContent = "Failed: " + err.message; btn.disabled = false; }
   };
   const chatStream = $("#bid-chat-stream");
   const chatInput = $("#bid-chat-input");
@@ -1037,6 +1053,22 @@ function renderDrawer(b) {
   $("#bid-chat-presets").querySelectorAll("button").forEach(btn => {
     btn.onclick = () => askBidQuestion(btn.dataset.q);
   });
+}
+
+/* Other states' portals: one card, driven by whatever the adapter put in extra (all public on the state portal) */
+const STATE_SKIP = new Set(["Contacts", "Codes", "Raw Ref", "Platform", "Listed", "State Program", "Documents Note", "Category"]);
+function stateCard(b) {
+  const x = b.extra || {}, codes = x.Codes || [];
+  const val = v => Array.isArray(v) ? v.join(", ") : typeof v === "boolean" ? (v ? "Yes" : "No") : typeof v === "object" ? Object.values(v).join(" · ") : v;
+  const facts = Object.entries(x).filter(([k, v]) => !STATE_SKIP.has(k) && v !== null && v !== "" && !(Array.isArray(v) && !v.length));
+  return `<div class="card"><h3>${esc(b.source)} details <span class="t-sub">· ${esc(STATE_NAMES[b.state] || b.state)} · ${esc(x.Platform || "")}</span></h3>
+    <div style="margin:0 0 10px;padding:8px 10px;border:1px solid #b7791f;border-radius:8px;background:var(--surface-2)">
+      <b>Out-of-state bid.</b> California SB/DVBE certifications and CSLB licenses don't carry over. ${esc(x["State Program"] || "")}.</div>
+    <div class="facts">${facts.map(([k, v]) => `<div><small>${esc(k)}</small>${esc(String(val(v)).slice(0, 300))}</div>`).join("")}
+      ${(x.Contacts || []).map(c => `<div><small>${esc(c.role || "Contact")}</small>${esc([c.name, c.email, c.phone].filter(Boolean).join(" · "))}</div>`).join("")}</div>
+    ${codes.length ? `<div class="chips" style="margin-top:10px">${codes.slice(0, 30).map(c => `<span class="chip" title="${esc(c.system)}">${esc(c.system)} ${esc(c.code)} ${esc(c.title || "")}</span>`).join("")}</div>` : ""}
+    ${x["Documents Note"] ? `<p class="t-sub" style="margin:8px 0 0">${esc(x["Documents Note"])}</p>` : ""}
+    <div style="margin-top:8px"><a href="${esc(b.detail_url)}" target="_blank" rel="noopener">Open on ${esc(b.source)}</a></div></div>`;
 }
 
 /* Caltrans DES: contract facts + the teaming market around each contract (all public on the Caltrans portal) */
@@ -1238,7 +1270,7 @@ function drawBidMatch() {
         <div class="t-sub">${esc(b.summary || "")}</div></div>
       <div class="row" style="flex-wrap:nowrap">
         <button class="btn" id="bm-review" style="white-space:nowrap">${rev ? "Re-run AI review" : "AI shortlist review"}</button>
-        <a class="btn" href="/api/bidmatch/${b.id}.csv${BM.role ? "?role=" + BM.role : ""}" style="text-decoration:none;white-space:nowrap">Export CSV</a></div>
+        <a class="btn" href="/api/bidmatch/${encodeURIComponent(b.id)}.csv${BM.role ? "?role=" + BM.role : ""}" style="text-decoration:none;white-space:nowrap">Export CSV</a></div>
     </div>
     <div class="req">
       <div><small>Commodity codes</small>${b.codes.map(c => `<div title="${esc(c.description)}">${c.code} <span class="t-sub">${esc((c.description || "").split(" - ").pop())}</span></div>`).join("") || "None listed: matched on text"}</div>
@@ -1260,7 +1292,7 @@ function drawBidMatch() {
   $("#bm-roles").querySelectorAll("button").forEach(x => x.onclick = () => { BM.role = x.dataset.role; loadBidMatch(BM.bid); });
   $("#bm-review").onclick = async e => {
     const btn = e.target; btn.disabled = true; btn.innerHTML = `<span class="spin"></span> Reviewing top 12…`;
-    try { const r = await post(`/api/bidmatch/${b.id}/review`); BM.data.review = r; drawBidMatch(); }
+    try { const r = await post(`/api/bidmatch/${encodeURIComponent(b.id)}/review`); BM.data.review = r; drawBidMatch(); }
     catch (err) { btn.disabled = false; btn.textContent = "Failed: " + err.message; }
   };
   bindFirmActions();

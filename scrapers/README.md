@@ -11,7 +11,21 @@ scrapers/
   csu/             CSU, all campuses (Jaggaer)                     -> data/bronze/csu/
   bonfire/         Bonfire / Euna portals (MTC, ...)               -> data/bronze/bonfire/
   planetbids/      blocked (AWS WAF on the data API), see pipeline/sources.py
+
+  # other states (official state portals; found via publicbidtracker.com/about)
+  common/          shared plumbing: honest UA, pacing + back-off, Bronze writer, verified downloads, time zones
+  oregonbuys/      OregonBuys (OR state + local, Periscope BuySpeed) -> data/bronze/oregonbuys/
+  mfmp/            MyFloridaMarketPlace (FL state agencies)         -> data/bronze/mfmp/
+  tx_esbd/         Texas ESBD (TX state + SmartBuy members)         -> data/bronze/tx_esbd/
+  ga_gpr/          Georgia Procurement Registry (state + local)     -> data/bronze/ga_gpr/
+  eva/             Virginia eVA (state, universities, localities)   -> data/bronze/eva/
+  pa_emarketplace/ Pennsylvania eMarketplace (Commonwealth)         -> data/bronze/pa_emarketplace/
 ```
+
+Out-of-state bids carry `state` (OR/FL/TX/GA/VA/PA). The matcher doesn't credit California SB/DVBE programs,
+CSLB licenses or CA service areas on them, and says so. Each state's own program (COBID, OSD, HUB, GOSBO,
+SWaM, Small Diverse Business) is noted on the bid. The master brief for these scrapers is
+`docs/MULTISTATE_SCRAPING_PROMPT.md`.
 
 ## Contract every scraper follows
 

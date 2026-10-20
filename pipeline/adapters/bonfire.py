@@ -54,7 +54,7 @@ def records():
                 f"- {q.get('Name')} ({q.get('Type')}, {q.get('Requirement')})" for q in reqs)})
         yield schema.empty(
             bid_uid=f"{SRC}:{key}", id=f"{META['id_prefix']}{key}", source=SRC, source_label=META["label"],
-            platform=META["platform"], level=META["level"], source_id=r["Project ID"],
+            platform=META["platform"], level=META["level"], state="CA", source_id=r["Project ID"],
             agency=r.get("Agency"), agency_code=r.get("Portal"), department=r.get("Department"),
             agency_city="San Francisco" if r.get("Portal") == "mtc" else None,
             title=clean(d.get("Project") or r.get("Name")), description=clean(r.get("Description")),

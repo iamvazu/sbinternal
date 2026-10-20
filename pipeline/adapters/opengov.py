@@ -43,7 +43,7 @@ def records():
         sol = clean(ev.get("Solicitation Text") or "")
         yield schema.empty(
             bid_uid=f"{SRC}:{pid}", id=f"{META['id_prefix']}{pid}", source=SRC, source_label=META["label"],
-            platform=META["platform"], level=META["level"], source_id=pid,
+            platform=META["platform"], level=META["level"], state="CA", source_id=pid,
             agency=d.get("Dept"), agency_code=d.get("Department Code"), department=d.get("Department"),
             agency_city=d.get("Agency City"), title=clean(ev.get("Event Name")), description=clean(ev.get("Description")),
             procurement_type=d.get("Format/Type"), solicitation_number=d.get("Solicitation Number"),

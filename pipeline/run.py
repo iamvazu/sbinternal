@@ -49,8 +49,10 @@ def status():
         import sqlite3
         c = sqlite3.connect(db)
         print("GOLD")
-        for src, lvl, n in c.execute("SELECT source, level, COUNT(*) FROM events GROUP BY 1, 2"):
-            print(f"  {src:16} {lvl:6} {n:5} bids")
+        cols = {r[1] for r in c.execute("PRAGMA table_info(events)")}
+        st = "COALESCE(state, 'CA')" if "state" in cols else "'CA'"
+        for state, src, lvl, n in c.execute(f"SELECT {st}, source, level, COUNT(*) FROM events GROUP BY 1, 2, 3 ORDER BY 1, 2"):
+            print(f"  {state:3} {src:16} {lvl or '':6} {n:5} bids")
 
 
 def main():

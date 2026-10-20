@@ -25,10 +25,12 @@ auth.seed_default_accounts(conn)
 lock = threading.Lock()  # one sqlite connection shared by request threads
 llm_busy = threading.Semaphore(1)  # the Jetson runs one generation at a time; queue the rest
 
-GLOBAL_ASK_SYSTEM = """You are STRONGERbuilt's senior bid-intelligence assistant for California state and local public procurement (Cal eProcure, OpenGov, Caltrans, CSU, Bonfire).
+GLOBAL_ASK_SYSTEM = """You are STRONGERbuilt's senior bid-intelligence assistant for public procurement: California state and local (Cal eProcure, OpenGov, Caltrans, CSU, Bonfire) plus
+Oregon (OregonBuys), Florida (MFMP), Texas (ESBD), Georgia (GPR), Virginia (eVA) and Pennsylvania (eMarketplace).
+Always say which state a bid is in; California SB/DVBE certifications do not apply to other states' bids.
 Answer clearly from the catalog and excerpts provided. Cite event IDs in square brackets like [0000040342] or [OG-299986]. Be concise, practical, and direct."""
 
-BID_CONSULTANT_SYSTEM = """You are the Senior Capture Director & Contracts Counsel at STRONGERbuilt, specializing exclusively in California state (Cal eProcure, Caltrans, CDCR, DGS, CSU) and local (municipalities, counties, transit agencies, OpenGov, Bonfire) public procurement.
+BID_CONSULTANT_SYSTEM = """You are the Senior Capture Director & Contracts Counsel at STRONGERbuilt, specializing in California state (Cal eProcure, Caltrans, CDCR, DGS, CSU) and local (municipalities, counties, transit agencies, OpenGov, Bonfire) public procurement, and in the state portals of Oregon, Florida, Texas, Georgia, Virginia and Pennsylvania.
 
 Your role is to interrogate solicitation documents and attachments with forensic accuracy to protect bidders from hidden traps, identify win themes, and extract exact requirements.
 
@@ -44,6 +46,10 @@ Operating Rules:
    - DGS Small Business (SB/MB) 5% bid preference or SB set-aside rules (California Government Code § 14838).
    - Distinguish state 3% DVBE participation/incentives from federal-aid CUCP DBE goals.
    - Contract Hierarchy: Verify if Addenda supersede base RFB/IFB terms.
+   - OUT-OF-STATE: if the dossier's State is not CA, the California rules above do NOT apply. Use that state's
+     program instead (Oregon COBID, Florida OSD, Texas HUB subcontracting plan, Georgia GOSBO, Virginia SWaM,
+     Pennsylvania Small Diverse Business) plus its contractor licensing, and tell the bidder which registrations
+     they would need first.
 
 3. STRUCTURE FOR IMMEDIATE ACTION:
    - **Direct Answer**: Concise 1-2 sentence bottom line.
@@ -111,7 +117,7 @@ def ask(question, event_id=None):
 Event ID: {focus['id']}
 Title: {focus['name']}
 Agency / Department: {focus['dept']}
-Source / Platform: {focus.get('source', '')} · {focus.get('level', '')}
+State: {focus.get('state') or 'CA'} | Source / Platform: {focus.get('source', '')} · {focus.get('level', '')}
 Format: {focus.get('format', '')}
 Published: {focus.get('published', '')} | Bids Due: {focus.get('end_date', '')}
 Contact / Buyer: {focus.get('contact_name', '')} {focus.get('contact_email', '')} {focus.get('contact_phone', '')}
@@ -131,11 +137,11 @@ Structured AI Analysis:
 </document_excerpts>"""
         sys_prompt = BID_CONSULTANT_SYSTEM
     else:
-        cat = "\n".join(f"[{r['id']}] {r['name'][:90]} | {r['dept']} | {r['category']} | due {r['end_date']} "
+        cat = "\n".join(f"[{r['id']}] {r['state']} | {r['name'][:90]} | {r['dept']} | {r['category']} | due {r['end_date']} "
                         f"({r['urgency']}) | signals: {','.join(r['signals'][:6])}" for r in catalog)
         ex = "\n\n".join(f"[{h['event_id']}] {h['source']}:\n{h['body'][:1200]}" for h in hits)
         ctx = (f"Today is {s['generated'][:10]}. {s['open']} open bids, {s['closing_7d']} close within 7 days.\n"
-               f"Departments: {s['by_dept']}\nCategories: {s['by_category']}\n\n"
+               f"By state: {s['by_state']}\nDepartments: {s['by_dept']}\nCategories: {s['by_category']}\n\n"
                f"Catalog of relevant bids:\n{cat or 'none'}\n\n<excerpts>\n{ex or 'none'}\n</excerpts>")
         sys_prompt = GLOBAL_ASK_SYSTEM
 
@@ -259,7 +265,7 @@ class Handler(BaseHTTPRequestHandler):
             return self.send(200, matcher.firm_stats())
         if p == "/api/firms/search":
             return self.send(200, matcher.search_firms(self.qs.get("q", ""), int(self.qs.get("limit", 25))))
-        if m := re.fullmatch(r"/api/bidmatch/([\w-]+)\.csv", p):
+        if m := re.fullmatch(r"/api/bidmatch/([^/]+)\.csv", p):
             body = matchapi.export_csv(m.group(1), self.qs.get("role") or None)
             self.send_response(200)
             self.send_header("Content-Type", "text/csv; charset=utf-8")
@@ -267,7 +273,7 @@ class Handler(BaseHTTPRequestHandler):
             self.send_header("Content-Length", str(len(body)))
             self.end_headers()
             return self.wfile.write(body)
-        if m := re.fullmatch(r"/api/bidmatch/([\w-]+)", p):
+        if m := re.fullmatch(r"/api/bidmatch/([^/]+)", p):
             res = matcher.match_bid(m.group(1), int(self.qs.get("limit", 100)), self.qs.get("role") or None)
             if res:
                 res["review"] = matchapi.saved_review(m.group(1))
@@ -287,7 +293,7 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send(200, dict(r) if r else {})
             if p == "/api/clients":
                 return self.send(200, insights.load_clients())
-            if m := re.fullmatch(r"/api/bid/([\w-]+)", p):
+            if m := re.fullmatch(r"/api/bid/([^/]+)", p):
                 d = bid_detail(m.group(1))
                 return self.send(200 if d else 404, d or {"error": "not found"})
             if m := re.fullmatch(r"/api/match/([\w-]+)", p):
@@ -295,7 +301,7 @@ class Handler(BaseHTTPRequestHandler):
                 if not client:
                     return self.send(404, {"error": "unknown client"})
                 return self.send(200, insights.match_all(conn, insights.load_rows(conn), client))
-            if m := re.fullmatch(r"/files/([\w-]+)/(.+)", p):
+            if m := re.fullmatch(r"/files/([^/]+)/(.+)", p):
                 row = conn.execute("SELECT local_path FROM attachments WHERE event_id=? AND file_name=?",
                                    m.groups()).fetchone()
                 if row:
@@ -417,14 +423,14 @@ class Handler(BaseHTTPRequestHandler):
         if p == "/api/ask":
             b = self.body()
             return self.send(200, ask(b.get("question", ""), b.get("event_id")))
-        if m := re.fullmatch(r"/api/bidmatch/([\w-]+)/review", p):
+        if m := re.fullmatch(r"/api/bidmatch/([^/]+)/review", p):
             with llm_busy:
                 res = matchapi.review(m.group(1))
             return self.send(200 if res else 404, res or {"error": "not found"})
         if m := re.fullmatch(r"/api/clients/from-firm/([\w-]+)", p):
             c = matchapi.client_from_firm(m.group(1))
             return self.send(200 if c else 404, c or {"error": "unknown firm"})
-        if m := re.fullmatch(r"/api/analyze/([\w-]+)", p):
+        if m := re.fullmatch(r"/api/analyze/([^/]+)", p):
             with lock:
                 ev = conn.execute("SELECT * FROM events WHERE id=?", (m.group(1),)).fetchone()
             if not ev:

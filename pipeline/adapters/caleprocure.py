@@ -73,7 +73,7 @@ def records():
                          "size_bytes": a.get("size_bytes"), "error": None if lp else "file missing on disk"})
         yield schema.empty(
             bid_uid=f"{SRC}:{eid}", id=f"{META['id_prefix']}{eid}", source=SRC, source_label=META["label"],
-            platform=META["platform"], level=META["level"], source_id=eid,
+            platform=META["platform"], level=META["level"], state="CA", source_id=eid,
             agency=d.get("Dept"), agency_code=d.get("Department Code") or x.get("Department"),
             title=clean(ev.get("Event Name")), description=clean(ev.get("Description")),
             procurement_type=d.get("Format/Type"), version=d.get("Event Version"),
@@ -91,7 +91,7 @@ def records():
         if eid and eid not in seen:
             yield schema.empty(
                 bid_uid=f"{SRC}:{eid}", id=f"{META['id_prefix']}{eid}", source=SRC, source_label=META["label"],
-                platform=META["platform"], level=META["level"], source_id=eid,
+                platform=META["platform"], level=META["level"], state="CA", source_id=eid,
                 agency=x.get("Department Name"), agency_code=x.get("Department"), title=clean(x.get("Event Name")),
                 procurement_type=f"{x.get('Format', '')} / {x.get('Type', '')}", status=x.get("Status"),
                 due_at=parse_pacific(x.get("End Date")),

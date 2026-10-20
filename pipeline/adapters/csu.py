@@ -53,7 +53,7 @@ def records():
                          "size_bytes": a.get("size_bytes"), "error": a.get("error")})
         yield schema.empty(
             bid_uid=f"{SRC}:{eid}", id=f"{META['id_prefix']}{eid}", source=SRC, source_label=META["label"],
-            platform=META["platform"], level=META["level"], source_id=eid,
+            platform=META["platform"], level=META["level"], state="CA", source_id=eid,
             agency="California State University", agency_code=prefix or None, department=campus,
             agency_city=CAMPUS_CITY.get(campus), title=clean(r["Title"]),
             description=f"{clean(r['Title'])}. {r.get('Type') or ''} issued by {campus or 'the CSU'} "

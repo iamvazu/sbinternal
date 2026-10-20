@@ -43,7 +43,11 @@ def urgency(d):
 ID_PREFIX_SOURCE = {"OG-": ("OpenGov", "Local"), "PB-": ("PlanetBids", "Local"), "CT-": ("Caltrans DES", "State"),
                     "CSU-": ("CSU", "State"), "BF-": ("Bonfire", "Local"), "BN-": ("BidNet Direct", "Local"),
                     "BG-": ("Biddingo", "Local"), "QC-": ("QuestCDN", "Local"), "CP-": ("CivicPlus Bids", "Local"),
-                    "AG-": ("Agency portals", "Local")}
+                    "AG-": ("Agency portals", "Local"), "OR-": ("OregonBuys", None), "FL-": ("Florida MFMP", "State"),
+                    "TX-": ("Texas ESBD", None), "GA-": ("Georgia GPR", None), "VA-": ("Virginia eVA", None),
+                    "PA-": ("PA eMarketplace", "State")}
+STATE_NAMES = {"CA": "California", "OR": "Oregon", "FL": "Florida", "TX": "Texas", "GA": "Georgia", "VA": "Virginia",
+               "PA": "Pennsylvania", "AZ": "Arizona", "WA": "Washington"}
 
 
 def _infer(ev):
@@ -58,6 +62,13 @@ def source_of(ev):
     return (ev["source"] if "source" in ev.keys() and ev["source"] else None) or _infer(ev)[0]
 
 
+def state_of(ev):
+    if "state" in ev.keys() and ev["state"]:
+        return ev["state"]
+    eid = ev["id"] or ""
+    return eid[:2] if eid[:3] in ("OR-", "FL-", "TX-", "GA-", "VA-", "PA-") else "CA"
+
+
 def level_of(ev):
     return (ev["level"] if "level" in ev.keys() and ev["level"] else None) or _infer(ev)[1]
 
@@ -70,7 +81,7 @@ def bid_row(ev, facts, analysis):
     sa = a.get("set_aside_and_preferences") or {}
     return {
         "id": ev["id"], "name": ev["name"], "dept": ev["dept"], "end_date": ev["end_date"],
-        "source": source_of(ev), "level": level_of(ev),
+        "source": source_of(ev), "level": level_of(ev), "state": state_of(ev),
         "published": ev["published"], "days_left": d, "urgency": urgency(d),
         "category": f.get("category") or "Other", "method": f.get("method"),
         "signals": sorted(sig.keys()),
@@ -117,6 +128,8 @@ def stats(rows):
         "closing_3d": sum(1 for r in live if r["urgency"] == "critical"),
         "analyzed": sum(1 for r in rows if r["analyzed"]),
         "by_source": Counter(r["source"] for r in live).most_common(),
+        "by_state": Counter(r["state"] for r in live).most_common(),
+        "state_names": STATE_NAMES,
         "sb_access": sum(1 for r in live if {"sb_set_aside", "sb_dvbe_option", "sb_preference"} & set(r["signals"])),
         "dvbe": sum(1 for r in live if r["dvbe_pct"] or "dvbe_participation" in r["signals"]),
         "dbe": sum(1 for r in live if r["dbe_pct"] or "dbe_goal" in r["signals"]),

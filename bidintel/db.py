@@ -80,11 +80,15 @@ def connect() -> sqlite3.Connection:
     # v2: multi-source bids. source = 'Cal eProcure' | 'OpenGov'; level = 'State' | 'Local';
     # extra = source-specific fields (solicitation #, NIGP codes, Q&A deadline, procurement contact, ...)
     cols = {r[1] for r in conn.execute("PRAGMA table_info(events)")}
-    for col in ("source", "level", "extra"):
+    # v3: multi-state. state = 2-letter US state of the buying agency ('CA', 'OR', 'TX' ...)
+    for col in ("source", "level", "extra", "state"):
         if col not in cols:
             conn.execute(f"ALTER TABLE events ADD COLUMN {col} TEXT")
     if conn.execute("SELECT 1 FROM events WHERE source IS NULL LIMIT 1").fetchone():  # write only when needed
         conn.execute("UPDATE events SET source='Cal eProcure', level='State' WHERE source IS NULL")
+        conn.commit()
+    if conn.execute("SELECT 1 FROM events WHERE state IS NULL LIMIT 1").fetchone():
+        conn.execute("UPDATE events SET state='CA' WHERE state IS NULL")  # everything before v3 was California
         conn.commit()
     return conn
 

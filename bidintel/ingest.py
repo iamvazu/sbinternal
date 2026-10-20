@@ -103,7 +103,11 @@ def zip_text(data: bytes):
     return "\n".join(parts), None
 
 
-EXTRACTORS = {"pdf": pdf_text, "docx": docx_text, "xlsx": xlsx_text, "zip": zip_text}
+def txt_text(data):
+    return data.decode("utf-8", errors="ignore"), None
+
+
+EXTRACTORS = {"pdf": pdf_text, "docx": docx_text, "xlsx": xlsx_text, "zip": zip_text, "txt": txt_text}
 
 
 def extract(path: Path):
@@ -188,19 +192,20 @@ def ingest(rebuild=False):
         buyer = next(iter(b.get("contacts") or []), {})
         conn.execute(
             """INSERT INTO events (id,name,dept,dept_code,format,version,status,published,end_date,description,
-                   contact_name,contact_email,contact_phone,detail_url,raw,first_seen,last_seen,source,level,extra)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+                   contact_name,contact_email,contact_phone,detail_url,raw,first_seen,last_seen,source,level,extra,state)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
                ON CONFLICT(id) DO UPDATE SET name=excluded.name, dept=excluded.dept, dept_code=excluded.dept_code,
                    format=excluded.format, version=excluded.version, status=excluded.status,
                    published=excluded.published, end_date=excluded.end_date, description=excluded.description,
                    contact_name=excluded.contact_name, contact_email=excluded.contact_email,
                    contact_phone=excluded.contact_phone, detail_url=excluded.detail_url, raw=excluded.raw,
-                   last_seen=excluded.last_seen, source=excluded.source, level=excluded.level, extra=excluded.extra""",
+                   last_seen=excluded.last_seen, source=excluded.source, level=excluded.level, extra=excluded.extra,
+                   state=excluded.state""",
             (eid, b["title"], b.get("agency"), b.get("agency_code"), b.get("procurement_type"), b.get("version"),
              b.get("status"), b.get("published_at"), b.get("due_at"), b.get("description"),
              buyer.get("name"), buyer.get("email"), buyer.get("phone"), b.get("url"),
              json.dumps({k: v for k, v in b.items() if k != "documents"}), now, now,
-             b["source_label"], b["level"], json.dumps(gold_extra(b))))
+             b["source_label"], b["level"], json.dumps(gold_extra(b)), b.get("state") or "CA"))
         for c in b.get("codes") or []:
             if c.get("system") == "UNSPSC" and c.get("code"):
                 desc = c.get("title") or ""
@@ -220,7 +225,7 @@ def ingest(rebuild=False):
     s = conn.execute("""SELECT (SELECT COUNT(*) FROM events) e, (SELECT COUNT(*) FROM attachments) a,
                         (SELECT COUNT(*) FROM attachments WHERE error IS NOT NULL) ae,
                         (SELECT COUNT(*) FROM chunks) c""").fetchone()
-    by = conn.execute("SELECT source, level, COUNT(*) FROM events GROUP BY 1, 2").fetchall()
+    by = conn.execute("SELECT state || ' ' || source, level, COUNT(*) FROM events GROUP BY 1, 2").fetchall()
     print(f"gold: {s['e']} events ({', '.join(f'{r[0]} {r[1]}: {r[2]}' for r in by)}), "
           f"{s['a']} attachments ({s['ae']} unreadable), {s['c']} search chunks")
 

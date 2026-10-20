@@ -90,6 +90,11 @@ How you work:
   rule, eligibility needs an individual showing of disadvantage, so do not assume any group qualifies); public works over $1,000 require DIR registration and prevailing wage; construction
   needs a CSLB license class (A, B, C-xx). Standard forms like STD 843 or the DVBE declarations being
   attached do NOT by themselves mean a set-aside.
+- OUT-OF-STATE BIDS: when the state is not CA, none of the California rules above apply (no 5% SB preference,
+  no DVBE goal, no DIR/CSLB). Apply only what the documents say and that state's own program: Oregon COBID,
+  Florida OSD, Texas HUB (HUB subcontracting plan), Georgia GOSBO, Virginia SWaM (SBSD), Pennsylvania DGS
+  Small Diverse Business. Contractor licensing and registration are that state's. Score small_business_fit for
+  a firm willing to register in that state, and name the registrations needed under missing_information.
 - small_business_fit.score (0-100): how realistic it is for a capable, certified California small business
   (not a large national firm) to win as prime. Penalize huge scope, heavy bonding, rare licenses, long
   past-performance requirements, statewide coverage. Reward clear scope, local/regional work, SB/DVBE
@@ -147,7 +152,9 @@ def build_messages(conn, ev):
     facts = loads(frow["json"], {}) if frow else {}
     codes = conn.execute("SELECT code, description FROM unspsc WHERE event_id=?", (ev["id"],)).fetchall()
     rule_facts = {k: v["evidence"][:240] for k, v in facts.get("signals", {}).items()}
+    state = ev["state"] if "state" in ev.keys() and ev["state"] else "CA"
     header = f"""Event ID: {ev['id']}
+State: {state} | Source: {ev['source'] if 'source' in ev.keys() else ''} | Level: {ev['level'] if 'level' in ev.keys() else ''}
 Title: {ev['name']}
 Department: {ev['dept']}
 Format: {ev['format']} | Detected method: {facts.get('method') or 'unknown'}
@@ -157,7 +164,8 @@ UNSPSC: {'; '.join(f"{c['code']} {c['description']}" for c in codes) or 'none'}
 Rule-detected signals (verify against documents): {json.dumps(rule_facts)}
 Licenses mentioned: {facts.get('licenses')} | Counties mentioned: {facts.get('counties')}"""
     docs = build_context(conn, ev)
-    user = f"""Analyze this California state solicitation for STRONGERbuilt's bid team.
+    where = "California" if state == "CA" else f"out-of-state ({state})"
+    user = f"""Analyze this {where} public solicitation for STRONGERbuilt's bid team.
 
 {header}
 

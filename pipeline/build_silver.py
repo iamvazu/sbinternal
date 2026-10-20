@@ -31,7 +31,7 @@ def build():
             n += 1
         atts = [a for r in out if r["source"] == key for a in r["attachments"]]
         manifest["sources"][key] = {
-            "label": meta["label"], "level": meta["level"], "records": n, "duplicates_dropped": dupes,
+            "label": meta["label"], "level": meta["level"], "state": meta.get("state", "CA"), "records": n, "duplicates_dropped": dupes,
             "attachments": len(atts), "attachments_on_disk": sum(1 for a in atts if a["local_path"]),
             "validation_problems": dict(problems),
         }
@@ -44,8 +44,9 @@ def build():
         for r in out:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
     manifest["total"] = len(out)
+    manifest["by_state"] = dict(Counter(r["state"] for r in out).most_common())
     SILVER_MANIFEST.write_text(json.dumps(manifest, indent=1), encoding="utf-8")
-    print(f"silver: {len(out)} bids -> {SILVER_BIDS}")
+    print(f"silver: {len(out)} bids -> {SILVER_BIDS}  by state: {manifest['by_state']}")
     return manifest
 
 
