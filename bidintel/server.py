@@ -161,16 +161,19 @@ class Handler(BaseHTTPRequestHandler):
         pass
 
     def send(self, code, body, ctype="application/json", headers=None):
-        data = body if isinstance(body, bytes) else json.dumps(body, default=str).encode()
-        self.send_response(code)
-        self.send_header("Content-Type", ctype)
-        self.send_header("Content-Length", str(len(data)))
-        self.send_header("Cache-Control", "no-store")
-        if headers:
-            for k, v in headers.items():
-                self.send_header(k, v)
-        self.end_headers()
-        self.wfile.write(data)
+        try:
+            data = body if isinstance(body, bytes) else json.dumps(body, default=str).encode()
+            self.send_response(code)
+            self.send_header("Content-Type", ctype)
+            self.send_header("Content-Length", str(len(data)))
+            self.send_header("Cache-Control", "no-store")
+            if headers:
+                for k, v in headers.items():
+                    self.send_header(k, v)
+            self.end_headers()
+            self.wfile.write(data)
+        except (BrokenPipeError, ConnectionResetError):
+            pass
 
     def body(self):
         n = int(self.headers.get("Content-Length") or 0)
@@ -213,23 +216,38 @@ class Handler(BaseHTTPRequestHandler):
             u = urlparse(self.path)
             self.qs = {k: v[0] for k, v in parse_qs(u.query).items()}
             self.route_get(unquote(u.path))
+        except (BrokenPipeError, ConnectionResetError):
+            pass
         except Exception as e:
             traceback.print_exc()
-            self.send(500, {"error": str(e)})
+            try:
+                self.send(500, {"error": str(e)})
+            except (BrokenPipeError, ConnectionResetError):
+                pass
 
     def do_POST(self):
         try:
             self.route_post(unquote(urlparse(self.path).path))
+        except (BrokenPipeError, ConnectionResetError):
+            pass
         except Exception as e:
             traceback.print_exc()
-            self.send(500, {"error": str(e)})
+            try:
+                self.send(500, {"error": str(e)})
+            except (BrokenPipeError, ConnectionResetError):
+                pass
 
     def do_DELETE(self):
         try:
             self.route_delete(unquote(urlparse(self.path).path))
+        except (BrokenPipeError, ConnectionResetError):
+            pass
         except Exception as e:
             traceback.print_exc()
-            self.send(500, {"error": str(e)})
+            try:
+                self.send(500, {"error": str(e)})
+            except (BrokenPipeError, ConnectionResetError):
+                pass
 
     def route_get(self, p):
         if p in ("/", "/index.html"):
@@ -267,12 +285,8 @@ class Handler(BaseHTTPRequestHandler):
             return self.send(200, matcher.search_firms(self.qs.get("q", ""), int(self.qs.get("limit", 25))))
         if m := re.fullmatch(r"/api/bidmatch/([^/]+)\.csv", p):
             body = matchapi.export_csv(m.group(1), self.qs.get("role") or None)
-            self.send_response(200)
-            self.send_header("Content-Type", "text/csv; charset=utf-8")
-            self.send_header("Content-Disposition", f'attachment; filename="bid-{m.group(1)}-matches.csv"')
-            self.send_header("Content-Length", str(len(body)))
-            self.end_headers()
-            return self.wfile.write(body)
+            return self.send(200, body, ctype="text/csv; charset=utf-8",
+                             headers={"Content-Disposition": f'attachment; filename="bid-{m.group(1)}-matches.csv"'})
         if m := re.fullmatch(r"/api/bidmatch/([^/]+)", p):
             res = matcher.match_bid(m.group(1), int(self.qs.get("limit", 100)), self.qs.get("role") or None)
             if res:
