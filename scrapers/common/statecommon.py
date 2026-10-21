@@ -125,18 +125,20 @@ def download(s, bronze, rid, file_name, url, method="GET", data=None, log=None, 
             rec["error"] = f"not downloaded: {size / 2**20:.0f} MB (over the {MAX_ATTACHMENT_BYTES // 2**20} MB cap); open on the portal"
             return rec
         head = b""
-        with open(dest, "wb") as fh:
+        part = dest.with_name(dest.name + ".part")  # renamed only when complete: a stop mid-file leaves no fake "done" file
+        with open(part, "wb") as fh:
             for chunk in r.iter_content(1 << 16):
                 if not head:
                     head = chunk[:200]
                 fh.write(chunk)
         if head.lstrip().lower().startswith((b"<!doctype html", b"<html")) and not dest.suffix.lower().endswith(("htm", "html")):
-            dest.unlink(missing_ok=True)
+            part.unlink(missing_ok=True)
             rec["error"] = "portal returned a web page instead of the file"
             return rec
+        part.replace(dest)
         rec.update(local_path=dest.relative_to(PROJECT).as_posix(), size_bytes=dest.stat().st_size)
     except Exception as e:
-        dest.unlink(missing_ok=True)
+        dest.with_name(dest.name + ".part").unlink(missing_ok=True)
         rec["error"] = str(e)[:200]
     return rec
 
