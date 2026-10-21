@@ -710,7 +710,7 @@ function when(r) {
   return `<span class="urg ${r.urgency}" title="${URG[r.urgency]}"><i></i>${txt}</span><div class="t-sub">${date}</div>`;
 }
 // Source label comes only from the data (source + level). Never assume a source.
-const STATE_NAMES = {CA: "California", OR: "Oregon", FL: "Florida", TX: "Texas", GA: "Georgia", VA: "Virginia", PA: "Pennsylvania", AZ: "Arizona", WA: "Washington"};
+const STATE_NAMES = {CA: "California", OR: "Oregon", FL: "Florida", TX: "Texas", GA: "Georgia", VA: "Virginia", PA: "Pennsylvania", AZ: "Arizona", WA: "Washington", US: "Federal"};
 const stChip = r => `<span class="chip st${(r.state || "CA") !== "CA" ? " oos" : ""}" title="${esc(STATE_NAMES[r.state || "CA"] || r.state)}${(r.state || "CA") !== "CA" ? " - California SB/DVBE certifications don't apply" : ""}">${esc(r.state || "CA")}</span>`;
 const srcChip = r => stChip(r) + ` <span class="chip src" title="${esc(r.level ? r.level + " government" : "")}">${esc(r.source || "Unknown source")}${r.level ? " · " + esc(r.level) : ""}</span>`;
 const chips = (sigs, max = 4) => `<div class="chips">${sigs.filter(s => KEY_SIG.has(s)).slice(0, max)
@@ -726,7 +726,7 @@ function md(text) {
     l = l.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
 
     // Bracketed IDs: [OG-299766], [08A4031], [0000040514]
-    l = l.replace(/\[((?:OR|FL|TX|GA|VA|PA)-[^\]]+|[\w-]+)\]/g, (m, id) => `<a href="#" data-bid="${id}">${id}</a>`);
+    l = l.replace(/\[((?:OR|FL|TX|GA|VA|PA|SAM|PIEE|FC|DIBBS)-[^\]]+|[\w-]+)\]/g, (m, id) => `<a href="#" data-bid="${id}">${id}</a>`);
 
     // Match all procurement bid formats:
     // - OpenGov: OG-123456
@@ -737,11 +737,11 @@ function md(text) {
     // - Caltrans contracts: 08A4031, 11A4455, 04A7533, 10A2938
     // - State agency formats: 03-1055-4, 05-1K9014, 27-001, 26-1...
     // - Controller / agency codes: EUPD91526, EEOS90326, HSR26-28, 75A0605, 9TSC0108, 7CA07824
-    // - Other states: OR-S-…, FL-AD-17250, TX-RFP-…, GA-PE-…, VA-IV128881, PA-…
-    const idPattern = /\b((?:OR|FL|TX|GA|VA|PA)-[\w.()-]+|OG-\d+|CSU-\d+|BF-[\w-]+|CT-[\w-]+|0000\d{6}|\d{2}[A-Z]\d{4}|\d{2}-[\w]+|EUPD\d+|EEOS\d+|HSR\d+-\d+|75A\d+|9TSC\d+|7CA\d+|\d{8,10})\b(?![^<]*<\/a>)/g;
+    // - Other states: OR-S-…, FL-AD-17250, TX-RFP-…, GA-PE-…, VA-IV128881, PA-…; federal: SAM-…, PIEE-…, FC-…, DIBBS-…
+    const idPattern = /\b((?:OR|FL|TX|GA|VA|PA|SAM|PIEE|FC|DIBBS)-[\w.()-]+|OG-\d+|CSU-\d+|BF-[\w-]+|CT-[\w-]+|0000\d{6}|\d{2}[A-Z]\d{4}|\d{2}-[\w]+|EUPD\d+|EEOS\d+|HSR\d+-\d+|75A\d+|9TSC\d+|7CA\d+|\d{8,10})\b(?![^<]*<\/a>)/g;
     l = l.replace(idPattern, (m, id) => {
       if (bidIdSet && !bidIdSet.has(id)) {
-        if (!id.startsWith("OG-") && !id.startsWith("0000") && !id.startsWith("CT-") && !id.startsWith("CSU-") && !id.startsWith("BF-") && !/^(OR|FL|TX|GA|VA|PA)-/.test(id)) {
+        if (!id.startsWith("OG-") && !id.startsWith("0000") && !id.startsWith("CT-") && !id.startsWith("CSU-") && !id.startsWith("BF-") && !/^(OR|FL|TX|GA|VA|PA|SAM|PIEE|FC|DIBBS)-/.test(id)) {
           return m;
         }
       }
@@ -805,7 +805,7 @@ function renderCommand() {
   const bySrc = Object.fromEntries(s.by_source || []);
   const bySt = s.by_state || [];
   $("#kpis").innerHTML = kpi(s.open, "Open bids", bySt.map(([k, v]) => `${v} ${esc(k)}`).join(" · ") || Object.entries(bySrc).map(([k, v]) => `${v} ${esc(k)}`).join(" · "))
-    + kpi(bySt.length, "States covered", `${Object.keys(bySrc).length} portals`) + kpi(s.closing_7d, "Close within 7 days", `${s.closing_3d} within 3 days`)
+    + kpi(bySt.filter(([k]) => k !== "US").length + (bySt.some(([k]) => k === "US") ? " + Fed" : ""), "States covered", `${Object.keys(bySrc).length} portals`) + kpi(s.closing_7d, "Close within 7 days", `${s.closing_3d} within 3 days`)
     + kpi(s.sb_access, "SB preference / set-aside", "certified SBs get an edge") + kpi(s.dvbe, "DVBE participation", "primes need DVBE partners")
     + kpi(s.dbe, "Federal DBE goals", "federal-aid work, CUCP-certified") + kpi(s.mandatory_prebid, "Mandatory pre-bids", "miss it, can't bid")
     + kpi(`${s.analyzed}`, "AI-analyzed bids", `${Math.round(s.analyzed / Math.max(1, s.total) * 100)}% coverage`);
@@ -854,8 +854,9 @@ function renderBids() {
     && (urg === "all" || (urg === "live" ? r.urgency !== "closed" : r.urgency === "critical" || r.urgency === "soon"))
     && (!ai || (ai === "yes") === r.analyzed));
   rows = rows.sort((a, b) => { const x = a[sortKey], y = b[sortKey]; return (x == null) - (y == null) || (x > y ? 1 : x < y ? -1 : 0) * sortDir; });
-  $("#count").textContent = `${rows.length} bids`;
-  $("#rows").innerHTML = rows.map(r => `<tr data-bid="${r.id}">
+  const SHOW = 400;
+  $("#count").textContent = rows.length > SHOW ? `${rows.length} bids (showing the first ${SHOW}; filter or search to narrow)` : `${rows.length} bids`;
+  $("#rows").innerHTML = rows.slice(0, SHOW).map(r => `<tr data-bid="${r.id}">
     <td><div class="t-name">${esc(r.name)}</div><div class="t-sub">${srcChip(r)} ${esc(r.dept)} · ${r.id}${r.method ? " · " + r.method : ""}${r.value ? " · " + esc(r.value) : ""}</div></td>
     <td>${esc(r.category)}</td><td class="num">${when(r)}</td><td>${chips(r.signals)}</td>
     <td class="num">${meter(r.fit)}</td><td class="num">${r.complexity ? r.complexity + " / 5" : "—"}</td></tr>`).join("")
@@ -984,7 +985,7 @@ function renderDrawer(b) {
       ${(b.extra["Submission Requirements"] || []).length ? `<h3 style="margin-top:12px">Submission requirements (from OpenGov)</h3>${li(b.extra["Submission Requirements"].slice(0, 25))}` : ""}
       <div style="margin-top:8px"><a href="${esc(b.detail_url)}" target="_blank" rel="noopener">Open on OpenGov</a></div></div>` : ""}
     ${b.source === "Caltrans DES" ? caltransCard(b) : ""}
-    ${(b.state || "CA") !== "CA" ? stateCard(b) : ""}
+    ${b.state === "US" ? federalCard(b) : (b.state || "CA") !== "CA" ? stateCard(b) : ""}
     ${b.source === "Bonfire" ? bonfireCard(b) : ""}
     ${b.source === "CSU" ? `<div class="card"><h3>CSU details <span class="t-sub">· ${esc(b.extra.Campus || "")}</span></h3>
       <p style="margin:0">${esc(b.extra["Documents Note"] || "")}</p>
@@ -1053,6 +1054,45 @@ function renderDrawer(b) {
   $("#bid-chat-presets").querySelectorAll("button").forEach(btn => {
     btn.onclick = () => askBidQuestion(btn.dataset.q);
   });
+}
+
+/* Federal (SAM.gov, PIEE, FedConnect, DIBBS): set-aside + SBA program, place of performance, and award history */
+const money = v => v == null ? "—" : v >= 1e6 ? `$${(v / 1e6).toFixed(1)}M` : v >= 1e3 ? `$${(v / 1e3).toFixed(0)}K` : `$${Math.round(v)}`;
+function awardHistoryCard(h) {
+  if (!h) return `<div class="card"><h3>Award history</h3><div class="t-sub">USAspending reference data not loaded on this machine yet.</div></div>`;
+  if (h.error) return `<div class="card"><h3>Award history</h3><div class="t-sub">${esc(h.error)}</div></div>`;
+  const s = h.summary, row = a => `<tr style="cursor:default"><td>${esc(a.recipient || "")}<div class="t-sub">${esc(a.piid || "")} · ${esc(a.office || "")} · ${esc(a.pop_city || "")} ${esc(a.pop_state || "")}</div></td>
+    <td class="num">${money(a.obligated)}</td><td class="t-sub">${esc((a.set_aside || "").replace(/ SET[- ]ASIDE.*$/i, "") || "—")}<br>${esc(a.offers ? a.offers + " offers" : "")}</td>
+    <td class="num t-sub">${esc((a.current_end || "").slice(0, 10))}</td></tr>`;
+  return `<div class="card"><h3>Award history <span class="t-sub">· USAspending (FPDS) · ${h.awards_loaded.toLocaleString()} awards loaded</span></h3>
+    ${h.prior.length ? `<h3 style="margin-top:4px">Prior awards under this solicitation (incumbent)</h3><table><tbody>${h.prior.map(row).join("")}</tbody></table>`
+      : `<div class="t-sub">No prior award found under this solicitation number.</div>`}
+    ${s ? `<h3 style="margin-top:12px">Market: ${esc(s.scope)} (NAICS ${esc(h.naics)})</h3>
+      <div class="facts"><div><small>Recent awards</small>${s.awards}</div><div><small>Total obligated</small>${money(s.total_obligated)}</div>
+        <div><small>Median award</small>${money(s.median_award)}</div><div><small>Set aside</small>${s.set_aside_share != null ? Math.round(s.set_aside_share * 100) + "%" : "—"}</div>
+        <div><small>Avg offers</small>${s.avg_offers ?? "—"}</div><div><small>Top winners</small>${s.top_winners.map(([n, c]) => `${esc(n)} (${c})`).join("<br>")}</div></div>
+      <table style="margin-top:8px"><tbody>${h.recent.map(row).join("")}</tbody></table>` : `<div class="t-sub" style="margin-top:8px">No comparable awards in the loaded history.</div>`}
+  </div>`;
+}
+function federalCard(b) {
+  const x = b.extra || {}, lines = x.Lines || [], src = x["Approved Sources"] || {};
+  const facts = [["Set-aside", x["Set-Aside"] || "None (full and open)"], ["SBA program needed", x["SBA Program"] || "—"],
+    ["Notice type", x["Notice Type"] || b.format], ["Office", x.Office || x["Contracting Office"] || b.dept],
+    ["Office code", x["AAC Code"] || x.DoDAAC || b.dept_code], ["Place of performance", x["Place of Performance"] || x["Place of Performance State"] || "—"],
+    ["Deadline as posted", x["Response Deadline (as posted)"] || x["Response Date (as posted)"] || x["Response Due (as posted)"] || x["Return By (DLA, date only)"]],
+    ["Solicitation #", x["Solicitation Number"]]].filter(([, v]) => v);
+  return `<div class="card"><h3>${esc(b.source)} details <span class="t-sub">· Federal · ${esc(x.Platform || "")}</span></h3>
+    <div style="margin:0 0 10px;padding:8px 10px;border:1px solid #2b6cb0;border-radius:8px;background:var(--surface-2)">
+      <b>Federal bid.</b> Needs an active SAM.gov registration (UEI). SBA programs apply (SB, 8(a), HUBZone, SDVOSB, WOSB); California SB/DVBE certifications don't.</div>
+    <div class="facts">${facts.map(([k, v]) => `<div><small>${esc(k)}</small>${esc(String(v))}</div>`).join("")}
+      ${(x.Contacts || []).map(c => `<div><small>${esc(c.role || "Contact")}</small>${esc([c.name, c.email, c.phone].filter(Boolean).join(" · "))}</div>`).join("")}</div>
+    ${(x.Codes || []).length ? `<div class="chips" style="margin-top:10px">${x.Codes.map(c => `<span class="chip">${esc(c.system)} ${esc(c.code)}${c.title ? " " + esc(c.title) : ""}</span>`).join("")}</div>` : ""}
+    ${lines.length ? `<h3 style="margin-top:12px">RFQ lines (${lines.length})</h3><table><tbody>${lines.map(l => `<tr style="cursor:default"><td>${esc(l.nsn_or_part)} ${esc(l.nomenclature || "")}
+      ${(src[l.nsn_or_part] || []).length ? `<div class="t-sub">Approved: ${src[l.nsn_or_part].map(s => `CAGE ${esc(s.cage)} P/N ${esc(s.part_number)}`).join("; ")}</div>` : ""}</td>
+      <td class="num">${esc(l.qty)} ${esc(l.unit || "")}</td></tr>`).join("")}</tbody></table>` : ""}
+    ${x["Attachments Note"] || x["Documents Note"] ? `<p class="t-sub" style="margin:8px 0 0">${esc(x["Attachments Note"] || x["Documents Note"])}</p>` : ""}
+    <div style="margin-top:8px"><a href="${esc(b.detail_url)}" target="_blank" rel="noopener">Open on ${esc(b.source)}</a></div></div>
+    ${awardHistoryCard(b.award_history)}`;
 }
 
 /* Other states' portals: one card, driven by whatever the adapter put in extra (all public on the state portal) */

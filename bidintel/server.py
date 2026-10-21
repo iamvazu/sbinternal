@@ -3,7 +3,9 @@
     python server.py            # http://127.0.0.1:8765
     BI_HOST=0.0.0.0 python server.py   # reachable from the office LAN
 """
+import gzip
 import json
+import os
 import re
 import threading
 import traceback
@@ -58,6 +60,19 @@ Operating Rules:
    - **Capture Recommendation**: Immediate next steps or clarifying questions for the buyer."""
 
 
+_rows_cache = {"key": None, "rows": None}
+
+
+def cached_rows():
+    """insights.load_rows over ~32k bids takes seconds; rebuild only when the database changed. Any commit (this
+    server's, the pipeline's, analyze.py's) touches the db or its WAL file, so their mtimes are a microsecond check.
+    Callers hold `lock` (the shared sqlite connection)."""
+    key = tuple(os.stat(p).st_mtime_ns if os.path.exists(p) else 0 for p in (str(config.DB_PATH), f"{config.DB_PATH}-wal"))
+    if key != _rows_cache["key"]:
+        _rows_cache.update(key=key, rows=insights.load_rows(conn))
+    return _rows_cache["rows"]
+
+
 def bid_detail(eid):
     ev = conn.execute("SELECT * FROM events WHERE id=?", (eid,)).fetchone()
     if not ev:
@@ -72,6 +87,11 @@ def bid_detail(eid):
     out["analysis"] = a
     out["analysis_meta"] = {k: arow[k] for k in ("model", "seconds", "created", "error")} if arow else None
     out["unspsc"] = [dict(r) for r in conn.execute("SELECT code, description FROM unspsc WHERE event_id=?", (eid,))]
+    if (ev["state"] if "state" in ev.keys() else None) == "US":
+        try:
+            out["award_history"] = insights.award_history(ev, out["extra"])
+        except Exception as exc:  # reference data is optional; never break the bid drawer
+            out["award_history"] = {"error": str(exc)}
     out["attachments"] = [dict(r) for r in conn.execute(
         "SELECT file_name, ext, size_bytes, pages, chars, error, download_url FROM attachments WHERE event_id=?", (eid,))]
     return out
@@ -95,7 +115,7 @@ def ask(question, event_id=None):
         hits = insights.retrieve(conn, question, event_id, k=k_val)
         focus = bid_detail(event_id) if event_id else None
         if not event_id:
-            rows = insights.load_rows(conn)
+            rows = cached_rows()
             s = insights.stats(rows)
             ids = list(dict.fromkeys(h["event_id"] for h in hits))
             terms = [w for w in re.findall(r"\w{4,}", question.lower()) if w not in insights.STOP]
@@ -163,8 +183,13 @@ class Handler(BaseHTTPRequestHandler):
     def send(self, code, body, ctype="application/json", headers=None):
         try:
             data = body if isinstance(body, bytes) else json.dumps(body, default=str).encode()
+            gz = len(data) > 65536 and "gzip" in (self.headers.get("Accept-Encoding") or "")
+            if gz:  # the bid list is ~20 MB of JSON; gzip makes it a few MB over the LAN
+                data = gzip.compress(data, compresslevel=5)
             self.send_response(code)
             self.send_header("Content-Type", ctype)
+            if gz:
+                self.send_header("Content-Encoding", "gzip")
             self.send_header("Content-Length", str(len(data)))
             self.send_header("Cache-Control", "no-store")
             if headers:
@@ -297,11 +322,11 @@ class Handler(BaseHTTPRequestHandler):
             return self.send(200 if res else 404, res or {"error": "not found"})
         with lock:
             if p == "/api/bids":
-                return self.send(200, insights.load_rows(conn))
+                return self.send(200, cached_rows())
             if p == "/api/stats":
-                return self.send(200, insights.stats(insights.load_rows(conn)))
+                return self.send(200, insights.stats(cached_rows()))
             if p == "/api/lens":
-                return self.send(200, lens(insights.load_rows(conn)))
+                return self.send(200, lens(cached_rows()))
             if p == "/api/brief":
                 r = conn.execute("SELECT * FROM briefs WHERE kind='portfolio'").fetchone()
                 return self.send(200, dict(r) if r else {})
@@ -314,7 +339,7 @@ class Handler(BaseHTTPRequestHandler):
                 client = next((c for c in insights.load_clients() if c["id"] == m.group(1)), None)
                 if not client:
                     return self.send(404, {"error": "unknown client"})
-                return self.send(200, insights.match_all(conn, insights.load_rows(conn), client))
+                return self.send(200, insights.match_all(conn, cached_rows(), client))
             if m := re.fullmatch(r"/files/([^/]+)/(.+)", p):
                 row = conn.execute("SELECT local_path FROM attachments WHERE event_id=? AND file_name=?",
                                    m.groups()).fetchone()

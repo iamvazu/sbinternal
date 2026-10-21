@@ -45,9 +45,10 @@ ID_PREFIX_SOURCE = {"OG-": ("OpenGov", "Local"), "PB-": ("PlanetBids", "Local"),
                     "BG-": ("Biddingo", "Local"), "QC-": ("QuestCDN", "Local"), "CP-": ("CivicPlus Bids", "Local"),
                     "AG-": ("Agency portals", "Local"), "OR-": ("OregonBuys", None), "FL-": ("Florida MFMP", "State"),
                     "TX-": ("Texas ESBD", None), "GA-": ("Georgia GPR", None), "VA-": ("Virginia eVA", None),
-                    "PA-": ("PA eMarketplace", "State")}
+                    "PA-": ("PA eMarketplace", "State"), "SAM-": ("SAM.gov", "Federal"), "PIEE-": ("PIEE", "Federal"),
+                    "FC-": ("FedConnect", "Federal"), "DIBBS-": ("DIBBS", "Federal")}
 STATE_NAMES = {"CA": "California", "OR": "Oregon", "FL": "Florida", "TX": "Texas", "GA": "Georgia", "VA": "Virginia",
-               "PA": "Pennsylvania", "AZ": "Arizona", "WA": "Washington"}
+               "PA": "Pennsylvania", "AZ": "Arizona", "WA": "Washington", "US": "Federal"}
 
 
 def _infer(ev):
@@ -66,6 +67,8 @@ def state_of(ev):
     if "state" in ev.keys() and ev["state"]:
         return ev["state"]
     eid = ev["id"] or ""
+    if eid.startswith(("SAM-", "PIEE-", "FC-", "DIBBS-")):
+        return "US"
     return eid[:2] if eid[:3] in ("OR-", "FL-", "TX-", "GA-", "VA-", "PA-") else "CA"
 
 
@@ -322,3 +325,60 @@ def retrieve(conn, question, event_id=None, k=10):
             pass
 
     return hits[:k]
+
+
+# ------------------------------------------------------------------ federal award history (USAspending)
+
+def _awards_db():
+    import sqlite3
+    from config import DATA
+    path = DATA / "reference" / "usaspending" / "awards.db"
+    if not path.exists():
+        return None
+    c = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
+    c.row_factory = sqlite3.Row
+    return c
+
+
+AWARD_COLS = ("piid, parent_piid, recipient, uei, agency, office, naics, naics_description, psc, set_aside, extent_competed, "
+              "offers, pop_city, pop_state, start_date, current_end, potential_end, round(obligated) AS obligated, "
+              "current_value, potential_value, last_action, description, permalink")
+
+
+def award_history(ev, extra):
+    """Who won this before (same solicitation id) and what the market looks like (same NAICS + office / state)."""
+    c = _awards_db()
+    if not c:
+        return None
+    sol = re.sub(r"[^A-Z0-9]", "", (extra.get("Solicitation Number") or "").upper())
+    naics = next((x["code"] for x in extra.get("Codes") or [] if x.get("system") == "NAICS"), None)
+    office = extra.get("AAC Code") or extra.get("DoDAAC")
+    pop = extra.get("Place of Performance State")
+    try:
+        prior = [dict(r) for r in c.execute(f"SELECT {AWARD_COLS} FROM awards WHERE sol_key = ? ORDER BY last_action DESC LIMIT 20",
+                                            (sol,))] if len(sol) >= 6 else []
+        market, scope = [], None
+        if naics:
+            for where, args, label in ((f"naics = ? AND office_code = ?", (naics, office), "same NAICS, same contracting office"),
+                                       (f"naics = ? AND pop_state = ?", (naics, pop), f"same NAICS, performed in {pop}"),
+                                       (f"naics = ?", (naics,), "same NAICS, all loaded states")):
+                if None in args:
+                    continue
+                rows = [dict(r) for r in c.execute(f"SELECT {AWARD_COLS} FROM awards WHERE {where} AND obligated > 0 "
+                                                   "ORDER BY last_action DESC LIMIT 400", args)]
+                if len(rows) >= 3:
+                    market, scope = rows, label
+                    break
+        vals = sorted(r["obligated"] for r in market if r["obligated"])
+        offers = [int(r["offers"]) for r in market if (r["offers"] or "").isdigit()]
+        summary = {"scope": scope, "awards": len(market), "total_obligated": sum(vals),
+                   "median_award": vals[len(vals) // 2] if vals else None,
+                   "set_aside_share": round(sum(1 for r in market if r["set_aside"] and "NO SET ASIDE" not in r["set_aside"].upper())
+                                            / len(market), 2) if market else None,
+                   "avg_offers": round(sum(offers) / len(offers), 1) if offers else None,
+                   "top_winners": Counter(r["recipient"] for r in market).most_common(5)} if market else None
+        loaded = c.execute("SELECT COUNT(*) FROM awards").fetchone()[0]
+        return {"prior": prior, "summary": summary, "recent": market[:12], "naics": naics, "office": office,
+                "awards_loaded": loaded}
+    finally:
+        c.close()

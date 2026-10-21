@@ -53,7 +53,16 @@ class Bronze:
         return {r[key]: r for r in json.loads(self.records_path.read_text(encoding="utf-8"))}
 
     def save(self, records):
-        self.records_path.write_text(json.dumps(list(records.values()), indent=1, ensure_ascii=False), encoding="utf-8")
+        # atomic: the pipeline may read this file while a long scrape checkpoints it
+        tmp = self.records_path.with_suffix(".saving")
+        tmp.write_text(json.dumps(list(records.values()), indent=1, ensure_ascii=False), encoding="utf-8")
+        for attempt in range(10):  # Windows refuses to replace a file another process is reading; wait it out
+            try:
+                tmp.replace(self.records_path)
+                return
+            except PermissionError:
+                time.sleep(3)
+        raise RuntimeError(f"could not replace {self.records_path.name}: it stayed open in another program ({tmp.name} kept)")
 
     def save_raw(self, rid, obj):
         (self.raw / f"{safe_name(rid)}.json").write_text(json.dumps(obj, indent=1, ensure_ascii=False, default=str), encoding="utf-8")

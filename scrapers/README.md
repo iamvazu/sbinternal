@@ -20,6 +20,13 @@ scrapers/
   ga_gpr/          Georgia Procurement Registry (state + local)     -> data/bronze/ga_gpr/
   eva/             Virginia eVA (state, universities, localities)   -> data/bronze/eva/
   pa_emarketplace/ Pennsylvania eMarketplace (Commonwealth)         -> data/bronze/pa_emarketplace/
+
+  # federal (docs/FEDERAL_SCRAPING_PROMPT.md)
+  sam/             SAM.gov Contract Opportunities (public extract)  -> data/bronze/sam/
+  piee/            PIEE Solicitation Module (DoD, PIEE-only detail) -> data/bronze/piee/
+  fedconnect/      FedConnect public opportunities                 -> data/bronze/fedconnect/
+  dibbs/           DLA DIBBS RFQs (daily download files)           -> data/bronze/dibbs/
+  usaspending/     award history (reference, not bids)             -> data/bronze/usaspending/ + data/reference/usaspending/
 ```
 
 Out-of-state bids carry `state` (OR/FL/TX/GA/VA/PA). The matcher doesn't credit California SB/DVBE programs,

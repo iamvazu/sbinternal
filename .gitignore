@@ -4,6 +4,14 @@ data/bronze/**/attachments/
 data/bronze/**/attachments
 data/bronze/**/raw/
 data/bronze/**/*.log
+# SAM.gov records are ~300 MB and rebuilt daily from SAM's public extract
+data/bronze/sam/SAM_Data.json
+# DIBBS records grow ~45 MB a month; rebuilt from DLA's daily RFQ files
+data/bronze/dibbs/DIBBS_Data.json
+# temp files of atomic saves, and stray copies of SAM's extract
+data/bronze/**/*.saving
+data/bronze/**/*.part
+data/bronze/sam/extract/
 data/silver/
 bidintel/data/
 

@@ -359,7 +359,12 @@ def bid_profile(conn, eid, ix=None):
         industry = {"Service"}
 
     state = insights.state_of(ev)
-    counties, statewide = bid_counties(ev, facts, a, conn, ix) if state == "CA" else ([], False)
+    # federal bids performed in California keep California geography (place of performance, not the buying office)
+    geo_state = extra.get("Place of Performance State") if state == "US" else state
+    counties, statewide = bid_counties(ev, facts, a, conn, ix) if geo_state == "CA" else ([], False)
+    if state == "US" and geo_state == "CA" and not counties and ix:
+        c = ix.locate(None, extra.get("Place of Performance City"))
+        counties = [c] if c else []
     if state == "CA" and insights.level_of(ev) == "Local" and not counties:
         # a city/county/district buys for its own area: agency name ("County of Orange") or its city
         found = {m.group(1) for m in COUNTY_RE.finditer(ev["dept"] or "")}
@@ -396,8 +401,8 @@ def bid_profile(conn, eid, ix=None):
         licenses, lic_ai, lic_rules = set(), [], set()
     return {
         "id": eid, "name": title, "dept": ev["dept"], "end_date": ev["end_date"], "category": category,
-        "source": insights.source_of(ev), "level": insights.level_of(ev), "state": state,
-        "state_program": extra.get("State Program"), "nigp": nigp,
+        "source": insights.source_of(ev), "level": insights.level_of(ev), "state": state, "geo_state": geo_state,
+        "state_program": extra.get("State Program"), "sba_program": extra.get("SBA Program"), "nigp": nigp,
         "codes": codes, "query": dict(q), "title_terms": [w for w in dict.fromkeys(tokens(title)) if w in q], "text": f"{title}. {code_text}. {body}"[:1800],
         "licenses": sorted(licenses), "license_hard": bool(lic_ai) or (construction and bool(lic_rules)),
         "counties": counties, "statewide": statewide, "industry": sorted(industry),
@@ -464,7 +469,10 @@ def commodity(ix, prof, i):
 
 
 def geography(prof, f):
-    if prof.get("state", "CA") != "CA":
+    if prof.get("state") == "US" and prof.get("geo_state") != "CA":
+        where = prof.get("geo_state") or "outside California / not stated"
+        return 0.5, f"Federal bid performed in {where}: CA service areas don't apply"
+    if prof.get("state", "CA") not in ("CA", "US"):
         # the certified-firm directory holds California service areas only: neutral, and say so
         return 0.5, f"Out-of-state bid ({prof['state']}): CA service areas don't apply"
     if not prof["counties"]:
@@ -629,7 +637,16 @@ def run_match(prof, ix, conn=None, semantic=True, only=None, cand_limit=600):
         if prof["dbe"] and "DBE" in f["divcerts"]:
             prog += 0.3
             reasons.append("DBE: counts toward federal goal")
-        if prof.get("state", "CA") != "CA":
+        if prof.get("state") == "US":
+            sba = prof.get("sba_program")
+            if sba and "Small Business (SBA" in sba:
+                flags.append("Federal SB set-aside: size is self-certified in SAM.gov (CA SB status suggests small, doesn't prove it)")
+            elif sba:
+                flags.append(f"Federal set-aside needs {sba} certification; CA SB/DVBE doesn't count"
+                             + (" (a CA DVBE firm can apply for SBA VetCert)" if "SDVOSB" in sba and "DVBE" in certs else ""))
+            else:
+                flags.append("Federal bid: needs an active SAM.gov registration (UEI); CA certifications don't apply")
+        elif prof.get("state", "CA") != "CA":
             flags.append(f"CA certifications don't apply in {prof['state']}"
                          + (f" - needs {prof['state_program'].split(' - ')[0]}" if prof.get("state_program") else ""))
         prog = min(1.0, prog)

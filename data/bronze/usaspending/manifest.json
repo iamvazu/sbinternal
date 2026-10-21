@@ -1,0 +1,182 @@
+{
+ "OR_FY2026_contracts": {
+  "state": "OR",
+  "fy": 2026,
+  "kind": "contracts",
+  "rows": 17970,
+  "file": "OR_FY2026_contracts.zip",
+  "bytes": 4973327,
+  "downloaded": "2026-10-20T14:37:33"
+ },
+ "CA_FY2027_contracts": {
+  "state": "CA",
+  "fy": 2027,
+  "kind": "contracts",
+  "rows": 3541,
+  "file": "CA_FY2027_contracts.zip",
+  "bytes": 728522,
+  "downloaded": "2026-10-20T14:38:21"
+ },
+ "OR_FY2027_contracts": {
+  "state": "OR",
+  "fy": 2027,
+  "kind": "contracts",
+  "rows": 298,
+  "file": "OR_FY2027_contracts.zip",
+  "bytes": 89528,
+  "downloaded": "2026-10-20T14:38:52"
+ },
+ "FL_FY2027_contracts": {
+  "state": "FL",
+  "fy": 2027,
+  "kind": "contracts",
+  "rows": 1199,
+  "file": "FL_FY2027_contracts.zip",
+  "bytes": 263354,
+  "downloaded": "2026-10-20T14:39:33"
+ },
+ "TX_FY2027_contracts": {
+  "state": "TX",
+  "fy": 2027,
+  "kind": "contracts",
+  "rows": 898,
+  "file": "TX_FY2027_contracts.zip",
+  "bytes": 266257,
+  "downloaded": "2026-10-20T14:40:24"
+ },
+ "GA_FY2027_contracts": {
+  "state": "GA",
+  "fy": 2027,
+  "kind": "contracts",
+  "rows": 1309,
+  "file": "GA_FY2027_contracts.zip",
+  "bytes": 231961,
+  "downloaded": "2026-10-20T15:05:47"
+ },
+ "VA_FY2027_contracts": {
+  "state": "VA",
+  "fy": 2027,
+  "kind": "contracts",
+  "rows": 4495,
+  "file": "VA_FY2027_contracts.zip",
+  "bytes": 697141,
+  "downloaded": "2026-10-20T15:08:59"
+ },
+ "PA_FY2027_contracts": {
+  "state": "PA",
+  "fy": 2027,
+  "kind": "contracts",
+  "rows": 737,
+  "file": "PA_FY2027_contracts.zip",
+  "bytes": 179315,
+  "downloaded": "2026-10-20T15:11:40"
+ },
+ "CA_FY2026_contracts": {
+  "state": "CA",
+  "fy": 2026,
+  "kind": "contracts",
+  "rows": 274793,
+  "file": "CA_FY2026_contracts.zip",
+  "bytes": 70261028,
+  "downloaded": "2026-10-20T15:44:31"
+ },
+ "FL_FY2026_contracts": {
+  "state": "FL",
+  "fy": 2026,
+  "kind": "contracts",
+  "rows": 211599,
+  "file": "FL_FY2026_contracts.zip",
+  "bytes": 48551341,
+  "downloaded": "2026-10-20T16:11:50"
+ },
+ "TX_FY2026_contracts": {
+  "state": "TX",
+  "fy": 2026,
+  "kind": "contracts",
+  "rows": 217063,
+  "file": "TX_FY2026_contracts.zip",
+  "bytes": 48864374,
+  "downloaded": "2026-10-20T16:27:22"
+ },
+ "GA_FY2026_contracts": {
+  "state": "GA",
+  "fy": 2026,
+  "kind": "contracts",
+  "rows": 93330,
+  "file": "GA_FY2026_contracts.zip",
+  "bytes": 21416578,
+  "downloaded": "2026-10-20T16:36:20"
+ },
+ "PA_FY2026_contracts": {
+  "state": "PA",
+  "fy": 2026,
+  "kind": "contracts",
+  "rows": 542590,
+  "file": "PA_FY2026_contracts.zip",
+  "bytes": 75934041,
+  "downloaded": "2026-10-20T18:02:06"
+ },
+ "CA_FY2025_contracts": {
+  "state": "CA",
+  "fy": 2025,
+  "kind": "contracts",
+  "rows": 352094,
+  "file": "CA_FY2025_contracts.zip",
+  "bytes": 98841958,
+  "downloaded": "2026-10-20T18:52:42"
+ },
+ "OR_FY2025_contracts": {
+  "state": "OR",
+  "fy": 2025,
+  "kind": "contracts",
+  "rows": 20096,
+  "file": "OR_FY2025_contracts.zip",
+  "bytes": 5558926,
+  "downloaded": "2026-10-20T18:55:24"
+ },
+ "FL_FY2025_contracts": {
+  "state": "FL",
+  "fy": 2025,
+  "kind": "contracts",
+  "rows": 247553,
+  "file": "FL_FY2025_contracts.zip",
+  "bytes": 62461083,
+  "downloaded": "2026-10-20T19:18:33"
+ },
+ "TX_FY2025_contracts": {
+  "state": "TX",
+  "fy": 2025,
+  "kind": "contracts",
+  "rows": 286517,
+  "file": "TX_FY2025_contracts.zip",
+  "bytes": 68213340,
+  "downloaded": "2026-10-20T19:35:40"
+ },
+ "GA_FY2025_contracts": {
+  "state": "GA",
+  "fy": 2025,
+  "kind": "contracts",
+  "rows": 138393,
+  "file": "GA_FY2025_contracts.zip",
+  "bytes": 31758339,
+  "downloaded": "2026-10-20T19:55:14"
+ },
+ "VA_FY2025_contracts": {
+  "state": "VA",
+  "fy": 2025,
+  "kind": "contracts",
+  "rows": 572166,
+  "file": "VA_FY2025_contracts.zip",
+  "bytes": 143661410,
+  "downloaded": "2026-10-20T20:53:02"
+ },
+ "PA_FY2025_contracts": {
+  "state": "PA",
+  "fy": 2025,
+  "kind": "contracts",
+  "rows": 697646,
+  "file": "PA_FY2025_contracts.zip",
+  "bytes": 102825359,
+  "downloaded": "2026-10-20T21:50:39"
+ }
+}

@@ -107,6 +107,49 @@ SOURCES = {
         "scraper": "scrapers/pa_emarketplace/pa_emarketplace_scraper.py", "adapter": "pipeline.adapters.pa_emarketplace",
         "notes": "Commonwealth agencies. WebForms postback (all rows), detail page, public FileDownload attachments.",
     },
+    # ---- federal (docs/FEDERAL_SCRAPING_PROMPT.md). state "US"; SBA programs apply, CA SB/DVBE does not ---------
+    "sam": {
+        "label": "SAM.gov", "platform": "SAM.gov Contract Opportunities", "level": "Federal", "state": "US",
+        "status": "active", "id_prefix": "SAM-", "url": "https://sam.gov/search/?index=opp",
+        "program": "SBA: SB, 8(a), HUBZone, SDVOSB, WOSB",
+        "scraper": "scrapers/sam/sam_scraper.py", "adapter": "pipeline.adapters.sam",
+        "notes": "System of record for federal notices. Official public daily extract (all ~71k active notices, 47 columns) "
+                 "+ public attachments per open notice. Controlled/export-controlled files are listed, never requested.",
+    },
+    "piee": {
+        "label": "PIEE", "platform": "PIEE Solicitation Module (DoD)", "level": "Federal", "state": "US", "status": "active",
+        "id_prefix": "PIEE-", "url": "https://piee.eb.mil/sol/xhtml/unauth/index.xhtml",
+        "scraper": "scrapers/piee/piee_scraper.py", "adapter": "pipeline.adapters.piee",
+        "notes": "Public notice search (visible Chrome, no stealth). ~88% of open notices are also on SAM: those are linked, "
+                 "not duplicated; PIEE-only notices get detail + documents.",
+    },
+    "fedconnect": {
+        "label": "FedConnect", "platform": "FedConnect (Unison PRISM)", "level": "Federal", "state": "US", "status": "active",
+        "id_prefix": "FC-", "url": "https://www.fedconnect.net/FedConnect/PublicPages/PublicSearch/Public_Opportunities.aspx",
+        "scraper": "scrapers/fedconnect/fedconnect_scraper.py", "adapter": "pipeline.adapters.fedconnect",
+        "notes": "DOE, DOI, EPA, NRC, USAID ... public opportunities and funding notices with public documents. "
+                 "Notices also on SAM are skipped in silver.",
+    },
+    "dibbs": {
+        "label": "DIBBS", "platform": "DLA Internet Bid Board System", "level": "Federal", "state": "US", "status": "active",
+        "id_prefix": "DIBBS-", "url": "https://www.dibbs.bsm.dla.mil/RFQ/RFQDates.aspx?category=recent",
+        "scraper": "scrapers/dibbs/dibbs_scraper.py", "adapter": "pipeline.adapters.dibbs",
+        "notes": "DLA spare-parts RFQs (~1,600 a day, mostly below the SAM threshold). DLA's published daily RFQ files "
+                 "(index, batch-quote, approved sources, PDF bundle) after the standard DoD consent banner.",
+    },
+    "unison": {
+        "label": "Unison Marketplace", "platform": "Unison Marketplace (ex-FedBid)", "level": "Federal", "state": "US",
+        "status": "blocked", "id_prefix": "UM-", "url": "https://marketplace.unisonglobal.com/",
+        "notes": "2026-10-20: every page is behind a seller login (Keycloak). Not scraped. Needs a registered seller account "
+                 "and Unison's permission for automated access. Requirements over the SAM threshold are synopsized on SAM.",
+    },
+    "usaspending": {
+        "label": "USAspending", "platform": "USAspending.gov (FPDS award data)", "level": "Federal", "state": "US",
+        "status": "reference", "url": "https://api.usaspending.gov",
+        "scraper": "scrapers/usaspending/usaspending_scraper.py",
+        "notes": "Award history, not bids: prime contract transactions -> data/reference/usaspending/awards.db. Linked to "
+                 "notices by solicitation id (incumbent / price history) and by NAICS + office (market history).",
+    },
     "bidnet": {
         "label": "BidNet Direct", "platform": "BidNet Direct", "level": "Local", "status": "planned", "id_prefix": "BN-",
         "portals": {"cityofsantaclara": "City of Santa Clara", "cityofukiah": "City of Ukiah"},

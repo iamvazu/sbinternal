@@ -9,8 +9,9 @@ id                    display / gold id: "0000040342" | "OG-301748"  (prefix per
 source                registry key: "caleprocure" | "opengov" | "planetbids" ...
 source_label          human label shown in the app: "Cal eProcure" | "OpenGov" | "PlanetBids" ...
 platform              underlying software: "Cal eProcure (PeopleSoft)" | "OpenGov Procurement" ...
-level                 "State" | "Local"
-state                 2-letter US state of the buying agency: "CA", "OR", "FL", "TX", "GA", "VA", "PA"
+level                 "State" | "Local" | "Federal"
+state                 2-letter US state of the buying agency: "CA", "OR", "FL", "TX", "GA", "VA", "PA";
+                      "US" for federal bids (place-of-performance state in extra["Place of Performance State"])
 source_id             the id on the source system
 agency                buying organisation ("Dept of Corrections & Rehab", "County of Orange")
 agency_code           short code on the source (dept code, OpenGov portal code, PlanetBids portal id)
@@ -26,7 +27,7 @@ published_at, due_at  "YYYY-MM-DDTHH:MM" in Pacific time, the app's clock (None 
 question_deadline     free text or ISO
 prebid_meeting        free text
 contacts              [{role, name, title, email, phone}]
-codes                 [{system: "UNSPSC"|"NIGP"|"NAICS", code, title}]
+codes                 [{system: "UNSPSC"|"NIGP"|"NAICS"|"PSC", code, title}]
 attachments           [{file_name, url, local_path (project-relative, forward slashes), size_bytes, error}]
 documents             [{name, text}]   solicitation text the source provides as data, not as a file
 url                   detail page on the source
@@ -36,9 +37,9 @@ scraped_at            ISO timestamp
 """
 
 REQUIRED = ("bid_uid", "id", "source", "source_label", "platform", "level", "state", "source_id", "title", "url")
-STATES = {"CA", "OR", "FL", "TX", "GA", "VA", "PA", "AZ", "WA"}
-LEVELS = {"State", "Local"}
-CODE_SYSTEMS = {"UNSPSC", "NIGP", "NAICS", "Other"}
+STATES = {"CA", "OR", "FL", "TX", "GA", "VA", "PA", "AZ", "WA", "US"}
+LEVELS = {"State", "Local", "Federal"}
+CODE_SYSTEMS = {"UNSPSC", "NIGP", "NAICS", "PSC", "Other"}
 
 
 def empty(**kw):

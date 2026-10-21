@@ -56,6 +56,19 @@ collide. The full registry, including verified targets not yet built, is `pipeli
 | Virginia eVA | VA | State + Local | public Solr feed via visible Chrome; documents behind reCAPTCHA (linked, not scraped) | `scrapers/eva/` |
 | PA eMarketplace | PA | State | WebForms; public FileDownload attachments | `scrapers/pa_emarketplace/` |
 
+**Federal** (`level` Federal, `state` US; master brief `docs/FEDERAL_SCRAPING_PROMPT.md`):
+
+| Source | What | Route | Scraper |
+|---|---|---|---|
+| SAM.gov | every federal notice over $25K (system of record) | official public daily extract + public attachments | `scrapers/sam/` |
+| PIEE | DoD Solicitation Module; ~88% duplicate SAM | public notice search (visible Chrome); PIEE-only notices in detail | `scrapers/piee/` |
+| FedConnect | DOE/DOI/EPA/NRC/USAID notices and funding | public ASP.NET pages + public documents | `scrapers/fedconnect/` |
+| DIBBS | DLA spare-parts RFQs (~1,600/day, mostly under the SAM threshold) | DLA's published daily RFQ files after the DoD consent banner | `scrapers/dibbs/` |
+| Unison Marketplace | reverse auctions | **blocked**: seller login only | — |
+| USAspending | award history (FPDS): incumbents, prices, market | official open API → `data/reference/usaspending/awards.db` | `scrapers/usaspending/` |
+
+Federal bids show SBA programs (SB, 8(a), HUBZone, SDVOSB, WOSB), never CA SB/DVBE, and an **Award history** panel.
+
 Arizona and Washington are deferred. California SB/DVBE certifications do not apply on out-of-state bids: the
 matcher drops CA program credit and CA geography there, and flags the state's own program instead.
 
