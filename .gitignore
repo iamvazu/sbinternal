@@ -3,6 +3,7 @@ data/bronze/**/attachments/
 # ...also when it is a symlink to external storage (the Jetson keeps attachments on its USB drive)
 data/bronze/**/attachments
 data/bronze/**/raw/
+data/bronze/**/raw
 data/bronze/**/*.log
 # SAM.gov records are ~300 MB and rebuilt daily from SAM's public extract
 data/bronze/sam/SAM_Data.json
@@ -13,6 +14,8 @@ data/bronze/**/*.saving
 data/bronze/**/*.part
 data/bronze/sam/extract/
 data/silver/
+# award history reference db (derived from USAspending downloads; on the Jetson a symlink to the USB drive)
+data/reference/usaspending
 bidintel/data/
 
 # ---- secrets & browser state (scrapers keep credentials in a local .env)
