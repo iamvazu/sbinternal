@@ -1078,7 +1078,7 @@ function awardHistoryCard(h) {
   return `<div class="card"><h3>Award history <span class="t-sub">· USAspending (FPDS) · ${h.awards_loaded.toLocaleString()} awards loaded</span></h3>
     ${h.prior.length ? `<h3 style="margin-top:4px">Prior awards under this solicitation (incumbent)</h3><table><tbody>${h.prior.map(row).join("")}</tbody></table>`
       : `<div class="t-sub">No prior award found under this solicitation number.</div>`}
-    ${s ? `<h3 style="margin-top:12px">Market: ${esc(s.scope)} (NAICS ${esc(h.naics)})</h3>
+    ${s ? `<h3 style="margin-top:12px">Market: ${esc(s.scope)}</h3>
       <div class="facts"><div><small>Recent awards</small>${s.awards}</div><div><small>Total obligated</small>${money(s.total_obligated)}</div>
         <div><small>Median award</small>${money(s.median_award)}</div><div><small>Set aside</small>${s.set_aside_share != null ? Math.round(s.set_aside_share * 100) + "%" : "—"}</div>
         <div><small>Avg offers</small>${s.avg_offers ?? "—"}</div><div><small>Top winners</small>${s.top_winners.map(([n, c]) => `${esc(n)} (${c})`).join("<br>")}</div></div>

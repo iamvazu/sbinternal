@@ -363,22 +363,26 @@ def award_history(ev, extra):
         return None
     sol = re.sub(r"[^A-Z0-9]", "", (extra.get("Solicitation Number") or "").upper())
     naics = next((x["code"] for x in extra.get("Codes") or [] if x.get("system") == "NAICS"), None)
+    psc = next((x["code"] for x in extra.get("Codes") or [] if x.get("system") == "PSC"), None)  # DIBBS parts: FSC only
     office = extra.get("AAC Code") or extra.get("DoDAAC")
     pop = extra.get("Place of Performance State")
     try:
         prior = [dict(r) for r in c.execute(f"SELECT {AWARD_COLS} FROM awards WHERE sol_key = ? ORDER BY last_action DESC LIMIT 20",
                                             (sol,))] if len(sol) >= 6 else []
-        market, scope = [], None
-        if naics:
-            for where, args, label in ((f"naics = ? AND office_code = ?", (naics, office), "same NAICS, same contracting office"),
-                                       (f"naics = ? AND pop_state = ?", (naics, pop), f"same NAICS, performed in {pop}"),
-                                       (f"naics = ?", (naics,), "same NAICS, all loaded states")):
+        market, scope, by = [], None, None
+        # NAICS first; PSC/FSC when there is no NAICS (DIBBS parts) or NAICS finds nothing comparable
+        for col, code_ in (("naics", naics), ("psc", psc)):
+            if not code_ or market:
+                continue
+            for where, args, label in ((f"{col} = ? AND office_code = ?", (code_, office), "same contracting office"),
+                                       (f"{col} = ? AND pop_state = ?", (code_, pop), f"performed in {pop}"),
+                                       (f"{col} = ?", (code_,), "all loaded states")):
                 if None in args:
                     continue
                 rows = [dict(r) for r in c.execute(f"SELECT {AWARD_COLS} FROM awards WHERE {where} AND obligated > 0 "
                                                    "ORDER BY last_action DESC LIMIT 400", args)]
                 if len(rows) >= 3:
-                    market, scope = rows, label
+                    market, scope, by = rows, f"same {col.upper()} {code_}, {label}", col
                     break
         vals = sorted(r["obligated"] for r in market if r["obligated"])
         offers = [int(r["offers"]) for r in market if (r["offers"] or "").isdigit()]
@@ -389,7 +393,7 @@ def award_history(ev, extra):
                    "avg_offers": round(sum(offers) / len(offers), 1) if offers else None,
                    "top_winners": Counter(r["recipient"] for r in market).most_common(5)} if market else None
         loaded = c.execute("SELECT COUNT(*) FROM awards").fetchone()[0]
-        return {"prior": prior, "summary": summary, "recent": market[:12], "naics": naics, "office": office,
+        return {"prior": prior, "summary": summary, "recent": market[:12], "naics": naics, "psc": psc, "office": office,
                 "awards_loaded": loaded}
     finally:
         c.close()

@@ -205,5 +205,23 @@
   "file": "FL_FY2024_contracts.zip",
   "bytes": 62050907,
   "downloaded": "2026-10-20T23:24:27"
+ },
+ "TX_FY2024_contracts": {
+  "state": "TX",
+  "fy": 2024,
+  "kind": "contracts",
+  "rows": 266035,
+  "file": "TX_FY2024_contracts.zip",
+  "bytes": 66703529,
+  "downloaded": "2026-10-20T23:55:53"
+ },
+ "GA_FY2024_contracts": {
+  "state": "GA",
+  "fy": 2024,
+  "kind": "contracts",
+  "rows": 159190,
+  "file": "GA_FY2024_contracts.zip",
+  "bytes": 35463083,
+  "downloaded": "2026-10-21T00:12:31"
  }
 }
