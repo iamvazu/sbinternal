@@ -10,6 +10,7 @@ import argparse
 import hashlib
 import json
 import re
+import sqlite3
 import time
 from datetime import datetime
 
@@ -278,7 +279,9 @@ def main():
             clauses.append("end_date >= ?")
             args.append(datetime.now().strftime("%Y-%m-%dT%H:%M"))
         if a.state:
-            if a.state.lower() in ("other", "non-ca"):
+            if a.state.lower() in ("other", "other-states", "states"):
+                clauses.append("(state NOT IN ('CA', 'US') AND state IS NOT NULL)")
+            elif a.state.lower() in ("all-other", "non-ca"):
                 clauses.append("(state != 'CA' OR state IS NULL)")
             else:
                 clauses.append("state = ?")
@@ -289,6 +292,10 @@ def main():
             events = events[:a.limit]
     total = len(events)
     for i, ev in enumerate(events, 1):
+        prev = conn.execute("SELECT json FROM analysis WHERE event_id=?", (ev["id"],)).fetchone()
+        if not (prev and prev["json"] and not a.force):
+            st = ev["state"] if "state" in ev.keys() and ev["state"] else "CA"
+            print(f"[{i}/{total}] {ev['id']} ({st}) {ev['name'][:50]:50} ... analyzing", flush=True)
         status, secs = analyze_event(conn, ev, a.force)
         print(f"[{i}/{total}] {ev['id']} {ev['name'][:60]:60} {status} {secs}s", flush=True)
 
