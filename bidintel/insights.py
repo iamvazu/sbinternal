@@ -79,12 +79,15 @@ def level_of(ev):
 def bid_row(ev, facts, analysis):
     f = facts or {}
     a = analysis or {}
+    st = state_of(ev)
+    x = loads(ev["extra"], {}) if st == "US" and "extra" in ev.keys() else {}  # federal: notice stage + SBA program
     sig = f.get("signals", {})
     d = days_left(ev["end_date"])
     sa = a.get("set_aside_and_preferences") or {}
     return {
         "id": ev["id"], "name": ev["name"], "dept": ev["dept"], "end_date": ev["end_date"],
-        "source": source_of(ev), "level": level_of(ev), "state": state_of(ev),
+        "source": source_of(ev), "level": level_of(ev), "state": st,
+        "stage": x.get("Notice Stage") or ("Solicitation" if st == "US" else None), "sba": x.get("SBA Program"),
         "published": ev["published"], "days_left": d, "urgency": urgency(d),
         "category": f.get("category") or "Other", "method": f.get("method"),
         "signals": sorted(sig.keys()),
@@ -116,7 +119,10 @@ def load_rows(conn):
 
 
 def stats(rows):
-    live = [r for r in rows if r["urgency"] not in ("closed",)]
+    open_all = [r for r in rows if r["urgency"] not in ("closed",)]
+    # sources sought / presolicitations / special notices can't be bid on yet: counted separately, not as open bids
+    live = [r for r in open_all if r.get("stage") != "Pre-RFP notice"]
+    fed = [r for r in live if r["state"] == "US"]
     now = datetime.now()
     week0 = (now - timedelta(days=now.weekday())).date()
     weeks = Counter()
@@ -132,6 +138,11 @@ def stats(rows):
         "analyzed": sum(1 for r in rows if r["analyzed"]),
         "by_source": Counter(r["source"] for r in live).most_common(),
         "by_state": Counter(r["state"] for r in live).most_common(),
+        "pre_rfp": sum(1 for r in open_all if r.get("stage") == "Pre-RFP notice"),
+        "federal": {"solicitations": sum(1 for r in fed if r.get("stage") in ("Solicitation", "Grant / funding")),
+                    "dla_rfqs": sum(1 for r in fed if r.get("stage") == "DLA parts RFQ"),
+                    "set_asides": sum(1 for r in fed if r.get("sba")),
+                    "by_program": Counter(r["sba"] for r in fed if r.get("sba")).most_common()},
         "state_names": STATE_NAMES,
         "sb_access": sum(1 for r in live if {"sb_set_aside", "sb_dvbe_option", "sb_preference"} & set(r["signals"])),
         "dvbe": sum(1 for r in live if r["dvbe_pct"] or "dvbe_participation" in r["signals"]),

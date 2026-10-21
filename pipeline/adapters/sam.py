@@ -8,7 +8,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from pipeline import schema
-from pipeline.adapters._federal import federal_extra
+from pipeline.adapters._federal import category, federal_extra, stage
 from pipeline.paths import BRONZE, PROJECT
 from pipeline.sources import SOURCES
 from pipeline.util import PACIFIC, attachment, clean, html_to_text
@@ -54,7 +54,8 @@ def records():
         atts = [attachment(a, PROJECT) for a in rec.get("Attachments") or []]
         extra = federal_extra(r.get("SetASide"), r.get("PopState"), r.get("PopCity"))
         extra.update({
-            "Notice Type": r.get("Type"), "Base Type": r.get("BaseType"), "Sub-Tier": r.get("Sub-Tier"),
+            "Notice Type": r.get("Type"), "Notice Stage": stage(r.get("Type")), "Base Type": r.get("BaseType"),
+            "Category": category(r.get("NaicsCode"), r.get("ClassificationCode")), "Sub-Tier": r.get("Sub-Tier"),
             "Office": r.get("Office"), "AAC Code": r.get("AAC Code"), "CGAC": r.get("CGAC"), "FPDS Code": r.get("FPDS Code"),
             "Place of Performance": ", ".join(x for x in (r.get("PopStreetAddress"), r.get("PopCity"), r.get("PopState"),
                                                          r.get("PopZip"), r.get("PopCountry")) if x) or None,
@@ -62,7 +63,7 @@ def records():
             "Response Deadline (as posted)": r.get("ResponseDeadLine") or None, "Archive Date": r.get("ArchiveDate") or None,
             "Additional Info": r.get("AdditionalInfoLink") or None,
             "Attachments Note": None if rec.get("Attachments") is not None else
-            "Attachments not fetched yet for this notice (outside the 7-state pass); open it on SAM.gov",
+            "Attachments for this notice have not been downloaded yet; they are on its SAM.gov page",
             "Listed": rec.get("Listed", True),
         })
         yield schema.empty(
@@ -73,6 +74,6 @@ def records():
             title=clean(r.get("Title")) or nid, description=desc or None, procurement_type=r.get("Type"),
             solicitation_number=r.get("Sol#") or None, status="Active" if r.get("Active") == "Yes" else r.get("Active"),
             published_at=pacific(r.get("PostedDate")), due_at=pacific(r.get("ResponseDeadLine"), date_only_eod=True),
-            contacts=contacts(r), codes=codes, attachments=atts, url=r.get("Link") or rec.get("Detail URL"),
+            contacts=contacts(r), codes=codes, attachments=atts, url=f"https://sam.gov/opp/{nid}/view",  # public notice page
             extra=extra, raw_ref=f"data/bronze/sam/SAM_Data.json#{nid}", scraped_at=rec.get("Scraped At"),
         )

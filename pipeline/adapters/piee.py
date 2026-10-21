@@ -10,7 +10,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from pipeline import schema
-from pipeline.adapters._federal import federal_extra
+from pipeline.adapters._federal import category, federal_extra, stage
 from pipeline.paths import BRONZE, PROJECT
 from pipeline.sources import SOURCES
 from pipeline.util import PACIFIC, attachment, clean
@@ -47,7 +47,9 @@ def records():
                     for role, p in (("primary", "Primary"), ("alternate", "Alternate")) if f.get(f"{p} Contact Name") or f.get(f"{p} Contact Email")]
         m = re.search(r"\b([A-Z]{2})\s+\d{5}", f.get("Contracting Office Address") or "")
         extra = federal_extra(f.get("Set Aside Code") or row.get("Set Aside"), None, None)
-        extra.update({"Contracting Office": f.get("Contracting Office Name") or row.get("Contracting Office Name"),
+        naics, psc = (row.get("NAICS") or "").split(" ")[0], (row.get("PSC") or f.get("Product or Service Code") or "").split(" ")[0]
+        extra.update({"Notice Type": row.get("Notice Type"), "Notice Stage": stage(row.get("Notice Type")), "Category": category(naics, psc),
+                      "Contracting Office": f.get("Contracting Office Name") or row.get("Contracting Office Name"),
                       "DoDAAC": f.get("Contracting Office DoDAAC"), "Office Address": f.get("Contracting Office Address"),
                       "Office State": m.group(1) if m else None,
                       "Place of Performance": f.get("Place of Performance Address") or f.get("Place of Performance Zip Code"),

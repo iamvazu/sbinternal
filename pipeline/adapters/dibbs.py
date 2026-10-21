@@ -9,7 +9,7 @@ from datetime import date, datetime
 from zoneinfo import ZoneInfo
 
 from pipeline import schema
-from pipeline.adapters._federal import federal_extra
+from pipeline.adapters._federal import category, federal_extra, stage
 from pipeline.paths import BRONZE, PROJECT
 from pipeline.sources import SOURCES
 from pipeline.util import PACIFIC, attachment
@@ -50,7 +50,7 @@ def records():
                       "Return By (DLA, date only)": r.get("Return By"), "Issued": r.get("Issued"), "Lines": lines,
                       "Approved Sources": r.get("Approved Sources") or {}, "FSC": fsc,
                       "Documents Note": "Quotes are submitted on DIBBS (free DLA account + CAGE code). The RFQ PDF is attached.",
-                      "Category": "Goods & Supplies"})
+                      "Notice Type": "RFQ", "Notice Stage": stage("RFQ", SRC), "Category": category(None, fsc) or "Goods & Supplies"})
         yield schema.empty(
             bid_uid=f"{SRC}:{sol}", id=f"{META['id_prefix']}{sol}", source=SRC, source_label=META["label"],
             platform=META["platform"], level="Federal", state="US", source_id=sol,

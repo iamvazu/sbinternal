@@ -8,7 +8,7 @@ import json
 import re
 
 from pipeline import schema
-from pipeline.adapters._federal import federal_extra, norm_sol, sam_solicitations
+from pipeline.adapters._federal import category, federal_extra, norm_sol, sam_solicitations, stage
 from pipeline.paths import BRONZE, PROJECT
 from pipeline.sources import SOURCES
 from pipeline.util import attachment, clean, local_to_pacific
@@ -42,6 +42,8 @@ def records():
         extra = federal_extra(f.get("Set Aside"))
         extra.update({"Contracting Office": f.get("Contracting office"), "Place of Performance": f.get("Place of Performance") or None,
                       "Vendors Conference": f.get("Vendors conference") or None, "Notice Type": row.get("Type"),
+                      "Notice Stage": stage(row.get("Type")),
+                      "Category": category((f.get("NAICS") or "").split("-")[0], (f.get("PSC / FSC") or "").split("-")[0]),
                       "Response Due (as posted)": f.get("Response due") or row.get("Response Due Date"),
                       "Documents": r.get("Documents") or [],
                       "Documents Note": "Submitting a response needs a free FedConnect account; documents are public.",

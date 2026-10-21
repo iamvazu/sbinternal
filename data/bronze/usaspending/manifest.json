@@ -178,5 +178,32 @@
   "file": "PA_FY2025_contracts.zip",
   "bytes": 102825359,
   "downloaded": "2026-10-20T21:50:39"
+ },
+ "CA_FY2024_contracts": {
+  "state": "CA",
+  "fy": 2024,
+  "kind": "contracts",
+  "rows": 339904,
+  "file": "CA_FY2024_contracts.zip",
+  "bytes": 100688047,
+  "downloaded": "2026-10-20T22:58:02"
+ },
+ "OR_FY2024_contracts": {
+  "state": "OR",
+  "fy": 2024,
+  "kind": "contracts",
+  "rows": 25947,
+  "file": "OR_FY2024_contracts.zip",
+  "bytes": 7040387,
+  "downloaded": "2026-10-20T23:02:18"
+ },
+ "FL_FY2024_contracts": {
+  "state": "FL",
+  "fy": 2024,
+  "kind": "contracts",
+  "rows": 235405,
+  "file": "FL_FY2024_contracts.zip",
+  "bytes": 62050907,
+  "downloaded": "2026-10-20T23:24:27"
  }
 }

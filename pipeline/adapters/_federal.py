@@ -43,3 +43,43 @@ def federal_extra(set_aside, pop_state=None, pop_city=None):
             "Place of Performance City": pop_city or None,
             "State Program": "Federal bid: SBA programs (SB, 8(a), HUBZone, SDVOSB, WOSB) and an active SAM.gov registration "
                              "apply - California SB/DVBE certifications do not"}
+
+
+PRE_RFP = {"Special Notice", "Presolicitation", "Sources Sought"}
+
+
+def stage(notice_type, source=None):
+    """What a bidder can do with it today: bid, quote a DLA part, or position for a coming RFP."""
+    if source == "dibbs":
+        return "DLA parts RFQ"
+    if notice_type in PRE_RFP:
+        return "Pre-RFP notice"
+    if notice_type == "Funding Opportunity":
+        return "Grant / funding"
+    return "Solicitation"
+
+
+# NAICS (longest prefix wins) and PSC (first letter / 2-digit FSC) -> the app's work types (analyze.WORK_TYPES)
+NAICS_CAT = [("5413", "Engineering & Architecture"), ("5415", "IT & Software"), ("5112", "IT & Software"), ("518", "IT & Software"),
+             ("5617", "Facilities & Maintenance"), ("5621", "Environmental & Waste"), ("5622", "Environmental & Waste"),
+             ("5629", "Environmental & Waste"), ("5616", "Safety & Security"), ("5311", "Real Estate & Leasing"), ("5312", "Real Estate & Leasing"),
+             ("23", "Construction"), ("48", "Transportation & Logistics"), ("49", "Transportation & Logistics"), ("62", "Health & Human Services"),
+             ("54", "Professional Services"), ("56", "Professional Services"), ("81", "Facilities & Maintenance"),
+             ("31", "Goods & Supplies"), ("32", "Goods & Supplies"), ("33", "Goods & Supplies"), ("42", "Goods & Supplies")]
+PSC_CAT = {"Y": "Construction", "Z": "Facilities & Maintenance", "C": "Engineering & Architecture", "D": "IT & Software",
+           "S": "Facilities & Maintenance", "J": "Facilities & Maintenance", "F": "Environmental & Waste",
+           "Q": "Health & Human Services", "G": "Health & Human Services", "R": "Professional Services", "B": "Professional Services",
+           "A": "Professional Services", "V": "Transportation & Logistics", "X": "Real Estate & Leasing", "H": "Facilities & Maintenance",
+           "K": "Facilities & Maintenance", "W": "Goods & Supplies", "L": "Facilities & Maintenance", "N": "Facilities & Maintenance"}
+
+
+def category(naics=None, psc=None):
+    naics, psc = (naics or "").strip(), (psc or "").strip().upper()
+    hit = next((c for p, c in sorted(NAICS_CAT, key=lambda x: -len(x[0])) if naics.startswith(p)), None)
+    if hit:
+        return hit
+    if psc:
+        if psc[0].isdigit():
+            return "IT & Software" if psc.startswith("70") else "Goods & Supplies"  # FSC 70xx = IT equipment
+        return PSC_CAT.get(psc[0])
+    return None
